@@ -1,0 +1,14 @@
+# Custom PC Fan Controller udev symlink rule
+# Creates persistent /dev/fancontrol symlink when ATmega328P / Arduino Nano USB is plugged in
+
+# Match CH340 USB-Serial:
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="fancontrol", MODE="0666"
+
+# Match FTDI FT232R USB-Serial:
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="fancontrol", MODE="0666"
+
+# Match CP2102 USB-Serial:
+SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", SYMLINK+="fancontrol", MODE="0666"
+
+# Match Arduino Uno / Leonardo (CDC ACM):
+SUBSYSTEM=="tty", ATTRS{idVendor}=="2341", SYMLINK+="fancontrol", MODE="0666"

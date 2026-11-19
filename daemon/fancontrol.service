@@ -1,0 +1,15 @@
+[Unit]
+Description=Custom PC Fan Controller Linux Daemon
+After=network.target multi-user.target
+Wants=dev-fancontrol.device
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/fancontrold -p /dev/fancontrol
+Restart=always
+RestartSec=3
+KillMode=process
+User=root
+
+[Install]
+WantedBy=multi-user.target
