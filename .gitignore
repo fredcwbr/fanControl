@@ -1,0 +1,12 @@
+# Build artifacts
+bin/
+build/
+*.o
+fancontrol
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
