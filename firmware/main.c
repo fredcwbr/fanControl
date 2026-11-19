@@ -88,6 +88,20 @@ static void process_command(char *cmd) {
             pwm_init(PWM_MODE_3PIN_LOWFREQ);
             uart_puts("OK: MODE_3PIN_LOWFREQ\n");
         }
+    } else if (strncmp(cmd, "BEHAVIOR ", 9) == 0) {
+        if (strncmp(cmd + 9, "SYMM", 4) == 0) {
+            pwm_set_behavior(FAN_BEHAVIOR_SYMMETRIC);
+            uart_puts("OK: SYMMETRIC\n");
+        } else if (strncmp(cmd + 9, "ASYMM", 5) == 0) {
+            pwm_set_behavior(FAN_BEHAVIOR_ASYMMETRIC);
+            uart_puts("OK: ASYMMETRIC\n");
+        } else if (strncmp(cmd + 9, "HOT_STANDBY", 11) == 0) {
+            pwm_set_behavior(FAN_BEHAVIOR_HOT_STANDBY);
+            uart_puts("OK: HOT_STANDBY\n");
+        } else {
+            pwm_set_behavior(FAN_BEHAVIOR_INDEPENDENT);
+            uart_puts("OK: INDEPENDENT\n");
+        }
     } else if (strncmp(cmd, "TIMEOUT ", 8) == 0) {
         int sec = atoi(cmd + 8);
         if (sec > 0 && sec <= 60) {
@@ -134,6 +148,9 @@ int main(void) {
                 cmd_buffer[cmd_idx++] = c;
             }
         }
+
+        // Check fan behaviors (such as Hot-Standby monitoring)
+        pwm_update_behavior(tach_get_rpm(1), tach_get_rpm(2));
 
         // Failsafe watchdog check:
         // If Linux host freezes or serial cable disconnects, ramp fans to failsafe PWM
