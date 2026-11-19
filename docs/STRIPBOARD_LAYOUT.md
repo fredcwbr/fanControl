@@ -15,10 +15,12 @@
 3. **Locked-in Option A (Bottom Edge Fan Bank):**
    - All 4 fan connectors are grouped at the **bottom edge of the board (Rows R26 to R28)**.
    - All fan cables exit toward the bottom of the PC chassis for clean, unified cable management.
+4. **Dedicated CH340 & Decoupling Zone (Rows R21 to R26):**
+   - The 6-pin female socket header for the CH340 USB module, the auto-reset DTR coupling capacitor, the 5V logic decoupling capacitor, and the 12V bulk electrolytic capacitor are grouped cleanly along Rows R21 to R26.
 
 ---
 
-## 2. Physical Board Matrix Diagram (28 Rows $\times$ 12 Columns = 336 Holes)
+## 2. Complete Physical Board Matrix (28 Rows $\times$ 12 Columns = 336 Holes)
 
 ```
         C01       C02  C03  C04  C05      C06    C07      C08  C09  C10  C11       C12
@@ -38,74 +40,105 @@
  R13:  (GND)                    Pin 12──► [            ] ◄── Pin 17 (Fan 3 PWM Out)(+5V )
  R14:  (GND)                    Pin 13──► [            ] ◄── Pin 16 (Fan 2 PWM Out)(+5V )
  R15:  (GND)                    Pin 14──► [            ] ◄── Pin 15 (Fan 1 PWM Out)(+5V )
-       ═══════════════════════════════════════════════════════════════════════════  [CUT] R16/C12
+       ═══════════════════════════════════════════════════════════════════════════  [CUT 1] R16/C12
  R16:  (GND)     ────────────────── [ 1-ROW SPACER GAP ] ───────────────────────   ─────
  R17:  (GND)     PWM 1 In ──►   Pin 1 ──► [  ULN2003A  ] ◄── Pin 16 (OUT 1) ──────►(+12V)
  R18:  (GND)     PWM 2 In ──►   Pin 2 ──► [   DIP-16   ] ◄── Pin 15 (OUT 2) ──────►(+12V)
  R19:  (GND)     PWM 3 In ──►   Pin 3 ──► [  Rows 17-24] ◄── Pin 14 (OUT 3) ──────►(+12V)
  R20:  (GND)     PWM 4 In ──►   Pin 4 ──► [   PINS:    ] ◄── Pin 13 (OUT 4) ──────►(+12V)
- R21:  (GND)                    Pin 5 ──► [ Left: 1-8  ] ◄── Pin 12                (+12V)
- R22:  (GND)                    Pin 6 ──► [   (in C05) ] ◄── Pin 11                (+12V)
- R23:  (GND)                    Pin 7 ──► [ Right:16-9 ] ◄── Pin 10                (+12V)
- R24:  (GND)     Jumper to GND  Pin 8 ──► [   (in C08) ] ◄── Pin 9 (COM) ─────────►(+12V)
- R25:  (GND)     ── [ CH340 6-Pin Socket Header & Decoupling Area ] ─────────────  (+12V)
- R26:  (GND)     [ FAN 1 & 2 +12V Bus (Net 38) ]         [ FAN 3 & 4 +12V Bus (Net 63) ] (+12V)
-                 ───[CUT R27/R28]───                     ───[CUT R27/R28]───
+       ────────────────── [ CH340 & DECOUPLING ZONE: ROWS R21-R26 ] ─────────────
+ R21:  (GND)     [CH340 Pin 1: DTR] [CUT 2] [C_DTR 100nF] ──► (ULN Pin 5: Unused) (+12V)
+ R22:  (GND)     [CH340 Pin 2: RXD] ───────────────────────► (ULN Pin 6: Unused) (+12V)
+ R23:  (GND)     [CH340 Pin 3: TXD] ───────────────────────► (ULN Pin 7: Unused) (+12V)
+ R24:  (GND)     [CH340 Pin 4: VCC] [CUT 3] [C2 100nF] ────► (ULN Pin 8: GND)    (+12V)
+ R25:  (GND)     [CH340 Pin 5: CTS (NC)] ── [C1 100uF 25V Electrolytic] ────────► (+12V)
+ R26:  (GND)     [CH340 Pin 6: GND] ────► [Bridge to C01] ──► (Fans +12V Bus)    (+12V)
+                 ───[CUT 4: R27/R28]───                  ───[CUT 5: R27/R28]───
  R27:  (GND)     [F1 SwGND: C02] [F2 SwGND: C04]         [F3 SwGND: C08] [F4 SwGND: C10] (+12V)
  R28:  (GND)     [F1 Tach : C02] [F2 Tach : C04]         [F3 Tach : C08] [F4 Tach : C10] (+12V)
 ```
 
 ---
 
-## 3. Bottom Edge Fan Connector Bank (Detailed Pinout)
+## 3. Detailed CH340 6-Pin Socket Header & Decoupling Area (Rows R21 to R26)
 
-Each standard 3-pin PC fan connector has:
-- **Pin 1:** Switched Ground (Black wire)
-- **Pin 2:** +12V Power (Red/Yellow wire)
-- **Pin 3:** Tachometer / RPM Pulse (Yellow/Green wire)
+The 6-pin female socket header (1x6, 2.54 mm pitch) is soldered into **Column C02 across Rows R21 to R26**.
 
-By making four tiny 1 mm track cuts between **Row R27 and Row R28** (under C02, C04, C08, C10), the 4 fan headers mount as standard 3-pin vertical headers:
+```
+                           DETAILED COMPONENT & TRACE CUT MAP
+                           Rows R21 to R26 (Columns C01 to C12)
 
-### Left Bank (Fans 1 & 2):
-```
-        Column C02 (Fan 1 Header)           Column C04 (Fan 2 Header)
-       ┌─────────────────────────┐         ┌─────────────────────────┐
- R26:  │ Pin 2: +12V Power Bus   │   R26:  │ Pin 2: +12V Power Bus   │  (Jumper to Lower C12)
- R27:  │ Pin 1: Switched GND 1   │   R27:  │ Pin 1: Switched GND 2   │  (From ULN OUT 1 & OUT 2)
- R28:  │ Pin 3: Tachometer 1     │   R28:  │ Pin 3: Tachometer 2     │  (To ATmega PC0 & PC1)
-       └─────────────────────────┘         └─────────────────────────┘
+        C01         C02            C03            C04            C05          C06       C07      C12
+       (GND)                                                                 (+5V)     (GND)    (+12V)
+R21:    │     [CH340 Pin 1: DTR] ──[CUT 2]── [C_DTR 100nF leg 2]                  │         │        │
+        │             │                              │                            │         │        │
+        │             └── [C_DTR 100nF leg 1]        └── Jumper wire to ATmega    │         │        │
+        │                                                Pin 1 (/RESET at R02)    │         │        │
+        │                                                                         │         │        │
+R22:    │     [CH340 Pin 2: RXD] ─────────────────────── Jumper wire to ATmega    │         │        │
+        │                                                Pin 3 (TXD at R04)       │         │        │
+        │                                                                         │         │        │
+R23:    │     [CH340 Pin 3: TXD] ─────────────────────── Jumper wire to ATmega    │         │        │
+        │                                                Pin 2 (RXD at R03)       │         │        │
+        │                                                                         │         │        │
+R24:    │     [CH340 Pin 4: VCC] ──[CUT 3]── [C2 100nF] ────► [ULN Pin 8: GND] ───┴──► +5V  │        │
+        │             │                                               │                     │        │
+        │             └── Wire jumper to C06 (+5V Rail)               └── Jumper to C01 GND │        │
+        │                                                                                   │        │
+R25:    │     [CH340 Pin 5: CTS (NC)]                                                       │        │
+        │             (Unconnected / Floating)                                              │        │
+        │                                                                                   │        │
+R26:    │     [CH340 Pin 6: GND] ── (Solder bridge to C01)                                  │        │
+        │             │                                                                     │        │
+        │             └── Negative leg of C1 (100uF) ────────────── Positive leg of C1 ─────┴──────►│
+        ▼                                                                                            ▼
 ```
 
-### Right Bank (Fans 3 & 4):
-```
-        Column C08 (Fan 3 Header)           Column C10 (Fan 4 Header)
-       ┌─────────────────────────┐         ┌─────────────────────────┐
- R26:  │ Pin 2: +12V Power Bus   │   R26:  │ Pin 2: +12V Power Bus   │  (Jumper to Lower C12)
- R27:  │ Pin 1: Switched GND 3   │   R27:  │ Pin 1: Switched GND 4   │  (From ULN OUT 3 & OUT 4)
- R28:  │ Pin 3: Tachometer 3     │   R28:  │ Pin 3: Tachometer 4     │  (To ATmega PC2 & PC3)
-       └─────────────────────────┘         └─────────────────────────┘
-```
+### A. Pin-by-Pin Wiring Schedule for CH340 Header
+
+| Pin # | CH340 Label | Location | Exact Connection & Jumper Routing |
+| :---: | :---: | :---: | :--- |
+| **Pin 1** | **DTR** | **Row R21, Col C02** | **Auto-Reset Circuit:**<br>• Make **[CUT 2]** between C02 and C03 on Row R21.<br>• Solder **C_DTR ($100\text{nF}$ ceramic)** with leg 1 in C02 and leg 2 in C03.<br>• Run a jumper wire from **Row R21, Col C03** up to **Row R02, Col C03** (ATmega Pin 1 / /RESET). |
+| **Pin 2** | **RXD** | **Row R22, Col C02** | **UART Receive (from MCU):**<br>• Row R22 Left Bank (Net 34) is free (ULN Pin 6 is unused).<br>• Run a jumper wire from **Row R22, Col C03** up to **Row R04, Col C04** (ATmega Pin 3 / PD1 / TXD). |
+| **Pin 3** | **TXD** | **Row R23, Col C02** | **UART Transmit (to MCU):**<br>• Row R23 Left Bank (Net 35) is free (ULN Pin 7 is unused).<br>• Run a jumper wire from **Row R23, Col C03** up to **Row R03, Col C04** (ATmega Pin 2 / PD0 / RXD). |
+| **Pin 4** | **VCC (+5V)** | **Row R24, Col C02** | **USB 5V Power Entry & Decoupling:**<br>• On Row R24, Col C05 holds ULN Pin 8 (GND). To prevent shorting VCC to GND, make **[CUT 3]** between C03 and C04 on Row R24.<br>• Run a jumper wire from **Row R24, Col C02** to **Column C06 (+5V Rail)**.<br>• Solder **C2 ($100\text{nF}$ ceramic)** directly across CUT 3 (leg 1 in C03 = +5V, leg 2 in C04 = GND) for zero-lead-length bypass filtering! |
+| **Pin 5** | **CTS** | **Row R25, Col C02** | **Clear to Send:**<br>• Leave unconnected (NC / Floating). |
+| **Pin 6** | **GND** | **Row R26, Col C02** | **Logic & Signal Ground:**<br>• Connect via a short solder bridge or 1-hole jumper from **Row R26, Col C02** directly to **Column C01 (GND Bus)**. |
 
 ---
 
-## 4. Signal Interconnect Schedule
+### B. Decoupling Capacitors in this Area
 
-| Fan | Pin 1 (Switched GND) | Pin 2 (+12V Power) | Pin 3 (Tachometer) | Pull-Up Resistor ($10\text{k}\Omega$) |
-| :---: | :---: | :---: | :---: | :---: |
-| **Fan 1** | Row R27, Col C02 $\leftarrow$ Jumper from ULN Pin 16 (R17, C09) | Row R26, Col C02 $\leftarrow$ Jumper to Lower C12 (+12V) | Row R28, Col C02 $\rightarrow$ Wire to ATmega Pin 23 (R07, C09) | Row R07: Spans C11 to Upper C12 (+5V) |
-| **Fan 2** | Row R27, Col C04 $\leftarrow$ Jumper from ULN Pin 15 (R18, C09) | Row R26, Col C04 $\leftarrow$ Jumper to Lower C12 (+12V) | Row R28, Col C04 $\rightarrow$ Wire to ATmega Pin 24 (R06, C09) | Row R06: Spans C11 to Upper C12 (+5V) |
-| **Fan 3** | Row R27, Col C08 $\leftarrow$ Jumper from ULN Pin 14 (R19, C09) | Row R26, Col C08 $\leftarrow$ Jumper to Lower C12 (+12V) | Row R28, Col C08 $\rightarrow$ Wire to ATmega Pin 25 (R05, C09) | Row R05: Spans C11 to Upper C12 (+5V) |
-| **Fan 4** | Row R27, Col C10 $\leftarrow$ Jumper from ULN Pin 13 (R20, C09) | Row R26, Col C10 $\leftarrow$ Jumper to Lower C12 (+12V) | Row R28, Col C10 $\rightarrow$ Wire to ATmega Pin 26 (R04, C09) | Row R04: Spans C11 to Upper C12 (+5V) |
+1. **C_DTR ($100\text{nF}$ Ceramic Disc / Monolithic):**
+   - **Location:** Row R21 across **[CUT 2]** (Hole C02 to Hole C03).
+   - **Role:** Differentiates the DTR level drop from Linux into a sharp 1ms negative spike to reset the ATmega328P automatically before serial code flashing.
+2. **C2 ($100\text{nF}$ Ceramic Bypass Capacitor):**
+   - **Location:** Row R24 across **[CUT 3]** (Hole C03 to Hole C04).
+   - **Role:** High-frequency noise suppression right at the USB +5V power input.
+3. **C1 ($100\mu\text{F}$ 25V Electrolytic Bulk Capacitor):**
+   - **Location:** Row R25 / R26.
+   - **Positive (+) lead:** Inserted into **Row R25, Column C12 (+12V Rail)**.
+   - **Negative (-) lead:** Inserted into **Row R25, Column C07 (GND)** or Column C01 (GND).
+   - **Role:** Stabilizes the +12V power rail and absorbs inductive voltage dips/spikes when all 4 cooling fans start up or switch duty cycles.
 
 ---
 
-## 5. Track Cuts Checklist (Summary)
+## 4. Track Cuts in the CH340 Area
 
-Only **5 easy track cuts** in total on the entire board:
-1. **[CRITICAL] Cut 1:** Row **R16, Column C12** (Separates Upper +5V Logic from Lower +12V Fan Power).
-2. **Cut 2:** Between Row R27 and R28 under Column C02 (Isolates Fan 1 Pin 1 from Pin 3).
-3. **Cut 3:** Between Row R27 and R28 under Column C04 (Isolates Fan 2 Pin 1 from Pin 3).
-4. **Cut 4:** Between Row R27 and R28 under Column C08 (Isolates Fan 3 Pin 1 from Pin 3).
-5. **Cut 5:** Between Row R27 and R28 under Column C10 (Isolates Fan 4 Pin 1 from Pin 3).
+| Cut ID | Coordinate | Method | Purpose |
+| :---: | :---: | :---: | :--- |
+| **[CUT 2]** | **Row R21 (between C02 and C03)** | Twist 3mm drill bit on copper side | Isolates CH340 DTR pin so $100\text{nF}$ AC capacitor C_DTR can be inserted in-line. |
+| **[CUT 3]** | **Row R24 (between C03 and C04)** | Twist 3mm drill bit on copper side | Isolates CH340 VCC (+5V in C02/C03) from ULN Pin 8 (GND in C04/C05). C2 bypass cap mounts directly across this cut! |
 
-*(No track cuts under the ATmega328P or ULN2003A sockets!)*
+---
+
+## 5. Summary of All Track Cuts on the Entire Board
+
+Only **7 tiny track cuts** across the whole 336-hole board:
+1. **Cut 1 (Rail Split):** Row **R16, Column C12** (Separates Upper +5V Logic from Lower +12V Fan Power).
+2. **Cut 2 (DTR Isolation):** Row **R21, between C02 and C03** (For in-line DTR auto-reset capacitor).
+3. **Cut 3 (VCC/GND Split):** Row **R24, between C03 and C04** (Separates CH340 5V from ULN GND; mounts C2 bypass cap).
+4. **Cut 4 (Fan 1 Pin Split):** Column **C02, between R27 and R28** (Separates Fan 1 GND from Tach).
+5. **Cut 5 (Fan 2 Pin Split):** Column **C04, between R27 and R28** (Separates Fan 2 GND from Tach).
+6. **Cut 6 (Fan 3 Pin Split):** Column **C08, between R27 and R28** (Separates Fan 3 GND from Tach).
+7. **Cut 7 (Fan 4 Pin Split):** Column **C10, between R27 and R28** (Separates Fan 4 GND from Tach).
