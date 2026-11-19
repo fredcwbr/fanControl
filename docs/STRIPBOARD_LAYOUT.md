@@ -1,154 +1,130 @@
-# Stripboard Assembly Guide (33x71 mm, 12 Tracks x 27 Holes)
+# 100% Through-Hole (THT) Stripboard Assembly Guide
+## Bare ATmega328P + Virtual USB (V-USB) + ULN2003A
+### Board: Placa Padrão Trilha 33x71 mm (12 Pistas x 27 Furos, 324 Furos)
 
-This document provides the complete **Bill of Materials (BOM)** and exact **Stripboard Layout** (coordinates, track cuts, and jumper wires) to assemble the **ATmega328P + ULN2003A/ULN7003A** 4-channel PC fan controller on a standard single-sided copper stripboard (Placa Padrão 33x71 mm, 324 furos).
+This guide documents the **all-through-hole (thru-pin / THT / DIP)** hardware design. It integrates directly with a desktop PC motherboard's **internal USB 2.0 9-pin header** using **V-USB** (software-based Low-Speed USB on ATmega328P @ 16MHz) with zero surface-mount parts.
 
 ---
 
-## 1. Bill of Materials (BOM)
+## 1. 100% Through-Pin Bill of Materials (BOM)
 
-| Item | Description | Qty | Purpose |
+All components are standard through-hole leaded parts with 2.54 mm (0.1") pitch or standard axial/radial packages:
+
+| Component | Package / Type | Qty | Purpose |
 | :--- | :--- | :---: | :--- |
-| **BRD1** | Placa Padrão Trilha 33x71 mm (12 pistas x 27 furos, pitch 2.54 mm) | 1 | Circuit base board |
-| **U1** | Arduino Nano (ATmega328P, 16MHz, USB Mini/Micro/C) | 1 | Microcontroller & USB-UART interface |
-| **SKT1** | 15-pin 2.54mm Female Header Sockets (or direct solder) | 2 | Socket for Arduino Nano |
-| **U2** | ULN2003A or ULN7003A (DIP-16 package) | 1 | 7-channel Darlington driver |
-| **SKT2** | 16-pin DIP IC Socket | 1 | Socket for ULN2003A |
-| **R1–R4**| $10\text{k}\Omega$, 1/4W Resistors | 4 | Pull-up resistors for Tachometer inputs |
-| **C1** | $100\mu\text{F}$ 25V Electrolytic Capacitor | 1 | Bulk decoupling on 12V fan power rail |
-| **C2** | $100\text{nF}$ (0.1µF) Ceramic Capacitor | 1 | High-frequency noise bypass |
-| **J_PWR**| 2-pin Screw Terminal Block (5.0 mm or 2.54 mm pitch) | 1 | 12V & GND input from PSU (Molex/SATA) |
-| **J_FAN**| 3-pin / 4-pin 2.54mm Male Header pins | 4 | Fan 1, Fan 2, Fan 3, Fan 4 headers |
-| **WIRE** | 22–24 AWG Solid Core Hookup Wire | ~1 m | Jumpers on component side |
+| **BRD1** | Placa Padrão Trilha 33x71 mm (12 tracks x 27 holes) | 1 | Circuit base |
+| **U1** | **ATmega328P-PU** (28-pin narrow DIP, 0.3" row spacing) | 1 | Microcontroller running V-USB stack |
+| **SKT1** | 28-pin DIP Socket (narrow 0.3") | 1 | Socket for ATmega328P |
+| **U2** | **ULN2003A or ULN7003A** (16-pin DIP) | 1 | 7-channel Darlington low-side driver |
+| **SKT2** | 16-pin DIP Socket | 1 | Socket for ULN2003A |
+| **Y1** | **16.000 MHz Quartz Crystal** (HC-49 through-hole) | 1 | Master clock for V-USB cycle timing |
+| **C3, C4** | **22 pF** Ceramic Disc Capacitors (Through-hole) | 2 | Crystal load capacitors to GND |
+| **D1, D2** | **3.6V Zener Diodes** (DO-35 axial leaded: 1N5227B or BZX55C3V6) | 2 | Clamp 5V AVR outputs to 3.3V USB logic |
+| **R_USB1,2**| **$68\Omega$**, 1/4W Metal/Carbon Film Resistors (Axial) | 2 | USB D+ and D- series impedance match |
+| **R_PULL** | **$1.5\text{k}\Omega$**, 1/4W Resistor (Axial) | 1 | Pull-up on USB D- (Signals USB Low-Speed) |
+| **R_RST** | **$10\text{k}\Omega$**, 1/4W Resistor (Axial) | 1 | Pull-up for ATmega Pin 1 (/RESET) |
+| **R1–R4** | **$10\text{k}\Omega$**, 1/4W Resistors (Axial) | 4 | Pull-ups for Fan Tachometer lines |
+| **C1** | **$100\mu\text{F}$ 25V** Electrolytic (Radial through-hole) | 1 | Bulk decoupling on 12V fan power rail |
+| **C2, C5** | **$100\text{nF}$** (0.1µF) Ceramic Disc/Monolithic (Radial) | 2 | VCC and AVCC bypass decoupling to GND |
+| **J_USB** | **4-pin 2.54mm Male Header** (Through-hole) | 1 | Plugs into internal Motherboard USB cable |
+| **J_PWR** | **2-pin 5.08mm Screw Terminal Block** (Through-hole) | 1 | +12V (Yellow) and GND (Black) from PSU |
+| **J_FAN** | **3-pin 2.54mm Male Header pins** (Through-hole) | 4 | Fan 1 to Fan 4 headers |
+| **WIRE** | 24 AWG Solid Core Hookup Wire | ~1 m | Jumpers on top side |
 
 ---
 
-## 2. Stripboard Grid Coordinate System
-
-- **Rows A to L** (12 horizontal copper tracks running from Column 1 to Column 27):
-  - Row A = Top track
-  - Row L = Bottom track
-- **Columns 1 to 27** (Vertical hole positions along each track).
+## 2. Through-Hole V-USB Schematic to Motherboard Header
 
 ```
-        Col 01 02 03 04 05 ... 25 26 27
-Row A  ───○──○──○──○──○───────○──○──○─── (Track 1)
-Row B  ───○──○──○──○──○───────○──○──○─── (Track 2)
-Row C  ───○──○──○──○──○───────○──○──○─── (Track 3)
-Row D  ───○──○──○──○──○───────○──○──○─── (Track 4)
-Row E  ───○──○──○──○──○───────○──○──○─── (Track 5)
-Row F  ───○──○──○──○──○───────○──○──○─── (Track 6)
-Row G  ───○──○──○──○──○───────○──○──○─── (Track 7)
-Row H  ───○──○──○──○──○───────○──○──○─── (Track 8)
-Row I  ───○──○──○──○──○───────○──○──○─── (Track 9)
-Row J  ───○──○──○──○──○───────○──○──○─── (Track 10)
-Row K  ───○──○──○──○──○───────○──○──○─── (Track 11)
-Row L  ───○──○──○──○──○───────○──○──○─── (Track 12)
+ Motherboard USB 2.0                                             ATmega328P-PU
+ Internal 9-Pin Header                                           (DIP-28 @ 16MHz)
+ ─────────────────────                                           ────────────────
+ Pin 1 (+5V) ──────────────────────────────────────────────────► Pin 7 (VCC) & Pin 20 (AVCC)
+                                   +5V Rail
+                                      │
+                                    [1.5kΩ Axial] (Signals Low-Speed USB to host)
+                                      │
+ Pin 3 (USB D-) ────[ 68Ω Axial ]─────┴────────────────────────► Pin 5 (PD3)
+                         │
+                   [3.6V Zener] (Cathode to line, Anode to GND)
+                         │
+ Pin 7 (GND) ────────────┴─────────────────────────────────────► Pin 8 (GND) & Pin 22 (GND)
+                         │
+                   [3.6V Zener] (Cathode to line, Anode to GND)
+                         │
+ Pin 5 (USB D+) ────[ 68Ω Axial ]──────────────────────────────► Pin 4 (PD2 / INT0)
 ```
 
 ---
 
-## 3. Dedicated Power Buses
+## 3. ATmega328P Pin Mapping for V-USB & Fans
 
-- **Row A (Top Track):** **GND Bus** (Common Ground for PSU, Nano GND, ULN Pin 8, and Fan Grounds).
-- **Row B (Second Track):** **+12V Rail** (From PSU 12V Yellow wire $\rightarrow$ Fan positive pins and ULN Pin 9 `COM`).
-- **Row L (Bottom Track):** **+5V Rail** (From Nano 5V pin $\rightarrow$ Tachometer $10\text{k}\Omega$ pull-up resistors).
-
----
-
-## 4. Copper Track Cuts (Required Isolations)
-
-> [!IMPORTANT]
-> Because stripboard tracks run continuously, you must cut the copper under DIP ICs and between partitioned components.
-> **How to cut tracks:** Use a 3.5 mm or 4.0 mm drill bit twisted gently by hand directly over the hole on the copper (bottom) side until the copper ring is neatly broken.
-
-| Cut ID | Coordinate | Track | Purpose |
+| ATmega328P Pin | Label | Thru-Pin Connection | Function |
 | :---: | :---: | :---: | :--- |
-| **X01** | Column 18, Row D | Track D | Isolates ULN Pin 1 from Pin 16 |
-| **X02** | Column 18, Row E | Track E | Isolates ULN Pin 2 from Pin 15 |
-| **X03** | Column 18, Row F | Track F | Isolates ULN Pin 3 from Pin 14 |
-| **X04** | Column 18, Row G | Track G | Isolates ULN Pin 4 from Pin 13 |
-| **X05** | Column 18, Row H | Track H | Isolates ULN Pin 5 from Pin 12 |
-| **X06** | Column 18, Row I | Track I | Isolates ULN Pin 6 from Pin 11 |
-| **X07** | Column 18, Row J | Track J | Isolates ULN Pin 7 from Pin 10 |
-| **X08** | Column 18, Row K | Track K | Isolates ULN Pin 8 from Pin 9 |
-| **X09** | Column 15, Row C | Track C | Isolates Nano Left Bank from Right Bank |
-| **X10** | Column 15, Row D | Track D | Isolates Nano D12 from ULN Input |
-| **X11** | Column 15, Row E | Track E | Isolates Nano D11 from ULN Input |
-| **X12** | Column 15, Row F | Track F | Isolates Nano D10 from ULN Input |
+| **Pin 1** | PC6 (/RESET) | $10\text{k}\Omega$ resistor to +5V | Hardware Reset |
+| **Pin 4** | PD2 (INT0) | Series $68\Omega$ resistor $\rightarrow$ USB D+ & 3.6V Zener | **USB Data Plus (Interrupt)** |
+| **Pin 5** | PD3 | Series $68\Omega$ $\rightarrow$ USB D- & $1.5\text{k}\Omega$ pull-up & 3.6V Zener | **USB Data Minus** |
+| **Pin 7** | VCC | Connected to +5V (from Motherboard Pin 1) | Logic Power (+5V) |
+| **Pin 8** | GND | Connected to Common Ground | Logic Ground |
+| **Pin 9** | PB6 (XTAL1) | 16.000 MHz Quartz Crystal + 22pF capacitor to GND | Master Clock |
+| **Pin 10**| PB7 (XTAL2) | 16.000 MHz Quartz Crystal + 22pF capacitor to GND | Master Clock |
+| **Pin 12**| PD6 (OC0A) | $\rightarrow$ ULN2003A Pin 4 (IN4) | **Fan 4 PWM** |
+| **Pin 15**| PB1 (OC1A) | $\rightarrow$ ULN2003A Pin 1 (IN1) | **Fan 1 PWM** |
+| **Pin 16**| PB2 (OC1B) | $\rightarrow$ ULN2003A Pin 2 (IN2) | **Fan 2 PWM** |
+| **Pin 17**| PB3 (OC2A) | $\rightarrow$ ULN2003A Pin 3 (IN3) | **Fan 3 PWM** |
+| **Pin 20**| AVCC | Connected to +5V via $100\text{nF}$ filter cap | Analog VCC |
+| **Pin 22**| GND | Connected to Common Ground | Logic Ground |
+| **Pin 23**| PC0 (PCINT8) | $\rightarrow$ Fan 1 Tach (Pin 3) with $10\text{k}\Omega$ pull-up | **Fan 1 RPM Sense** |
+| **Pin 24**| PC1 (PCINT9) | $\rightarrow$ Fan 2 Tach (Pin 3) with $10\text{k}\Omega$ pull-up | **Fan 2 RPM Sense** |
+| **Pin 25**| PC2 (PCINT10)| $\rightarrow$ Fan 3 Tach (Pin 3) with $10\text{k}\Omega$ pull-up | **Fan 3 RPM Sense** |
+| **Pin 26**| PC3 (PCINT11)| $\rightarrow$ Fan 4 Tach (Pin 3) with $10\text{k}\Omega$ pull-up | **Fan 4 RPM Sense** |
 
 ---
 
-## 5. Component Layout (Top Side)
-
-### A. Arduino Nano Sockets (Columns 2 to 16)
-- **Top Row Header (Pins D13 down to TX):** Positioned along **Row C**, Columns 2 to 16.
-- **Bottom Row Header (Pins D12 down to RAW):** Positioned along **Row J**, Columns 2 to 16.
-- *Nano USB connector points left towards edge (Column 1) for easy cable access.*
-
-### B. ULN2003A DIP-16 Socket (Columns 19 to 26)
-- **Pins 1 to 8 (Inputs + GND):**
-  - Pin 1 (IN 1): Row D, Col 19
-  - Pin 2 (IN 2): Row E, Col 20
-  - Pin 3 (IN 3): Row F, Col 21
-  - Pin 4 (IN 4): Row G, Col 22
-  - Pin 8 (GND):  Row K, Col 26 (Jumper to Row A Ground)
-- **Pins 9 to 16 (COM + Outputs):**
-  - Pin 9  (COM): Row K, Col 26 (Opposite side; tied to Row B +12V)
-  - Pin 13 (OUT 4): Row G, Col 22
-  - Pin 14 (OUT 3): Row F, Col 21
-  - Pin 15 (OUT 2): Row E, Col 20
-  - Pin 16 (OUT 1): Row D, Col 19
-
-### C. Fan Headers (Columns 24 to 27)
-Standard 3-pin headers (Pin 1: Switched GND, Pin 2: +12V, Pin 3: Tachometer):
-- **Fan 1:** Col 24, Pins across Rows D (OUT 1), B (+12V), and L (+5V via Pull-up)
-- **Fan 2:** Col 25, Pins across Rows E (OUT 2), B (+12V), and L (+5V via Pull-up)
-- **Fan 3:** Col 26, Pins across Rows F (OUT 3), B (+12V), and L (+5V via Pull-up)
-- **Fan 4:** Col 27, Pins across Rows G (OUT 4), B (+12V), and L (+5V via Pull-up)
-
-### D. Pull-Up Resistors ($10\text{k}\Omega$)
-- **R1 (Fan 1 Tach):** Spanning Row L (+5V) to Tach Signal Line
-- **R2 (Fan 2 Tach):** Spanning Row L (+5V) to Tach Signal Line
-- **R3 (Fan 3 Tach):** Spanning Row L (+5V) to Tach Signal Line
-- **R4 (Fan 4 Tach):** Spanning Row L (+5V) to Tach Signal Line
-
----
-
-## 6. Step-by-Step Soldering Sequence
-
-1. **Mark & Cut Tracks:**
-   - On the copper side, locate the 12 cut positions listed in Section 4.
-   - Twist the drill bit until the copper track is clearly broken.
-   - Use a continuity multimeter to confirm no shorts exist across each cut.
-2. **Solder Wire Jumpers First:**
-   - Install all flat wire jumpers on the component side before mounting sockets.
-   - Connect Ground Bus (Row A) to Nano GND pin.
-   - Connect +5V Bus (Row L) to Nano 5V pin.
-   - Connect +12V Bus (Row B) to ULN Pin 9 (`COM`).
-3. **Solder Resistors and Capacitors:**
-   - Install R1–R4 ($10\text{k}\Omega$).
-   - Install C2 ($100\text{nF}$) close to Nano 5V/GND.
-   - Install C1 ($100\mu\text{F}$) across +12V (Row B) and GND (Row A) with correct electrolytic polarity.
-4. **Solder IC Sockets:**
-   - Solder the 16-pin socket for U2 and the two 15-pin female headers for the Nano.
-5. **Solder Connectors:**
-   - Install the 2-pin screw terminal for 12V/GND power input.
-   - Install the four 3-pin fan connectors.
-
----
-
-## 7. Pre-Power Checklist (Bench Test)
-
-Before plugging the board into your PC power supply or connecting fans:
+## 4. Stripboard Physical Layout (33x71 mm Grid)
 
 ```
-[ ] 1. Multimeter in Continuity / Resistance mode.
-[ ] 2. Check resistance between +12V (Row B) and GND (Row A). Must be > 100kΩ (no short).
-[ ] 3. Check resistance between +5V (Row L) and GND (Row A). Must be > 10kΩ.
-[ ] 4. Check ULN Pin 9 (COM) has direct continuity (0Ω) to +12V (Row B).
-[ ] 5. Insert Arduino Nano into socket. Connect USB cable to PC.
-[ ] 6. Confirm Nano power LED lights up and no components get hot.
-[ ] 7. Insert ULN2003A into its socket with Pin 1 notch facing the correct direction.
-[ ] 8. Connect 12V bench power or SATA power. Test fan channels using Linux CLI:
-       ./fancontrold -p /dev/ttyUSB0 --set 1 200
+Column:   01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 | 16 | 17 18 19 20 21 22 23 24 | 25 26 27
+Row A  ───[              GND BUS (PSU GND & USB Pin 7)                   ]────────────
+Row B  ───[              +12V RAIL (PSU 12V Yellow & ULN Pin 9 COM)      ]────────────
+Row C  ───○ [ ATmega328P Pins 1 to 14 (Top Row) ] ──○ ──[CUT]─○ [ ULN Pins 1 to 8 ] ───○ ──[FAN 1-4]
+Row D  ───○ ──(Track cut under IC)──────────────────○ ──[CUT]─○ ────────────────────────○ ──[FAN 1-4]
+Row E  ───○ ──(Track cut under IC)──────────────────○ ──[CUT]─○ ────────────────────────○ ──[FAN 1-4]
+Row F  ───○ [ ATmega328P Pins 28 to 15 (Bot Row)] ──○ ──[CUT]─○ [ ULN Pins 16 to 9 ] ──○ ──[FAN 1-4]
+Row G  ───○ ──[ 16MHz Crystal + 22pF Caps ]─────────○ ───────○ ──(PWM Routing Jumpers)──○ ──[TACH 1-4]
+Row H  ───○ ──[ V-USB: 68Ω Resistors & 3.6V Zeners]─○ ───────○ ────────────────────────○ ──[PULL-UPS]
+Row I  ───○ ──[ V-USB: 1.5kΩ D- Pull-Up Resistor ]──○ ───────○ ────────────────────────○ ──[PULL-UPS]
+Row J  ───○ ──[ J_USB: 4-Pin Header (5V, D-, D+, GND) ]──────○ ────────────────────────○ ──[PULL-UPS]
+Row K  ───○ ──[ R_RST 10kΩ & Decoupling Caps ]──────○ ───────○ ────────────────────────○ ──[PULL-UPS]
+Row L  ───[              +5V RAIL (Motherboard USB Pin 1 +5V)            ]────────────
 ```
+
+### Copper Track Cuts:
+1. **Column 16 (Tracks C, D, E, F):** Isolates the ATmega328P pin rows from the ULN2003A.
+2. **Columns 3 to 14 (Tracks D, E):** Clears the intermediate stripboard tracks directly underneath the ATmega328P socket.
+3. **Columns 17 to 24 (Tracks D, E):** Clears the intermediate stripboard tracks directly underneath the ULN2003A socket.
+
+---
+
+## 5. Linux Kernel Driver Integration
+
+The Linux driver is provided in `kernel/fancontrol_hwmon.c`:
+1. It binds directly to the V-USB device (`VID: 0x16c0 / PID: 0x05dc`).
+2. When the internal USB cable is plugged into the motherboard, Linux automatically detects the device and registers it into the kernel **hwmon** subsystem.
+3. Native Linux sysfs entries are created:
+   - `/sys/class/hwmon/hwmonX/pwm1` to `pwm4`
+   - `/sys/class/hwmon/hwmonX/fan1_input` to `fan4_input`
+4. Standard Linux commands work out of the box:
+   ```bash
+   # Read fan speeds
+   sensors
+   # Output:
+   # custom_fan-usb-0:
+   #   fan1: 1450 RPM
+   #   fan2: 1420 RPM
+   #   fan3: 1800 RPM
+   #   fan4: 1460 RPM
+
+   # Manually set fan 1 speed to 60%
+   echo 150 | sudo tee /sys/class/hwmon/hwmon2/pwm1
+   ```
