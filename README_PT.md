@@ -13,6 +13,8 @@ Um sistema completo de hardware, firmware e software para controle inteligente e
 
 ## Índice
 
+- [🎯 Contexto e Motivação](#-contexto-e-motivação)
+
 1. [Visão Geral da Arquitetura](#visão-geral-da-arquitetura)
 2. [Lista de Materiais de Hardware (BOM)](#lista-de-materiais-de-hardware-bom)
 3. [Decisões e Justificativas de Engenharia](#decisões-e-justificativas-de-engenharia)
@@ -31,6 +33,28 @@ Um sistema completo de hardware, firmware e software para controle inteligente e
 9. [Bibliografia e Referências](#9-bibliografia-e-referências)
 10. [Avaliação Detalhada de Custo de Produção (Production Cost Analysis)](#10-avaliação-detalhada-de-custo-de-produção-production-cost-analysis)
 11. [Licença](#11-licença)
+
+---
+
+## 🎯 Contexto e Motivação
+
+Este projeto nasceu de uma necessidade real de bancada e manutenção: a queima da ventoinha frontal de 180 mm do meu gabinete principal — uma medida fora de padrão e proprietária, essencial para meu único computador de trabalho.
+
+A ventoinha original já vinha sofrendo com eventos frequentes de superaquecimento, especialmente durante os meses mais quentes do ano. Ao pesquisar a peça de reposição compatível, o custo orbitava os **R$ 180,00** por um componente de baixa eficiência. A alternativa geométrica viável foi preencher o mesmo vão físico com **quatro ventoinhas de 90 mm**. No entanto, surgiu o gargalo técnico: a placa-mãe não possuía conexões suficientes nem capacidade de acionamento independente para gerenciar esse conjunto de forma segura e elegante.
+
+### Da gambiarra temporária ao circuito definitivo
+
+1. **O protótipo de emergência:** Montei uma solução rápida em *perfboard* para não paralisar o trabalho diário, mas o espaço físico reduzido e o arranjo de fiação criaram uma situação indesejável de manutenção.
+2. **O problema do chaveamento Low-Side vs. Tacômetro:**  
+   > ⚠️ **Nota Técnica:** O controle de rotação usando arranjos *low-side* tradicionais (como dar pull-down no terra via ULN2003 ou N-MOSFETs comuns) chaveia o pino de GND da ventoinha. Isso faz com que a referência interna de terra do circuito do sensor Hall flutue. O resultado prático é que o sinal do **tacômetro (pino de RPM)** é corrompido ou para de ser lido com precisão pela placa-mãe/controlador.
+3. **A evolução da placa:** Como não havia espaço físico na perfboard para implementar o chaveamento adequado (preservando o terra comum para o tacômetro) e o roteamento virou uma teia de fios, decidi projetar uma placa dedicada.
+4. **Pensando em futuros protótipos:** Sabendo que no ecossistema maker *"nada é mais definitivo que uma solução temporária"*, aproveitei o redesenho para adicionar barramentos de alimentação, proteções e pontos de conexão que rotineiramente fazem falta na bancada em outros projetos de automação e refrigeração.
+
+---
+
+O projeto foi disponibilizado publicamente na esperança de poupar tempo e retrabalho de quem estiver enfrentando problemas similares com arrefecimento customizado ou prototipagem de periféricos. 
+
+Comentários, correções, testes e *pull requests* são muito bem-vindos!
 
 ---
 

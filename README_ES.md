@@ -13,6 +13,8 @@ Un sistema completo de hardware, firmware y software para el control térmico in
 
 ## Tabla de Contenidos
 
+- [🎯 Contexto y Motivación](#-contexto-y-motivación)
+
 1. [Visión General de la Arquitectura](#visión-general-de-la-arquitectura)
 2. [Lista de Materiales de Hardware (BOM)](#lista-de-materiales-de-hardware-bom)
 3. [Decisiones y Justificaciones de Ingeniería](#decisiones-y-justificaciones-de-ingeniería)
@@ -24,6 +26,28 @@ Un sistema completo de hardware, firmware y software para el control térmico in
 9. [Bibliografía y Referencias](#9-bibliografía-y-referencias)
 10. [Evaluación Detallada de Costos de Producción (Production Cost Analysis)](#10-evaluación-detallada-de-costos-de-producción-production-cost-analysis)
 11. [Licencia](#11-licencia)
+
+---
+
+## 🎯 Contexto y Motivación
+
+Este proyecto nació de una necesidad real de banco de trabajo y mantenimiento: la falla del ventilador frontal de 180 mm de mi gabinete principal — una medida propietaria y fuera de estándar, indispensable para mantener operativa mi única computadora de trabajo.
+
+El ventilador original ya venía sufriendo frecuentes episodios de sobrecalentamiento, especialmente durante los meses más calurosos del año. Al buscar el repuesto compatible, el costo rondaba los **R$ 180,00 (~$31 USD)** por un componente de baja eficiencia. La alternativa geométrica viable consistió en ocupar el mismo espacio físico con **cuatro ventiladores de 90 mm**. Sin embargo, surgió de inmediato el obstáculo técnico: la placa base no disponía de suficientes conectores ni de la capacidad de control independiente para gestionar este conjunto de forma segura y prolija.
+
+### De la solución improvisada al circuito definitivo
+
+1. **El prototipo de emergencia:** Armé una solución rápida en placa perforada (*perfboard*) para no interrumpir el trabajo diario, pero el espacio reducido y el cableado aéreo crearon una situación indeseable para el mantenimiento.
+2. **El dilema de la conmutación Low-Side vs. Tacómetro:**  
+   > ⚠️ **Nota Técnica:** El control de velocidad mediante configuraciones *low-side* tradicionales (conmutando la masa a través de un ULN2003 o transistores N-MOSFET) corta el pin GND del ventilador. Esto hace que la referencia interna de masa del sensor Hall del ventilador quede flotante. Como resultado práctico, la señal del **tacómetro (pin de RPM)** se corrompe o deja de leerse con precisión en el microcontrolador o placa madre.
+3. **Evolución a una placa dedicada:** Dado que no había espacio físico en la perfboard para implementar el filtrado adecuado (preservando una masa común sólida para el tacómetro) y el ruteo se convirtió en una maraña de cables, decidí diseñar una placa de circuito impreso dedicada.
+4. **Pensando en futuros prototipos:** Sabiendo que en la cultura maker *"no hay nada más definitivo que una solución temporal"*, aproveché el rediseño para integrar rieles de alimentación, diodos de protección y puntos de prueba que habitualmente se echan en falta en el banco de trabajo para otros proyectos de automatización y refrigeración.
+
+---
+
+El proyecto se publica de forma abierta con la esperanza de ahorrar tiempo y esfuerzo a quienes enfrenten desafíos similares en refrigeración personalizada o prototipado de periféricos.
+
+¡Comentarios, correcciones, pruebas y *pull requests* son muy bienvenidos!
 
 ---
 

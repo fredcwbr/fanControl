@@ -13,6 +13,8 @@ A comprehensive hardware, firmware, and software system for integrating custom c
 
 ## Table of Contents
 
+- [🎯 Context & Motivation](#-context--motivation)
+
 1. [Architecture Overview](#architecture-overview)
 2. [Hardware Bill of Materials (BOM)](#hardware-bill-of-materials-bom)
 3. [Engineering Reasoning & Design Choices](#engineering-reasoning--design-choices)
@@ -47,6 +49,28 @@ A comprehensive hardware, firmware, and software system for integrating custom c
 9. [Bibliography & References](#bibliography--references)
 10. [Comprehensive Production Cost Analysis](#10-comprehensive-production-cost-analysis)
 11. [License](#11-license)
+
+---
+
+## 🎯 Context & Motivation
+
+This project was born out of a real workbench and maintenance need: the failure of the 180 mm front intake fan in my primary PC case — a non-standard and proprietary form factor, essential for keeping my sole workstation running.
+
+The original fan had already been struggling with frequent thermal throttling and overheating events, especially during the hottest months of the year. When researching a compatible replacement part, the cost hovered around **R$ 180,00 (~$31 USD)** for a low-efficiency stock component. The viable geometric alternative was to fill the exact same physical opening with **four 90 mm cooling fans**. However, a technical bottleneck immediately arose: the motherboard lacked sufficient fan headers and had zero independent driving capacity to manage such an array safely and elegantly.
+
+### From a Temporary Workaround to a Definitive Circuit
+
+1. **The Emergency Prototype:** I quickly assembled an emergency solution on a standard *perfboard* to avoid disrupting daily work, but the cramped physical space and tangled flying wires created an unmaintainable rat's nest.
+2. **The Low-Side Switching vs. Tachometer Dilemma:**  
+   > ⚠️ **Technical Note:** Speed control using conventional *low-side* switching topologies (such as pulling down ground via a ULN2003 Darlington array or discrete N-channel MOSFETs) chops the fan's GND pin. This causes the internal ground reference of the fan's integrated Hall-effect sensor to float. In practice, the **tachometer signal (RPM pulse pin)** becomes severely corrupted or fails to register accurately on the host motherboard or microcontroller.
+3. **Evolution to a Dedicated Board:** Because there was no physical room left on the perfboard to implement proper drive filtering (preserving a solid common ground reference for tachometer capture) and the wiring had become an unmanageable web, I decided to engineer a purpose-built PCB.
+4. **Designing for Future Prototyping Needs:** Knowing well that in the maker ecosystem *"nothing is more permanent than a temporary fix"*, I took advantage of the redesign to incorporate dedicated power distribution rails, protective flyback clamps, and breakout tie-points that are routinely missed on the workbench during other embedded automation and cooling projects.
+
+---
+
+This project is made publicly available in the hope of saving time, frustration, and rework for anyone tackling similar PC chassis cooling challenges or peripheral prototyping.
+
+Feedback, bug reports, field tests, and pull requests are warmly welcomed!
 
 ---
 
