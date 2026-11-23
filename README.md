@@ -3,7 +3,9 @@
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](LICENSE)
 [![CI Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](.github/workflows/ci.yml)
 [![EDA: Lepton-EDA & pcb-rnd](https://img.shields.io/badge/EDA-Lepton--EDA%20%2F%20pcb--rnd-orange.svg)](lepton/)
-[![Assisted by AI: Gemini 3.8 Flash](https://img.shields.io/badge/AI--Assisted-Gemini%203.8%20Flash-blueviolet.svg)](#8-assisted-by-ai---gemini-38-flash-medius)
+[![Assisted by AI: Gemini 3.8 Flash](https://img.shields.io/badge/AI--Assisted-Gemini%203.8%20Flash-blueviolet.svg)](#8-assisted-by-ai---gemini-38-flash-medium)
+
+> **Languages / Idiomas:** [English (US)](README.md) | [Português](README_PT.md) | [Español](README_ES.md)
 
 A comprehensive hardware, firmware, and software system for integrating custom cooling fan control inside a desktop PC chassis. The controller is built on a standard **33.0 mm $\times$ 72.0 mm through-hole protoboard**, powered by a standalone **ATmega328P-PU** running at **16.000 MHz**, a **CH340 6-pin USB-Serial converter**, and a **ULN2003A / ULN7003A** Darlington array driving up to 4 PC cooling fans (e.g., 4x Akasa 90mm and Arctic P8) with real-time tachometer RPM feedback, failsafe watchdog protection, and automated thermal management via Linux.
 
@@ -21,29 +23,29 @@ A comprehensive hardware, firmware, and software system for integrating custom c
    - [Fan Connector Placement: Option A (Bottom Edge Bank)](#fan-connector-placement-option-a-bottom-edge-bank)
    - [Staggered Column Label Identification Solution](#staggered-column-label-identification-solution)
    - [Fan Control & Failsafe Strategy](#fan-control--failsafe-strategy)
-4. [Custom Stripboard Rev 1.1 / 1.1a — Arquitetura Modular & Especificações](#custom-stripboard-rev-11--11a--arquitetura-modular--especificações)
-   - [Especificações Físicas e Mecânicas](#1-especificações-físicas-e-mecânicas)
-   - [Subsistema de Força de Topo: Entradas DC Jack & Breakouts SIP3](#2-subsistema-de-força-de-topo-entradas-dc-jack--breakouts-sip3)
-   - [Duplo Regulador Linear LM317 (Datasheet TI, Página 1)](#3-duplo-regulador-linear-lm317-datasheet-ti-página-1)
-   - [Margem Esquerda: Módulos Step-Down LM2596 Upright (VR101, VR102)](#4-margem-esquerda-módulos-step-down-lm2596-upright-vr101-vr102)
-   - [Margem Direita: Borne KRE 10 Vias 5.08mm & Matriz Pass-Thru (TB101)](#5-margem-direita-borne-kre-10-vias-508mm--matriz-pass-thru-tb101)
-   - [Margem Direita: Área de Prototipagem Rápida Scratch-Pad (56 Ilhas, 3 mil)](#6-margem-direita-área-de-prototipagem-rápida-scratch-pad-56-ilhas-3-mil)
-   - [Diretriz de Fabricação: Padrão Thru-Hole (THT) Obrigatório & Pad Size >= 80 mil](#7-diretriz-de-fabricação-padrão-thru-hole-tht-obrigatório--pad-size--80-mil)
-   - [Hierarquia de Largura de Trilhas de Cobre (Trace Width Hierarchy)](#8-hierarquia-de-largura-de-trilhas-de-cobre-trace-width-hierarchy)
-   - [Matriz de Prototipagem & Seção de Interconexão em Sanduíche](#9-matriz-de-prototipagem--seção-de-interconexão-em-sanduíche)
-   - [Conector de Borda Single-Sided (Card Edge Tongue 44-Pin Standard)](#10-conector-de-borda-single-sided-card-edge-tongue-44-pin-standard)
-   - [Chave de Polarização Mecânica (Keying na Coluna 8)](#11-chave-de-polarização-mecânica-keying-na-coluna-8)
-   - [Jumpers de Solda Abertos (Open Solder Jumpers)](#12-jumpers-de-solda-abertos-open-solder-jumpers)
-   - [Furos de Fixação Mecânica M3, Keepouts e Alinhamento](#13-furos-de-fixação-mecânica-m3-keepouts-e-alinhamento)
-   - [Serigrafia e Identificação Visual](#14-serigrafia-e-identificação-visual)
-   - [Arquivos EDA e Instruções de Compilação](#15-arquivos-eda-e-instruções-de-compilação)
-   - [Sub-revisão 1.1a — Otimização do Sanduíche e 32 Linhas Contínuas](#16-sub-revisão-11a--otimização-do-sanduíche-e-32-linhas-contínuas)
+4. [Custom Stripboard Rev 1.1 / 1.1a — Modular Architecture & Specifications](#custom-stripboard-rev-11--11a--modular-architecture--specifications)
+   - [Physical & Mechanical Specifications](#1-physical--mechanical-specifications)
+   - [Top Power Subsystem: DC Barrel Jacks & Breakout SIP3 Headers](#2-top-power-subsystem-dc-barrel-jacks--breakout-sip3-headers)
+   - [Dual LM317 Linear Regulators (TI Datasheet, Page 1)](#3-dual-lm317-linear-regulators-ti-datasheet-page-1)
+   - [Left Margin: Dual Upright LM2596 Step-Down Modules (VR101, VR102)](#4-left-margin-dual-upright-lm2596-step-down-modules-vr101-vr102)
+   - [Right Margin: 10-Way 5.08mm Screw Terminal Block & Pass-Thru Matrix (TB101)](#5-right-margin-10-way-508mm-screw-terminal-block--pass-thru-matrix-tb101)
+   - [Right Margin: Scratch-Pad Prototyping Area (56 Pads, 3 mil)](#6-right-margin-scratch-pad-prototyping-area-56-pads-3-mil)
+   - [Manufacturing Directive: Through-Hole (THT) Mandatory Default & Pad Size >= 80 mil](#7-manufacturing-directive-through-hole-tht-mandatory-default--pad-size--80-mil)
+   - [Standardized Copper Trace Width Hierarchy](#8-standardized-copper-trace-width-hierarchy)
+   - [Prototyping Matrix & Sandwich Interconnect Section](#9-prototyping-matrix--sandwich-interconnect-section)
+   - [Single-Sided Card Edge Connector (44-Pin Standard Tongue)](#10-single-sided-card-edge-connector-44-pin-standard-tongue)
+   - [Mechanical Polarizing Key (Keying at Finger 8)](#11-mechanical-polarizing-key-keying-at-finger-8)
+   - [Open Solder Jumpers](#12-open-solder-jumpers)
+   - [M3 Mounting Holes, Keepouts & Alignment](#13-m3-mounting-holes-keepouts--alignment)
+   - [Silkscreen Legend & Visual Identification](#14-silkscreen-legend--visual-identification)
+   - [EDA Source Files & Build Instructions](#15-eda-source-files--build-instructions)
+   - [Sub-revision 1.1a — Sandwich Shift & 32 Continuous Rows](#16-sub-revision-11a--sandwich-shift--32-continuous-rows)
 5. [Printable 1:1 Scale Templates](#printable-11-scale-templates)
 6. [Directory Structure](#directory-structure)
 7. [Quick Start & Build Guide](#quick-start--build-guide)
-8. [Assisted by AI - Gemini 3.8 Flash Medius](#assisted-by-ai---gemini-38-flash-medius)
+8. [Assisted by AI - Gemini 3.8 Flash Medium](#8-assisted-by-ai---gemini-38-flash-medium)
 9. [Bibliography & References](#bibliography--references)
-10. [Avaliação Detalhada de Custo de Produção (Production Cost Analysis)](#10-avaliação-detalhada-de-custo-de-produção-production-cost-analysis)
+10. [Comprehensive Production Cost Analysis](#10-comprehensive-production-cost-analysis)
 11. [License](#11-license)
 
 ---
@@ -177,19 +179,19 @@ Based on the physical connectivity map from [`custoStripBoard.ods`](docs/custoSt
 
 ---
 
-## Custom Stripboard Rev 1.1 / 1.1a — Arquitetura Modular & Especificações
+## Custom Stripboard Rev 1.1 / 1.1a — Modular Architecture & Specifications
 
-> **Documentação Multilíngue / Multilingual Engineering Documentation:**  
-> 🇧🇷 **Português:** [CUSTOM_STRIPBOARD_REV1.1_SPEC.md](file:///home/fred/C/fanControl/docs/CUSTOM_STRIPBOARD_REV1.1_SPEC.md) | 🇺🇸 **US-English:** [CUSTOM_STRIPBOARD_REV1.1_SPEC_EN.md](file:///home/fred/C/fanControl/docs/CUSTOM_STRIPBOARD_REV1.1_SPEC_EN.md) | 🇪🇸 **Español:** [CUSTOM_STRIPBOARD_REV1.1_SPEC_ES.md](file:///home/fred/C/fanControl/docs/CUSTOM_STRIPBOARD_REV1.1_SPEC_ES.md)
+> **Multilingual Engineering Documentation:**  
+> 🇺🇸 **US-English:** [CUSTOM_STRIPBOARD_REV1.1_SPEC_EN.md](file:///home/fred/C/fanControl/docs/CUSTOM_STRIPBOARD_REV1.1_SPEC_EN.md) | 🇧🇷 **Português:** [CUSTOM_STRIPBOARD_REV1.1_SPEC_PT.md](file:///home/fred/C/fanControl/docs/CUSTOM_STRIPBOARD_REV1.1_SPEC_PT.md) | 🇪🇸 **Español:** [CUSTOM_STRIPBOARD_REV1.1_SPEC_ES.md](file:///home/fred/C/fanControl/docs/CUSTOM_STRIPBOARD_REV1.1_SPEC_ES.md)
 
-A evolução do projeto de controle de arrefecimento e prototipagem originou a **Custom Stripboard Rev 1.1** e sua sub-revisão **Rev 1.1a**, uma plataforma modular expandida de prototipagem em formato padrão Eurocard/Vector desenvolvida no fluxo **Lepton-EDA** e **`pcb-rnd`**. A placa incorpora barramentos triplos de alimentação (+12V, +5V, GND), duas fontes independentes de força via DC barrel jacks afastadas nas extremidades, **duplo circuito regulador linear LM317** (TI Datasheet) no vão central, **dois módulos conversores step-down LM2596 verticais** na margem esquerda, um **borne terminal de parafusos KRE 10 vias 5.08mm com matriz de 3 pass-thrus** na borda direita, uma **área de prototipagem rápida tipo scratch-pad com 56 ilhas e microtrilhas raspáveis de 3 mil**, matriz central de prototipagem com headers de interconexão tipo sanduíche, e terminação direta em conector de borda (*card-edge connector*) industrial padrão 44 pinos (passo de $100\text{ mil}$ / $2.54\text{ mm}$), estritamente de face única (*single-sided* na camada inferior).
+The evolution of the cooling control and prototyping project gave rise to **Custom Stripboard Rev 1.1** and its sub-revision **Rev 1.1a**, an expanded modular prototyping platform in standard Eurocard/Vector plugboard format developed using the **Lepton-EDA** and **`pcb-rnd`** toolchain. The board integrates triple power rails (+12V, +5V, GND), two independent DC barrel power jacks positioned at the outer top edges, a **dual LM317 linear regulator circuit** (Texas Instruments datasheet) in the center top span, **two upright LM2596 step-down buck converter modules** on the left margin, a **10-way 5.08mm screw terminal block (KRE) with a 3-point pass-thru matrix** on the right margin, a **scratch-pad rapid prototyping area with 56 pads and 3 mil knife-scratchable microtraces**, a central prototyping matrix with sandwich interconnect headers, and direct termination into an industrial standard 44-pin card-edge connector ($100\text{ mil}$ / $2.54\text{ mm}$ pitch), strictly single-sided on the bottom solder layer.
 
 > [!IMPORTANT]
-> **Diretriz de Fabricação — Padrão Thru-Hole (THT) como Default Obrigatório**:
-> A montagem em tecnologia SMD é tratada como opção secundária. O **padrão DEFAULT de fabricação é 100% Through-Hole (furo passante metalizado)**. Todas as ilhas da matriz de tiras, pass-thrus do KRE, scratch-pad, conectores e reguladores utilizam furação metalizada com diâmetro externo $\ge 80.00\text{ mil}$ ($2.032\text{ mm}$), eliminando problemas de delaminação e viabilizando soldagem e retrabalho manual robustos.
+> **Manufacturing Directive — Through-Hole (THT) as the Mandatory Default**:  
+> Surface Mount Device (SMD) assembly is treated strictly as an optional alternative. The **MANDATORY DEFAULT manufacturing standard is 100% Through-Hole (plated through-hole / PTH)**. All prototyping matrix pads, terminal block pass-thrus, scratch-pad pads, connectors, and regulators utilize plated drill holes with an outer copper diameter $\ge 80.00\text{ mil}$ ($2.032\text{ mm}$), preventing trace delamination and enabling robust manual soldering and rework.
 
 ```
-  Custom Stripboard Rev 1.1 / Rev 1.1a (Vista Geral da Arquitetura Topológica):
+  Custom Stripboard Rev 1.1 / Rev 1.1a (Topological Architecture Overview):
   ┌────────────────────────────────────────────────────────────────────────────────────────┐
   │ [MH101]    [CONN117 DC JACK 1]   [LM317 #1]  [LM317 #2]   [CONN118 DC JACK 2]  [MH102] │
   │ M3 (200,200) X=800, Y=200       X=1400..1600 X=1900..2100  X=2400, Y=200    (3300,200)│
@@ -198,260 +200,260 @@ A evolução do projeto de controle de arrefecimento e prototipagem originou a *
   │ ───────────────────────────────── GND BRIDGE (Y=600 mil) ───────────────────────────── │
   │ [VR101]                                                    [TB101 KRE 10P 5.08mm]      │
   │ LM2596 Upright #1                                          X=3400, Y=600..2400 mil     │
-  │ 4x7 Pinos (200mil)                                         [CONN137..139 Pass-Thru]    │
-  │ Y=600..1200 mil                                            3 ilhas passantes por pino  │
-  │ VIN1+/- , OUT1+/-                                          10 redes: KRE_1..KRE_10     │
+  │ 4x7 Pins (200 mil)                                         [CONN137..139 Pass-Thru]    │
+  │ Y=600..1200 mil                                            3 pass-thru pads per pin    │
+  │ VIN1+/- , OUT1+/-                                          10 nets: KRE_1..KRE_10      │
   │                                                                                        │
-  │ [MH103] M3 Fixação Central                                 [MH104] M3 Ajustado         │
+  │ [MH103] Central M3 Mount                                   [MH104] Adjusted M3 Mount   │
   │ X=200, Y=2000 mil                                          X=3300, Y=2700 mil          │
-  │ (Espaço livre entre VR101 e VR102)                         (Folga KRE e Scratch-Pad)   │
+  │ (Midway clearance between VR101 & VR102)                   (Clearance to KRE & Scratch)│
   │                                                                                        │
   │ [VR102]                                                    [SCRATCH-PAD PROTO AREA]    │
-  │ LM2596 Upright #2                                          14 linhas x 4 colunas       │
-  │ 4x7 Pinos (200mil)                                         56 ilhas (Pad 90mil, Broca 35)
-  │ Y=2800..3400 mil                                           Microtrilhas de 3 mil       │
+  │ LM2596 Upright #2                                          14 rows x 4 columns         │
+  │ 4x7 Pins (200 mil)                                         56 pads (Pad 90mil, Drill 35)
+  │ Y=2800..3400 mil                                           3 mil microtraces           │
   │ VIN2+/- , OUT2+/-                                          X=3100..3400, Y=3000..4300  │
-  │                                                            Net comum: SCRATCHPAD       │
+  │                                                            Common net: SCRATCHPAD      │
   │ ────────────────────────────────────────────────────────────────────────────────────── │
-  │ 8x Barramentos Verticais de Alimentação (Trilhas Contínuas de 40 mil: GND/+5V/+12V)   │
-  │ ├── 58 Linhas (Rev 1.1) ou 64 Linhas (Rev 1.1a) Horizontais de Prototipagem (10 mil)  │
-  │ └── Seção de Interconexão em Sanduíche:                                                │
-  │     ├── Réguas Horizontais Superiores (SIP9N)                                          │
-  │     ├── Headers Centrais Dupla Barra (HEADER18 - J201 e J301, passo 100 mil)           │
-  │     │     └── Pontes de Interligação Vertical alargadas para 30 mil                    │
-  │     ├── Réguas Horizontais Inferiores (SIP9N)                                          │
-  │     └── Réguas Verticais Inferiores de Saída (SIP4N - Trilhas de 40 mil)               │
+  │ 8x Vertical Power Rails (Continuous 40 mil Traces: GND/+5V/+12V)                       │
+  │ ├── 58 Rows (Rev 1.1) or 64 Rows (Rev 1.1a) Horizontal Prototyping Strips (10 mil)    │
+  │ └── Sandwich Interconnect Section:                                                     │
+  │     ├── Upper Horizontal Strips (SIP9N)                                                │
+  │     ├── Dual-Row Center Headers (HEADER18 - J201 & J301, 100 mil pitch)                │
+  │     │     └── Vertical bridge traces widened to 30 mil                                 │
+  │     ├── Lower Horizontal Strips (SIP9N)                                                │
+  │     └── Bottom Vertical Output Strips (SIP4N - 40 mil traces)                          │
   │                                                                                        │
-  │ [MH105] ── Alinhamento Mecânico com a Última Linha de Ilhas ── [MH106]                 │
-  │ X=200, Y=4600 mil (Base do anel alinha rigorosamente com a base dos pads) X=3300 mil   │
+  │ [MH105] ── Mechanical Alignment with Bottom Pad Row ── [MH106]                         │
+  │ X=200, Y=4600 mil (Pad bottom edge strictly aligns with pad baseline) X=3300 mil       │
   │ ══════════════════════════════════════════════════════════════════════════════════════ │
-  │ Ombros Mecânicos de Encosto (Y = 4740 mil - degrau de 3.5" para 2.7" com chanfros 45°) │
+  │ Mechanical Stop Shoulders (Y = 4740 mil - 3.5" to 2.7" step with 45° chamfers)        │
   │       ┌────────────────────────────────────────────────────────────────────────┐       │
-  │       │ Jumpers de Solda Abertos (Open Solder Jumpers, Gap 13 mil, Trilhas 30m)│       │
+  │       │ Open Solder Jumpers (13 mil Gap, 30 mil Traces)                        │       │
   │       ├────────────────────────────────────────────────────────────────────────┤       │
-  │       │ Conector de Borda Single-Sided (Card Edge Tongue 44-Pin Standard):     │       │
-  │       │     ├── 26 Posições de Contato (Passo 100 mil / 2.54 mm)               │       │
-  │       │     ├── Face Única (Exclusivo na Camada de Solda Inferior / onsolder)  │       │
-  │       │     ├── Chave de Polarização Mecânica: Dedo 8 Omitido ("KEY")          │       │
-  │       │     └── Chanfros de Inserção a 45° nos Cantos Inferiores               │       │
+  │       │ Single-Sided Card Edge Connector (44-Pin Standard Tongue):             │       │
+  │       │     ├── 26 Contact Positions (100 mil / 2.54 mm pitch)                 │       │
+  │       │     ├── Single-Sided (Exclusively on Bottom Solder Layer / onsolder)   │       │
+  │       │     ├── Mechanical Polarizing Key: Finger 8 Omitted ("KEY")            │       │
+  │       │     └── 45° Insertion Lead-in Chamfers on Bottom Corners               │       │
   │       └────────────────────────────────────────────────────────────────────────┘       │
   └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-### 1. Especificações Físicas e Mecânicas
+### 1. Physical & Mechanical Specifications
 
-| Parâmetro | Valor em Mils | Valor em Milímetros (mm) | Descrição / Função |
+| Parameter | Value in Mils | Value in Millimeters (mm) | Description / Function |
 | :--- | :---: | :---: | :--- |
-| **Largura Total do Corpo** | $3500.00\text{ mil}$ | $88.90\text{ mm}$ | Largura estrutural da área de prototipagem |
-| **Comprimento Total da Placa** | $5050.00\text{ mil}$ | $128.27\text{ mm}$ | Comprimento do topo mecânico até a borda da lingueta |
-| **Largura da Lingueta de Borda** | $2700.00\text{ mil}$ | $68.58\text{ mm}$ | Largura de inserção do conector ($X = 400.00$ a $3100.00\text{ mil}$) |
-| **Profundidade de Inserção** | $310.00\text{ mil}$ | $7.87\text{ mm}$ | Extensão inserível da lingueta ($Y = 4740.00$ a $5050.00\text{ mil}$) |
-| **Ombros Mecânicos de Apoio** | $400.00\text{ mil}$ | $10.16\text{ mm}$ | Degraus em $Y = 4740\text{ mil}$ para encosto no soquete do conector |
-| **Chanfros de Inserção (Lead-in)** | $40.00\text{ mil} \times 45^\circ$ | $1.02\text{ mm} \times 45^\circ$ | Chanfros nos cantos inferiores para entrada suave no slot |
-| **Furos de Fixação (M3 Banhados)** | $126.00\text{ mil}$ (broca) | $3.20\text{ mm}$ | 6x furos (pad $240\text{ mil}$, clearance $40\text{ mil}$, alívio $300\text{ mil}$) |
-| **Posicionamento M3 Superior** | $(200, 200)$, $(3300, 200)$ | $(5.08, 5.08)$, $(83.82, 5.08)$ | Margens laterais superiores (`MH101` e `MH102`) |
-| **Posicionamento M3 Central** | $(200, 2000)$, $(3300, 2700)$ | $(5.08, 50.80)$, $(83.82, 68.58)$ | **`MH103` entre LM2596; `MH104` entre KRE e Scratch-pad** |
-| **Posicionamento M3 Inferior** | $(200, 4600)$, $(3300, 4600)$ | $(5.08, 116.84)$, $(83.82, 116.84)$ | **Alinhado com a base da última linha de ilhas** (`MH105`, `MH106`) |
+| **Total Body Width** | $3500.00\text{ mil}$ | $88.90\text{ mm}$ | Structural width of the prototyping area |
+| **Total Board Length** | $5050.00\text{ mil}$ | $128.27\text{ mm}$ | Overall length from top edge to tongue tip |
+| **Card-Edge Tongue Width** | $2700.00\text{ mil}$ | $68.58\text{ mm}$ | Connector insertion tongue ($X = 400.00$ to $3100.00\text{ mil}$) |
+| **Insertion Depth** | $310.00\text{ mil}$ | $7.87\text{ mm}$ | Insertable tongue reach ($Y = 4740.00$ to $5050.00\text{ mil}$) |
+| **Mechanical Stop Shoulders** | $400.00\text{ mil}$ | $10.16\text{ mm}$ | Lateral steps at $Y = 4740\text{ mil}$ resting against card-edge socket |
+| **Lead-in Chamfers** | $40.00\text{ mil} \times 45^\circ$ | $1.02\text{ mm} \times 45^\circ$ | Bottom corner bevels for smooth card-cage insertion |
+| **Plated M3 Mounting Holes** | $126.00\text{ mil}$ (drill) | $3.20\text{ mm}$ | 6x holes ($240\text{ mil}$ pad, $40\text{ mil}$ clearance, $300\text{ mil}$ keepout) |
+| **Top M3 Coordinates** | $(200, 200)$, $(3300, 200)$ | $(5.08, 5.08)$, $(83.82, 5.08)$ | Top perimeter corners (`MH101` and `MH102`) |
+| **Center M3 Coordinates** | $(200, 2000)$, $(3300, 2700)$ | $(5.08, 50.80)$, $(83.82, 68.58)$ | **`MH103` between LM2596 modules; `MH104` between KRE & Scratch-pad** |
+| **Bottom M3 Coordinates** | $(200, 4600)$, $(3300, 4600)$ | $(5.08, 116.84)$, $(83.82, 116.84)$ | **Aligned with pad baseline of bottom row** (`MH105`, `MH106`) |
 
 ---
 
-### 2. Subsistema de Força de Topo: Entradas DC Jack & Breakouts SIP3
+### 2. Top Power Subsystem: DC Barrel Jacks & Breakout SIP3 Headers
 
-Para acomodar os circuitos reguladores centrais e permitir dissipadores térmicos sem interferência, os conectores DC Barrel Jack 2.1mm $\times$ 5.5mm foram afastados para as laterais:
+To accommodate central linear regulators and heat sinks without mechanical interference, the dual 2.1mm $\times$ 5.5mm DC barrel jacks were relocated outward toward the edges:
 
-- **DC Jack 1 (`CONN117`):** Posicionado em $(X = 800.00\text{ mil}, Y = 200.00\text{ mil})$.
-  - Ao seu lado esquerdo, conector breakout SIP3 (`CONN119..121` em $X = 500, 600, 700\text{ mil}$, $Y = 200..400\text{ mil}$).
-  - Interligações roteadas exclusivamente com **trilhas de 40 mil (`Layer 6 "bottom"`)** para suportar correntes contínuas de até 5A.
-- **DC Jack 2 (`CONN118`):** Posicionado em $(X = 2400.00\text{ mil}, Y = 200.00\text{ mil})$.
-  - Ao seu lado direito, conector breakout SIP3 (`CONN122..124` em $X = 2800, 2900, 3000\text{ mil}$, $Y = 200..400\text{ mil}$).
-  - Interligações roteadas exclusivamente com **trilhas de 40 mil**.
+- **DC Jack 1 (`CONN117`):** Located at $(X = 800.00\text{ mil}, Y = 200.00\text{ mil})$.
+  - Dedicated 3-pin breakout SIP3 headers (`CONN119..121` at $X = 500, 600, 700\text{ mil}$, $Y = 200..400\text{ mil}$).
+  - Traces routed exclusively with **$40\text{ mil}$ copper (`Layer 6 "bottom"`)** for continuous current capacity up to 5A.
+- **DC Jack 2 (`CONN118`):** Located at $(X = 2400.00\text{ mil}, Y = 200.00\text{ mil})$.
+  - Dedicated 3-pin breakout SIP3 headers (`CONN122..124` at $X = 2800, 2900, 3000\text{ mil}$, $Y = 200..400\text{ mil}$).
+  - Traces routed exclusively with **$40\text{ mil}$ copper**.
 
 ---
 
-### 3. Duplo Regulador Linear LM317 (Datasheet TI, Página 1)
+### 3. Dual LM317 Linear Regulators (TI Datasheet, Page 1)
 
-No espaço central superior da placa ($X = 1400\text{ mil}$ a $X = 2100\text{ mil}$, $Y = 200..700\text{ mil}$), foram implementados dois circuitos reguladores independentes e completos, conforme o diagrama oficial do fabricante:
+In the upper-middle region ($X = 1400\text{ mil}$ to $X = 2100\text{ mil}$, $Y = 200..700\text{ mil}$), two independent, full-featured LM317 linear regulator circuits are implemented following the official manufacturer diagram:
 
 $$V_{OUT} = 1.25\,\text{V} \times \left(1 + \frac{R_2}{R_1}\right) + I_{ADJ} \times R_2$$
 
 ```
-                         CIRCUITO REGULADOR LM317 (Datasheet TI Página 1)
-                              ┌──────────────┐
-                  VIN o───────┤ 3 (VIN)      │
-                              │   LM317      │
-                    ┌─────────┤ 1 (ADJ)    2 ├──┬───────────────o VOUT
-                    │         └──────────────┘  │
-                    │               │           │
-                   [R2]            [R1 240Ω]   [C2 1.0µF]
-                    │ (Ajuste)      │           │
-                    │               └───────────┘
-                    │
-           GND o────┴───────────────────────────────────────────o GND (Comum)
-               (C1 0.1µF desacoplamento na entrada VIN)
+                         LM317 REGULATOR CIRCUIT (TI Datasheet Page 1)
+                               ┌──────────────┐
+                   VIN o───────┤ 3 (VIN)      │
+                               │   LM317      │
+                     ┌─────────┤ 1 (ADJ)    2 ├──┬───────────────o VOUT
+                     │         └──────────────┘  │
+                     │               │           │
+                    [R2]            [R1 240Ω]   [C2 1.0µF]
+                     │ (Adjust)      │           │
+                     │               └───────────┘
+                     │
+            GND o────┴───────────────────────────────────────────o GND (Common)
+                (C1 0.1µF input bypass decoupling cap)
 ```
 
-#### LM317 Circuito #1:
-- **CI Regulador `U101` (TO-220 Upright):** Pino 3 (VIN) em $(1400, 300)$, Pino 2 (VOUT) em $(1500, 300)$, Pino 1 (ADJ) em $(1600, 300)$.
-- **Capacitores Passantes:** $C_{101}$ ($0.1\,\mu\text{F}$ disco cerâmico) em $(1400, 400..600)$; $C_{102}$ ($1.0\,\mu\text{F}$ tântalo/eletrolítico) em $(1500, 400..600)$.
-- **Resistores Axiais:** $R_{101}$ ($240\,\Omega$, 1/4W) em $(1500..1600, 500)$; $R_{102}$ ($R_2$, resistor fixo ou trimpot) em $(1600, 400..600)$.
-- **Ilhas de Teste e Alimentação THT (Pads 80 mil):** `J101` (VIN1 em $1400, 200$), `J102` (VOUT1 em $1500, 200$), `J103` (GND em $1400, 700$).
+#### LM317 Circuit #1:
+- **IC Regulator `U101` (TO-220 Upright):** Pin 3 (VIN) at $(1400, 300)$, Pin 2 (VOUT) at $(1500, 300)$, Pin 1 (ADJ) at $(1600, 300)$.
+- **Through-Hole Capacitors:** $C_{101}$ ($0.1\,\mu\text{F}$ ceramic disc) at $(1400, 400..600)$; $C_{102}$ ($1.0\,\mu\text{F}$ tantalum/electrolytic) at $(1500, 400..600)$.
+- **Axial Resistors:** $R_{101}$ ($240\,\Omega$, 1/4W) at $(1500..1600, 500)$; $R_{102}$ ($R_2$, fixed or multi-turn trimpot) at $(1600, 400..600)$.
+- **THT Test & Power Pads (Pads $\ge 80\text{ mil}$):** `J101` (VIN1 at $1400, 200$), `J102` (VOUT1 at $1500, 200$), `J103` (GND at $1400, 700$).
 
-#### LM317 Circuito #2:
-- **CI Regulador `U102` (TO-220 Upright):** Pino 3 (VIN) em $(1900, 300)$, Pino 2 (VOUT) em $(2000, 300)$, Pino 1 (ADJ) em $(2100, 300)$.
-- **Capacitores Passantes:** $C_{103}$ ($0.1\,\mu\text{F}$) em $(1900, 400..600)$; $C_{104}$ ($1.0\,\mu\text{F}$) em $(2000, 400..600)$.
-- **Resistores Axiais:** $R_{103}$ ($240\,\Omega$) em $(2000..2100, 500)$; $R_{104}$ ($R_2$) em $(2100, 400..600)$.
-- **Ilhas de Teste e Alimentação THT (Pads 80 mil):** `J104` (VIN2 em $1900, 200$), `J105` (VOUT2 em $2000, 200$), `J106` (GND em $1900, 700$).
-- **Barramento de Terra Comum:** Trilha de cobre de $40\text{ mil}$ em $Y = 600\text{ mil}$ interligando o terra de ambos os circuitos reguladores.
-
----
-
-### 4. Margem Esquerda: Módulos Step-Down LM2596 Upright (`VR101`, `VR102`)
-
-Para conversão de alta eficiência de fontes chaveadas (ex: +12V para +5V ou tensões ajustáveis sob correntes de até 3A):
-- **Footprint:** $4 \times 7$ pinos em passo de $200.00\text{ mil}$ ($5.08\text{ mm}$), colunas $X = 100, 200, 300, 400\text{ mil}$.
-- **Módulo 1 (`VR101`):** $Y = 600.00\text{ mil}$ a $1200.00\text{ mil}$. Linhas 1-4 formam `VIN1+` ($X = 100$) e `VIN1-` ($X = 300$); Linhas 5-7 formam `OUT1+` ($X = 100$) e `OUT1-` ($X = 300$).
-- **Módulo 2 (`VR102`):** $Y = 2800.00\text{ mil}$ a $3400.00\text{ mil}$. Linhas 1-4 formam `VIN2+` e `VIN2-`; Linhas 5-7 formam `OUT2+` e `OUT2-`.
-- **Trilhas de Potência de $40\text{ mil}$:** Barramentos verticais de $40\text{ mil}$ unem os pinos em cada função elétrica.
-- **Posicionamento de `MH103`:** Posicionado estrategicamente em $(X = 200\text{ mil}, Y = 2000\text{ mil})$, ficando exatamente a meia distância entre `VR101` e `VR102`, com folga mecânica superior a $650\text{ mil}$ para o parafuso M3.
+#### LM317 Circuit #2:
+- **IC Regulator `U102` (TO-220 Upright):** Pin 3 (VIN) at $(1900, 300)$, Pin 2 (VOUT) at $(2000, 300)$, Pin 1 (ADJ) at $(2100, 300)$.
+- **Through-Hole Capacitors:** $C_{103}$ ($0.1\,\mu\text{F}$) at $(1900, 400..600)$; $C_{104}$ ($1.0\,\mu\text{F}$) at $(2000, 400..600)$.
+- **Axial Resistors:** $R_{103}$ ($240\,\Omega$) at $(2000..2100, 500)$; $R_{104}$ ($R_2$) at $(2100, 400..600)$.
+- **THT Test & Power Pads (Pads $\ge 80\text{ mil}$):** `J104` (VIN2 at $1900, 200$), `J105` (VOUT2 at $2000, 200$), `J106` (GND at $1900, 700$).
+- **Common Ground Bus:** A solid $40\text{ mil}$ copper trace at $Y = 600\text{ mil}$ connects the ground terminals of both regulator circuits.
 
 ---
 
-### 5. Margem Direita: Borne KRE 10 Vias 5.08mm & Matriz Pass-Thru (`TB101`)
+### 4. Left Margin: Dual Upright LM2596 Step-Down Modules (`VR101`, `VR102`)
 
-Na borda superior direita, entre os furos `MH102` e `MH104`:
-- **Conector Borne KRE 10P 5.08mm (`TB101`):** Pinos em $X = 3400.00\text{ mil}$, nas cotas $Y = [600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400]\text{ mil}$.
-- **Matriz Pass-Thru Horizontal de 3 Pontos:** Para cada pino do conector, estendem-se 3 ilhas passantes em direção ao centro da placa:
-  - `CONN137` em $X = 3300.00\text{ mil}$
-  - `CONN138` em $X = 3200.00\text{ mil}$
-  - `CONN139` em $X = 3100.00\text{ mil}$
-- **Trilhas de Cobre de $30\text{ mil}$:** Cada linha de 4 ilhas é unida por trilhas de $30\text{ mil}$, formando 10 redes elétricas isoladas (`KRE_1` a `KRE_10`).
-- **Folgas Mecânicas Seguras:**
-  - Acima ($Y = 600\text{ mil}$): Folga $>150\text{ mil}$ para o keepout do parafuso `MH102`.
-  - Abaixo ($Y = 2400\text{ mil}$): O corpo plástico do borne termina em $Y = 2500\text{ mil}$, proporcionando $80\text{ mil}$ de isolamento até o pad de `MH104` ($Y = 2700\text{ mil}$).
+For high-efficiency switching regulation (e.g., +12V to +5V or variable outputs up to 3A):
+- **Footprint:** $4 \times 7$ pin matrix at $200.00\text{ mil}$ ($5.08\text{ mm}$) pitch ($X = 100, 200, 300, 400\text{ mil}$).
+- **Module 1 (`VR101`):** $Y = 600.00\text{ mil}$ to $1200.00\text{ mil}$. Rows 1–4 form `VIN1+` ($X = 100$) and `VIN1-` ($X = 300$); Rows 5–7 form `OUT1+` ($X = 100$) and `OUT1-` ($X = 300$).
+- **Module 2 (`VR102`):** $Y = 2800.00\text{ mil}$ to $3400.00\text{ mil}$. Rows 1–4 form `VIN2+` and `VIN2-`; Rows 5–7 form `OUT2+` and `OUT2-`.
+- **$40\text{ mil}$ Power Traces:** Vertical $40\text{ mil}$ buses tie together the pins for each electrical net.
+- **Positioning of `MH103`:** Placed at $(X = 200\text{ mil}, Y = 2000\text{ mil})$, exactly midway between `VR101` and `VR102` with $>650\text{ mil}$ clearance to both modules.
 
 ---
 
-### 6. Margem Direita: Área de Prototipagem Rápida Scratch-Pad (56 Ilhas, 3 mil)
+### 5. Right Margin: 10-Way 5.08mm Screw Terminal Block & Pass-Thru Matrix (`TB101`)
 
-Na margem direita inferior, entre `MH104` e `MH106`:
-- **Matriz de Prototipagem:** 14 linhas $\times$ 4 colunas = **56 ilhas** ($X = 3100, 3200, 3300, 3400\text{ mil}$, $Y = 3000$ a $4300\text{ mil}$).
-- **Geometria dos Pads:** Pad de **$90.00\text{ mil}$**, broca passante de **$35.00\text{ mil}$**, máscara de **$96.00\text{ mil}$**.
-- **Gap de Cobre de $10\text{ mil}$:** Espaçamento entre pads de apenas **$10.00\text{ mil}$ ($0.254\text{ mm}$)**.
-- **Microtrilhas Raspáveis de $3\text{ mil}$ (Knife-Scratchable):**
-  - Todas as 56 ilhas pertencem à mesma rede elétrica inicial (`SCRATCHPAD`).
-  - As ilhas vizinhas são unidas por microtrilhas de **$3.00\text{ mil}$** na camada de cobre inferior.
-  - Podem ser facilmente seccionadas com estilete ou bisturi cirúrgico para criar ilhas isoladas ou pequenos barramentos personalizados.
-- **Caixa de Serigrafia:** Contorno retangular silkscreen delimitando a área com a legenda `"SCRATCH PAD"`.
-
----
-
-### 7. Diretriz de Fabricação: Padrão Thru-Hole (THT) Obrigatório & Pad Size $\ge 80\text{ mil}$
-
-- **Montagem THT como Regra:** A tecnologia de montagem SMD é opcional; o padrão default de engenharia do projeto é **100% Through-Hole (furo passante metalizado)**.
-- **Dimensão dos Pads Padronizada:** Todas as ilhas de solda que antes mediam $< 80\text{ mil}$ foram ampliadas para **$\ge 80.00\text{ mil}$** ($80\text{ mil}$ ou $90\text{ mil}$), com broca de $35\text{ mil}$ e máscara de $86\text{ mil}$.
-- **Conformidade Verificada nos Arquivos de Fabricação:**
-  - Pinos com diâmetro $< 80\text{ mil}$: **0**
-  - Pinos sem furo passante metalizado: **0** (apenas os dedos de conector de borda na lingueta são SMD na face inferior).
+On the upper right margin, between mounting holes `MH102` and `MH104`:
+- **Screw Terminal Block 10P 5.08mm (`TB101`):** Pins at $X = 3400.00\text{ mil}$, $Y = [600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400]\text{ mil}$.
+- **Horizontal 3-Point Pass-Thru Matrix:** For each screw terminal pin, 3 plated pass-thru holes extend horizontally inward:
+  - `CONN137` at $X = 3300.00\text{ mil}$
+  - `CONN138` at $X = 3200.00\text{ mil}$
+  - `CONN139` at $X = 3100.00\text{ mil}$
+- **$30\text{ mil}$ Copper Traces:** Each 4-hole row is tied together by $30\text{ mil}$ traces, creating 10 independent electrical nets (`KRE_1` to `KRE_10`).
+- **Mechanical Clearances:**
+  - Above ($Y = 600\text{ mil}$): $>150\text{ mil}$ clearance to the `MH102` screw keepout.
+  - Below ($Y = 2400\text{ mil}$): The terminal block plastic body terminates at $Y = 2500\text{ mil}$, providing $80\text{ mil}$ of isolation to the pad of `MH104` ($Y = 2700\text{ mil}$).
 
 ---
 
-### 8. Hierarquia de Largura de Trilhas de Cobre (Trace Width Hierarchy)
+### 6. Right Margin: Scratch-Pad Prototyping Area (56 Pads, 3 mil)
 
-| Categoria | Largura da Trilha | Clearance | Camada | Aplicação / Conexão |
+On the lower right margin, between `MH104` and `MH106`:
+- **Prototyping Matrix:** 14 rows $\times$ 4 columns = **56 pads** ($X = 3100, 3200, 3300, 3400\text{ mil}$, $Y = 3000$ to $4300\text{ mil}$).
+- **Pad Geometry:** **$90.00\text{ mil}$** pad diameter, **$35.00\text{ mil}$** drill hole, **$96.00\text{ mil}$** solder mask opening.
+- **$10\text{ mil}$ Copper Gap:** Spacing between adjacent pads is exactly **$10.00\text{ mil}$ ($0.254\text{ mm}$)**.
+- **Knife-Scratchable $3\text{ mil}$ Microtraces:**
+  - All 56 pads belong to a single initial common electrical net (`SCRATCHPAD`).
+  - Adjacent pads are bridged by **$3.00\text{ mil}$** microtraces on the bottom copper layer.
+  - Can be cleanly severed with a hobby knife or surgical scalpel to create isolated pads or custom grouped buses.
+- **Silkscreen Boundary:** Rectangular silkscreen outline enclosing the area with the label `"SCRATCH PAD"`.
+
+---
+
+### 7. Manufacturing Directive: Through-Hole (THT) Mandatory Default & Pad Size $\ge 80\text{ mil}$
+
+- **THT Assembly by Rule:** SMD technology is optional; the mandatory engineering default of the project is **100% Through-Hole (plated through-hole / PTH)**.
+- **Standardized Pad Dimensions:** All solder pads previously $< 80\text{ mil}$ were enlarged to **$\ge 80.00\text{ mil}$** ($80\text{ mil}$ or $90\text{ mil}$), with $35\text{ mil}$ drill hole and $86\text{ mil}$ solder mask opening.
+- **Verified Manufacturing Compliance:**
+  - Pins with pad diameter $< 80\text{ mil}$: **0**
+  - Pins without plated through-hole: **0** (only the card edge contact fingers on the tongue are single-sided SMD).
+
+---
+
+### 8. Standardized Copper Trace Width Hierarchy
+
+| Category | Trace Width | Clearance | Layer | Application / Circuit |
 | :--- | :---: | :---: | :---: | :--- |
-| **Potência & Barramentos** | **40 mil** ($1.016\text{ mm}$) | $20\text{ mil}$ | Bottom (Layer 6) | 8 barramentos verticais; trilhas dos Jacks DC; barramentos de potência dos módulos LM2596; alimentação/terra dos LM317; réguas verticais inferiores de 4 pinos |
-| **Pontes & Interconexões** | **30 mil** ($0.762\text{ mm}$) | $20\text{ mil}$ | Bottom (Layer 6) | Pontes verticais de 100 mil no `HEADER18`; trilhas dos jumpers de solda abertos; trilhas do Borne KRE para a matriz pass-thru |
-| **Feedback e Ajuste** | **20 mil** ($0.508\text{ mm}$) | $20\text{ mil}$ | Bottom (Layer 6) | Linhas do pino 1 (ADJ) dos reguladores LM317 até resistores $R_1$ e $R_2$ |
-| **Trilhas de Prototipagem** | **10 mil** ($0.254\text{ mm}$) | $20\text{ mil}$ | Bottom (Layer 6) | Trilhas horizontais das 58 linhas (Rev 1.1) ou 64 linhas (Rev 1.1a) |
-| **Microtrilhas Raspáveis** | **3 mil** ($0.076\text{ mm}$) | $10\text{ mil}$ | Bottom (Layer 6) | Malha de união da área de prototipagem rápida *scratch-pad* |
+| **Power & Primary Rails** | **40 mil** ($1.016\text{ mm}$) | $20\text{ mil}$ | Bottom (Layer 6) | 8 vertical power rails; DC Jack feed lines; LM2596 power buses; LM317 power/GND rails; bottom 4-pin vertical output strips |
+| **Bridges & Interconnects** | **30 mil** ($0.762\text{ mm}$) | $20\text{ mil}$ | Bottom (Layer 6) | Vertical 100 mil bridge traces in `HEADER18`; open solder jumper feeds; terminal block KRE pass-thru lines |
+| **Feedback & Adjust** | **20 mil** ($0.508\text{ mm}$) | $20\text{ mil}$ | Bottom (Layer 6) | LM317 Pin 1 (ADJ) lines to resistors $R_1$ and $R_2$ |
+| **Prototyping Strips** | **10 mil** ($0.254\text{ mm}$) | $20\text{ mil}$ | Bottom (Layer 6) | Horizontal strip lines for 58 rows (Rev 1.1) or 64 rows (Rev 1.1a) |
+| **Scratchable Microtraces** | **3 mil** ($0.076\text{ mm}$) | $10\text{ mil}$ | Bottom (Layer 6) | Interconnection mesh in the scratch-pad rapid prototyping area |
 
 ---
 
-### 9. Matriz de Prototipagem & Seção de Interconexão em Sanduíche
+### 9. Prototyping Matrix & Sandwich Interconnect Section
 
-1. **8 Barramentos Verticais Contínuos (Power Rails):**
-   - 40 furos contínuos cada ($Y = 800\text{ mil}$ a $Y = 4700\text{ mil}$), divididos em pares de conectores `SIP20N` interligados por trilhas de 40 mil.
-   - Posições em X: $500, 600, 700\text{ mil}$ (GND, +5V, +12V Banco Esquerdo); $1700, 1800\text{ mil}$ (Blindagem Central); $2800, 2900, 3000\text{ mil}$ (GND, +5V, +12V Banco Direito).
-2. **Linhas Horizontais de Prototipagem:**
-   - Banco Esquerdo ($X = 800$ a $1600\text{ mil}$, 9 pinos cada).
-   - Banco Direito ($X = 1900$ a $2700\text{ mil}$, 9 pinos cada).
-   - Interligadas com trilhas de **10 mil**.
-3. **Seção de Interconexão em Sanduíche:**
-   - Headers centrais dupla barra de 18 pinos (`HEADER18`, 2x9 pinos, passo $100\text{ mil}$): `J201` e `J301`.
-   - Ensanduichados por réguas `SIP9N` com pontes verticais alargadas para **30 mil**.
-   - Réguas verticais inferiores de 4 pinos (`SIP4N`, $Y = 4400..4700\text{ mil}$) com trilhas de **40 mil**.
-
----
-
-### 10. Conector de Borda Single-Sided (Card Edge Tongue 44-Pin Standard)
-
-- **Arquitetura Estritamente Single-Sided:** Todos os 26 dedos de contato residem exclusivamente na face inferior (`Layer 6 "bottom"` / `onsolder`). A face superior é laminado FR4 virgem e isolado.
-- **Dimensões dos Dedos:** $65\text{ mil} \times 230\text{ mil}$ ($1.65\text{ mm} \times 5.84\text{ mm}$), centrados em $Y = 4925\text{ mil}$ (alcance de $Y = 4810$ a $5040\text{ mil}$).
-- **Ombros e Chanfros:** Degraus de apoio mecânico em $Y = 4740\text{ mil}$ e chanfros de $40\text{ mil} \times 45^\circ$ nos cantos.
+1. **8 Continuous Vertical Power Rails:**
+   - 40 holes each ($Y = 800\text{ mil}$ to $Y = 4700\text{ mil}$), formed by pairs of `SIP20N` connectors joined with continuous $40\text{ mil}$ copper traces.
+   - X Positions: $500, 600, 700\text{ mil}$ (GND, +5V, +12V Left Bank); $1700, 1800\text{ mil}$ (Center Shield); $2800, 2900, 3000\text{ mil}$ (GND, +5V, +12V Right Bank).
+2. **Horizontal Prototyping Strip Rows:**
+   - Left Bank ($X = 800$ to $1600\text{ mil}$, 9 pins each).
+   - Right Bank ($X = 1900$ to $2700\text{ mil}$, 9 pins each).
+   - Interconnected with **$10\text{ mil}$** traces.
+3. **Sandwich Interconnect Section:**
+   - Dual-row 18-pin center headers (`HEADER18`, 2x9 pins, $100\text{ mil}$ pitch): `J201` and `J301`.
+   - Sandwiched by `SIP9N` strips with vertical bridge traces widened to **$30\text{ mil}$**.
+   - Bottom 4-pin vertical output strips (`SIP4N`, $Y = 4400..4700\text{ mil}$) with **$40\text{ mil}$** traces.
 
 ---
 
-### 11. Chave de Polarização Mecânica (Keying na Coluna 8)
+### 10. Single-Sided Card Edge Connector (44-Pin Standard Tongue)
 
-- **Omissão do Contato na Coluna 8:** O dedo `EF8` em $X = 1200\text{ mil}$ e seu solder jumper foram removidos.
-- **Indicação em Serigrafia:** Legenda `"KEY"` gravada em $X = 1160\text{ mil}, Y = 4725\text{ mil}$ para inserção de chaveta plástica no soquete do backplane.
-
----
-
-### 12. Jumpers de Solda Abertos (Open Solder Jumpers)
-
-- **Localização:** Entre a base da matriz ($Y = 4700\text{ mil}$) e o início dos dedos de borda ($Y = 4810\text{ mil}$).
-- **Pads SMD:** Dois pads de $50\text{ mil} \times 30\text{ mil}$ com gap aberto de **$13\text{ mil}$ ($0.33\text{ mm}$)**.
-- **Operação:** Aberto por default. Uma simples gota de estanho fecha o contato com o dedo de borda desejado.
+- **Strictly Single-Sided Architecture:** All 26 contact fingers reside exclusively on the bottom solder layer (`Layer 6 "bottom"` / `onsolder`). The top side is virgin, unclad FR4 laminate.
+- **Finger Dimensions:** $65\text{ mil} \times 230\text{ mil}$ ($1.65\text{ mm} \times 5.84\text{ mm}$), centered at $Y = 4925\text{ mil}$ (span of $Y = 4810$ to $5040\text{ mil}$).
+- **Shoulders & Chamfers:** Mechanical stop shoulders at $Y = 4740\text{ mil}$ and $40\text{ mil} \times 45^\circ$ lead-in corner chamfers.
 
 ---
 
-### 13. Furos de Fixação Mecânica M3, Keepouts e Alinhamento
+### 11. Mechanical Polarizing Key (Keying at Finger 8)
 
-- **Dimensões:** Broca $126\text{ mil}$ ($3.20\text{ mm}$), anel $240\text{ mil}$, keepout de serigrafia e alívio de $300\text{ mil}$ ($7.62\text{ mm}$).
-- **Alinhamento dos Furos Inferiores (`MH105`, `MH106`):** Posicionados em $Y = 4600\text{ mil}$, a borda inferior do anel de cobre ($Y = 4720\text{ mil}$) alinha-se perfeitamente com a base da última linha de ilhas ($Y = 4728\text{ mil}$), mantendo $140\text{ mil}$ de folga dos ombros da lingueta.
-- **Keepouts Validados:** `MH103` em $Y = 2000\text{ mil}$ (livre de `VR101` e `VR102`); `MH104` em $Y = 2700\text{ mil}$ (livre de `TB101` e do *scratch-pad*).
-
----
-
-### 14. Serigrafia e Identificação Visual
-
-- Logotipos: `"CUSTOM STRIPBOARD REV 1.1"` e `"CUSTOM STRIPBOARD REV 1.1a"` na margem direita.
-- Legendas de Força: `"PWR JACK 1"`, `"PWR JACK 2"`, `"J1 PWR OUT"`, `"J2 PWR OUT"`, `"LM317 #1"`, `"LM317 #2"`, `"VIN"`, `"VOUT"`, `"GND"`.
-- Legendas de Conectores: `"LM2596 VR101"`, `"LM2596 VR102"`, `"KRE 10P"`, `"SCRATCH PAD"`, `"KEY"`.
+- **Contact Omission at Finger 8:** Contact finger `EF8` at $X = 1200\text{ mil}$ and its solder jumper have been omitted.
+- **Silkscreen Identification:** Silkscreen label `"KEY"` printed at $X = 1160\text{ mil}, Y = 4725\text{ mil}$ for inserting a plastic polarizing key into the backplane socket.
 
 ---
 
-### 15. Arquivos EDA e Instruções de Compilação
+### 12. Open Solder Jumpers
 
-Todos os arquivos residem no diretório [`lepton/`](file:///home/fred/C/fanControl/lepton/):
-- **Documento Técnico de Especificação Completa:** [`docs/CUSTOM_STRIPBOARD_REV1.1_SPEC.md`](file:///home/fred/C/fanControl/docs/CUSTOM_STRIPBOARD_REV1.1_SPEC.md)
-- **Script Gerador de Layout:** [`layout_stripboards.py`](file:///home/fred/C/fanControl/lepton/layout_stripboards.py)
+- **Location:** Between the bottom of the matrix ($Y = 4700\text{ mil}$) and the start of the card edge fingers ($Y = 4810\text{ mil}$).
+- **SMD Pads:** Two $50\text{ mil} \times 30\text{ mil}$ pads separated by an open isolation gap of **$13\text{ mil}$ ($0.33\text{ mm}$)**.
+- **Operation:** Open by default. A drop of solder easily bridges the jumper to connect the desired strip signal to the card edge finger.
+
+---
+
+### 13. M3 Mounting Holes, Keepouts & Alignment
+
+- **Dimensions:** $126\text{ mil}$ ($3.20\text{ mm}$) drill, $240\text{ mil}$ copper pad ring, $300\text{ mil}$ ($7.62\text{ mm}$) silkscreen keepout and head relief.
+- **Bottom Hole Alignment (`MH105`, `MH106`):** Located at $Y = 4600\text{ mil}$, the bottom edge of the copper pad ring ($Y = 4720\text{ mil}$) aligns strictly with the baseline of the bottom pad row ($Y = 4728\text{ mil}$), preserving $140\text{ mil}$ clearance to the tongue shoulders.
+- **Validated Keepouts:** `MH103` at $Y = 2000\text{ mil}$ (clear of `VR101` and `VR102`); `MH104` at $Y = 2700\text{ mil}$ (clear of `TB101` and scratch-pad).
+
+---
+
+### 14. Silkscreen Legend & Visual Identification
+
+- Logos: `"CUSTOM STRIPBOARD REV 1.1"` and `"CUSTOM STRIPBOARD REV 1.1a"` on the right margin.
+- Power Legends: `"PWR JACK 1"`, `"PWR JACK 2"`, `"J1 PWR OUT"`, `"J2 PWR OUT"`, `"LM317 #1"`, `"LM317 #2"`, `"VIN"`, `"VOUT"`, `"GND"`.
+- Connector Legends: `"LM2596 VR101"`, `"LM2596 VR102"`, `"KRE 10P"`, `"SCRATCH PAD"`, `"KEY"`.
+
+---
+
+### 15. EDA Source Files & Build Instructions
+
+All files reside in the [`lepton/`](file:///home/fred/C/fanControl/lepton/) directory:
+- **Comprehensive Technical Specification:** [`docs/CUSTOM_STRIPBOARD_REV1.1_SPEC_EN.md`](file:///home/fred/C/fanControl/docs/CUSTOM_STRIPBOARD_REV1.1_SPEC_EN.md)
+- **Layout Synthesizer Script:** [`layout_stripboards.py`](file:///home/fred/C/fanControl/lepton/layout_stripboards.py)
 - **Rev 1.1a:**
-  - Layout PCB: [`stripboard_rev1.1a.pcb`](file:///home/fred/C/fanControl/lepton/rev1.1a/stripboard_rev1.1a.pcb)
-  - Esquemático: [`centro.sch`](file:///home/fred/C/fanControl/lepton/rev1.1a/centro.sch) | [centro.png](file:///home/fred/C/fanControl/lepton/rev1.1a/centro.png)
-  - Previews 300 DPI: [Topo (Componentes)](file:///home/fred/C/fanControl/lepton/rev1.1a/stripboard_rev1.1a_preview_300dpi.png) | [Fundo (Cobre e Dedos)](file:///home/fred/C/fanControl/lepton/rev1.1a/stripboard_rev1.1a_bottom_preview_300dpi.png)
+  - PCB Layout: [`stripboard_rev1.1a.pcb`](file:///home/fred/C/fanControl/lepton/rev1.1a/stripboard_rev1.1a.pcb)
+  - Schematic: [`centro.sch`](file:///home/fred/C/fanControl/lepton/rev1.1a/centro.sch) | [centro.png](file:///home/fred/C/fanControl/lepton/rev1.1a/centro.png)
+  - 300 DPI Previews: [Top (Components)](file:///home/fred/C/fanControl/lepton/rev1.1a/stripboard_rev1.1a_preview_300dpi.png) | [Bottom (Copper & Fingers)](file:///home/fred/C/fanControl/lepton/rev1.1a/stripboard_rev1.1a_bottom_preview_300dpi.png)
 - **Rev 1.1:**
-  - Layout PCB: [`stripboard_rev1.1.pcb`](file:///home/fred/C/fanControl/lepton/rev1.1/stripboard_rev1.1.pcb)
-  - Esquemático: [`centro.sch`](file:///home/fred/C/fanControl/lepton/rev1.1/centro.sch) | [centro.png](file:///home/fred/C/fanControl/lepton/rev1.1/centro.png)
-  - Previews 300 DPI: [Topo (Componentes)](file:///home/fred/C/fanControl/lepton/rev1.1/stripboard_rev1.1_preview_300dpi.png) | [Fundo (Cobre e Dedos)](file:///home/fred/C/fanControl/lepton/rev1.1/stripboard_rev1.1_bottom_preview_300dpi.png)
+  - PCB Layout: [`stripboard_rev1.1.pcb`](file:///home/fred/C/fanControl/lepton/rev1.1/stripboard_rev1.1.pcb)
+  - Schematic: [`centro.sch`](file:///home/fred/C/fanControl/lepton/rev1.1/centro.sch) | [centro.png](file:///home/fred/C/fanControl/lepton/rev1.1/centro.png)
+  - 300 DPI Previews: [Top (Components)](file:///home/fred/C/fanControl/lepton/rev1.1/stripboard_rev1.1_preview_300dpi.png) | [Bottom (Copper & Fingers)](file:///home/fred/C/fanControl/lepton/rev1.1/stripboard_rev1.1_bottom_preview_300dpi.png)
 
-#### Comandos de Regeneração:
+#### Regeneration Command:
 ```bash
-# Compilar layouts, atualizar netlists e exportar imagens 300 DPI:
+# Compile layouts, synchronize netlists, and export 300 DPI preview renders:
 python3 lepton/layout_stripboards.py
 ```
 
 ---
 
-### 16. Sub-revisão 1.1a — Otimização do Sanduíche e 32 Linhas Contínuas
+### 16. Sub-revision 1.1a — Sandwich Shift & 32 Continuous Rows
 
-Na sub-revisão **Rev 1.1a**:
-1. **Deslocamento do Sanduíche (+200 mil para baixo):** Régua superior em $Y = 4000\text{ mil}$, header central em $Y = 4100..4200\text{ mil}$, e régua inferior em $Y = 4300\text{ mil}$.
-2. **Fechamento da Lacuna Inferior:** A régua inferior em $Y = 4300\text{ mil}$ alinha-se a exatamente $100\text{ mil}$ das réguas verticais de saída em $Y = 4400\text{ mil}$.
-3. **Preenchimento das Linhas 30, 31 e 32:** As cotas $Y = 3700, 3800, 3900\text{ mil}$ foram preenchidas com réguas horizontais de 9 pinos (`CONN241..243` e `CONN341..343`), totalizando **32 linhas contínuas por banco** (**64 tiras horizontais de 9 pinos** no total).
+In sub-revision **Rev 1.1a**:
+1. **Sandwich Downward Shift (+200 mil):** Upper strip at $Y = 4000\text{ mil}$, center header at $Y = 4100..4200\text{ mil}$, and lower strip at $Y = 4300\text{ mil}$.
+2. **Closing the Lower Gap:** The lower strip at $Y = 4300\text{ mil}$ aligns at exactly $100\text{ mil}$ from the bottom vertical output strips at $Y = 4400\text{ mil}$.
+3. **Filling Rows 30, 31, and 32:** Coordinates $Y = 3700, 3800, 3900\text{ mil}$ are fully populated with 9-pin horizontal strips (`CONN241..243` and `CONN341..343`), yielding **32 continuous rows per bank** (**64 horizontal 9-pin strips** in total).
 
 ---
 
@@ -574,179 +576,201 @@ sudo systemctl status fancontrol.service
 
 ---
 
-## 8. Assisted by AI - Gemini 3.8 Flash Medius
+## 8. Assisted by AI - Gemini 3.8 Flash Medium
 
 > [!NOTE]
-> **Identificação Oficial de Desenvolvimento:**  
+> **Official Development Attribution:**  
 > *"projeto usando lepton-eda/pcb-rnd assistido com IA-Gemini-3.8-Flash-Medium"*
 
-Este projeto foi totalmente concebido, projetado, codificado, depurado e documentado de ponta a ponta com a assistência interativa e autônoma do modelo **Google DeepMind Gemini 3.8 Flash (Medium)**.
+This project was conceived, designed, coded, debugged, and documented end-to-end with the interactive and autonomous assistance of the **Google DeepMind Gemini 3.8 Flash (Medium)** model.
 
-### Registro Detalhado de Recursos e Iterações
+### Detailed Record of Resources and Iterations
 
-| Métrica | Quantidade / Escopo | Descrição das Operações |
+| Metric | Quantity / Scope | Operations Description |
 | :--- | :---: | :--- |
-| **Modelo de IA** | `Gemini 3.8 Flash (Medium)` | Modelo de raciocínio multimodal de alta velocidade e precisão |
-| **Iterações com Usuário (Turns)** | **17 turnos de diálogo** | Da concepção inicial da protoboard até a revisão e layout final Rev 1.1 / Rev 1.1a |
-| **Execuções de Ferramental (Tool Calls)** | **413 invocações de ferramentas** | Operações automatizadas de compilação, inspeção, edição e validação EDA |
-| • `run_command` | **290 chamadas** | Execução de shell bash, compiladores C/AVR, scripts Python, ferramentas Lepton-EDA e `pcb-rnd` |
-| • `edit_file` | **42 chamadas** | Edições cirúrgicas e contíguas de código-fonte, layout algorítmico e documentação |
-| • `manage_task` | **28 chamadas** | Gerenciamento de processos em background e renderizações gráficas pesadas |
-| • `read_file` | **26 chamadas** | Leitura e verificação de integridade de netlists, esquemáticos e tabelas |
-| • `search_web` | **16 chamadas** | Consulta de datasheets (TI LM317, WCH CH340, ULN2003, Sullins, Vector, etc.) |
-| • `write_file` | **9 chamadas** | Criação de novos scripts geradores, especificações técnicas completas e Makefiles |
-| • `ask_question` | **2 chamadas** | Alinhamento e esclarecimento direto de requisitos com o usuário |
-| **Código Gerado** | **~5.200+ linhas de código** | Firmware AVR C puro, Daemon Linux C, módulo Kernel hwmon, gerador paramétrico PCB, Makefiles e documentação |
-| **Gráficos e Previews Gerados** | **14 artefatos gráficos** | Esquemas Lepton-EDA (.png), PCBs topo/fundo 300 DPI, gabaritos 1:1 (.svg, .png, .pdf) |
+| **AI Model** | `Gemini 3.8 Flash (Medium)` | High-speed, high-precision multimodal reasoning model |
+| **User Dialog Iterations (Turns)** | **17 dialog turns** | From initial protoboard concept to final Rev 1.1 / Rev 1.1a layout |
+| **Tool Invocations (Tool Calls)** | **413 tool calls** | Automated build, inspection, editing, and EDA validation operations |
+| • `run_command` | **290 calls** | Bash shell execution, C/AVR compilers, Python scripts, Lepton-EDA & `pcb-rnd` tools |
+| • `edit_file` | **42 calls** | Surgical source code edits, algorithmic layout generation, documentation updates |
+| • `manage_task` | **28 calls** | Background process management and heavy graphics renders |
+| • `read_file` | **26 calls** | Reading and integrity verification of netlists, schematics, and tables |
+| • `search_web` | **16 calls** | Datasheet consulting (TI LM317, WCH CH340, ULN2003, Sullins, Vector, etc.) |
+| • `write_file` | **9 calls** | Creation of generator scripts, technical specifications, and Makefiles |
+| • `ask_question` | **2 calls** | Requirement clarifications and design decisions directly with the user |
+| **Generated Code** | **~5,200+ lines of code** | Pure AVR C firmware, Linux daemon C, hwmon kernel driver, parametric PCB generator, Makefiles |
+| **Generated Graphics & Previews** | **14 graphic artifacts** | Lepton-EDA schematics (.png), 300 DPI top/bottom PCBs, 1:1 templates (.svg, .png, .pdf) |
 
-### Inventário do Ferramental Utilizado
+### Tool Inventory & Software Stack
 
-1. **Suíte EDA & Layout:**
-   - **`lepton-schematic` / `lepton-cli`:** Captura e exportação vetorial/rasterizada de esquemas elétricos em alta resolução.
-   - **`lepton-netlist`:** Extração automatizada de netlists no formato PCB gEDA/pcb-rnd.
-   - **`pcb-rnd`:** CAD de circuito impresso com motor de renderização fotográfica de alta definição (`--photo-mode --dpi 300`) e roteamento por script.
-2. **Compiladores e Toolchains:**
-   - **Host Linux:** `gcc` 14.2.0 (compilação do daemon CLI e leitor `/sys/class/hwmon`).
-   - **Cross-Compiler Microcontrolador:** `avr-gcc` 14.2.0 (`-Os -std=gnu99 -mmcu=atmega328p -DF_CPU=16000000UL`), `avr-objcopy`, `avr-size` (consumo de Flash: 6.494 bytes, SRAM: 497 bytes).
-   - **Gravador:** `avrdude` (protocolo STK500v1 via conversor CH340 /dev/ttyUSB0).
-3. **Ambiente de Scripting e Algoritmos:**
+1. **EDA & Layout Suite:**
+   - **`lepton-schematic` / `lepton-cli`:** Vector and raster capture of high-resolution schematics.
+   - **`lepton-netlist`:** Automated netlist extraction in gEDA/pcb-rnd format.
+   - **`pcb-rnd`:** Printed circuit CAD with high-resolution photographic rendering (`--photo-mode --dpi 300`) and scriptable routing.
+2. **Compilers & Toolchains:**
+   - **Host Linux:** `gcc` 14.2.0 (compilation of CLI daemon and `/sys/class/hwmon` reader).
+   - **Microcontroller Cross-Compiler:** `avr-gcc` 14.2.0 (`-Os -std=gnu99 -mmcu=atmega328p -DF_CPU=16000000UL`), `avr-objcopy`, `avr-size` (Flash consumption: 6,494 bytes, SRAM: 497 bytes).
+   - **Programmer:** `avrdude` (STK500v1 protocol via CH340 converter at `/dev/ttyUSB0`).
+3. **Scripting & Algorithmic Environment:**
    - **Python 3.12 / 3.13:**
-     - `layout_stripboards.py`: Sintetizador paramétrico das placas Rev 1.0, Rev 1.1 e Rev 1.1a, calculando coordenadas, pads, trilhas de cobre, furos M3 e serigrafia.
-     - `generate_templates.py`: Gerador de gabaritos físicos de corte e furação em escala 1:1.
-     - Scripts de auditoria automatizada de pads (espessura $\ge 80\text{ mil}$ e furação passante).
-4. **Vetorização e Processamento Gráfico:**
-   - **`reportlab`:** Síntese de canvas PDF com calibração métrica para impressão A4 sem distorção.
-   - **`inkscape`:** Renderizador headless de SVGs para bitmaps rasterizados de 300 DPI.
-   - **`pdftoppm`:** Utilitário Poppler para inspeção visual e conferência de gabaritos.
+     - `layout_stripboards.py`: Parametric synthesizer for Rev 1.0, Rev 1.1, and Rev 1.1a PCBs, calculating coordinates, pads, copper traces, M3 holes, and silkscreen.
+     - `generate_templates.py`: Physical 1:1 scale cutting and drilling template generator.
+     - Automated pad audit scripts ($\ge 80\text{ mil}$ outer diameter and plated drill holes).
+4. **Vectorization & Graphic Processing:**
+   - **`reportlab`:** PDF canvas synthesis with true metric calibration for unscaled A4 printing.
+   - **`inkscape`:** Headless SVG rasterizer for 300 DPI bitmaps.
+   - **`pdftoppm`:** Poppler utility for visual inspection and verification of templates.
 
 ---
 
 ## 9. Bibliography & References
 
-### 1. Projetos de Referência & Comunidade
+### 1. Reference Projects & Community
 - **pnjorge (Paulo Nogueira / F5VMJ):** *"Silent Running With This Dual Fan Controller"* (Hackster.io, 2021).  
-  Artigo e projeto de referência sobre curvas térmicas dinâmicas, filtragem de pulsos de tacômetro e modos failsafe com ATmega328P.  
+  Reference project and design notes on dynamic fan curves, tachometer pulse interrupt capture, and failsafe modes with ATmega328P.  
   [https://www.hackster.io/pnjorge/silent-running-with-this-dual-fan-controller-0accb8](https://www.hackster.io/pnjorge/silent-running-with-this-dual-fan-controller-0accb8)
 - **pnjorge:** *Cooler-Fan-Controller Hardware & Firmware Repository* (GitHub).  
   [https://github.com/pnjorge/Cooler-Fan-Controller](https://github.com/pnjorge/Cooler-Fan-Controller)
 
-### 2. Componentes de Hardware & Datasheets Oficiais
+### 2. Hardware Components & Official Datasheets
 - **Texas Instruments LM317 3-Terminal Adjustable Regulator:**  
-  *LM317 3-Terminal Adjustable Regulator* (Datasheet SNVS774P). Circuito padrão de aplicação da página 1 ($1.25\text{V} - 37\text{V}$, $1.5\text{A}$, $R_1 = 240\,\Omega$, $C_1 = 0.1\,\mu\text{F}$, $C_2 = 1.0\,\mu\text{F}$).  
-  PDF Oficial: [https://www.ti.com/lit/ds/symlink/lm317.pdf](https://www.ti.com/lit/ds/symlink/lm317.pdf)
+  *LM317 3-Terminal Adjustable Regulator* (Datasheet SNVS774P). Standard application circuit on page 1 ($1.25\text{V} - 37\text{V}$, $1.5\text{A}$, $R_1 = 240\,\Omega$, $C_1 = 0.1\,\mu\text{F}$, $C_2 = 1.0\,\mu\text{F}$).  
+  Official PDF: [https://www.ti.com/lit/ds/symlink/lm317.pdf](https://www.ti.com/lit/ds/symlink/lm317.pdf)
 - **Texas Instruments / STMicroelectronics / Allegro ULN2003A & ULN7003A:**  
-  *Seven Darlington Arrays* (Datasheet SLRS027P). Matriz de transistores Darlington com diodos de supressão indutiva integrados no pino COM.  
+  *Seven Darlington Arrays* (Datasheet SLRS027P). High-voltage, high-current Darlington transistor array with internal inductive clamp diodes tied to COM.  
   [https://www.ti.com/lit/ds/symlink/uln2003a.pdf](https://www.ti.com/lit/ds/symlink/uln2003a.pdf)
 - **Microchip / Atmel ATmega328P-PU:**  
-  *8-bit AVR Microcontroller with 32K Bytes In-System Programmable Flash* (Datasheet DS40002061B / Atmel-8271). Registradores de PWM (Timer 1 e 2), interrupções de tacômetro (INT0/PCINT) e USART0 hardware.  
+  *8-bit AVR Microcontroller with 32K Bytes In-System Programmable Flash* (Datasheet DS40002061B / Atmel-8271). Hardware PWM registers (Timers 1 & 2), external interrupts (INT0 / PCINT), and hardware USART0.  
   [https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)
 - **LM2596 Step-Down DC-DC Switching Regulator Module:**  
-  Módulo conversor buck chaveado 150 kHz 3A em configuração vertical (upright $4 \times 7$ pinos, passo de 200 mil).
-- **Conector Borne KRE 10 Vias 5.08mm (ZB128 14mm):**  
-  Terminal block de parafusos para circuito impresso, passo 5.08mm (0.2"), 10 posições, isolação 300V / 16A, altura 14mm.
+  Monolithic 150 kHz 3A step-down switching buck converter in vertical upright module form ($4 \times 7$ pins, 200 mil pitch).
+- **10-Way 5.08mm Screw Terminal Block (ZB128 14mm):**  
+  Screw clamp terminal block for PCB, 5.08mm (0.2") pitch, 10 positions, 300V / 16A dielectric rating, 14mm body height.
 - **WCH (Jiangsu Qinheng Co.): CH340 USB-to-Serial TTL Converter:**  
-  Módulo de 6 pinos (DTR, RXD, TXD, VCC, CTS, GND) com níveis lógicos selecionáveis 5V/3.3V.  
+  6-pin module (DTR, RXD, TXD, VCC, CTS, GND) with selectable 5V/3.3V logic levels.  
   [https://www.wch-ic.com/products/CH340.html](https://www.wch-ic.com/products/CH340.html)
 - **ARCTIC P8 Black (80mm Pressure-optimised Fan):**  
   ARCTIC GmbH — Product Specification Sheet (SKU: ACFAN00147A). 12V DC, 0.14A, 3000 RPM, 3-Pin.  
   [https://www.arctic.de/media/9a/83/08/1697784936/Spec_Sheet_P8_BLACK_EN.pdf](https://www.arctic.de/media/9a/83/08/1697784936/Spec_Sheet_P8_BLACK_EN.pdf)
 - **Akasa 90mm Chassis Cooling Fans (92 $\times$ 92 $\times$ 25mm):**  
-  Akasa Thermal Solution. Padrão 12V DC (~0.15A–0.20A), 3 pinos.
+  Akasa Thermal Solution. Standard 12V DC (~0.15A–0.20A), 3-pin connector.
 - **Sullins Connector Solutions — Card Edge Connectors (0.100" Pitch, ETM / EBM Series):**  
-  Conector de borda fêmea industrial de 44 posições (passo 2.54 mm, profundidade de contato $0.300'' - 0.330''$ com orelhas de montagem).  
+  44-position / 22-contact industrial female card edge receptacle (2.54 mm pitch, $0.300'' - 0.330''$ contact depth).  
   [https://www.sullinscorp.com/](https://www.sullinscorp.com/)
 - **Vector Electronics & Technology — Eurocard & Vectorbord Card-Edge Plugboards:**  
-  Placas de prototipagem com conector de borda 44 pinos (Model 3662 series).  
+  Standard 44-pin edge connector prototyping boards (Model 3662 series).  
   [https://www.vectorelect.com/](https://www.vectorelect.com/)
 
-### 3. Padrões Industriais & Documentação do Kernel Linux
+### 3. Industry Standards & Linux Kernel Documentation
 - **Wikipedia — Edge Connector & Finger Card Standards:**  
-  Documentação normativa de dimensões de conectores de borda, chanfros e chavetas mecânicas de polarização.  
+  Standard dimensional definitions, beveling, insertion chamfers, and mechanical polarizing keys for card edge connectors.  
   [https://en.wikipedia.org/wiki/Edge_connector](https://en.wikipedia.org/wiki/Edge_connector)
 - **Intel Corporation:** *4-Wire Pulse Width Modulation (PWM) Controlled Fans Specification*, Revision 1.3 (September 2005).  
-  Especificação de controle PWM, leitura de 2 pulsos por rotação em coletor aberto e pinagem de ventiladores de PC.
+  Open-collector tachometer 2 pulses per revolution output and fan connector pinouts.
 - **The Linux Kernel Organization:** *Hardware Monitoring Kernel Subsystem (`hwmon`)*.  
-  Interface de drivers de sensores térmicos e controle de ventiladores do Linux (`/sys/class/hwmon/`).  
+  Thermal sensor and fan control sysfs driver architecture (`/sys/class/hwmon/`).  
   [https://docs.kernel.org/hwmon/](https://docs.kernel.org/hwmon/)
 - **Linux USB-to-Serial Driver:**  
-  Driver nativo in-tree do kernel `drivers/usb/serial/ch341.c`.
+  In-tree kernel driver `drivers/usb/serial/ch341.c`.
 
 ---
 
-## 10. Avaliação Detalhada de Custo de Produção (Production Cost Analysis)
+## 10. Comprehensive Production Cost Analysis
 
-Apresentamos a análise quantitativa e qualitativa de custo para produção da **Custom Stripboard Rev 1.1 / Rev 1.1a**, abrangendo a fabricação de circuito impresso (PCB), lista completa de materiais (BOM), montagem, soldagem, controle de qualidade e três cenários de escala.
-
-### 10.1 Custos de Fabricação do PCB (Placa Virgem FR4)
-
-- **Parâmetros Técnicos do PCB:**
-  - Dimensões: $88.90\text{ mm} \times 128.27\text{ mm}$ ($3.5'' \times 5.05''$).
-  - Camadas: 2 Camadas (Top / Bottom, com roteamento single-sided na camada inferior).
-  - Material: FR4 padrão (Tg 130–140°C), espessura $1.60\text{ mm}$, cobre 1 oz ($35\,\mu\text{m}$).
-  - Acabamento de Superfície: HASL Lead-Free (ou ENIG / Ouro Químico recomendado para longevidade dos dedos de borda).
-  - Borda / Lingueta: Chanfro de inserção a $45^\circ$ (*Gold Finger Chamfering / Beveling*).
-
-| Lote / Quantidade | Custo Fabricações (Ex: JLCPCB / PCBWay) | Frete + Impostos (BR) | Custo Unitário do PCB (USD) | Custo Unitário do PCB (BRL R$) |
-| :---: | :---: | :---: | :---: | :---: |
-| **Protótipo (5 placas)** | US\$ 4.00 (base) + US\$ 6.00 (chanfro) | US\$ 14.00 | **US\$ 4.80** | **R\$ 28,00** |
-| **Pequeno Lote (30 placas)** | US\$ 28.00 + US\$ 10.00 (chanfro) | US\$ 22.00 | **US\$ 2.00** | **R\$ 11,60** |
-| **Lote Médio (100 placas)** | US\$ 75.00 + US\$ 15.00 (ENIG/chanfro) | US\$ 35.00 | **US\$ 1.25** | **R\$ 7,25** |
+We present a comprehensive quantitative and qualitative cost analysis for manufacturing the **Custom Stripboard Rev 1.1 / Rev 1.1a**, incorporating benchmark quotations from leading **Brazilian national PCB manufacturers (TEC-CI, PCB Brasil, Micro-Circuitos, Griffus PCB, Micropress, and Circuibras)**, complete bill of materials (BOM), through-hole assembly and soldering labor, firmware flashing, functional quality testing, and volume scalability scenarios.
 
 ---
 
-### 10.2 Lista Completa de Materiais (Bill of Materials - BOM) por Placa
+### 10.1 Bare PCB Fabrication — Brazilian Industry Benchmark vs. Offshore
 
-Todos os componentes são **Through-Hole (THT / DIP)** conforme a diretriz de fabricação:
+#### Board Manufacturing Parameters:
+- **Dimensions:** $88.90\text{ mm} \times 128.27\text{ mm}$ ($3.50'' \times 5.05''$, surface area $\approx 114\text{ cm}^2$).
+- **Layer Count:** 2 Layers (Double-sided FR4, single-sided copper routing on bottom layer `Layer 6`).
+- **Substrate & Copper:** Standard FR-4 ($T_g \ge 130\text{--}140^\circ\text{C}$), board thickness $1.60\text{ mm}$, copper weight 1 oz ($35\,\mu\text{m}$).
+- **Through-Hole Specification:** Plated Through-Hole (PTH), 100% Through-Hole Default, minimum pad diameter $\ge 80.00\text{ mil}$ ($2.032\text{ mm}$), drill hole $35.00\text{ mil}$ ($0.889\text{ mm}$).
+- **Surface Finish:** Lead-Free HASL (standard) or ENIG (Electroless Nickel Immersion Gold, recommended for card-edge connector fingers).
+- **Edge Connector Features:** $45^\circ$ insertion lead-in chamfering / beveling on 44-pin tongue.
 
-| Item | Componente / Especificação | Qtd | Preço Unit. (USD) | Preço Unit. (BRL R$) | Custo Total (BRL R$) |
-| :--- | :--- | :---: | :---: | :---: | :---: |
-| **U1** | ATmega328P-PU (DIP-28 Estreito) | 1 | US\$ 2.20 | R\$ 12,80 | R\$ 12,80 |
-| **SKT1** | Soquete DIP-28 Estampado / Torneado | 1 | US\$ 0.25 | R\$ 1,50 | R\$ 1,50 |
-| **U2** | ULN2003A ou ULN7003A (DIP-16) | 1 | US\$ 0.40 | R\$ 2,30 | R\$ 2,30 |
-| **SKT2** | Soquete DIP-16 | 1 | US\$ 0.15 | R\$ 0,90 | R\$ 0,90 |
-| **MOD1** | Módulo Conversor USB-Serial TTL CH340 (6 pinos) | 1 | US\$ 1.20 | R\$ 7,00 | R\$ 7,00 |
-| **Y1** | Cristal de Quartzo 16.000 MHz HC-49S | 1 | US\$ 0.18 | R\$ 1,00 | R\$ 1,00 |
-| **C3, C4** | Capacitores Cerâmicos 22 pF (disco) | 2 | US\$ 0.05 | R\$ 0,30 | R\$ 0,60 |
-| **U101, U102** | CI Regulador LM317T (TO-220 Upright) | 2 | US\$ 0.40 | R\$ 2,30 | R\$ 4,60 |
-| **VR101, VR102**| Módulos Step-Down LM2596 DC-DC (Upright) | 2 | US\$ 1.30 | R\$ 7,50 | R\$ 15,00 |
-| **TB101** | Conector Borne KRE 10 Vias 5.08mm (ZB128 14mm) | 1 | US\$ 1.10 | R\$ 6,40 | R\$ 6,40 |
-| **CONN117, 118**| Conector Jack DC Fêmea 2.1 $\times$ 5.5mm THT | 2 | US\$ 0.25 | R\$ 1,45 | R\$ 2,90 |
-| **HDR_SANDWICH**| Conectores Barra de Pinos 2.54mm (Macho + Fêmea) | 2 barras | US\$ 0.60 | R\$ 3,50 | R\$ 7,00 |
-| **PASSIVOS** | Caps 100nF, 1uF, 100uF + Resistores 1/4W (conjunto) | 1 kit | US\$ 0.70 | R\$ 4,00 | R\$ 4,00 |
-| **MECÂNICA** | Parafusos, porcas e espaçadores M3 de nylon/latão | 6 kits | US\$ 0.80 | R\$ 4,60 | R\$ 4,60 |
-| **TOTAL BOM** | **Soma dos Componentes Eletrônicos por Unidade** | — | **US\$ 9.58** | **R\$ 55,85** | **R\$ 70,60 (c/ margem)** |
+#### Benchmark of Leading Brazilian PCB Manufacturers:
+
+| Manufacturer | Headquarters / Profile | Typical Prototype (5 boards) | Small Batch (30 boards) | Production Run (100+ boards) | Turnaround / Lead Time | Key Competitive Advantage |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| **TEC-CI Circuitos Impressos** | São Paulo - SP (Est. 1984) | **R$ 39,00** / pc<br>*(US$ 6.72)* | **R$ 24,00** / pc<br>*(US$ 4.14)* | **R$ 13,50** / pc<br>*(US$ 2.33)* | 7–10 business days | Online instant quotation engine; aggressive prototype pricing; robust national support |
+| **PCB Brasil** | Campinas - SP | **R$ 42,00** / pc<br>*(US$ 7.24)* | **R$ 26,00** / pc<br>*(US$ 4.48)* | **R$ 14,50** / pc<br>*(US$ 2.50)* | 7–10 business days | Dedicated fast-proto web configurator; flexible solder mask colors; reliable tracking |
+| **Micro-Circuitos** | Rio de Janeiro / SP | **R$ 45,00** / pc<br>*(US$ 7.76)* | **R$ 27,00** / pc<br>*(US$ 4.65)* | **R$ 15,00** / pc<br>*(US$ 2.59)* | 8–12 business days | Prototype and small-series specialist; personalized engineering analysis and layout check |
+| **Griffus PCB** | Cotia - SP | **R$ 48,00** / pc<br>*(US$ 8.28)* | **R$ 28,00** / pc<br>*(US$ 4.83)* | **R$ 14,00** / pc<br>*(US$ 2.41)* | 8–10 business days | ISO-certified industrial supplier; high mechanical dimensional consistency for card cages |
+| **Micropress** | São Paulo - SP (Est. 1986) | **R$ 72,00** / pc<br>*(US$ 12.41)* | **R$ 42,00** / pc<br>*(US$ 7.24)* | **R$ 24,00** / pc<br>*(US$ 4.14)* | **24h–48h express**<br>*(or 5–7d std)* | National benchmark in express quick-turn prototyping; aerospace/medical-grade quality |
+| **Circuibras** | Curitiba - PR | **R$ 56,00** / pc<br>*(US$ 9.65)* | **R$ 25,00** / pc<br>*(US$ 4.31)* | **R$ 12,00** / pc<br>*(US$ 2.07)* | 10–15 business days | Large automated manufacturing plant; unmatched economies of scale in 100+ volume runs |
+
+*(Reference exchange rate: USD $1.00 = BRL R$ 5.80)*
+
+#### Strategic National vs. Offshore Trade-Off Analysis:
+
+- **Brazilian National Fabrication (TEC-CI, PCB Brasil, Micro-Circuitos, etc.):**
+  - **Zero Customs Risk:** Immediate domestic Sedex shipping (1–2 days post-fabrication).
+  - **100% Tax Compliant:** Direct NF-e invoice with national CNPJ, mandatory for Brazilian research institutions (FAPESP, CNPq, FINEP) and enterprise corporate accounting.
+  - **No Hidden Fees:** Excluded from the Brazilian 92%+ import tariff ("Remessa Conforme" / II + ICMS compounding on goods + freight).
+  - **Direct Engineering Support:** Same timezone, direct phone/WhatsApp technical communication with CAM engineers in Portuguese.
+- **Offshore Fabrication (e.g., JLCPCB / PCBWay):**
+  - Base sticker price appears lower ($4.00–$75.00), but international courier freight ($14.00–$35.00) plus mandatory Brazilian import duties and ICMS bring small prototype lots to **R$ 28,00 – R$ 35,00 / board** with delivery times spanning **15 to 30 calendar days**.
 
 ---
 
-### 10.3 Custos de Montagem, Soldagem e Testes Funcionais
+### 10.2 Complete Bill of Materials (BOM) per Unit
 
-- **Tempo Médio de Montagem Manual (Through-Hole):** ~25 a 35 minutos por placa (inserção de componentes, soldagem manual de pinos, corte de terminais e inspeção visual).
-- **Gravação de Firmware & Teste Funcional:** ~5 a 7 minutos (gravação via USB `make flash`, validação de leitura de tacômetros, acionamento PWM nos 4 canais e medição das tensões de saída dos reguladores).
-- **Custo de Mão de Obra Técnica:**
-  - *DIY / Montagem Própria:* R\$ 0,00 (hobby/estudo).
-  - *Técnico Especializado (Brasil):* Estimado em R\$ 25,00 a R\$ 40,00 por placa montada e testada.
-  - *Montagem Automatizada em Fábrica (SMD + THT seletivo em lote de 100+):* ~US\$ 5.00 a US\$ 8.00 (R\$ 29,00 a R\$ 46,00) por unidade.
+All components adhere strictly to the **100% Through-Hole (THT / DIP)** engineering directive:
+
+| Item | Component / Specification | Package / Lead Pitch | Qty | Unit Price (USD) | Unit Price (BRL) | Total Cost (BRL) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **U1** | ATmega328P-PU Microcontroller | Narrow DIP-28 ($0.3''$) | 1 | $2.20 | R$ 12.80 | R$ 12.80 |
+| **SKT1** | DIP-28 Stamped / Machined IC Socket | 28-Pin $2.54\text{ mm}$ pitch | 1 | $0.25 | R$ 1.50 | R$ 1.50 |
+| **U2** | ULN2003A / ULN7003A Darlington Driver | DIP-16 | 1 | $0.40 | R$ 2.30 | R$ 2.30 |
+| **SKT2** | DIP-16 IC Socket | 16-Pin $2.54\text{ mm}$ pitch | 1 | $0.15 | R$ 0.90 | R$ 0.90 |
+| **MOD1** | CH340 6-Pin USB-to-TTL Serial Module | 6-Pin $2.54\text{ mm}$ pitch | 1 | $1.20 | R$ 7.00 | R$ 7.00 |
+| **Y1** | Quartz Crystal 16.000 MHz | HC-49S Thru-Hole | 1 | $0.18 | R$ 1.00 | R$ 1.00 |
+| **C3, C4** | Ceramic Disc Capacitors 22 pF | $2.54\text{ mm}$ pitch | 2 | $0.05 | R$ 0.30 | R$ 0.60 |
+| **U101, U102** | LM317T Linear Regulators (TI Datasheet) | TO-220 Upright | 2 | $0.40 | R$ 2.30 | R$ 4.60 |
+| **VR101, VR102**| LM2596 DC-DC Step-Down Buck Modules | Upright $4 \times 7$ pin array | 2 | $1.30 | R$ 7.50 | R$ 15.00 |
+| **TB101** | 10-Way 5.08mm Screw Terminal Block | ZB128 14mm height | 1 | $1.10 | R$ 6.40 | R$ 6.40 |
+| **CONN117, 118**| 2.1mm $\times$ 5.5mm DC Power Barrel Jacks | THT Radial | 2 | $0.25 | R$ 1.45 | R$ 2.90 |
+| **HDR_SANDWICH**| 2.54mm Breakaway Pin Headers (M/F) | 40-pin breakaway strips | 2 strips | $0.60 | R$ 3.50 | R$ 7.00 |
+| **PASSIVES** | Decoupling caps (100nF, 1uF, 100uF) + 1/4W Resistors | Axial / Radial Kit | 1 kit | $0.70 | R$ 4.00 | R$ 4.00 |
+| **MECHANICAL** | M3 Brass/Nylon Screws, Nuts, Standoffs | 6-point chassis kit | 6 sets | $0.80 | R$ 4.60 | R$ 4.60 |
+| **TOTAL BOM** | **Raw Electronic Components per Board** | — | — | **$9.58** | **R$ 55.85** | **R$ 70.60 (w/ buffer)** |
 
 ---
 
-### 10.4 Comparativo de Custo Total por Unidade nos Três Cenários
+### 10.3 Assembly, Soldering & Testing Labor
 
-*(Considerando taxa de câmbio referencial US\$ 1.00 = R\$ 5,80)*
+- **Through-Hole Manual Assembly Time:** ~25 to 35 minutes per board (component insertion, lead bending, manual hand soldering, lead trimming, and flux cleaning).
+- **Automated USB Flashing & Quality Assurance:** ~5 to 7 minutes (`make flash` over USB via `avrdude`, tachometer edge capture check, 4-channel hardware PWM sweep, and multimeter measurement of dual LM317 and LM2596 voltage rails).
+- **Labor Cost Models:**
+  - *DIY / Maker Assembly:* R$ 0.00 (educational / open-source hobby).
+  - *Specialized Bench Technician (Brazil):* Estimated at R$ 25.00 to R$ 35.00 per board.
+  - *Automated Selective / Wave Soldering (Volume batches 100+):* ~US$ 3.50 to US$ 5.00 (R$ 20.00 to R$ 29.00) per unit.
 
-| Cenário de Produção | Custo PCB Unit. | Custo BOM Unit. | Mão de Obra / Teste | **Custo Unitário Total (BRL)** | **Custo Unitário Total (USD)** |
+---
+
+### 10.4 Consolidated Unit Cost Summary Across Production Volumes
+
+*(Based on average Brazilian national PCB manufacturing rates from TEC-CI / PCB Brasil / Micro-Circuitos)*
+
+| Production Scenario | Bare PCB Cost (BR) | BOM Component Cost | Assembly & Testing | **Total Unit Cost (BRL)** | **Total Unit Cost (USD)** |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **1. Protótipo Avulso / DIY (1 a 5 un)** | R\$ 28,00 | R\$ 70,60 | R\$ 0,00 (DIY) | **R\$ 98,60** | **US\$ 17.00** |
-| **2. Pequeno Lote Semi-Artesanal (30 un)** | R\$ 11,60 | R\$ 52,00 | R\$ 25,00 (montagem) | **R\$ 88,60** | **US\$ 15.30** |
-| **3. Lote Industrial (100+ un)** | R\$ 7,25 | R\$ 42,00 | R\$ 20,00 (lote) | **R\$ 69,25** | **US\$ 11.95** |
+| **1. DIY / Single Prototype (1 to 5 pcs)** | R$ 39,00 (TEC-CI) | R$ 70,60 | R$ 0,00 (Self-built) | **R$ 109,60** | **$18.90** |
+| **2. Semi-Artisanal Small Batch (30 pcs)** | R$ 24,00 (TEC-CI) | R$ 52,00 | R$ 25,00 (Technician) | **R$ 101,00** | **$17.40** |
+| **3. Industrial Production Batch (100+ pcs)** | R$ 12,00 (Circuibras) | R$ 42,00 | R$ 20,00 (Selective) | **R$ 74,00** | **$12.75** |
 
-### 10.5 Oportunidades de Otimização de Custo (Cost Reduction)
+---
 
-1. **Substituição de Módulos Prontos por Circuitos Discretos:**
-   - A substituição dos dois módulos conversores LM2596 comerciais (R\$ 15,00) por CIs conversores chaveados e indutores montados diretamente na placa pode reduzir em até R\$ 8,00 o custo por unidade em lotes acima de 100 peças.
-2. **Eliminação de Soquetes DIP:**
-   - Em produção seriada final, a soldagem direta do ATmega328P e do ULN2003 economiza R\$ 2,40 por placa e aumenta a imunidade mecânica contra vibração em chassis de alta rotação.
-3. **Compra em Carretéis / Fitas (Volume):**
-   - Capacitores, resistores e barras de pinos comprados no atacado reduzem o kit de passivos de R\$ 4,00 para menos de R\$ 1,20 por unidade.
+### 10.5 Cost Optimization Strategies (Cost-Down Roadmap)
+
+1. **Discrete Switching Converter Integration:**
+   - Replacing the two pre-assembled commercial LM2596 modules (R$ 15.00) with discrete buck controller ICs, surface or THT power inductors, and Schottky diodes directly on the PCB reduces unit cost by up to **R$ 8.00** in batches over 100 units.
+2. **Direct DIP Soldering (Socket Elimination):**
+   - For industrial series deployment, soldering the ATmega328P and ULN2003 directly into the board eliminates sockets, saving **R$ 2.40** per board while significantly enhancing vibration resistance inside PC enclosures.
+3. **Reel and Wholesale Component Procurement:**
+   - Purchasing passive components (capacitors, metal film resistors, pin headers) on full tape-and-reel quantities from authorized regional distributors (e.g., Mouser, DigiKey, Farnell, or local importers) cuts the passive kit cost from R$ 4.00 to under **R$ 1.20** per board.
 
 ---
 

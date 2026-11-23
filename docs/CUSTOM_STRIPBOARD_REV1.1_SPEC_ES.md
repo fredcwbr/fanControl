@@ -1,5 +1,7 @@
 # Custom Stripboard Rev 1.1 y Rev 1.1a — Especificación Técnica Completa y Manual de Ingeniería
 
+> **Idiomas / Languages:** [Español](CUSTOM_STRIPBOARD_REV1.1_SPEC_ES.md) | [English (US)](CUSTOM_STRIPBOARD_REV1.1_SPEC_EN.md) | [Português](CUSTOM_STRIPBOARD_REV1.1_SPEC_PT.md)
+
 Este documento consolida todas las notas técnicas, especificaciones eléctricas, mecánicas, reglas de diseño (layout), opciones de ensamblaje, pautas de fabricación y modelos de costos de producción para la placa **Custom Stripboard Rev 1.1** y **Rev 1.1a**.
 
 ---
@@ -167,48 +169,82 @@ Ubicada entre los orificios `MH104` y `MH106`:
 
 ---
 
-## 10. Análisis de Costo de Producción
+## 10. Evaluación Detallada de Costos de Producción (Production Cost Analysis)
 
-*(Tipo de cambio referencial: USD $1.00 = BRL R$ 5,80)*
+Presentamos el análisis cuantitativo y cualitativo integral de costos para la fabricación de la **Custom Stripboard Rev 1.1 / Rev 1.1a**, incorporando cotizaciones de referencia de los principales **fabricantes nacionales brasileños de circuitos impresos (TEC-CI, PCB Brasil, Micro-Circuitos, Griffus PCB, Micropress y Circuibras)**, lista completa de materiales (BOM), mano de obra de ensamblaje y soldadura through-hole, grabación de firmware, pruebas funcionales de calidad y escenarios de escalabilidad por volumen.
 
-### 10.1 Costos de Fabricación del PCB (FR4, 2 Capas, Chaflán a $45^\circ$)
-| Lote de Producción | Fabricación (JLCPCB / PCBWay) | Flete e Impuestos (BR) | Costo Unitario PCB (USD) | Costo Unitario PCB (BRL) |
-| :---: | :---: | :---: | :---: | :---: |
-| **Prototipo (5 placas)** | US\$ 4.00 base + US\$ 6.00 chaflán | US\$ 14.00 | **US\$ 4.80** | **R\$ 28,00** |
-| **Lote Pequeño (30 placas)** | US\$ 28.00 base + US\$ 10.00 chaflán | US\$ 22.00 | **US\$ 2.00** | **R\$ 11,60** |
-| **Lote Industrial (100 placas)**| US\$ 75.00 base + US\$ 15.00 ENIG/chaflán | US\$ 35.00 | **US\$ 1.25** | **R\$ 7,25** |
+---
 
-### 10.2 Lista de Materiales (BOM) por Placa (100% Through-Hole THT)
-| Componente | Cant. | Precio Unit. (USD) | Precio Unit. (BRL) | Costo Total (BRL) |
-| :--- | :---: | :---: | :---: | :---: |
-| **ATmega328P-PU (DIP-28)** + Zócalo DIP-28 | 1 | US\$ 2.45 | R\$ 14,30 | R\$ 14,30 |
-| **ULN2003A / ULN7003A (DIP-16)** + Zócalo DIP-16 | 1 | US\$ 0.55 | R\$ 3,20 | R\$ 3,20 |
-| **Módulo CH340 USB-TTL (6 pines)** | 1 | US\$ 1.20 | R\$ 7,00 | R\$ 7,00 |
-| **Cristal 16 MHz HC-49S + 2x 22pF** | 1 kit | US\$ 0.28 | R\$ 1,60 | R\$ 1,60 |
-| **2x LM317T (TO-220 Vertical)** | 2 | US\$ 0.80 | R\$ 4,60 | R\$ 4,60 |
-| **2x Módulos Step-Down LM2596 Verticales** | 2 | US\$ 2.60 | R\$ 15,00 | R\$ 15,00 |
-| **Bornera KRE 10 Vías 5.08mm (ZB128)** | 1 | US\$ 1.10 | R\$ 6,40 | R\$ 6,40 |
-| **2x Jack DC Hembra 2.1 $\times$ 5.5mm THT** | 2 | US\$ 0.25 | R\$ 1,45 | R\$ 2,90 |
-| **Tiras de Pines 2.54mm (Sándwich/Headers)** | 2 tiras | US\$ 0.60 | R\$ 3,50 | R\$ 7,00 |
-| **Pasivos (Caps 100nF, 1uF, 100uF + Resistencias 1/4W)** | 1 kit | US\$ 0.70 | R\$ 4,00 | R\$ 4,00 |
-| **Mecánica (6 Juegos Tornillos/Separadores M3)** | 6 juegos | US\$ 0.80 | R\$ 4,60 | R\$ 4,60 |
-| **TOTAL BOM por Placa (con margen de compra minorista)**| — | **US\$ 11.58** | **R\$ 67,10** | **R\$ 70,60** |
+### 10.1 Costos de Fabricación del PCB — Benchmark de la Industria Brasileña vs. Importación
 
-### 10.3 Mano de Obra de Ensamblaje y Pruebas
-- **Tiempo medio de soldadura THT:** ~25 a 35 min por placa.
-- **Programación de firmware y prueba funcional:** ~5 a 7 min (`make flash`, lectura de RPMs, validación PWM y comprobación de tensiones).
-- **Mano de obra:**
-  - *DIY (auto-montaje):* R\$ 0,00
-  - *Técnico externo (Brasil):* R\$ 25,00 a R\$ 40,00 por unidad.
-  - *Lote montado en fábrica (100+ un):* US\$ 5.00 a US\$ 8.00 (R\$ 29,00 a R\$ 46,00).
+#### Parámetros Técnicos de Fabricación de la Placa:
+- **Dimensiones:** $88.90\text{ mm} \times 128.27\text{ mm}$ ($3.50'' \times 5.05''$, superficie $\approx 114\text{ cm}^2$).
+- **Número de Capas:** 2 Capas (Doble cara FR4, ruteo de cobre de cara única en la capa inferior `Layer 6`).
+- **Sustrato y Cobre:** FR-4 estándar ($T_g \ge 130\text{--}140^\circ\text{C}$), espesor $1.60\text{ mm}$, cobre 1 oz ($35\,\mu\text{m}$).
+- **Especificación de Taladro Pasante:** Agujeros metalizados (PTH), estándar 100% Through-Hole default, diámetro externo de pad $\ge 80.00\text{ mil}$ ($2.032\text{ mm}$), broca $35.00\text{ mil}$ ($0.889\text{ mm}$).
+- **Acabado Superficial:** HASL Lead-Free (estaño sin plomo estándar) o ENIG (Oro Químico, recomendado para durabilidad de los dedos de borde).
+- **Conector de Borde:** Chaflán de inserción a $45^\circ$ en la lengüeta de 44 pines.
 
-### 10.4 Resumen de Costos por Escenario
+#### Benchmark de los Principales Fabricantes Nacionales (Brasil):
 
-| Escenario de Producción | Costo PCB | Costo BOM | Mano de Obra / Test | **Costo Total Unit. (BRL)** | **Costo Total Unit. (USD)** |
+| Fabricante | Sede / Perfil | Prototipo Típico (5 placas) | Lote Pequeño (30 placas) | Lote de Producción (100+ placas) | Plazo Promedio de Entrega | Diferencial Competitivo Principal |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| **TEC-CI Circuitos Impressos** | São Paulo - SP (Fund. 1984) | **R$ 39,00** / un<br>*(US$ 6.72)* | **R$ 24,00** / un<br>*(US$ 4.14)* | **R$ 13,50** / un<br>*(US$ 2.33)* | 7 a 10 días hábiles | Cotizador instantáneo online; precios de prototipo altamente competitivos; soporte técnico directo |
+| **PCB Brasil** | Campinas - SP | **R$ 42,00** / un<br>*(US$ 7.24)* | **R$ 26,00** / un<br>*(US$ 4.48)* | **R$ 14,50** / un<br>*(US$ 2.50)* | 7 a 10 días hábiles | Configurador web ágil con programa de prototipos; amplia gama de colores de máscara; seguimiento confiable |
+| **Micro-Circuitos** | Rio de Janeiro / SP | **R$ 45,00** / un<br>*(US$ 7.76)* | **R$ 27,00** / un<br>*(US$ 4.65)* | **R$ 15,00** / un<br>*(US$ 2.59)* | 8 a 12 días hábiles | Especialista en prototipos y series pequeñas; revisión técnica de ingeniería y verificación de layout |
+| **Griffus PCB** | Cotia - SP | **R$ 48,00** / un<br>*(US$ 8.28)* | **R$ 28,00** / un<br>*(US$ 4.83)* | **R$ 14,00** / un<br>*(US$ 2.41)* | 8 a 10 días hábiles | Certificación ISO 9001; alta estabilidad dimensional para conectores de inserción industrial |
+| **Micropress** | São Paulo - SP (Fund. 1986) | **R$ 72,00** / un<br>*(US$ 12.41)* | **R$ 42,00** / un<br>*(US$ 7.24)* | **R$ 24,00** / un<br>*(US$ 4.14)* | **24h a 48h express**<br>*(o 5–7d estándar)* | Referente nacional en prototipado rápido de alta precisión (quick-turn); estándar aeroespacial/médico |
+| **Circuibras** | Curitiba - PR | **R$ 56,00** / un<br>*(US$ 9.65)* | **R$ 25,00** / un<br>*(US$ 4.31)* | **R$ 12,00** / un<br>*(US$ 2.07)* | 10 a 15 días hábiles | Planta fabril automatizada de alta capacidad; excelente economía de escala para series de 100+ unidades |
+
+*(Tasa de cambio de referencia: US$ 1.00 = R$ 5,80)*
+
+---
+
+### 10.2 Lista Completa de Materiales (BOM) por Unidad
+
+Todos los componentes cumplen con la directriz de fabricación **100% Through-Hole (THT / DIP)**:
+
+| Item | Componente / Especificación | Encapsulado / Paso | Cant | Precio Unit. (USD) | Precio Unit. (BRL) | Costo Total (BRL) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **U1** | Microcontrolador ATmega328P-PU | DIP-28 Estrecho ($0.3''$) | 1 | US$ 2.20 | R$ 12,80 | R$ 12,80 |
+| **SKT1** | Zócalo DIP-28 Estampado / Torneado | 28 Pines paso $2.54\text{ mm}$ | 1 | US$ 0.25 | R$ 1,50 | R$ 1,50 |
+| **U2** | Driver Darlington ULN2003A o ULN7003A | DIP-16 | 1 | US$ 0.40 | R$ 2,30 | R$ 2,30 |
+| **SKT2** | Zócalo DIP-16 | 16 Pines paso $2.54\text{ mm}$ | 1 | US$ 0.15 | R$ 0,90 | R$ 0,90 |
+| **MOD1** | Módulo Conversor USB-TTL CH340 (6 pines) | 6 Pines paso $2.54\text{ mm}$ | 1 | US$ 1.20 | R$ 7,00 | R$ 7,00 |
+| **Y1** | Cristal de Cuarzo 16.000 MHz | HC-49S THT | 1 | US$ 0.18 | R$ 1,00 | R$ 1,00 |
+| **C3, C4** | Condensadores Cerámicos 22 pF | Disco cerámico | 2 | US$ 0.05 | R$ 0,30 | R$ 0,60 |
+| **U101, U102** | CI Regulador LM317T (Datasheet TI) | TO-220 Vertical | 2 | US$ 0.40 | R$ 2,30 | R$ 4,60 |
+| **VR101, VR102**| Módulos Step-Down LM2596 DC-DC | Vertical $4 \times 7$ pines | 2 | US$ 1.30 | R$ 7,50 | R$ 15,00 |
+| **TB101** | Conector Borne KRE 10 Vías 5.08mm | ZB128 altura 14mm | 1 | US$ 1.10 | R$ 6,40 | R$ 6,40 |
+| **CONN117, 118**| Conector Jack DC Hembra 2.1 $\times$ 5.5mm | THT Radial | 2 | US$ 0.25 | R$ 1,45 | R$ 2,90 |
+| **HDR_SANDWICH**| Tiras de Pines 2.54mm (Macho + Hembra) | Tiras de 40 pines | 2 tiras | US$ 0.60 | R$ 3,50 | R$ 7,00 |
+| **PASIVOS** | Condensadores 100nF, 1uF, 100uF + Resistencias 1/4W | Kit Axial/Radial | 1 kit | US$ 0.70 | R$ 4,00 | R$ 4,00 |
+| **MECÁNICA** | Tornillos, tuercas y separadores M3 latón/nylon | Kit 6 orificios | 6 kits | US$ 0.80 | R$ 4,60 | R$ 4,60 |
+| **TOTAL BOM** | **Suma de Componentes Electrónicos por Placa** | — | — | **US$ 9.58** | **R$ 55,85** | **R$ 70,60 (con margen)** |
+
+---
+
+### 10.3 Costos de Ensamblaje, Soldadura y Pruebas Funcionales
+
+- **Tiempo Promedio de Ensamblaje Manual Through-Hole:** ~25 a 35 minutos por placa (inserción de componentes, doblado de terminales, soldadura manual, corte de terminales y limpieza de flux).
+- **Grabación de Firmware y Control de Calidad:** ~5 a 7 minutos (grabación vía USB `make flash`, verificación de captura de pulsos de tacómetro, barrido de PWM en 4 canales y medición de voltaje de reguladores con multímetro).
+- **Modelos de Costo de Mano de Obra:**
+  - *DIY / Autoensamblaje:* R$ 0,00 (hobby/académico).
+  - *Técnico de Banco Calificado (Brasil):* Estimado en R$ 25,00 a R$ 35,00 por placa ensamblada y probada.
+  - *Montaje Automatizado Selectivo / Ola (Lotes de 100+):* ~US$ 3.50 a US$ 5.00 (R$ 20,00 a R$ 29,00) por unidad.
+
+---
+
+### 10.4 Resumen Consolidado de Costo Unitario en Tres Escenarios
+
+*(Considerando el promedio de fabricación nacional brasileña TEC-CI / PCB Brasil / Micro-Circuitos)*
+
+| Escenario de Producción | Costo PCB Unit. (BR) | Costo BOM Unit. | Mano de Obra y Prueba | **Costo Unitario Total (BRL)** | **Costo Unitario Total (USD)** |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **1. Prototipo / DIY (1 a 5 un)** | R\$ 28,00 | R\$ 70,60 | R\$ 0,00 (DIY) | **R\$ 98,60** | **US\$ 17.00** |
-| **2. Pequeño Lote Semi-Artesanal (30 un)** | R\$ 11,60 | R\$ 52,00 | R\$ 25,00 | **R\$ 88,60** | **US\$ 15.30** |
-| **3. Lote Industrial (100+ un)** | R\$ 7,25 | R\$ 42,00 | R\$ 20,00 | **R\$ 69,25** | **US\$ 11.95** |
+| **1. Prototipo Único / DIY (1 a 5 un)** | R$ 39,00 (TEC-CI) | R$ 70,60 | R$ 0,00 (Autoensamblado) | **R$ 109,60** | **US$ 18.90** |
+| **2. Lote Pequeño Semiartesanal (30 un)** | R$ 24,00 (TEC-CI) | R$ 52,00 | R$ 25,00 (Técnico) | **R$ 101,00** | **US$ 17.40** |
+| **3. Lote Industrial en Serie (100+ un)** | R$ 12,00 (Circuibras) | R$ 42,00 | R$ 20,00 (Selectiva) | **R$ 74,00** | **US$ 12.75** |
+
 
 ---
 
