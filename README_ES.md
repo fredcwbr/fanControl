@@ -173,6 +173,11 @@ Este proyecto fue concebido, diseñado, codificado, depurado y documentado de ex
 
 ## 10. Evaluación Detallada de Costos de Producción (Production Cost Analysis)
 
+> [!WARNING]
+> **Aviso de Vigencia Temporal de Precios (Noviembre/Diciembre de 2026):**  
+> Todas las cotizaciones, precios de componentes (BOM), mano de obra y tasas de cambio reflejan las condiciones de mercado vigentes en **Noviembre/Diciembre de 2026** (tipo de cambio de referencia: US$ 1.00 = R$ 5.80). Los costos de materias primas (cobre, laminado FR4), inflación, políticas arancelarias de importación, disponibilidad de componentes y variaciones cambiarias modificarán estas cifras con el tiempo. Quienes consulten esta documentación en el futuro deben solicitar cotizaciones actualizadas directamente a los fabricantes y distribuidores antes de planificar la producción.
+
+
 Presentamos el análisis cuantitativo y cualitativo integral de costos para la fabricación de la **Custom Stripboard Rev 1.1 / Rev 1.1a**, incorporando cotizaciones de referencia de los principales **fabricantes nacionales brasileños de circuitos impresos (TEC-CI, PCB Brasil, Micro-Circuitos, Griffus PCB, Micropress y Circuibras)**, lista completa de materiales (BOM), mano de obra de ensamblaje y soldadura through-hole, grabación de firmware, pruebas funcionales de calidad y escenarios de escalabilidad por volumen.
 
 ---

@@ -223,6 +223,11 @@ cd ../rev1.1 && lepton-cli export -o centro.png centro.sch && lepton-netlist -g 
 
 ## 10. Avaliação Detalhada de Custo de Produção (Production Cost Analysis)
 
+> [!WARNING]
+> **Aviso de Vigência Temporal de Preços (Novembro/Dezembro de 2026):**  
+> Todas as cotações de placas, valores de componentes (BOM), mão de obra e taxas de câmbio apresentados nesta seção têm como base o cenário de mercado apurado em **Novembro/Dezembro de 2026** (taxa cambial de referência: US$ 1,00 = R$ 5,80). Custos de insumos (laminados de fibra FR4, cobre), inflação acumulada, regimes tributários de importação (como alíquotas de ICMS e Remessa Conforme), ciclo de vida de componentes e oscilações cambiais alterarão esses montantes ao longo do tempo. Leitores e projetistas que consultarem este documento no futuro devem obter orçamentos atualizados diretamente junto aos fabricantes e distribuidores antes de executar ordens de produção.
+
+
 Apresentamos a análise quantitativa e qualitativa abrangente de custo para produção da **Custom Stripboard Rev 1.1 / Rev 1.1a**, incorporando cotações de referência dos principais **fabricantes nacionais brasileiros de circuito impresso (TEC-CI, PCB Brasil, Micro-Circuitos, Griffus PCB, Micropress e Circuibras)**, lista completa de materiais (BOM), mão de obra de montagem e soldagem through-hole, gravação de firmware, testes funcionais de qualidade e cenários de escala de volume.
 
 ---

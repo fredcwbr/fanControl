@@ -173,6 +173,11 @@ Located on the lower right perimeter between `MH104` and `MH106`:
 
 ## 10. Comprehensive Production Cost Analysis
 
+> [!WARNING]
+> **Temporal Pricing Disclaimer (November/December 2026):**  
+> All quotations, component prices, labor estimates, and foreign exchange rates listed in this section reflect prevailing Brazilian and international market conditions as of **November/December 2026** (reference rate: USD $1.00 = BRL R$ 5.80). Commodity prices (copper, FR4 laminate), cumulative inflation, import tariff changes (such as "Remessa Conforme" / ICMS), component lifecycle availability, and currency volatility will alter these figures over time. Readers and engineers consulting this documentation in the future should obtain updated quotes from suppliers and board houses before committing to production.
+
+
 We present a comprehensive quantitative and qualitative cost analysis for manufacturing the **Custom Stripboard Rev 1.1 / Rev 1.1a**, incorporating benchmark quotations from leading **Brazilian national PCB manufacturers (TEC-CI, PCB Brasil, Micro-Circuitos, Griffus PCB, Micropress, and Circuibras)**, complete bill of materials (BOM), through-hole assembly and soldering labor, firmware flashing, functional quality testing, and volume scalability scenarios.
 
 ---
