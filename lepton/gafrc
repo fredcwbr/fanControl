@@ -1,0 +1,10 @@
+(component-library "." "local")
+;(component-library "/home/fred/C/Bima" "WTrabalho" )
+(component-library-search "."  )
+;(component-library-search "./kaimartin_knaak"  )
+;(component-library-search "./arduino-templates-gaf" "arduino")
+
+;# (source-library "." "local" )
+;# (source-library "/home/fred/C/Bima" "WTrabalho" )
+;# (source-library "kaimartin_knaak"  )
+

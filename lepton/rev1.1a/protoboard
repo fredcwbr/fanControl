@@ -1,0 +1,6 @@
+schematics centro.sch lado1.sch lado2.sch interconnect.sch
+output-name stripboard_rev1.1a
+elements-dir .
+elements-dir ../common
+skip-m4
+use-files

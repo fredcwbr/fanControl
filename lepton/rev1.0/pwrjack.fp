@@ -1,0 +1,11 @@
+Element(0x00 "DC Power Jack" "" "PWRJACK" 160 10 3 100 0x00)
+(
+	Pin(100 100 120 40 "1" 0x101)
+	Pin(100 300 120 40 "2" 0x01)
+	Pin(100 500 120 40 "3" 0x01)
+	ElementLine(  0   0   0 600 20)
+	ElementLine(500   0 500 600 20)
+	ElementLine(  0   0 500   0 20)
+	ElementLine(  0 600 500 600 20)
+	Mark(100 100)
+)

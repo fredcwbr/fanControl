@@ -2,11 +2,37 @@
 bin/
 build/
 *.o
+*.a
+*.so
+*.elf
+*.hex
+*.bin
 fancontrol
+daemon/fancontrold
+
+# Lepton-EDA & pcb-rnd temporary/backup files
+*.bak*
+*.backup
+*.new.pcb
+*~
+#*#
+.#*
+*.cmd
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
 
 # Editor / IDE
 .vscode/
 .idea/
 *.swp
-*~
+*.swo
+
+# OS files
 .DS_Store
+Thumbs.db
+

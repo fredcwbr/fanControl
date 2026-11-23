@@ -1,0 +1,4 @@
+(component-library "." "local")
+(component-library "../common" "common")
+(component-library-search ".")
+(component-library-search "../common")

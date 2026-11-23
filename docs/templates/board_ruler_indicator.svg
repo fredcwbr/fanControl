@@ -1,0 +1,1217 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="61.0mm" height="104.0mm" viewBox="0 0 61.0 104.0">
+<style>
+  text { font-family: "DejaVu Sans", "Helvetica", Arial, sans-serif; font-size: 1.3px; text-anchor: middle; dominant-baseline: central; }
+  .label-axis { font-size: 1.2px; fill: #000000; font-weight: bold; }
+  .title { font-size: 2.3px; font-weight: bold; fill: #111111; }
+  .subtitle { font-size: 1.25px; fill: #444444; }
+  .board-outline { fill: #fdfaf2; stroke: #000000; stroke-width: 0.45; }
+  .copper-track { fill: #e6b87d; stroke: #c99355; stroke-width: 0.15; opacity: 0.85; }
+  .copper-rail { fill: #d4a366; stroke: #b58045; stroke-width: 0.15; opacity: 0.90; }
+  .hole { fill: #ffffff; stroke: #333333; stroke-width: 0.18; }
+  .hole-cross { stroke: #666666; stroke-width: 0.12; }
+  .cut-box { fill: #ff1111; stroke: #880000; stroke-width: 0.25; }
+  .cut-cross { stroke: #ffffff; stroke-width: 0.4; stroke-linecap: round; }
+  .guide-line { stroke: #555555; stroke-width: 0.18; stroke-dasharray: 0.4, 0.4; }
+  .ruler-tick { stroke: #111111; stroke-width: 0.25; }
+  .ruler-subtick { stroke: #666666; stroke-width: 0.15; }
+</style>
+<rect width="61.0" height="104.0" fill="#ffffff" />
+<g transform="translate(14.0, 16.0)">
+  <rect x="0" y="0" width="33.0" height="72.0" rx="1.0" ry="1.0" class="board-outline" />
+  <line x1="-2.0" y1="0" x2="0" y2="0" class="ruler-tick" />
+  <text x="-4.2" y="0" class="label-axis" style="text-anchor: end; font-size: 1.1px;">0</text>
+  <line x1="-0.8" y1="1" x2="0" y2="1" class="ruler-subtick" />
+  <line x1="-0.8" y1="2" x2="0" y2="2" class="ruler-subtick" />
+  <line x1="-0.8" y1="3" x2="0" y2="3" class="ruler-subtick" />
+  <line x1="-0.8" y1="4" x2="0" y2="4" class="ruler-subtick" />
+  <line x1="-1.3" y1="5" x2="0" y2="5" class="ruler-tick" />
+  <line x1="-0.8" y1="6" x2="0" y2="6" class="ruler-subtick" />
+  <line x1="-0.8" y1="7" x2="0" y2="7" class="ruler-subtick" />
+  <line x1="-0.8" y1="8" x2="0" y2="8" class="ruler-subtick" />
+  <line x1="-0.8" y1="9" x2="0" y2="9" class="ruler-subtick" />
+  <line x1="-2.0" y1="10" x2="0" y2="10" class="ruler-tick" />
+  <text x="-4.2" y="10" class="label-axis" style="text-anchor: end; font-size: 1.1px;">10</text>
+  <line x1="-0.8" y1="11" x2="0" y2="11" class="ruler-subtick" />
+  <line x1="-0.8" y1="12" x2="0" y2="12" class="ruler-subtick" />
+  <line x1="-0.8" y1="13" x2="0" y2="13" class="ruler-subtick" />
+  <line x1="-0.8" y1="14" x2="0" y2="14" class="ruler-subtick" />
+  <line x1="-1.3" y1="15" x2="0" y2="15" class="ruler-tick" />
+  <line x1="-0.8" y1="16" x2="0" y2="16" class="ruler-subtick" />
+  <line x1="-0.8" y1="17" x2="0" y2="17" class="ruler-subtick" />
+  <line x1="-0.8" y1="18" x2="0" y2="18" class="ruler-subtick" />
+  <line x1="-0.8" y1="19" x2="0" y2="19" class="ruler-subtick" />
+  <line x1="-2.0" y1="20" x2="0" y2="20" class="ruler-tick" />
+  <text x="-4.2" y="20" class="label-axis" style="text-anchor: end; font-size: 1.1px;">20</text>
+  <line x1="-0.8" y1="21" x2="0" y2="21" class="ruler-subtick" />
+  <line x1="-0.8" y1="22" x2="0" y2="22" class="ruler-subtick" />
+  <line x1="-0.8" y1="23" x2="0" y2="23" class="ruler-subtick" />
+  <line x1="-0.8" y1="24" x2="0" y2="24" class="ruler-subtick" />
+  <line x1="-1.3" y1="25" x2="0" y2="25" class="ruler-tick" />
+  <line x1="-0.8" y1="26" x2="0" y2="26" class="ruler-subtick" />
+  <line x1="-0.8" y1="27" x2="0" y2="27" class="ruler-subtick" />
+  <line x1="-0.8" y1="28" x2="0" y2="28" class="ruler-subtick" />
+  <line x1="-0.8" y1="29" x2="0" y2="29" class="ruler-subtick" />
+  <line x1="-2.0" y1="30" x2="0" y2="30" class="ruler-tick" />
+  <text x="-4.2" y="30" class="label-axis" style="text-anchor: end; font-size: 1.1px;">30</text>
+  <line x1="-0.8" y1="31" x2="0" y2="31" class="ruler-subtick" />
+  <line x1="-0.8" y1="32" x2="0" y2="32" class="ruler-subtick" />
+  <line x1="-0.8" y1="33" x2="0" y2="33" class="ruler-subtick" />
+  <line x1="-0.8" y1="34" x2="0" y2="34" class="ruler-subtick" />
+  <line x1="-1.3" y1="35" x2="0" y2="35" class="ruler-tick" />
+  <line x1="-0.8" y1="36" x2="0" y2="36" class="ruler-subtick" />
+  <line x1="-0.8" y1="37" x2="0" y2="37" class="ruler-subtick" />
+  <line x1="-0.8" y1="38" x2="0" y2="38" class="ruler-subtick" />
+  <line x1="-0.8" y1="39" x2="0" y2="39" class="ruler-subtick" />
+  <line x1="-2.0" y1="40" x2="0" y2="40" class="ruler-tick" />
+  <text x="-4.2" y="40" class="label-axis" style="text-anchor: end; font-size: 1.1px;">40</text>
+  <line x1="-0.8" y1="41" x2="0" y2="41" class="ruler-subtick" />
+  <line x1="-0.8" y1="42" x2="0" y2="42" class="ruler-subtick" />
+  <line x1="-0.8" y1="43" x2="0" y2="43" class="ruler-subtick" />
+  <line x1="-0.8" y1="44" x2="0" y2="44" class="ruler-subtick" />
+  <line x1="-1.3" y1="45" x2="0" y2="45" class="ruler-tick" />
+  <line x1="-0.8" y1="46" x2="0" y2="46" class="ruler-subtick" />
+  <line x1="-0.8" y1="47" x2="0" y2="47" class="ruler-subtick" />
+  <line x1="-0.8" y1="48" x2="0" y2="48" class="ruler-subtick" />
+  <line x1="-0.8" y1="49" x2="0" y2="49" class="ruler-subtick" />
+  <line x1="-2.0" y1="50" x2="0" y2="50" class="ruler-tick" />
+  <text x="-4.2" y="50" class="label-axis" style="text-anchor: end; font-size: 1.1px;">50</text>
+  <line x1="-0.8" y1="51" x2="0" y2="51" class="ruler-subtick" />
+  <line x1="-0.8" y1="52" x2="0" y2="52" class="ruler-subtick" />
+  <line x1="-0.8" y1="53" x2="0" y2="53" class="ruler-subtick" />
+  <line x1="-0.8" y1="54" x2="0" y2="54" class="ruler-subtick" />
+  <line x1="-1.3" y1="55" x2="0" y2="55" class="ruler-tick" />
+  <line x1="-0.8" y1="56" x2="0" y2="56" class="ruler-subtick" />
+  <line x1="-0.8" y1="57" x2="0" y2="57" class="ruler-subtick" />
+  <line x1="-0.8" y1="58" x2="0" y2="58" class="ruler-subtick" />
+  <line x1="-0.8" y1="59" x2="0" y2="59" class="ruler-subtick" />
+  <line x1="-2.0" y1="60" x2="0" y2="60" class="ruler-tick" />
+  <text x="-4.2" y="60" class="label-axis" style="text-anchor: end; font-size: 1.1px;">60</text>
+  <line x1="-0.8" y1="61" x2="0" y2="61" class="ruler-subtick" />
+  <line x1="-0.8" y1="62" x2="0" y2="62" class="ruler-subtick" />
+  <line x1="-0.8" y1="63" x2="0" y2="63" class="ruler-subtick" />
+  <line x1="-0.8" y1="64" x2="0" y2="64" class="ruler-subtick" />
+  <line x1="-1.3" y1="65" x2="0" y2="65" class="ruler-tick" />
+  <line x1="-0.8" y1="66" x2="0" y2="66" class="ruler-subtick" />
+  <line x1="-0.8" y1="67" x2="0" y2="67" class="ruler-subtick" />
+  <line x1="-0.8" y1="68" x2="0" y2="68" class="ruler-subtick" />
+  <line x1="-0.8" y1="69" x2="0" y2="69" class="ruler-subtick" />
+  <line x1="-2.0" y1="70" x2="0" y2="70" class="ruler-tick" />
+  <text x="-4.2" y="70" class="label-axis" style="text-anchor: end; font-size: 1.1px;">70</text>
+  <line x1="-0.8" y1="71" x2="0" y2="71" class="ruler-subtick" />
+  <line x1="-0.8" y1="72" x2="0" y2="72" class="ruler-subtick" />
+  <circle cx="2.530" cy="1.710" r="0.55" class="hole" />
+  <line x1="2.230" y1="1.710" x2="2.830" y2="1.710" class="hole-cross" />
+  <line x1="2.530" y1="1.410" x2="2.530" y2="2.010" class="hole-cross" />
+  <circle cx="5.070" cy="1.710" r="0.55" class="hole" />
+  <line x1="4.770" y1="1.710" x2="5.370" y2="1.710" class="hole-cross" />
+  <line x1="5.070" y1="1.410" x2="5.070" y2="2.010" class="hole-cross" />
+  <circle cx="7.610" cy="1.710" r="0.55" class="hole" />
+  <line x1="7.310" y1="1.710" x2="7.910" y2="1.710" class="hole-cross" />
+  <line x1="7.610" y1="1.410" x2="7.610" y2="2.010" class="hole-cross" />
+  <circle cx="10.150" cy="1.710" r="0.55" class="hole" />
+  <line x1="9.850" y1="1.710" x2="10.450" y2="1.710" class="hole-cross" />
+  <line x1="10.150" y1="1.410" x2="10.150" y2="2.010" class="hole-cross" />
+  <circle cx="12.690" cy="1.710" r="0.55" class="hole" />
+  <line x1="12.390" y1="1.710" x2="12.990" y2="1.710" class="hole-cross" />
+  <line x1="12.690" y1="1.410" x2="12.690" y2="2.010" class="hole-cross" />
+  <circle cx="15.230" cy="1.710" r="0.55" class="hole" />
+  <line x1="14.930" y1="1.710" x2="15.530" y2="1.710" class="hole-cross" />
+  <line x1="15.230" y1="1.410" x2="15.230" y2="2.010" class="hole-cross" />
+  <circle cx="17.770" cy="1.710" r="0.55" class="hole" />
+  <line x1="17.470" y1="1.710" x2="18.070" y2="1.710" class="hole-cross" />
+  <line x1="17.770" y1="1.410" x2="17.770" y2="2.010" class="hole-cross" />
+  <circle cx="20.310" cy="1.710" r="0.55" class="hole" />
+  <line x1="20.010" y1="1.710" x2="20.610" y2="1.710" class="hole-cross" />
+  <line x1="20.310" y1="1.410" x2="20.310" y2="2.010" class="hole-cross" />
+  <circle cx="22.850" cy="1.710" r="0.55" class="hole" />
+  <line x1="22.550" y1="1.710" x2="23.150" y2="1.710" class="hole-cross" />
+  <line x1="22.850" y1="1.410" x2="22.850" y2="2.010" class="hole-cross" />
+  <circle cx="25.390" cy="1.710" r="0.55" class="hole" />
+  <line x1="25.090" y1="1.710" x2="25.690" y2="1.710" class="hole-cross" />
+  <line x1="25.390" y1="1.410" x2="25.390" y2="2.010" class="hole-cross" />
+  <circle cx="27.930" cy="1.710" r="0.55" class="hole" />
+  <line x1="27.630" y1="1.710" x2="28.230" y2="1.710" class="hole-cross" />
+  <line x1="27.930" y1="1.410" x2="27.930" y2="2.010" class="hole-cross" />
+  <circle cx="30.470" cy="1.710" r="0.55" class="hole" />
+  <line x1="30.170" y1="1.710" x2="30.770" y2="1.710" class="hole-cross" />
+  <line x1="30.470" y1="1.410" x2="30.470" y2="2.010" class="hole-cross" />
+  <circle cx="2.530" cy="4.250" r="0.55" class="hole" />
+  <line x1="2.230" y1="4.250" x2="2.830" y2="4.250" class="hole-cross" />
+  <line x1="2.530" y1="3.950" x2="2.530" y2="4.550" class="hole-cross" />
+  <circle cx="5.070" cy="4.250" r="0.55" class="hole" />
+  <line x1="4.770" y1="4.250" x2="5.370" y2="4.250" class="hole-cross" />
+  <line x1="5.070" y1="3.950" x2="5.070" y2="4.550" class="hole-cross" />
+  <circle cx="7.610" cy="4.250" r="0.55" class="hole" />
+  <line x1="7.310" y1="4.250" x2="7.910" y2="4.250" class="hole-cross" />
+  <line x1="7.610" y1="3.950" x2="7.610" y2="4.550" class="hole-cross" />
+  <circle cx="10.150" cy="4.250" r="0.55" class="hole" />
+  <line x1="9.850" y1="4.250" x2="10.450" y2="4.250" class="hole-cross" />
+  <line x1="10.150" y1="3.950" x2="10.150" y2="4.550" class="hole-cross" />
+  <circle cx="12.690" cy="4.250" r="0.55" class="hole" />
+  <line x1="12.390" y1="4.250" x2="12.990" y2="4.250" class="hole-cross" />
+  <line x1="12.690" y1="3.950" x2="12.690" y2="4.550" class="hole-cross" />
+  <circle cx="15.230" cy="4.250" r="0.55" class="hole" />
+  <line x1="14.930" y1="4.250" x2="15.530" y2="4.250" class="hole-cross" />
+  <line x1="15.230" y1="3.950" x2="15.230" y2="4.550" class="hole-cross" />
+  <circle cx="17.770" cy="4.250" r="0.55" class="hole" />
+  <line x1="17.470" y1="4.250" x2="18.070" y2="4.250" class="hole-cross" />
+  <line x1="17.770" y1="3.950" x2="17.770" y2="4.550" class="hole-cross" />
+  <circle cx="20.310" cy="4.250" r="0.55" class="hole" />
+  <line x1="20.010" y1="4.250" x2="20.610" y2="4.250" class="hole-cross" />
+  <line x1="20.310" y1="3.950" x2="20.310" y2="4.550" class="hole-cross" />
+  <circle cx="22.850" cy="4.250" r="0.55" class="hole" />
+  <line x1="22.550" y1="4.250" x2="23.150" y2="4.250" class="hole-cross" />
+  <line x1="22.850" y1="3.950" x2="22.850" y2="4.550" class="hole-cross" />
+  <circle cx="25.390" cy="4.250" r="0.55" class="hole" />
+  <line x1="25.090" y1="4.250" x2="25.690" y2="4.250" class="hole-cross" />
+  <line x1="25.390" y1="3.950" x2="25.390" y2="4.550" class="hole-cross" />
+  <circle cx="27.930" cy="4.250" r="0.55" class="hole" />
+  <line x1="27.630" y1="4.250" x2="28.230" y2="4.250" class="hole-cross" />
+  <line x1="27.930" y1="3.950" x2="27.930" y2="4.550" class="hole-cross" />
+  <circle cx="30.470" cy="4.250" r="0.55" class="hole" />
+  <line x1="30.170" y1="4.250" x2="30.770" y2="4.250" class="hole-cross" />
+  <line x1="30.470" y1="3.950" x2="30.470" y2="4.550" class="hole-cross" />
+  <circle cx="2.530" cy="6.790" r="0.55" class="hole" />
+  <line x1="2.230" y1="6.790" x2="2.830" y2="6.790" class="hole-cross" />
+  <line x1="2.530" y1="6.490" x2="2.530" y2="7.090" class="hole-cross" />
+  <circle cx="5.070" cy="6.790" r="0.55" class="hole" />
+  <line x1="4.770" y1="6.790" x2="5.370" y2="6.790" class="hole-cross" />
+  <line x1="5.070" y1="6.490" x2="5.070" y2="7.090" class="hole-cross" />
+  <circle cx="7.610" cy="6.790" r="0.55" class="hole" />
+  <line x1="7.310" y1="6.790" x2="7.910" y2="6.790" class="hole-cross" />
+  <line x1="7.610" y1="6.490" x2="7.610" y2="7.090" class="hole-cross" />
+  <circle cx="10.150" cy="6.790" r="0.55" class="hole" />
+  <line x1="9.850" y1="6.790" x2="10.450" y2="6.790" class="hole-cross" />
+  <line x1="10.150" y1="6.490" x2="10.150" y2="7.090" class="hole-cross" />
+  <circle cx="12.690" cy="6.790" r="0.55" class="hole" />
+  <line x1="12.390" y1="6.790" x2="12.990" y2="6.790" class="hole-cross" />
+  <line x1="12.690" y1="6.490" x2="12.690" y2="7.090" class="hole-cross" />
+  <circle cx="15.230" cy="6.790" r="0.55" class="hole" />
+  <line x1="14.930" y1="6.790" x2="15.530" y2="6.790" class="hole-cross" />
+  <line x1="15.230" y1="6.490" x2="15.230" y2="7.090" class="hole-cross" />
+  <circle cx="17.770" cy="6.790" r="0.55" class="hole" />
+  <line x1="17.470" y1="6.790" x2="18.070" y2="6.790" class="hole-cross" />
+  <line x1="17.770" y1="6.490" x2="17.770" y2="7.090" class="hole-cross" />
+  <circle cx="20.310" cy="6.790" r="0.55" class="hole" />
+  <line x1="20.010" y1="6.790" x2="20.610" y2="6.790" class="hole-cross" />
+  <line x1="20.310" y1="6.490" x2="20.310" y2="7.090" class="hole-cross" />
+  <circle cx="22.850" cy="6.790" r="0.55" class="hole" />
+  <line x1="22.550" y1="6.790" x2="23.150" y2="6.790" class="hole-cross" />
+  <line x1="22.850" y1="6.490" x2="22.850" y2="7.090" class="hole-cross" />
+  <circle cx="25.390" cy="6.790" r="0.55" class="hole" />
+  <line x1="25.090" y1="6.790" x2="25.690" y2="6.790" class="hole-cross" />
+  <line x1="25.390" y1="6.490" x2="25.390" y2="7.090" class="hole-cross" />
+  <circle cx="27.930" cy="6.790" r="0.55" class="hole" />
+  <line x1="27.630" y1="6.790" x2="28.230" y2="6.790" class="hole-cross" />
+  <line x1="27.930" y1="6.490" x2="27.930" y2="7.090" class="hole-cross" />
+  <circle cx="30.470" cy="6.790" r="0.55" class="hole" />
+  <line x1="30.170" y1="6.790" x2="30.770" y2="6.790" class="hole-cross" />
+  <line x1="30.470" y1="6.490" x2="30.470" y2="7.090" class="hole-cross" />
+  <circle cx="2.530" cy="9.330" r="0.55" class="hole" />
+  <line x1="2.230" y1="9.330" x2="2.830" y2="9.330" class="hole-cross" />
+  <line x1="2.530" y1="9.030" x2="2.530" y2="9.630" class="hole-cross" />
+  <circle cx="5.070" cy="9.330" r="0.55" class="hole" />
+  <line x1="4.770" y1="9.330" x2="5.370" y2="9.330" class="hole-cross" />
+  <line x1="5.070" y1="9.030" x2="5.070" y2="9.630" class="hole-cross" />
+  <circle cx="7.610" cy="9.330" r="0.55" class="hole" />
+  <line x1="7.310" y1="9.330" x2="7.910" y2="9.330" class="hole-cross" />
+  <line x1="7.610" y1="9.030" x2="7.610" y2="9.630" class="hole-cross" />
+  <circle cx="10.150" cy="9.330" r="0.55" class="hole" />
+  <line x1="9.850" y1="9.330" x2="10.450" y2="9.330" class="hole-cross" />
+  <line x1="10.150" y1="9.030" x2="10.150" y2="9.630" class="hole-cross" />
+  <circle cx="12.690" cy="9.330" r="0.55" class="hole" />
+  <line x1="12.390" y1="9.330" x2="12.990" y2="9.330" class="hole-cross" />
+  <line x1="12.690" y1="9.030" x2="12.690" y2="9.630" class="hole-cross" />
+  <circle cx="15.230" cy="9.330" r="0.55" class="hole" />
+  <line x1="14.930" y1="9.330" x2="15.530" y2="9.330" class="hole-cross" />
+  <line x1="15.230" y1="9.030" x2="15.230" y2="9.630" class="hole-cross" />
+  <circle cx="17.770" cy="9.330" r="0.55" class="hole" />
+  <line x1="17.470" y1="9.330" x2="18.070" y2="9.330" class="hole-cross" />
+  <line x1="17.770" y1="9.030" x2="17.770" y2="9.630" class="hole-cross" />
+  <circle cx="20.310" cy="9.330" r="0.55" class="hole" />
+  <line x1="20.010" y1="9.330" x2="20.610" y2="9.330" class="hole-cross" />
+  <line x1="20.310" y1="9.030" x2="20.310" y2="9.630" class="hole-cross" />
+  <circle cx="22.850" cy="9.330" r="0.55" class="hole" />
+  <line x1="22.550" y1="9.330" x2="23.150" y2="9.330" class="hole-cross" />
+  <line x1="22.850" y1="9.030" x2="22.850" y2="9.630" class="hole-cross" />
+  <circle cx="25.390" cy="9.330" r="0.55" class="hole" />
+  <line x1="25.090" y1="9.330" x2="25.690" y2="9.330" class="hole-cross" />
+  <line x1="25.390" y1="9.030" x2="25.390" y2="9.630" class="hole-cross" />
+  <circle cx="27.930" cy="9.330" r="0.55" class="hole" />
+  <line x1="27.630" y1="9.330" x2="28.230" y2="9.330" class="hole-cross" />
+  <line x1="27.930" y1="9.030" x2="27.930" y2="9.630" class="hole-cross" />
+  <circle cx="30.470" cy="9.330" r="0.55" class="hole" />
+  <line x1="30.170" y1="9.330" x2="30.770" y2="9.330" class="hole-cross" />
+  <line x1="30.470" y1="9.030" x2="30.470" y2="9.630" class="hole-cross" />
+  <circle cx="2.530" cy="11.870" r="0.55" class="hole" />
+  <line x1="2.230" y1="11.870" x2="2.830" y2="11.870" class="hole-cross" />
+  <line x1="2.530" y1="11.570" x2="2.530" y2="12.170" class="hole-cross" />
+  <circle cx="5.070" cy="11.870" r="0.55" class="hole" />
+  <line x1="4.770" y1="11.870" x2="5.370" y2="11.870" class="hole-cross" />
+  <line x1="5.070" y1="11.570" x2="5.070" y2="12.170" class="hole-cross" />
+  <circle cx="7.610" cy="11.870" r="0.55" class="hole" />
+  <line x1="7.310" y1="11.870" x2="7.910" y2="11.870" class="hole-cross" />
+  <line x1="7.610" y1="11.570" x2="7.610" y2="12.170" class="hole-cross" />
+  <circle cx="10.150" cy="11.870" r="0.55" class="hole" />
+  <line x1="9.850" y1="11.870" x2="10.450" y2="11.870" class="hole-cross" />
+  <line x1="10.150" y1="11.570" x2="10.150" y2="12.170" class="hole-cross" />
+  <circle cx="12.690" cy="11.870" r="0.55" class="hole" />
+  <line x1="12.390" y1="11.870" x2="12.990" y2="11.870" class="hole-cross" />
+  <line x1="12.690" y1="11.570" x2="12.690" y2="12.170" class="hole-cross" />
+  <circle cx="15.230" cy="11.870" r="0.55" class="hole" />
+  <line x1="14.930" y1="11.870" x2="15.530" y2="11.870" class="hole-cross" />
+  <line x1="15.230" y1="11.570" x2="15.230" y2="12.170" class="hole-cross" />
+  <circle cx="17.770" cy="11.870" r="0.55" class="hole" />
+  <line x1="17.470" y1="11.870" x2="18.070" y2="11.870" class="hole-cross" />
+  <line x1="17.770" y1="11.570" x2="17.770" y2="12.170" class="hole-cross" />
+  <circle cx="20.310" cy="11.870" r="0.55" class="hole" />
+  <line x1="20.010" y1="11.870" x2="20.610" y2="11.870" class="hole-cross" />
+  <line x1="20.310" y1="11.570" x2="20.310" y2="12.170" class="hole-cross" />
+  <circle cx="22.850" cy="11.870" r="0.55" class="hole" />
+  <line x1="22.550" y1="11.870" x2="23.150" y2="11.870" class="hole-cross" />
+  <line x1="22.850" y1="11.570" x2="22.850" y2="12.170" class="hole-cross" />
+  <circle cx="25.390" cy="11.870" r="0.55" class="hole" />
+  <line x1="25.090" y1="11.870" x2="25.690" y2="11.870" class="hole-cross" />
+  <line x1="25.390" y1="11.570" x2="25.390" y2="12.170" class="hole-cross" />
+  <circle cx="27.930" cy="11.870" r="0.55" class="hole" />
+  <line x1="27.630" y1="11.870" x2="28.230" y2="11.870" class="hole-cross" />
+  <line x1="27.930" y1="11.570" x2="27.930" y2="12.170" class="hole-cross" />
+  <circle cx="30.470" cy="11.870" r="0.55" class="hole" />
+  <line x1="30.170" y1="11.870" x2="30.770" y2="11.870" class="hole-cross" />
+  <line x1="30.470" y1="11.570" x2="30.470" y2="12.170" class="hole-cross" />
+  <circle cx="2.530" cy="14.410" r="0.55" class="hole" />
+  <line x1="2.230" y1="14.410" x2="2.830" y2="14.410" class="hole-cross" />
+  <line x1="2.530" y1="14.110" x2="2.530" y2="14.710" class="hole-cross" />
+  <circle cx="5.070" cy="14.410" r="0.55" class="hole" />
+  <line x1="4.770" y1="14.410" x2="5.370" y2="14.410" class="hole-cross" />
+  <line x1="5.070" y1="14.110" x2="5.070" y2="14.710" class="hole-cross" />
+  <circle cx="7.610" cy="14.410" r="0.55" class="hole" />
+  <line x1="7.310" y1="14.410" x2="7.910" y2="14.410" class="hole-cross" />
+  <line x1="7.610" y1="14.110" x2="7.610" y2="14.710" class="hole-cross" />
+  <circle cx="10.150" cy="14.410" r="0.55" class="hole" />
+  <line x1="9.850" y1="14.410" x2="10.450" y2="14.410" class="hole-cross" />
+  <line x1="10.150" y1="14.110" x2="10.150" y2="14.710" class="hole-cross" />
+  <circle cx="12.690" cy="14.410" r="0.55" class="hole" />
+  <line x1="12.390" y1="14.410" x2="12.990" y2="14.410" class="hole-cross" />
+  <line x1="12.690" y1="14.110" x2="12.690" y2="14.710" class="hole-cross" />
+  <circle cx="15.230" cy="14.410" r="0.55" class="hole" />
+  <line x1="14.930" y1="14.410" x2="15.530" y2="14.410" class="hole-cross" />
+  <line x1="15.230" y1="14.110" x2="15.230" y2="14.710" class="hole-cross" />
+  <circle cx="17.770" cy="14.410" r="0.55" class="hole" />
+  <line x1="17.470" y1="14.410" x2="18.070" y2="14.410" class="hole-cross" />
+  <line x1="17.770" y1="14.110" x2="17.770" y2="14.710" class="hole-cross" />
+  <circle cx="20.310" cy="14.410" r="0.55" class="hole" />
+  <line x1="20.010" y1="14.410" x2="20.610" y2="14.410" class="hole-cross" />
+  <line x1="20.310" y1="14.110" x2="20.310" y2="14.710" class="hole-cross" />
+  <circle cx="22.850" cy="14.410" r="0.55" class="hole" />
+  <line x1="22.550" y1="14.410" x2="23.150" y2="14.410" class="hole-cross" />
+  <line x1="22.850" y1="14.110" x2="22.850" y2="14.710" class="hole-cross" />
+  <circle cx="25.390" cy="14.410" r="0.55" class="hole" />
+  <line x1="25.090" y1="14.410" x2="25.690" y2="14.410" class="hole-cross" />
+  <line x1="25.390" y1="14.110" x2="25.390" y2="14.710" class="hole-cross" />
+  <circle cx="27.930" cy="14.410" r="0.55" class="hole" />
+  <line x1="27.630" y1="14.410" x2="28.230" y2="14.410" class="hole-cross" />
+  <line x1="27.930" y1="14.110" x2="27.930" y2="14.710" class="hole-cross" />
+  <circle cx="30.470" cy="14.410" r="0.55" class="hole" />
+  <line x1="30.170" y1="14.410" x2="30.770" y2="14.410" class="hole-cross" />
+  <line x1="30.470" y1="14.110" x2="30.470" y2="14.710" class="hole-cross" />
+  <circle cx="2.530" cy="16.950" r="0.55" class="hole" />
+  <line x1="2.230" y1="16.950" x2="2.830" y2="16.950" class="hole-cross" />
+  <line x1="2.530" y1="16.650" x2="2.530" y2="17.250" class="hole-cross" />
+  <circle cx="5.070" cy="16.950" r="0.55" class="hole" />
+  <line x1="4.770" y1="16.950" x2="5.370" y2="16.950" class="hole-cross" />
+  <line x1="5.070" y1="16.650" x2="5.070" y2="17.250" class="hole-cross" />
+  <circle cx="7.610" cy="16.950" r="0.55" class="hole" />
+  <line x1="7.310" y1="16.950" x2="7.910" y2="16.950" class="hole-cross" />
+  <line x1="7.610" y1="16.650" x2="7.610" y2="17.250" class="hole-cross" />
+  <circle cx="10.150" cy="16.950" r="0.55" class="hole" />
+  <line x1="9.850" y1="16.950" x2="10.450" y2="16.950" class="hole-cross" />
+  <line x1="10.150" y1="16.650" x2="10.150" y2="17.250" class="hole-cross" />
+  <circle cx="12.690" cy="16.950" r="0.55" class="hole" />
+  <line x1="12.390" y1="16.950" x2="12.990" y2="16.950" class="hole-cross" />
+  <line x1="12.690" y1="16.650" x2="12.690" y2="17.250" class="hole-cross" />
+  <circle cx="15.230" cy="16.950" r="0.55" class="hole" />
+  <line x1="14.930" y1="16.950" x2="15.530" y2="16.950" class="hole-cross" />
+  <line x1="15.230" y1="16.650" x2="15.230" y2="17.250" class="hole-cross" />
+  <circle cx="17.770" cy="16.950" r="0.55" class="hole" />
+  <line x1="17.470" y1="16.950" x2="18.070" y2="16.950" class="hole-cross" />
+  <line x1="17.770" y1="16.650" x2="17.770" y2="17.250" class="hole-cross" />
+  <circle cx="20.310" cy="16.950" r="0.55" class="hole" />
+  <line x1="20.010" y1="16.950" x2="20.610" y2="16.950" class="hole-cross" />
+  <line x1="20.310" y1="16.650" x2="20.310" y2="17.250" class="hole-cross" />
+  <circle cx="22.850" cy="16.950" r="0.55" class="hole" />
+  <line x1="22.550" y1="16.950" x2="23.150" y2="16.950" class="hole-cross" />
+  <line x1="22.850" y1="16.650" x2="22.850" y2="17.250" class="hole-cross" />
+  <circle cx="25.390" cy="16.950" r="0.55" class="hole" />
+  <line x1="25.090" y1="16.950" x2="25.690" y2="16.950" class="hole-cross" />
+  <line x1="25.390" y1="16.650" x2="25.390" y2="17.250" class="hole-cross" />
+  <circle cx="27.930" cy="16.950" r="0.55" class="hole" />
+  <line x1="27.630" y1="16.950" x2="28.230" y2="16.950" class="hole-cross" />
+  <line x1="27.930" y1="16.650" x2="27.930" y2="17.250" class="hole-cross" />
+  <circle cx="30.470" cy="16.950" r="0.55" class="hole" />
+  <line x1="30.170" y1="16.950" x2="30.770" y2="16.950" class="hole-cross" />
+  <line x1="30.470" y1="16.650" x2="30.470" y2="17.250" class="hole-cross" />
+  <circle cx="2.530" cy="19.490" r="0.55" class="hole" />
+  <line x1="2.230" y1="19.490" x2="2.830" y2="19.490" class="hole-cross" />
+  <line x1="2.530" y1="19.190" x2="2.530" y2="19.790" class="hole-cross" />
+  <circle cx="5.070" cy="19.490" r="0.55" class="hole" />
+  <line x1="4.770" y1="19.490" x2="5.370" y2="19.490" class="hole-cross" />
+  <line x1="5.070" y1="19.190" x2="5.070" y2="19.790" class="hole-cross" />
+  <circle cx="7.610" cy="19.490" r="0.55" class="hole" />
+  <line x1="7.310" y1="19.490" x2="7.910" y2="19.490" class="hole-cross" />
+  <line x1="7.610" y1="19.190" x2="7.610" y2="19.790" class="hole-cross" />
+  <circle cx="10.150" cy="19.490" r="0.55" class="hole" />
+  <line x1="9.850" y1="19.490" x2="10.450" y2="19.490" class="hole-cross" />
+  <line x1="10.150" y1="19.190" x2="10.150" y2="19.790" class="hole-cross" />
+  <circle cx="12.690" cy="19.490" r="0.55" class="hole" />
+  <line x1="12.390" y1="19.490" x2="12.990" y2="19.490" class="hole-cross" />
+  <line x1="12.690" y1="19.190" x2="12.690" y2="19.790" class="hole-cross" />
+  <circle cx="15.230" cy="19.490" r="0.55" class="hole" />
+  <line x1="14.930" y1="19.490" x2="15.530" y2="19.490" class="hole-cross" />
+  <line x1="15.230" y1="19.190" x2="15.230" y2="19.790" class="hole-cross" />
+  <circle cx="17.770" cy="19.490" r="0.55" class="hole" />
+  <line x1="17.470" y1="19.490" x2="18.070" y2="19.490" class="hole-cross" />
+  <line x1="17.770" y1="19.190" x2="17.770" y2="19.790" class="hole-cross" />
+  <circle cx="20.310" cy="19.490" r="0.55" class="hole" />
+  <line x1="20.010" y1="19.490" x2="20.610" y2="19.490" class="hole-cross" />
+  <line x1="20.310" y1="19.190" x2="20.310" y2="19.790" class="hole-cross" />
+  <circle cx="22.850" cy="19.490" r="0.55" class="hole" />
+  <line x1="22.550" y1="19.490" x2="23.150" y2="19.490" class="hole-cross" />
+  <line x1="22.850" y1="19.190" x2="22.850" y2="19.790" class="hole-cross" />
+  <circle cx="25.390" cy="19.490" r="0.55" class="hole" />
+  <line x1="25.090" y1="19.490" x2="25.690" y2="19.490" class="hole-cross" />
+  <line x1="25.390" y1="19.190" x2="25.390" y2="19.790" class="hole-cross" />
+  <circle cx="27.930" cy="19.490" r="0.55" class="hole" />
+  <line x1="27.630" y1="19.490" x2="28.230" y2="19.490" class="hole-cross" />
+  <line x1="27.930" y1="19.190" x2="27.930" y2="19.790" class="hole-cross" />
+  <circle cx="30.470" cy="19.490" r="0.55" class="hole" />
+  <line x1="30.170" y1="19.490" x2="30.770" y2="19.490" class="hole-cross" />
+  <line x1="30.470" y1="19.190" x2="30.470" y2="19.790" class="hole-cross" />
+  <circle cx="2.530" cy="22.030" r="0.55" class="hole" />
+  <line x1="2.230" y1="22.030" x2="2.830" y2="22.030" class="hole-cross" />
+  <line x1="2.530" y1="21.730" x2="2.530" y2="22.330" class="hole-cross" />
+  <circle cx="5.070" cy="22.030" r="0.55" class="hole" />
+  <line x1="4.770" y1="22.030" x2="5.370" y2="22.030" class="hole-cross" />
+  <line x1="5.070" y1="21.730" x2="5.070" y2="22.330" class="hole-cross" />
+  <circle cx="7.610" cy="22.030" r="0.55" class="hole" />
+  <line x1="7.310" y1="22.030" x2="7.910" y2="22.030" class="hole-cross" />
+  <line x1="7.610" y1="21.730" x2="7.610" y2="22.330" class="hole-cross" />
+  <circle cx="10.150" cy="22.030" r="0.55" class="hole" />
+  <line x1="9.850" y1="22.030" x2="10.450" y2="22.030" class="hole-cross" />
+  <line x1="10.150" y1="21.730" x2="10.150" y2="22.330" class="hole-cross" />
+  <circle cx="12.690" cy="22.030" r="0.55" class="hole" />
+  <line x1="12.390" y1="22.030" x2="12.990" y2="22.030" class="hole-cross" />
+  <line x1="12.690" y1="21.730" x2="12.690" y2="22.330" class="hole-cross" />
+  <circle cx="15.230" cy="22.030" r="0.55" class="hole" />
+  <line x1="14.930" y1="22.030" x2="15.530" y2="22.030" class="hole-cross" />
+  <line x1="15.230" y1="21.730" x2="15.230" y2="22.330" class="hole-cross" />
+  <circle cx="17.770" cy="22.030" r="0.55" class="hole" />
+  <line x1="17.470" y1="22.030" x2="18.070" y2="22.030" class="hole-cross" />
+  <line x1="17.770" y1="21.730" x2="17.770" y2="22.330" class="hole-cross" />
+  <circle cx="20.310" cy="22.030" r="0.55" class="hole" />
+  <line x1="20.010" y1="22.030" x2="20.610" y2="22.030" class="hole-cross" />
+  <line x1="20.310" y1="21.730" x2="20.310" y2="22.330" class="hole-cross" />
+  <circle cx="22.850" cy="22.030" r="0.55" class="hole" />
+  <line x1="22.550" y1="22.030" x2="23.150" y2="22.030" class="hole-cross" />
+  <line x1="22.850" y1="21.730" x2="22.850" y2="22.330" class="hole-cross" />
+  <circle cx="25.390" cy="22.030" r="0.55" class="hole" />
+  <line x1="25.090" y1="22.030" x2="25.690" y2="22.030" class="hole-cross" />
+  <line x1="25.390" y1="21.730" x2="25.390" y2="22.330" class="hole-cross" />
+  <circle cx="27.930" cy="22.030" r="0.55" class="hole" />
+  <line x1="27.630" y1="22.030" x2="28.230" y2="22.030" class="hole-cross" />
+  <line x1="27.930" y1="21.730" x2="27.930" y2="22.330" class="hole-cross" />
+  <circle cx="30.470" cy="22.030" r="0.55" class="hole" />
+  <line x1="30.170" y1="22.030" x2="30.770" y2="22.030" class="hole-cross" />
+  <line x1="30.470" y1="21.730" x2="30.470" y2="22.330" class="hole-cross" />
+  <circle cx="2.530" cy="24.570" r="0.55" class="hole" />
+  <line x1="2.230" y1="24.570" x2="2.830" y2="24.570" class="hole-cross" />
+  <line x1="2.530" y1="24.270" x2="2.530" y2="24.870" class="hole-cross" />
+  <circle cx="5.070" cy="24.570" r="0.55" class="hole" />
+  <line x1="4.770" y1="24.570" x2="5.370" y2="24.570" class="hole-cross" />
+  <line x1="5.070" y1="24.270" x2="5.070" y2="24.870" class="hole-cross" />
+  <circle cx="7.610" cy="24.570" r="0.55" class="hole" />
+  <line x1="7.310" y1="24.570" x2="7.910" y2="24.570" class="hole-cross" />
+  <line x1="7.610" y1="24.270" x2="7.610" y2="24.870" class="hole-cross" />
+  <circle cx="10.150" cy="24.570" r="0.55" class="hole" />
+  <line x1="9.850" y1="24.570" x2="10.450" y2="24.570" class="hole-cross" />
+  <line x1="10.150" y1="24.270" x2="10.150" y2="24.870" class="hole-cross" />
+  <circle cx="12.690" cy="24.570" r="0.55" class="hole" />
+  <line x1="12.390" y1="24.570" x2="12.990" y2="24.570" class="hole-cross" />
+  <line x1="12.690" y1="24.270" x2="12.690" y2="24.870" class="hole-cross" />
+  <circle cx="15.230" cy="24.570" r="0.55" class="hole" />
+  <line x1="14.930" y1="24.570" x2="15.530" y2="24.570" class="hole-cross" />
+  <line x1="15.230" y1="24.270" x2="15.230" y2="24.870" class="hole-cross" />
+  <circle cx="17.770" cy="24.570" r="0.55" class="hole" />
+  <line x1="17.470" y1="24.570" x2="18.070" y2="24.570" class="hole-cross" />
+  <line x1="17.770" y1="24.270" x2="17.770" y2="24.870" class="hole-cross" />
+  <circle cx="20.310" cy="24.570" r="0.55" class="hole" />
+  <line x1="20.010" y1="24.570" x2="20.610" y2="24.570" class="hole-cross" />
+  <line x1="20.310" y1="24.270" x2="20.310" y2="24.870" class="hole-cross" />
+  <circle cx="22.850" cy="24.570" r="0.55" class="hole" />
+  <line x1="22.550" y1="24.570" x2="23.150" y2="24.570" class="hole-cross" />
+  <line x1="22.850" y1="24.270" x2="22.850" y2="24.870" class="hole-cross" />
+  <circle cx="25.390" cy="24.570" r="0.55" class="hole" />
+  <line x1="25.090" y1="24.570" x2="25.690" y2="24.570" class="hole-cross" />
+  <line x1="25.390" y1="24.270" x2="25.390" y2="24.870" class="hole-cross" />
+  <circle cx="27.930" cy="24.570" r="0.55" class="hole" />
+  <line x1="27.630" y1="24.570" x2="28.230" y2="24.570" class="hole-cross" />
+  <line x1="27.930" y1="24.270" x2="27.930" y2="24.870" class="hole-cross" />
+  <circle cx="30.470" cy="24.570" r="0.55" class="hole" />
+  <line x1="30.170" y1="24.570" x2="30.770" y2="24.570" class="hole-cross" />
+  <line x1="30.470" y1="24.270" x2="30.470" y2="24.870" class="hole-cross" />
+  <circle cx="2.530" cy="27.110" r="0.55" class="hole" />
+  <line x1="2.230" y1="27.110" x2="2.830" y2="27.110" class="hole-cross" />
+  <line x1="2.530" y1="26.810" x2="2.530" y2="27.410" class="hole-cross" />
+  <circle cx="5.070" cy="27.110" r="0.55" class="hole" />
+  <line x1="4.770" y1="27.110" x2="5.370" y2="27.110" class="hole-cross" />
+  <line x1="5.070" y1="26.810" x2="5.070" y2="27.410" class="hole-cross" />
+  <circle cx="7.610" cy="27.110" r="0.55" class="hole" />
+  <line x1="7.310" y1="27.110" x2="7.910" y2="27.110" class="hole-cross" />
+  <line x1="7.610" y1="26.810" x2="7.610" y2="27.410" class="hole-cross" />
+  <circle cx="10.150" cy="27.110" r="0.55" class="hole" />
+  <line x1="9.850" y1="27.110" x2="10.450" y2="27.110" class="hole-cross" />
+  <line x1="10.150" y1="26.810" x2="10.150" y2="27.410" class="hole-cross" />
+  <circle cx="12.690" cy="27.110" r="0.55" class="hole" />
+  <line x1="12.390" y1="27.110" x2="12.990" y2="27.110" class="hole-cross" />
+  <line x1="12.690" y1="26.810" x2="12.690" y2="27.410" class="hole-cross" />
+  <circle cx="15.230" cy="27.110" r="0.55" class="hole" />
+  <line x1="14.930" y1="27.110" x2="15.530" y2="27.110" class="hole-cross" />
+  <line x1="15.230" y1="26.810" x2="15.230" y2="27.410" class="hole-cross" />
+  <circle cx="17.770" cy="27.110" r="0.55" class="hole" />
+  <line x1="17.470" y1="27.110" x2="18.070" y2="27.110" class="hole-cross" />
+  <line x1="17.770" y1="26.810" x2="17.770" y2="27.410" class="hole-cross" />
+  <circle cx="20.310" cy="27.110" r="0.55" class="hole" />
+  <line x1="20.010" y1="27.110" x2="20.610" y2="27.110" class="hole-cross" />
+  <line x1="20.310" y1="26.810" x2="20.310" y2="27.410" class="hole-cross" />
+  <circle cx="22.850" cy="27.110" r="0.55" class="hole" />
+  <line x1="22.550" y1="27.110" x2="23.150" y2="27.110" class="hole-cross" />
+  <line x1="22.850" y1="26.810" x2="22.850" y2="27.410" class="hole-cross" />
+  <circle cx="25.390" cy="27.110" r="0.55" class="hole" />
+  <line x1="25.090" y1="27.110" x2="25.690" y2="27.110" class="hole-cross" />
+  <line x1="25.390" y1="26.810" x2="25.390" y2="27.410" class="hole-cross" />
+  <circle cx="27.930" cy="27.110" r="0.55" class="hole" />
+  <line x1="27.630" y1="27.110" x2="28.230" y2="27.110" class="hole-cross" />
+  <line x1="27.930" y1="26.810" x2="27.930" y2="27.410" class="hole-cross" />
+  <circle cx="30.470" cy="27.110" r="0.55" class="hole" />
+  <line x1="30.170" y1="27.110" x2="30.770" y2="27.110" class="hole-cross" />
+  <line x1="30.470" y1="26.810" x2="30.470" y2="27.410" class="hole-cross" />
+  <circle cx="2.530" cy="29.650" r="0.55" class="hole" />
+  <line x1="2.230" y1="29.650" x2="2.830" y2="29.650" class="hole-cross" />
+  <line x1="2.530" y1="29.350" x2="2.530" y2="29.950" class="hole-cross" />
+  <circle cx="5.070" cy="29.650" r="0.55" class="hole" />
+  <line x1="4.770" y1="29.650" x2="5.370" y2="29.650" class="hole-cross" />
+  <line x1="5.070" y1="29.350" x2="5.070" y2="29.950" class="hole-cross" />
+  <circle cx="7.610" cy="29.650" r="0.55" class="hole" />
+  <line x1="7.310" y1="29.650" x2="7.910" y2="29.650" class="hole-cross" />
+  <line x1="7.610" y1="29.350" x2="7.610" y2="29.950" class="hole-cross" />
+  <circle cx="10.150" cy="29.650" r="0.55" class="hole" />
+  <line x1="9.850" y1="29.650" x2="10.450" y2="29.650" class="hole-cross" />
+  <line x1="10.150" y1="29.350" x2="10.150" y2="29.950" class="hole-cross" />
+  <circle cx="12.690" cy="29.650" r="0.55" class="hole" />
+  <line x1="12.390" y1="29.650" x2="12.990" y2="29.650" class="hole-cross" />
+  <line x1="12.690" y1="29.350" x2="12.690" y2="29.950" class="hole-cross" />
+  <circle cx="15.230" cy="29.650" r="0.55" class="hole" />
+  <line x1="14.930" y1="29.650" x2="15.530" y2="29.650" class="hole-cross" />
+  <line x1="15.230" y1="29.350" x2="15.230" y2="29.950" class="hole-cross" />
+  <circle cx="17.770" cy="29.650" r="0.55" class="hole" />
+  <line x1="17.470" y1="29.650" x2="18.070" y2="29.650" class="hole-cross" />
+  <line x1="17.770" y1="29.350" x2="17.770" y2="29.950" class="hole-cross" />
+  <circle cx="20.310" cy="29.650" r="0.55" class="hole" />
+  <line x1="20.010" y1="29.650" x2="20.610" y2="29.650" class="hole-cross" />
+  <line x1="20.310" y1="29.350" x2="20.310" y2="29.950" class="hole-cross" />
+  <circle cx="22.850" cy="29.650" r="0.55" class="hole" />
+  <line x1="22.550" y1="29.650" x2="23.150" y2="29.650" class="hole-cross" />
+  <line x1="22.850" y1="29.350" x2="22.850" y2="29.950" class="hole-cross" />
+  <circle cx="25.390" cy="29.650" r="0.55" class="hole" />
+  <line x1="25.090" y1="29.650" x2="25.690" y2="29.650" class="hole-cross" />
+  <line x1="25.390" y1="29.350" x2="25.390" y2="29.950" class="hole-cross" />
+  <circle cx="27.930" cy="29.650" r="0.55" class="hole" />
+  <line x1="27.630" y1="29.650" x2="28.230" y2="29.650" class="hole-cross" />
+  <line x1="27.930" y1="29.350" x2="27.930" y2="29.950" class="hole-cross" />
+  <circle cx="30.470" cy="29.650" r="0.55" class="hole" />
+  <line x1="30.170" y1="29.650" x2="30.770" y2="29.650" class="hole-cross" />
+  <line x1="30.470" y1="29.350" x2="30.470" y2="29.950" class="hole-cross" />
+  <circle cx="2.530" cy="32.190" r="0.55" class="hole" />
+  <line x1="2.230" y1="32.190" x2="2.830" y2="32.190" class="hole-cross" />
+  <line x1="2.530" y1="31.890" x2="2.530" y2="32.490" class="hole-cross" />
+  <circle cx="5.070" cy="32.190" r="0.55" class="hole" />
+  <line x1="4.770" y1="32.190" x2="5.370" y2="32.190" class="hole-cross" />
+  <line x1="5.070" y1="31.890" x2="5.070" y2="32.490" class="hole-cross" />
+  <circle cx="7.610" cy="32.190" r="0.55" class="hole" />
+  <line x1="7.310" y1="32.190" x2="7.910" y2="32.190" class="hole-cross" />
+  <line x1="7.610" y1="31.890" x2="7.610" y2="32.490" class="hole-cross" />
+  <circle cx="10.150" cy="32.190" r="0.55" class="hole" />
+  <line x1="9.850" y1="32.190" x2="10.450" y2="32.190" class="hole-cross" />
+  <line x1="10.150" y1="31.890" x2="10.150" y2="32.490" class="hole-cross" />
+  <circle cx="12.690" cy="32.190" r="0.55" class="hole" />
+  <line x1="12.390" y1="32.190" x2="12.990" y2="32.190" class="hole-cross" />
+  <line x1="12.690" y1="31.890" x2="12.690" y2="32.490" class="hole-cross" />
+  <circle cx="15.230" cy="32.190" r="0.55" class="hole" />
+  <line x1="14.930" y1="32.190" x2="15.530" y2="32.190" class="hole-cross" />
+  <line x1="15.230" y1="31.890" x2="15.230" y2="32.490" class="hole-cross" />
+  <circle cx="17.770" cy="32.190" r="0.55" class="hole" />
+  <line x1="17.470" y1="32.190" x2="18.070" y2="32.190" class="hole-cross" />
+  <line x1="17.770" y1="31.890" x2="17.770" y2="32.490" class="hole-cross" />
+  <circle cx="20.310" cy="32.190" r="0.55" class="hole" />
+  <line x1="20.010" y1="32.190" x2="20.610" y2="32.190" class="hole-cross" />
+  <line x1="20.310" y1="31.890" x2="20.310" y2="32.490" class="hole-cross" />
+  <circle cx="22.850" cy="32.190" r="0.55" class="hole" />
+  <line x1="22.550" y1="32.190" x2="23.150" y2="32.190" class="hole-cross" />
+  <line x1="22.850" y1="31.890" x2="22.850" y2="32.490" class="hole-cross" />
+  <circle cx="25.390" cy="32.190" r="0.55" class="hole" />
+  <line x1="25.090" y1="32.190" x2="25.690" y2="32.190" class="hole-cross" />
+  <line x1="25.390" y1="31.890" x2="25.390" y2="32.490" class="hole-cross" />
+  <circle cx="27.930" cy="32.190" r="0.55" class="hole" />
+  <line x1="27.630" y1="32.190" x2="28.230" y2="32.190" class="hole-cross" />
+  <line x1="27.930" y1="31.890" x2="27.930" y2="32.490" class="hole-cross" />
+  <circle cx="30.470" cy="32.190" r="0.55" class="hole" />
+  <line x1="30.170" y1="32.190" x2="30.770" y2="32.190" class="hole-cross" />
+  <line x1="30.470" y1="31.890" x2="30.470" y2="32.490" class="hole-cross" />
+  <circle cx="2.530" cy="34.730" r="0.55" class="hole" />
+  <line x1="2.230" y1="34.730" x2="2.830" y2="34.730" class="hole-cross" />
+  <line x1="2.530" y1="34.430" x2="2.530" y2="35.030" class="hole-cross" />
+  <circle cx="5.070" cy="34.730" r="0.55" class="hole" />
+  <line x1="4.770" y1="34.730" x2="5.370" y2="34.730" class="hole-cross" />
+  <line x1="5.070" y1="34.430" x2="5.070" y2="35.030" class="hole-cross" />
+  <circle cx="7.610" cy="34.730" r="0.55" class="hole" />
+  <line x1="7.310" y1="34.730" x2="7.910" y2="34.730" class="hole-cross" />
+  <line x1="7.610" y1="34.430" x2="7.610" y2="35.030" class="hole-cross" />
+  <circle cx="10.150" cy="34.730" r="0.55" class="hole" />
+  <line x1="9.850" y1="34.730" x2="10.450" y2="34.730" class="hole-cross" />
+  <line x1="10.150" y1="34.430" x2="10.150" y2="35.030" class="hole-cross" />
+  <circle cx="12.690" cy="34.730" r="0.55" class="hole" />
+  <line x1="12.390" y1="34.730" x2="12.990" y2="34.730" class="hole-cross" />
+  <line x1="12.690" y1="34.430" x2="12.690" y2="35.030" class="hole-cross" />
+  <circle cx="15.230" cy="34.730" r="0.55" class="hole" />
+  <line x1="14.930" y1="34.730" x2="15.530" y2="34.730" class="hole-cross" />
+  <line x1="15.230" y1="34.430" x2="15.230" y2="35.030" class="hole-cross" />
+  <circle cx="17.770" cy="34.730" r="0.55" class="hole" />
+  <line x1="17.470" y1="34.730" x2="18.070" y2="34.730" class="hole-cross" />
+  <line x1="17.770" y1="34.430" x2="17.770" y2="35.030" class="hole-cross" />
+  <circle cx="20.310" cy="34.730" r="0.55" class="hole" />
+  <line x1="20.010" y1="34.730" x2="20.610" y2="34.730" class="hole-cross" />
+  <line x1="20.310" y1="34.430" x2="20.310" y2="35.030" class="hole-cross" />
+  <circle cx="22.850" cy="34.730" r="0.55" class="hole" />
+  <line x1="22.550" y1="34.730" x2="23.150" y2="34.730" class="hole-cross" />
+  <line x1="22.850" y1="34.430" x2="22.850" y2="35.030" class="hole-cross" />
+  <circle cx="25.390" cy="34.730" r="0.55" class="hole" />
+  <line x1="25.090" y1="34.730" x2="25.690" y2="34.730" class="hole-cross" />
+  <line x1="25.390" y1="34.430" x2="25.390" y2="35.030" class="hole-cross" />
+  <circle cx="27.930" cy="34.730" r="0.55" class="hole" />
+  <line x1="27.630" y1="34.730" x2="28.230" y2="34.730" class="hole-cross" />
+  <line x1="27.930" y1="34.430" x2="27.930" y2="35.030" class="hole-cross" />
+  <circle cx="30.470" cy="34.730" r="0.55" class="hole" />
+  <line x1="30.170" y1="34.730" x2="30.770" y2="34.730" class="hole-cross" />
+  <line x1="30.470" y1="34.430" x2="30.470" y2="35.030" class="hole-cross" />
+  <circle cx="2.530" cy="37.270" r="0.55" class="hole" />
+  <line x1="2.230" y1="37.270" x2="2.830" y2="37.270" class="hole-cross" />
+  <line x1="2.530" y1="36.970" x2="2.530" y2="37.570" class="hole-cross" />
+  <circle cx="5.070" cy="37.270" r="0.55" class="hole" />
+  <line x1="4.770" y1="37.270" x2="5.370" y2="37.270" class="hole-cross" />
+  <line x1="5.070" y1="36.970" x2="5.070" y2="37.570" class="hole-cross" />
+  <circle cx="7.610" cy="37.270" r="0.55" class="hole" />
+  <line x1="7.310" y1="37.270" x2="7.910" y2="37.270" class="hole-cross" />
+  <line x1="7.610" y1="36.970" x2="7.610" y2="37.570" class="hole-cross" />
+  <circle cx="10.150" cy="37.270" r="0.55" class="hole" />
+  <line x1="9.850" y1="37.270" x2="10.450" y2="37.270" class="hole-cross" />
+  <line x1="10.150" y1="36.970" x2="10.150" y2="37.570" class="hole-cross" />
+  <circle cx="12.690" cy="37.270" r="0.55" class="hole" />
+  <line x1="12.390" y1="37.270" x2="12.990" y2="37.270" class="hole-cross" />
+  <line x1="12.690" y1="36.970" x2="12.690" y2="37.570" class="hole-cross" />
+  <circle cx="15.230" cy="37.270" r="0.55" class="hole" />
+  <line x1="14.930" y1="37.270" x2="15.530" y2="37.270" class="hole-cross" />
+  <line x1="15.230" y1="36.970" x2="15.230" y2="37.570" class="hole-cross" />
+  <circle cx="17.770" cy="37.270" r="0.55" class="hole" />
+  <line x1="17.470" y1="37.270" x2="18.070" y2="37.270" class="hole-cross" />
+  <line x1="17.770" y1="36.970" x2="17.770" y2="37.570" class="hole-cross" />
+  <circle cx="20.310" cy="37.270" r="0.55" class="hole" />
+  <line x1="20.010" y1="37.270" x2="20.610" y2="37.270" class="hole-cross" />
+  <line x1="20.310" y1="36.970" x2="20.310" y2="37.570" class="hole-cross" />
+  <circle cx="22.850" cy="37.270" r="0.55" class="hole" />
+  <line x1="22.550" y1="37.270" x2="23.150" y2="37.270" class="hole-cross" />
+  <line x1="22.850" y1="36.970" x2="22.850" y2="37.570" class="hole-cross" />
+  <circle cx="25.390" cy="37.270" r="0.55" class="hole" />
+  <line x1="25.090" y1="37.270" x2="25.690" y2="37.270" class="hole-cross" />
+  <line x1="25.390" y1="36.970" x2="25.390" y2="37.570" class="hole-cross" />
+  <circle cx="27.930" cy="37.270" r="0.55" class="hole" />
+  <line x1="27.630" y1="37.270" x2="28.230" y2="37.270" class="hole-cross" />
+  <line x1="27.930" y1="36.970" x2="27.930" y2="37.570" class="hole-cross" />
+  <circle cx="30.470" cy="37.270" r="0.55" class="hole" />
+  <line x1="30.170" y1="37.270" x2="30.770" y2="37.270" class="hole-cross" />
+  <line x1="30.470" y1="36.970" x2="30.470" y2="37.570" class="hole-cross" />
+  <circle cx="2.530" cy="39.810" r="0.55" class="hole" />
+  <line x1="2.230" y1="39.810" x2="2.830" y2="39.810" class="hole-cross" />
+  <line x1="2.530" y1="39.510" x2="2.530" y2="40.110" class="hole-cross" />
+  <circle cx="5.070" cy="39.810" r="0.55" class="hole" />
+  <line x1="4.770" y1="39.810" x2="5.370" y2="39.810" class="hole-cross" />
+  <line x1="5.070" y1="39.510" x2="5.070" y2="40.110" class="hole-cross" />
+  <circle cx="7.610" cy="39.810" r="0.55" class="hole" />
+  <line x1="7.310" y1="39.810" x2="7.910" y2="39.810" class="hole-cross" />
+  <line x1="7.610" y1="39.510" x2="7.610" y2="40.110" class="hole-cross" />
+  <circle cx="10.150" cy="39.810" r="0.55" class="hole" />
+  <line x1="9.850" y1="39.810" x2="10.450" y2="39.810" class="hole-cross" />
+  <line x1="10.150" y1="39.510" x2="10.150" y2="40.110" class="hole-cross" />
+  <circle cx="12.690" cy="39.810" r="0.55" class="hole" />
+  <line x1="12.390" y1="39.810" x2="12.990" y2="39.810" class="hole-cross" />
+  <line x1="12.690" y1="39.510" x2="12.690" y2="40.110" class="hole-cross" />
+  <circle cx="15.230" cy="39.810" r="0.55" class="hole" />
+  <line x1="14.930" y1="39.810" x2="15.530" y2="39.810" class="hole-cross" />
+  <line x1="15.230" y1="39.510" x2="15.230" y2="40.110" class="hole-cross" />
+  <circle cx="17.770" cy="39.810" r="0.55" class="hole" />
+  <line x1="17.470" y1="39.810" x2="18.070" y2="39.810" class="hole-cross" />
+  <line x1="17.770" y1="39.510" x2="17.770" y2="40.110" class="hole-cross" />
+  <circle cx="20.310" cy="39.810" r="0.55" class="hole" />
+  <line x1="20.010" y1="39.810" x2="20.610" y2="39.810" class="hole-cross" />
+  <line x1="20.310" y1="39.510" x2="20.310" y2="40.110" class="hole-cross" />
+  <circle cx="22.850" cy="39.810" r="0.55" class="hole" />
+  <line x1="22.550" y1="39.810" x2="23.150" y2="39.810" class="hole-cross" />
+  <line x1="22.850" y1="39.510" x2="22.850" y2="40.110" class="hole-cross" />
+  <circle cx="25.390" cy="39.810" r="0.55" class="hole" />
+  <line x1="25.090" y1="39.810" x2="25.690" y2="39.810" class="hole-cross" />
+  <line x1="25.390" y1="39.510" x2="25.390" y2="40.110" class="hole-cross" />
+  <circle cx="27.930" cy="39.810" r="0.55" class="hole" />
+  <line x1="27.630" y1="39.810" x2="28.230" y2="39.810" class="hole-cross" />
+  <line x1="27.930" y1="39.510" x2="27.930" y2="40.110" class="hole-cross" />
+  <circle cx="30.470" cy="39.810" r="0.55" class="hole" />
+  <line x1="30.170" y1="39.810" x2="30.770" y2="39.810" class="hole-cross" />
+  <line x1="30.470" y1="39.510" x2="30.470" y2="40.110" class="hole-cross" />
+  <circle cx="2.530" cy="42.350" r="0.55" class="hole" />
+  <line x1="2.230" y1="42.350" x2="2.830" y2="42.350" class="hole-cross" />
+  <line x1="2.530" y1="42.050" x2="2.530" y2="42.650" class="hole-cross" />
+  <circle cx="5.070" cy="42.350" r="0.55" class="hole" />
+  <line x1="4.770" y1="42.350" x2="5.370" y2="42.350" class="hole-cross" />
+  <line x1="5.070" y1="42.050" x2="5.070" y2="42.650" class="hole-cross" />
+  <circle cx="7.610" cy="42.350" r="0.55" class="hole" />
+  <line x1="7.310" y1="42.350" x2="7.910" y2="42.350" class="hole-cross" />
+  <line x1="7.610" y1="42.050" x2="7.610" y2="42.650" class="hole-cross" />
+  <circle cx="10.150" cy="42.350" r="0.55" class="hole" />
+  <line x1="9.850" y1="42.350" x2="10.450" y2="42.350" class="hole-cross" />
+  <line x1="10.150" y1="42.050" x2="10.150" y2="42.650" class="hole-cross" />
+  <circle cx="12.690" cy="42.350" r="0.55" class="hole" />
+  <line x1="12.390" y1="42.350" x2="12.990" y2="42.350" class="hole-cross" />
+  <line x1="12.690" y1="42.050" x2="12.690" y2="42.650" class="hole-cross" />
+  <circle cx="15.230" cy="42.350" r="0.55" class="hole" />
+  <line x1="14.930" y1="42.350" x2="15.530" y2="42.350" class="hole-cross" />
+  <line x1="15.230" y1="42.050" x2="15.230" y2="42.650" class="hole-cross" />
+  <circle cx="17.770" cy="42.350" r="0.55" class="hole" />
+  <line x1="17.470" y1="42.350" x2="18.070" y2="42.350" class="hole-cross" />
+  <line x1="17.770" y1="42.050" x2="17.770" y2="42.650" class="hole-cross" />
+  <circle cx="20.310" cy="42.350" r="0.55" class="hole" />
+  <line x1="20.010" y1="42.350" x2="20.610" y2="42.350" class="hole-cross" />
+  <line x1="20.310" y1="42.050" x2="20.310" y2="42.650" class="hole-cross" />
+  <circle cx="22.850" cy="42.350" r="0.55" class="hole" />
+  <line x1="22.550" y1="42.350" x2="23.150" y2="42.350" class="hole-cross" />
+  <line x1="22.850" y1="42.050" x2="22.850" y2="42.650" class="hole-cross" />
+  <circle cx="25.390" cy="42.350" r="0.55" class="hole" />
+  <line x1="25.090" y1="42.350" x2="25.690" y2="42.350" class="hole-cross" />
+  <line x1="25.390" y1="42.050" x2="25.390" y2="42.650" class="hole-cross" />
+  <circle cx="27.930" cy="42.350" r="0.55" class="hole" />
+  <line x1="27.630" y1="42.350" x2="28.230" y2="42.350" class="hole-cross" />
+  <line x1="27.930" y1="42.050" x2="27.930" y2="42.650" class="hole-cross" />
+  <circle cx="30.470" cy="42.350" r="0.55" class="hole" />
+  <line x1="30.170" y1="42.350" x2="30.770" y2="42.350" class="hole-cross" />
+  <line x1="30.470" y1="42.050" x2="30.470" y2="42.650" class="hole-cross" />
+  <circle cx="2.530" cy="44.890" r="0.55" class="hole" />
+  <line x1="2.230" y1="44.890" x2="2.830" y2="44.890" class="hole-cross" />
+  <line x1="2.530" y1="44.590" x2="2.530" y2="45.190" class="hole-cross" />
+  <circle cx="5.070" cy="44.890" r="0.55" class="hole" />
+  <line x1="4.770" y1="44.890" x2="5.370" y2="44.890" class="hole-cross" />
+  <line x1="5.070" y1="44.590" x2="5.070" y2="45.190" class="hole-cross" />
+  <circle cx="7.610" cy="44.890" r="0.55" class="hole" />
+  <line x1="7.310" y1="44.890" x2="7.910" y2="44.890" class="hole-cross" />
+  <line x1="7.610" y1="44.590" x2="7.610" y2="45.190" class="hole-cross" />
+  <circle cx="10.150" cy="44.890" r="0.55" class="hole" />
+  <line x1="9.850" y1="44.890" x2="10.450" y2="44.890" class="hole-cross" />
+  <line x1="10.150" y1="44.590" x2="10.150" y2="45.190" class="hole-cross" />
+  <circle cx="12.690" cy="44.890" r="0.55" class="hole" />
+  <line x1="12.390" y1="44.890" x2="12.990" y2="44.890" class="hole-cross" />
+  <line x1="12.690" y1="44.590" x2="12.690" y2="45.190" class="hole-cross" />
+  <circle cx="15.230" cy="44.890" r="0.55" class="hole" />
+  <line x1="14.930" y1="44.890" x2="15.530" y2="44.890" class="hole-cross" />
+  <line x1="15.230" y1="44.590" x2="15.230" y2="45.190" class="hole-cross" />
+  <circle cx="17.770" cy="44.890" r="0.55" class="hole" />
+  <line x1="17.470" y1="44.890" x2="18.070" y2="44.890" class="hole-cross" />
+  <line x1="17.770" y1="44.590" x2="17.770" y2="45.190" class="hole-cross" />
+  <circle cx="20.310" cy="44.890" r="0.55" class="hole" />
+  <line x1="20.010" y1="44.890" x2="20.610" y2="44.890" class="hole-cross" />
+  <line x1="20.310" y1="44.590" x2="20.310" y2="45.190" class="hole-cross" />
+  <circle cx="22.850" cy="44.890" r="0.55" class="hole" />
+  <line x1="22.550" y1="44.890" x2="23.150" y2="44.890" class="hole-cross" />
+  <line x1="22.850" y1="44.590" x2="22.850" y2="45.190" class="hole-cross" />
+  <circle cx="25.390" cy="44.890" r="0.55" class="hole" />
+  <line x1="25.090" y1="44.890" x2="25.690" y2="44.890" class="hole-cross" />
+  <line x1="25.390" y1="44.590" x2="25.390" y2="45.190" class="hole-cross" />
+  <circle cx="27.930" cy="44.890" r="0.55" class="hole" />
+  <line x1="27.630" y1="44.890" x2="28.230" y2="44.890" class="hole-cross" />
+  <line x1="27.930" y1="44.590" x2="27.930" y2="45.190" class="hole-cross" />
+  <circle cx="30.470" cy="44.890" r="0.55" class="hole" />
+  <line x1="30.170" y1="44.890" x2="30.770" y2="44.890" class="hole-cross" />
+  <line x1="30.470" y1="44.590" x2="30.470" y2="45.190" class="hole-cross" />
+  <circle cx="2.530" cy="47.430" r="0.55" class="hole" />
+  <line x1="2.230" y1="47.430" x2="2.830" y2="47.430" class="hole-cross" />
+  <line x1="2.530" y1="47.130" x2="2.530" y2="47.730" class="hole-cross" />
+  <circle cx="5.070" cy="47.430" r="0.55" class="hole" />
+  <line x1="4.770" y1="47.430" x2="5.370" y2="47.430" class="hole-cross" />
+  <line x1="5.070" y1="47.130" x2="5.070" y2="47.730" class="hole-cross" />
+  <circle cx="7.610" cy="47.430" r="0.55" class="hole" />
+  <line x1="7.310" y1="47.430" x2="7.910" y2="47.430" class="hole-cross" />
+  <line x1="7.610" y1="47.130" x2="7.610" y2="47.730" class="hole-cross" />
+  <circle cx="10.150" cy="47.430" r="0.55" class="hole" />
+  <line x1="9.850" y1="47.430" x2="10.450" y2="47.430" class="hole-cross" />
+  <line x1="10.150" y1="47.130" x2="10.150" y2="47.730" class="hole-cross" />
+  <circle cx="12.690" cy="47.430" r="0.55" class="hole" />
+  <line x1="12.390" y1="47.430" x2="12.990" y2="47.430" class="hole-cross" />
+  <line x1="12.690" y1="47.130" x2="12.690" y2="47.730" class="hole-cross" />
+  <circle cx="15.230" cy="47.430" r="0.55" class="hole" />
+  <line x1="14.930" y1="47.430" x2="15.530" y2="47.430" class="hole-cross" />
+  <line x1="15.230" y1="47.130" x2="15.230" y2="47.730" class="hole-cross" />
+  <circle cx="17.770" cy="47.430" r="0.55" class="hole" />
+  <line x1="17.470" y1="47.430" x2="18.070" y2="47.430" class="hole-cross" />
+  <line x1="17.770" y1="47.130" x2="17.770" y2="47.730" class="hole-cross" />
+  <circle cx="20.310" cy="47.430" r="0.55" class="hole" />
+  <line x1="20.010" y1="47.430" x2="20.610" y2="47.430" class="hole-cross" />
+  <line x1="20.310" y1="47.130" x2="20.310" y2="47.730" class="hole-cross" />
+  <circle cx="22.850" cy="47.430" r="0.55" class="hole" />
+  <line x1="22.550" y1="47.430" x2="23.150" y2="47.430" class="hole-cross" />
+  <line x1="22.850" y1="47.130" x2="22.850" y2="47.730" class="hole-cross" />
+  <circle cx="25.390" cy="47.430" r="0.55" class="hole" />
+  <line x1="25.090" y1="47.430" x2="25.690" y2="47.430" class="hole-cross" />
+  <line x1="25.390" y1="47.130" x2="25.390" y2="47.730" class="hole-cross" />
+  <circle cx="27.930" cy="47.430" r="0.55" class="hole" />
+  <line x1="27.630" y1="47.430" x2="28.230" y2="47.430" class="hole-cross" />
+  <line x1="27.930" y1="47.130" x2="27.930" y2="47.730" class="hole-cross" />
+  <circle cx="30.470" cy="47.430" r="0.55" class="hole" />
+  <line x1="30.170" y1="47.430" x2="30.770" y2="47.430" class="hole-cross" />
+  <line x1="30.470" y1="47.130" x2="30.470" y2="47.730" class="hole-cross" />
+  <circle cx="2.530" cy="49.970" r="0.55" class="hole" />
+  <line x1="2.230" y1="49.970" x2="2.830" y2="49.970" class="hole-cross" />
+  <line x1="2.530" y1="49.670" x2="2.530" y2="50.270" class="hole-cross" />
+  <circle cx="5.070" cy="49.970" r="0.55" class="hole" />
+  <line x1="4.770" y1="49.970" x2="5.370" y2="49.970" class="hole-cross" />
+  <line x1="5.070" y1="49.670" x2="5.070" y2="50.270" class="hole-cross" />
+  <circle cx="7.610" cy="49.970" r="0.55" class="hole" />
+  <line x1="7.310" y1="49.970" x2="7.910" y2="49.970" class="hole-cross" />
+  <line x1="7.610" y1="49.670" x2="7.610" y2="50.270" class="hole-cross" />
+  <circle cx="10.150" cy="49.970" r="0.55" class="hole" />
+  <line x1="9.850" y1="49.970" x2="10.450" y2="49.970" class="hole-cross" />
+  <line x1="10.150" y1="49.670" x2="10.150" y2="50.270" class="hole-cross" />
+  <circle cx="12.690" cy="49.970" r="0.55" class="hole" />
+  <line x1="12.390" y1="49.970" x2="12.990" y2="49.970" class="hole-cross" />
+  <line x1="12.690" y1="49.670" x2="12.690" y2="50.270" class="hole-cross" />
+  <circle cx="15.230" cy="49.970" r="0.55" class="hole" />
+  <line x1="14.930" y1="49.970" x2="15.530" y2="49.970" class="hole-cross" />
+  <line x1="15.230" y1="49.670" x2="15.230" y2="50.270" class="hole-cross" />
+  <circle cx="17.770" cy="49.970" r="0.55" class="hole" />
+  <line x1="17.470" y1="49.970" x2="18.070" y2="49.970" class="hole-cross" />
+  <line x1="17.770" y1="49.670" x2="17.770" y2="50.270" class="hole-cross" />
+  <circle cx="20.310" cy="49.970" r="0.55" class="hole" />
+  <line x1="20.010" y1="49.970" x2="20.610" y2="49.970" class="hole-cross" />
+  <line x1="20.310" y1="49.670" x2="20.310" y2="50.270" class="hole-cross" />
+  <circle cx="22.850" cy="49.970" r="0.55" class="hole" />
+  <line x1="22.550" y1="49.970" x2="23.150" y2="49.970" class="hole-cross" />
+  <line x1="22.850" y1="49.670" x2="22.850" y2="50.270" class="hole-cross" />
+  <circle cx="25.390" cy="49.970" r="0.55" class="hole" />
+  <line x1="25.090" y1="49.970" x2="25.690" y2="49.970" class="hole-cross" />
+  <line x1="25.390" y1="49.670" x2="25.390" y2="50.270" class="hole-cross" />
+  <circle cx="27.930" cy="49.970" r="0.55" class="hole" />
+  <line x1="27.630" y1="49.970" x2="28.230" y2="49.970" class="hole-cross" />
+  <line x1="27.930" y1="49.670" x2="27.930" y2="50.270" class="hole-cross" />
+  <circle cx="30.470" cy="49.970" r="0.55" class="hole" />
+  <line x1="30.170" y1="49.970" x2="30.770" y2="49.970" class="hole-cross" />
+  <line x1="30.470" y1="49.670" x2="30.470" y2="50.270" class="hole-cross" />
+  <circle cx="2.530" cy="52.510" r="0.55" class="hole" />
+  <line x1="2.230" y1="52.510" x2="2.830" y2="52.510" class="hole-cross" />
+  <line x1="2.530" y1="52.210" x2="2.530" y2="52.810" class="hole-cross" />
+  <circle cx="5.070" cy="52.510" r="0.55" class="hole" />
+  <line x1="4.770" y1="52.510" x2="5.370" y2="52.510" class="hole-cross" />
+  <line x1="5.070" y1="52.210" x2="5.070" y2="52.810" class="hole-cross" />
+  <circle cx="7.610" cy="52.510" r="0.55" class="hole" />
+  <line x1="7.310" y1="52.510" x2="7.910" y2="52.510" class="hole-cross" />
+  <line x1="7.610" y1="52.210" x2="7.610" y2="52.810" class="hole-cross" />
+  <circle cx="10.150" cy="52.510" r="0.55" class="hole" />
+  <line x1="9.850" y1="52.510" x2="10.450" y2="52.510" class="hole-cross" />
+  <line x1="10.150" y1="52.210" x2="10.150" y2="52.810" class="hole-cross" />
+  <circle cx="12.690" cy="52.510" r="0.55" class="hole" />
+  <line x1="12.390" y1="52.510" x2="12.990" y2="52.510" class="hole-cross" />
+  <line x1="12.690" y1="52.210" x2="12.690" y2="52.810" class="hole-cross" />
+  <circle cx="15.230" cy="52.510" r="0.55" class="hole" />
+  <line x1="14.930" y1="52.510" x2="15.530" y2="52.510" class="hole-cross" />
+  <line x1="15.230" y1="52.210" x2="15.230" y2="52.810" class="hole-cross" />
+  <circle cx="17.770" cy="52.510" r="0.55" class="hole" />
+  <line x1="17.470" y1="52.510" x2="18.070" y2="52.510" class="hole-cross" />
+  <line x1="17.770" y1="52.210" x2="17.770" y2="52.810" class="hole-cross" />
+  <circle cx="20.310" cy="52.510" r="0.55" class="hole" />
+  <line x1="20.010" y1="52.510" x2="20.610" y2="52.510" class="hole-cross" />
+  <line x1="20.310" y1="52.210" x2="20.310" y2="52.810" class="hole-cross" />
+  <circle cx="22.850" cy="52.510" r="0.55" class="hole" />
+  <line x1="22.550" y1="52.510" x2="23.150" y2="52.510" class="hole-cross" />
+  <line x1="22.850" y1="52.210" x2="22.850" y2="52.810" class="hole-cross" />
+  <circle cx="25.390" cy="52.510" r="0.55" class="hole" />
+  <line x1="25.090" y1="52.510" x2="25.690" y2="52.510" class="hole-cross" />
+  <line x1="25.390" y1="52.210" x2="25.390" y2="52.810" class="hole-cross" />
+  <circle cx="27.930" cy="52.510" r="0.55" class="hole" />
+  <line x1="27.630" y1="52.510" x2="28.230" y2="52.510" class="hole-cross" />
+  <line x1="27.930" y1="52.210" x2="27.930" y2="52.810" class="hole-cross" />
+  <circle cx="30.470" cy="52.510" r="0.55" class="hole" />
+  <line x1="30.170" y1="52.510" x2="30.770" y2="52.510" class="hole-cross" />
+  <line x1="30.470" y1="52.210" x2="30.470" y2="52.810" class="hole-cross" />
+  <circle cx="2.530" cy="55.050" r="0.55" class="hole" />
+  <line x1="2.230" y1="55.050" x2="2.830" y2="55.050" class="hole-cross" />
+  <line x1="2.530" y1="54.750" x2="2.530" y2="55.350" class="hole-cross" />
+  <circle cx="5.070" cy="55.050" r="0.55" class="hole" />
+  <line x1="4.770" y1="55.050" x2="5.370" y2="55.050" class="hole-cross" />
+  <line x1="5.070" y1="54.750" x2="5.070" y2="55.350" class="hole-cross" />
+  <circle cx="7.610" cy="55.050" r="0.55" class="hole" />
+  <line x1="7.310" y1="55.050" x2="7.910" y2="55.050" class="hole-cross" />
+  <line x1="7.610" y1="54.750" x2="7.610" y2="55.350" class="hole-cross" />
+  <circle cx="10.150" cy="55.050" r="0.55" class="hole" />
+  <line x1="9.850" y1="55.050" x2="10.450" y2="55.050" class="hole-cross" />
+  <line x1="10.150" y1="54.750" x2="10.150" y2="55.350" class="hole-cross" />
+  <circle cx="12.690" cy="55.050" r="0.55" class="hole" />
+  <line x1="12.390" y1="55.050" x2="12.990" y2="55.050" class="hole-cross" />
+  <line x1="12.690" y1="54.750" x2="12.690" y2="55.350" class="hole-cross" />
+  <circle cx="15.230" cy="55.050" r="0.55" class="hole" />
+  <line x1="14.930" y1="55.050" x2="15.530" y2="55.050" class="hole-cross" />
+  <line x1="15.230" y1="54.750" x2="15.230" y2="55.350" class="hole-cross" />
+  <circle cx="17.770" cy="55.050" r="0.55" class="hole" />
+  <line x1="17.470" y1="55.050" x2="18.070" y2="55.050" class="hole-cross" />
+  <line x1="17.770" y1="54.750" x2="17.770" y2="55.350" class="hole-cross" />
+  <circle cx="20.310" cy="55.050" r="0.55" class="hole" />
+  <line x1="20.010" y1="55.050" x2="20.610" y2="55.050" class="hole-cross" />
+  <line x1="20.310" y1="54.750" x2="20.310" y2="55.350" class="hole-cross" />
+  <circle cx="22.850" cy="55.050" r="0.55" class="hole" />
+  <line x1="22.550" y1="55.050" x2="23.150" y2="55.050" class="hole-cross" />
+  <line x1="22.850" y1="54.750" x2="22.850" y2="55.350" class="hole-cross" />
+  <circle cx="25.390" cy="55.050" r="0.55" class="hole" />
+  <line x1="25.090" y1="55.050" x2="25.690" y2="55.050" class="hole-cross" />
+  <line x1="25.390" y1="54.750" x2="25.390" y2="55.350" class="hole-cross" />
+  <circle cx="27.930" cy="55.050" r="0.55" class="hole" />
+  <line x1="27.630" y1="55.050" x2="28.230" y2="55.050" class="hole-cross" />
+  <line x1="27.930" y1="54.750" x2="27.930" y2="55.350" class="hole-cross" />
+  <circle cx="30.470" cy="55.050" r="0.55" class="hole" />
+  <line x1="30.170" y1="55.050" x2="30.770" y2="55.050" class="hole-cross" />
+  <line x1="30.470" y1="54.750" x2="30.470" y2="55.350" class="hole-cross" />
+  <circle cx="2.530" cy="57.590" r="0.55" class="hole" />
+  <line x1="2.230" y1="57.590" x2="2.830" y2="57.590" class="hole-cross" />
+  <line x1="2.530" y1="57.290" x2="2.530" y2="57.890" class="hole-cross" />
+  <circle cx="5.070" cy="57.590" r="0.55" class="hole" />
+  <line x1="4.770" y1="57.590" x2="5.370" y2="57.590" class="hole-cross" />
+  <line x1="5.070" y1="57.290" x2="5.070" y2="57.890" class="hole-cross" />
+  <circle cx="7.610" cy="57.590" r="0.55" class="hole" />
+  <line x1="7.310" y1="57.590" x2="7.910" y2="57.590" class="hole-cross" />
+  <line x1="7.610" y1="57.290" x2="7.610" y2="57.890" class="hole-cross" />
+  <circle cx="10.150" cy="57.590" r="0.55" class="hole" />
+  <line x1="9.850" y1="57.590" x2="10.450" y2="57.590" class="hole-cross" />
+  <line x1="10.150" y1="57.290" x2="10.150" y2="57.890" class="hole-cross" />
+  <circle cx="12.690" cy="57.590" r="0.55" class="hole" />
+  <line x1="12.390" y1="57.590" x2="12.990" y2="57.590" class="hole-cross" />
+  <line x1="12.690" y1="57.290" x2="12.690" y2="57.890" class="hole-cross" />
+  <circle cx="15.230" cy="57.590" r="0.55" class="hole" />
+  <line x1="14.930" y1="57.590" x2="15.530" y2="57.590" class="hole-cross" />
+  <line x1="15.230" y1="57.290" x2="15.230" y2="57.890" class="hole-cross" />
+  <circle cx="17.770" cy="57.590" r="0.55" class="hole" />
+  <line x1="17.470" y1="57.590" x2="18.070" y2="57.590" class="hole-cross" />
+  <line x1="17.770" y1="57.290" x2="17.770" y2="57.890" class="hole-cross" />
+  <circle cx="20.310" cy="57.590" r="0.55" class="hole" />
+  <line x1="20.010" y1="57.590" x2="20.610" y2="57.590" class="hole-cross" />
+  <line x1="20.310" y1="57.290" x2="20.310" y2="57.890" class="hole-cross" />
+  <circle cx="22.850" cy="57.590" r="0.55" class="hole" />
+  <line x1="22.550" y1="57.590" x2="23.150" y2="57.590" class="hole-cross" />
+  <line x1="22.850" y1="57.290" x2="22.850" y2="57.890" class="hole-cross" />
+  <circle cx="25.390" cy="57.590" r="0.55" class="hole" />
+  <line x1="25.090" y1="57.590" x2="25.690" y2="57.590" class="hole-cross" />
+  <line x1="25.390" y1="57.290" x2="25.390" y2="57.890" class="hole-cross" />
+  <circle cx="27.930" cy="57.590" r="0.55" class="hole" />
+  <line x1="27.630" y1="57.590" x2="28.230" y2="57.590" class="hole-cross" />
+  <line x1="27.930" y1="57.290" x2="27.930" y2="57.890" class="hole-cross" />
+  <circle cx="30.470" cy="57.590" r="0.55" class="hole" />
+  <line x1="30.170" y1="57.590" x2="30.770" y2="57.590" class="hole-cross" />
+  <line x1="30.470" y1="57.290" x2="30.470" y2="57.890" class="hole-cross" />
+  <circle cx="2.530" cy="60.130" r="0.55" class="hole" />
+  <line x1="2.230" y1="60.130" x2="2.830" y2="60.130" class="hole-cross" />
+  <line x1="2.530" y1="59.830" x2="2.530" y2="60.430" class="hole-cross" />
+  <circle cx="5.070" cy="60.130" r="0.55" class="hole" />
+  <line x1="4.770" y1="60.130" x2="5.370" y2="60.130" class="hole-cross" />
+  <line x1="5.070" y1="59.830" x2="5.070" y2="60.430" class="hole-cross" />
+  <circle cx="7.610" cy="60.130" r="0.55" class="hole" />
+  <line x1="7.310" y1="60.130" x2="7.910" y2="60.130" class="hole-cross" />
+  <line x1="7.610" y1="59.830" x2="7.610" y2="60.430" class="hole-cross" />
+  <circle cx="10.150" cy="60.130" r="0.55" class="hole" />
+  <line x1="9.850" y1="60.130" x2="10.450" y2="60.130" class="hole-cross" />
+  <line x1="10.150" y1="59.830" x2="10.150" y2="60.430" class="hole-cross" />
+  <circle cx="12.690" cy="60.130" r="0.55" class="hole" />
+  <line x1="12.390" y1="60.130" x2="12.990" y2="60.130" class="hole-cross" />
+  <line x1="12.690" y1="59.830" x2="12.690" y2="60.430" class="hole-cross" />
+  <circle cx="15.230" cy="60.130" r="0.55" class="hole" />
+  <line x1="14.930" y1="60.130" x2="15.530" y2="60.130" class="hole-cross" />
+  <line x1="15.230" y1="59.830" x2="15.230" y2="60.430" class="hole-cross" />
+  <circle cx="17.770" cy="60.130" r="0.55" class="hole" />
+  <line x1="17.470" y1="60.130" x2="18.070" y2="60.130" class="hole-cross" />
+  <line x1="17.770" y1="59.830" x2="17.770" y2="60.430" class="hole-cross" />
+  <circle cx="20.310" cy="60.130" r="0.55" class="hole" />
+  <line x1="20.010" y1="60.130" x2="20.610" y2="60.130" class="hole-cross" />
+  <line x1="20.310" y1="59.830" x2="20.310" y2="60.430" class="hole-cross" />
+  <circle cx="22.850" cy="60.130" r="0.55" class="hole" />
+  <line x1="22.550" y1="60.130" x2="23.150" y2="60.130" class="hole-cross" />
+  <line x1="22.850" y1="59.830" x2="22.850" y2="60.430" class="hole-cross" />
+  <circle cx="25.390" cy="60.130" r="0.55" class="hole" />
+  <line x1="25.090" y1="60.130" x2="25.690" y2="60.130" class="hole-cross" />
+  <line x1="25.390" y1="59.830" x2="25.390" y2="60.430" class="hole-cross" />
+  <circle cx="27.930" cy="60.130" r="0.55" class="hole" />
+  <line x1="27.630" y1="60.130" x2="28.230" y2="60.130" class="hole-cross" />
+  <line x1="27.930" y1="59.830" x2="27.930" y2="60.430" class="hole-cross" />
+  <circle cx="30.470" cy="60.130" r="0.55" class="hole" />
+  <line x1="30.170" y1="60.130" x2="30.770" y2="60.130" class="hole-cross" />
+  <line x1="30.470" y1="59.830" x2="30.470" y2="60.430" class="hole-cross" />
+  <circle cx="2.530" cy="62.670" r="0.55" class="hole" />
+  <line x1="2.230" y1="62.670" x2="2.830" y2="62.670" class="hole-cross" />
+  <line x1="2.530" y1="62.370" x2="2.530" y2="62.970" class="hole-cross" />
+  <circle cx="5.070" cy="62.670" r="0.55" class="hole" />
+  <line x1="4.770" y1="62.670" x2="5.370" y2="62.670" class="hole-cross" />
+  <line x1="5.070" y1="62.370" x2="5.070" y2="62.970" class="hole-cross" />
+  <circle cx="7.610" cy="62.670" r="0.55" class="hole" />
+  <line x1="7.310" y1="62.670" x2="7.910" y2="62.670" class="hole-cross" />
+  <line x1="7.610" y1="62.370" x2="7.610" y2="62.970" class="hole-cross" />
+  <circle cx="10.150" cy="62.670" r="0.55" class="hole" />
+  <line x1="9.850" y1="62.670" x2="10.450" y2="62.670" class="hole-cross" />
+  <line x1="10.150" y1="62.370" x2="10.150" y2="62.970" class="hole-cross" />
+  <circle cx="12.690" cy="62.670" r="0.55" class="hole" />
+  <line x1="12.390" y1="62.670" x2="12.990" y2="62.670" class="hole-cross" />
+  <line x1="12.690" y1="62.370" x2="12.690" y2="62.970" class="hole-cross" />
+  <circle cx="15.230" cy="62.670" r="0.55" class="hole" />
+  <line x1="14.930" y1="62.670" x2="15.530" y2="62.670" class="hole-cross" />
+  <line x1="15.230" y1="62.370" x2="15.230" y2="62.970" class="hole-cross" />
+  <circle cx="17.770" cy="62.670" r="0.55" class="hole" />
+  <line x1="17.470" y1="62.670" x2="18.070" y2="62.670" class="hole-cross" />
+  <line x1="17.770" y1="62.370" x2="17.770" y2="62.970" class="hole-cross" />
+  <circle cx="20.310" cy="62.670" r="0.55" class="hole" />
+  <line x1="20.010" y1="62.670" x2="20.610" y2="62.670" class="hole-cross" />
+  <line x1="20.310" y1="62.370" x2="20.310" y2="62.970" class="hole-cross" />
+  <circle cx="22.850" cy="62.670" r="0.55" class="hole" />
+  <line x1="22.550" y1="62.670" x2="23.150" y2="62.670" class="hole-cross" />
+  <line x1="22.850" y1="62.370" x2="22.850" y2="62.970" class="hole-cross" />
+  <circle cx="25.390" cy="62.670" r="0.55" class="hole" />
+  <line x1="25.090" y1="62.670" x2="25.690" y2="62.670" class="hole-cross" />
+  <line x1="25.390" y1="62.370" x2="25.390" y2="62.970" class="hole-cross" />
+  <circle cx="27.930" cy="62.670" r="0.55" class="hole" />
+  <line x1="27.630" y1="62.670" x2="28.230" y2="62.670" class="hole-cross" />
+  <line x1="27.930" y1="62.370" x2="27.930" y2="62.970" class="hole-cross" />
+  <circle cx="30.470" cy="62.670" r="0.55" class="hole" />
+  <line x1="30.170" y1="62.670" x2="30.770" y2="62.670" class="hole-cross" />
+  <line x1="30.470" y1="62.370" x2="30.470" y2="62.970" class="hole-cross" />
+  <circle cx="2.530" cy="65.210" r="0.55" class="hole" />
+  <line x1="2.230" y1="65.210" x2="2.830" y2="65.210" class="hole-cross" />
+  <line x1="2.530" y1="64.910" x2="2.530" y2="65.510" class="hole-cross" />
+  <circle cx="5.070" cy="65.210" r="0.55" class="hole" />
+  <line x1="4.770" y1="65.210" x2="5.370" y2="65.210" class="hole-cross" />
+  <line x1="5.070" y1="64.910" x2="5.070" y2="65.510" class="hole-cross" />
+  <circle cx="7.610" cy="65.210" r="0.55" class="hole" />
+  <line x1="7.310" y1="65.210" x2="7.910" y2="65.210" class="hole-cross" />
+  <line x1="7.610" y1="64.910" x2="7.610" y2="65.510" class="hole-cross" />
+  <circle cx="10.150" cy="65.210" r="0.55" class="hole" />
+  <line x1="9.850" y1="65.210" x2="10.450" y2="65.210" class="hole-cross" />
+  <line x1="10.150" y1="64.910" x2="10.150" y2="65.510" class="hole-cross" />
+  <circle cx="12.690" cy="65.210" r="0.55" class="hole" />
+  <line x1="12.390" y1="65.210" x2="12.990" y2="65.210" class="hole-cross" />
+  <line x1="12.690" y1="64.910" x2="12.690" y2="65.510" class="hole-cross" />
+  <circle cx="15.230" cy="65.210" r="0.55" class="hole" />
+  <line x1="14.930" y1="65.210" x2="15.530" y2="65.210" class="hole-cross" />
+  <line x1="15.230" y1="64.910" x2="15.230" y2="65.510" class="hole-cross" />
+  <circle cx="17.770" cy="65.210" r="0.55" class="hole" />
+  <line x1="17.470" y1="65.210" x2="18.070" y2="65.210" class="hole-cross" />
+  <line x1="17.770" y1="64.910" x2="17.770" y2="65.510" class="hole-cross" />
+  <circle cx="20.310" cy="65.210" r="0.55" class="hole" />
+  <line x1="20.010" y1="65.210" x2="20.610" y2="65.210" class="hole-cross" />
+  <line x1="20.310" y1="64.910" x2="20.310" y2="65.510" class="hole-cross" />
+  <circle cx="22.850" cy="65.210" r="0.55" class="hole" />
+  <line x1="22.550" y1="65.210" x2="23.150" y2="65.210" class="hole-cross" />
+  <line x1="22.850" y1="64.910" x2="22.850" y2="65.510" class="hole-cross" />
+  <circle cx="25.390" cy="65.210" r="0.55" class="hole" />
+  <line x1="25.090" y1="65.210" x2="25.690" y2="65.210" class="hole-cross" />
+  <line x1="25.390" y1="64.910" x2="25.390" y2="65.510" class="hole-cross" />
+  <circle cx="27.930" cy="65.210" r="0.55" class="hole" />
+  <line x1="27.630" y1="65.210" x2="28.230" y2="65.210" class="hole-cross" />
+  <line x1="27.930" y1="64.910" x2="27.930" y2="65.510" class="hole-cross" />
+  <circle cx="30.470" cy="65.210" r="0.55" class="hole" />
+  <line x1="30.170" y1="65.210" x2="30.770" y2="65.210" class="hole-cross" />
+  <line x1="30.470" y1="64.910" x2="30.470" y2="65.510" class="hole-cross" />
+  <circle cx="2.530" cy="67.750" r="0.55" class="hole" />
+  <line x1="2.230" y1="67.750" x2="2.830" y2="67.750" class="hole-cross" />
+  <line x1="2.530" y1="67.450" x2="2.530" y2="68.050" class="hole-cross" />
+  <circle cx="5.070" cy="67.750" r="0.55" class="hole" />
+  <line x1="4.770" y1="67.750" x2="5.370" y2="67.750" class="hole-cross" />
+  <line x1="5.070" y1="67.450" x2="5.070" y2="68.050" class="hole-cross" />
+  <circle cx="7.610" cy="67.750" r="0.55" class="hole" />
+  <line x1="7.310" y1="67.750" x2="7.910" y2="67.750" class="hole-cross" />
+  <line x1="7.610" y1="67.450" x2="7.610" y2="68.050" class="hole-cross" />
+  <circle cx="10.150" cy="67.750" r="0.55" class="hole" />
+  <line x1="9.850" y1="67.750" x2="10.450" y2="67.750" class="hole-cross" />
+  <line x1="10.150" y1="67.450" x2="10.150" y2="68.050" class="hole-cross" />
+  <circle cx="12.690" cy="67.750" r="0.55" class="hole" />
+  <line x1="12.390" y1="67.750" x2="12.990" y2="67.750" class="hole-cross" />
+  <line x1="12.690" y1="67.450" x2="12.690" y2="68.050" class="hole-cross" />
+  <circle cx="15.230" cy="67.750" r="0.55" class="hole" />
+  <line x1="14.930" y1="67.750" x2="15.530" y2="67.750" class="hole-cross" />
+  <line x1="15.230" y1="67.450" x2="15.230" y2="68.050" class="hole-cross" />
+  <circle cx="17.770" cy="67.750" r="0.55" class="hole" />
+  <line x1="17.470" y1="67.750" x2="18.070" y2="67.750" class="hole-cross" />
+  <line x1="17.770" y1="67.450" x2="17.770" y2="68.050" class="hole-cross" />
+  <circle cx="20.310" cy="67.750" r="0.55" class="hole" />
+  <line x1="20.010" y1="67.750" x2="20.610" y2="67.750" class="hole-cross" />
+  <line x1="20.310" y1="67.450" x2="20.310" y2="68.050" class="hole-cross" />
+  <circle cx="22.850" cy="67.750" r="0.55" class="hole" />
+  <line x1="22.550" y1="67.750" x2="23.150" y2="67.750" class="hole-cross" />
+  <line x1="22.850" y1="67.450" x2="22.850" y2="68.050" class="hole-cross" />
+  <circle cx="25.390" cy="67.750" r="0.55" class="hole" />
+  <line x1="25.090" y1="67.750" x2="25.690" y2="67.750" class="hole-cross" />
+  <line x1="25.390" y1="67.450" x2="25.390" y2="68.050" class="hole-cross" />
+  <circle cx="27.930" cy="67.750" r="0.55" class="hole" />
+  <line x1="27.630" y1="67.750" x2="28.230" y2="67.750" class="hole-cross" />
+  <line x1="27.930" y1="67.450" x2="27.930" y2="68.050" class="hole-cross" />
+  <circle cx="30.470" cy="67.750" r="0.55" class="hole" />
+  <line x1="30.170" y1="67.750" x2="30.770" y2="67.750" class="hole-cross" />
+  <line x1="30.470" y1="67.450" x2="30.470" y2="68.050" class="hole-cross" />
+  <circle cx="2.530" cy="70.290" r="0.55" class="hole" />
+  <line x1="2.230" y1="70.290" x2="2.830" y2="70.290" class="hole-cross" />
+  <line x1="2.530" y1="69.990" x2="2.530" y2="70.590" class="hole-cross" />
+  <circle cx="5.070" cy="70.290" r="0.55" class="hole" />
+  <line x1="4.770" y1="70.290" x2="5.370" y2="70.290" class="hole-cross" />
+  <line x1="5.070" y1="69.990" x2="5.070" y2="70.590" class="hole-cross" />
+  <circle cx="7.610" cy="70.290" r="0.55" class="hole" />
+  <line x1="7.310" y1="70.290" x2="7.910" y2="70.290" class="hole-cross" />
+  <line x1="7.610" y1="69.990" x2="7.610" y2="70.590" class="hole-cross" />
+  <circle cx="10.150" cy="70.290" r="0.55" class="hole" />
+  <line x1="9.850" y1="70.290" x2="10.450" y2="70.290" class="hole-cross" />
+  <line x1="10.150" y1="69.990" x2="10.150" y2="70.590" class="hole-cross" />
+  <circle cx="12.690" cy="70.290" r="0.55" class="hole" />
+  <line x1="12.390" y1="70.290" x2="12.990" y2="70.290" class="hole-cross" />
+  <line x1="12.690" y1="69.990" x2="12.690" y2="70.590" class="hole-cross" />
+  <circle cx="15.230" cy="70.290" r="0.55" class="hole" />
+  <line x1="14.930" y1="70.290" x2="15.530" y2="70.290" class="hole-cross" />
+  <line x1="15.230" y1="69.990" x2="15.230" y2="70.590" class="hole-cross" />
+  <circle cx="17.770" cy="70.290" r="0.55" class="hole" />
+  <line x1="17.470" y1="70.290" x2="18.070" y2="70.290" class="hole-cross" />
+  <line x1="17.770" y1="69.990" x2="17.770" y2="70.590" class="hole-cross" />
+  <circle cx="20.310" cy="70.290" r="0.55" class="hole" />
+  <line x1="20.010" y1="70.290" x2="20.610" y2="70.290" class="hole-cross" />
+  <line x1="20.310" y1="69.990" x2="20.310" y2="70.590" class="hole-cross" />
+  <circle cx="22.850" cy="70.290" r="0.55" class="hole" />
+  <line x1="22.550" y1="70.290" x2="23.150" y2="70.290" class="hole-cross" />
+  <line x1="22.850" y1="69.990" x2="22.850" y2="70.590" class="hole-cross" />
+  <circle cx="25.390" cy="70.290" r="0.55" class="hole" />
+  <line x1="25.090" y1="70.290" x2="25.690" y2="70.290" class="hole-cross" />
+  <line x1="25.390" y1="69.990" x2="25.390" y2="70.590" class="hole-cross" />
+  <circle cx="27.930" cy="70.290" r="0.55" class="hole" />
+  <line x1="27.630" y1="70.290" x2="28.230" y2="70.290" class="hole-cross" />
+  <line x1="27.930" y1="69.990" x2="27.930" y2="70.590" class="hole-cross" />
+  <circle cx="30.470" cy="70.290" r="0.55" class="hole" />
+  <line x1="30.170" y1="70.290" x2="30.770" y2="70.290" class="hole-cross" />
+  <line x1="30.470" y1="69.990" x2="30.470" y2="70.590" class="hole-cross" />
+  <line x1="2.530" y1="-3.500" x2="2.530" y2="0" class="guide-line" />
+  <text x="2.530" y="-4.500" class="label-axis">C01</text>
+  <line x1="5.070" y1="-0.700" x2="5.070" y2="0" class="ruler-tick" />
+  <text x="5.070" y="-1.600" class="label-axis">C02</text>
+  <line x1="7.610" y1="-3.500" x2="7.610" y2="0" class="guide-line" />
+  <text x="7.610" y="-4.500" class="label-axis">C03</text>
+  <line x1="10.150" y1="-0.700" x2="10.150" y2="0" class="ruler-tick" />
+  <text x="10.150" y="-1.600" class="label-axis">C04</text>
+  <line x1="12.690" y1="-3.500" x2="12.690" y2="0" class="guide-line" />
+  <text x="12.690" y="-4.500" class="label-axis">C05</text>
+  <line x1="15.230" y1="-0.700" x2="15.230" y2="0" class="ruler-tick" />
+  <text x="15.230" y="-1.600" class="label-axis">C06</text>
+  <line x1="17.770" y1="-3.500" x2="17.770" y2="0" class="guide-line" />
+  <text x="17.770" y="-4.500" class="label-axis">C07</text>
+  <line x1="20.310" y1="-0.700" x2="20.310" y2="0" class="ruler-tick" />
+  <text x="20.310" y="-1.600" class="label-axis">C08</text>
+  <line x1="22.850" y1="-3.500" x2="22.850" y2="0" class="guide-line" />
+  <text x="22.850" y="-4.500" class="label-axis">C09</text>
+  <line x1="25.390" y1="-0.700" x2="25.390" y2="0" class="ruler-tick" />
+  <text x="25.390" y="-1.600" class="label-axis">C10</text>
+  <line x1="27.930" y1="-3.500" x2="27.930" y2="0" class="guide-line" />
+  <text x="27.930" y="-4.500" class="label-axis">C11</text>
+  <line x1="30.470" y1="-0.700" x2="30.470" y2="0" class="ruler-tick" />
+  <text x="30.470" y="-1.600" class="label-axis">C12</text>
+  <line x1="2.530" y1="72.0" x2="2.530" y2="75.800" class="guide-line" />
+  <text x="2.530" y="76.800" class="label-axis">C01</text>
+  <line x1="5.070" y1="72.0" x2="5.070" y2="72.900" class="ruler-tick" />
+  <text x="5.070" y="73.800" class="label-axis">C02</text>
+  <line x1="7.610" y1="72.0" x2="7.610" y2="75.800" class="guide-line" />
+  <text x="7.610" y="76.800" class="label-axis">C03</text>
+  <line x1="10.150" y1="72.0" x2="10.150" y2="72.900" class="ruler-tick" />
+  <text x="10.150" y="73.800" class="label-axis">C04</text>
+  <line x1="12.690" y1="72.0" x2="12.690" y2="75.800" class="guide-line" />
+  <text x="12.690" y="76.800" class="label-axis">C05</text>
+  <line x1="15.230" y1="72.0" x2="15.230" y2="72.900" class="ruler-tick" />
+  <text x="15.230" y="73.800" class="label-axis">C06</text>
+  <line x1="17.770" y1="72.0" x2="17.770" y2="75.800" class="guide-line" />
+  <text x="17.770" y="76.800" class="label-axis">C07</text>
+  <line x1="20.310" y1="72.0" x2="20.310" y2="72.900" class="ruler-tick" />
+  <text x="20.310" y="73.800" class="label-axis">C08</text>
+  <line x1="22.850" y1="72.0" x2="22.850" y2="75.800" class="guide-line" />
+  <text x="22.850" y="76.800" class="label-axis">C09</text>
+  <line x1="25.390" y1="72.0" x2="25.390" y2="72.900" class="ruler-tick" />
+  <text x="25.390" y="73.800" class="label-axis">C10</text>
+  <line x1="27.930" y1="72.0" x2="27.930" y2="75.800" class="guide-line" />
+  <text x="27.930" y="76.800" class="label-axis">C11</text>
+  <line x1="30.470" y1="72.0" x2="30.470" y2="72.900" class="ruler-tick" />
+  <text x="30.470" y="73.800" class="label-axis">C12</text>
+  <text x="-1.200" y="1.710" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R01</text>
+  <text x="34.200" y="1.710" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R01</text>
+  <text x="-1.200" y="4.250" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R02</text>
+  <text x="34.200" y="4.250" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R02</text>
+  <text x="-1.200" y="6.790" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R03</text>
+  <text x="34.200" y="6.790" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R03</text>
+  <text x="-1.200" y="9.330" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R04</text>
+  <text x="34.200" y="9.330" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R04</text>
+  <text x="-1.200" y="11.870" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R05</text>
+  <text x="34.200" y="11.870" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R05</text>
+  <text x="-1.200" y="14.410" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R06</text>
+  <text x="34.200" y="14.410" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R06</text>
+  <text x="-1.200" y="16.950" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R07</text>
+  <text x="34.200" y="16.950" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R07</text>
+  <text x="-1.200" y="19.490" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R08</text>
+  <text x="34.200" y="19.490" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R08</text>
+  <text x="-1.200" y="22.030" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R09</text>
+  <text x="34.200" y="22.030" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R09</text>
+  <text x="-1.200" y="24.570" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R10</text>
+  <text x="34.200" y="24.570" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R10</text>
+  <text x="-1.200" y="27.110" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R11</text>
+  <text x="34.200" y="27.110" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R11</text>
+  <text x="-1.200" y="29.650" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R12</text>
+  <text x="34.200" y="29.650" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R12</text>
+  <text x="-1.200" y="32.190" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R13</text>
+  <text x="34.200" y="32.190" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R13</text>
+  <text x="-1.200" y="34.730" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R14</text>
+  <text x="34.200" y="34.730" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R14</text>
+  <text x="-1.200" y="37.270" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R15</text>
+  <text x="34.200" y="37.270" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R15</text>
+  <text x="-1.200" y="39.810" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R16</text>
+  <text x="34.200" y="39.810" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R16</text>
+  <text x="-1.200" y="42.350" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R17</text>
+  <text x="34.200" y="42.350" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R17</text>
+  <text x="-1.200" y="44.890" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R18</text>
+  <text x="34.200" y="44.890" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R18</text>
+  <text x="-1.200" y="47.430" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R19</text>
+  <text x="34.200" y="47.430" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R19</text>
+  <text x="-1.200" y="49.970" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R20</text>
+  <text x="34.200" y="49.970" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R20</text>
+  <text x="-1.200" y="52.510" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R21</text>
+  <text x="34.200" y="52.510" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R21</text>
+  <text x="-1.200" y="55.050" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R22</text>
+  <text x="34.200" y="55.050" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R22</text>
+  <text x="-1.200" y="57.590" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R23</text>
+  <text x="34.200" y="57.590" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R23</text>
+  <text x="-1.200" y="60.130" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R24</text>
+  <text x="34.200" y="60.130" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R24</text>
+  <text x="-1.200" y="62.670" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R25</text>
+  <text x="34.200" y="62.670" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R25</text>
+  <text x="-1.200" y="65.210" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R26</text>
+  <text x="34.200" y="65.210" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R26</text>
+  <text x="-1.200" y="67.750" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R27</text>
+  <text x="34.200" y="67.750" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R27</text>
+  <text x="-1.200" y="70.290" class="label-axis" style="text-anchor: end; font-size: 0.95px;">R28</text>
+  <text x="34.200" y="70.290" class="label-axis" style="text-anchor: start; font-size: 0.95px;">R28</text>
+</g>
+<text x="30.50" y="4.2" class="title">BOARD RULER &amp; ALIGNMENT INDICATOR</text>
+<text x="30.50" y="7.0" class="subtitle">TOP (COMPONENT SIDE) - 1:1 TRUE SCALE | Exact: 33 mm x 72 mm</text>
+</svg>

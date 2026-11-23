@@ -1,0 +1,23 @@
+# Footprint for 19-pin scratchpad column with 90 mil pads and 35 mil drill
+Element[0x00000000 "SIP19_90PAD" "" "" 0 0 -2400 -6000 0 100 ""]
+(
+	Pin[0.0000 0.00mil 90.00mil 10.00mil 96.00mil 35.00mil "1" "1" ""]
+	Pin[0.0000 100.00mil 90.00mil 10.00mil 96.00mil 35.00mil "2" "2" ""]
+	Pin[0.0000 200.00mil 90.00mil 10.00mil 96.00mil 35.00mil "3" "3" ""]
+	Pin[0.0000 300.00mil 90.00mil 10.00mil 96.00mil 35.00mil "4" "4" ""]
+	Pin[0.0000 400.00mil 90.00mil 10.00mil 96.00mil 35.00mil "5" "5" ""]
+	Pin[0.0000 500.00mil 90.00mil 10.00mil 96.00mil 35.00mil "6" "6" ""]
+	Pin[0.0000 600.00mil 90.00mil 10.00mil 96.00mil 35.00mil "7" "7" ""]
+	Pin[0.0000 700.00mil 90.00mil 10.00mil 96.00mil 35.00mil "8" "8" ""]
+	Pin[0.0000 800.00mil 90.00mil 10.00mil 96.00mil 35.00mil "9" "9" ""]
+	Pin[0.0000 900.00mil 90.00mil 10.00mil 96.00mil 35.00mil "10" "10" ""]
+	Pin[0.0000 1000.00mil 90.00mil 10.00mil 96.00mil 35.00mil "11" "11" ""]
+	Pin[0.0000 1100.00mil 90.00mil 10.00mil 96.00mil 35.00mil "12" "12" ""]
+	Pin[0.0000 1200.00mil 90.00mil 10.00mil 96.00mil 35.00mil "13" "13" ""]
+	Pin[0.0000 1300.00mil 90.00mil 10.00mil 96.00mil 35.00mil "14" "14" ""]
+	Pin[0.0000 1400.00mil 90.00mil 10.00mil 96.00mil 35.00mil "15" "15" ""]
+	Pin[0.0000 1500.00mil 90.00mil 10.00mil 96.00mil 35.00mil "16" "16" ""]
+	Pin[0.0000 1600.00mil 90.00mil 10.00mil 96.00mil 35.00mil "17" "17" ""]
+	Pin[0.0000 1700.00mil 90.00mil 10.00mil 96.00mil 35.00mil "18" "18" ""]
+	Pin[0.0000 1800.00mil 90.00mil 10.00mil 96.00mil 35.00mil "19" "19" ""]
+)
