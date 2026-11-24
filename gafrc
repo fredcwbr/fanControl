@@ -1,0 +1,9 @@
+(component-library "./lepton/symbols" "symbols")
+(component-library "./lepton/common" "common")
+(component-library "./lepton" "lepton")
+(component-library-search "./lepton/symbols")
+(component-library-search "./lepton/common")
+(component-library-search "./lepton")
+
+(source-library ".")
+(source-library "./lepton")

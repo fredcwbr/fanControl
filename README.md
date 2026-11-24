@@ -25,12 +25,14 @@ A comprehensive hardware, firmware, and software system for integrating custom c
    - [Fan Connector Placement: Option A (Bottom Edge Bank)](#fan-connector-placement-option-a-bottom-edge-bank)
    - [Staggered Column Label Identification Solution](#staggered-column-label-identification-solution)
    - [Fan Control & Failsafe Strategy](#fan-control--failsafe-strategy)
+   - [High-Side Switching via Sziklai Pair (BC549 + BC328)](#high-side-switching-via-sziklai-pair-bc549--bc328)
+   - [Autonomous Onboard Power via Standard ATX MOLEX (+12V / +5V)](#autonomous-onboard-power-via-standard-atx-molex-12v--5v)
 4. [Custom Stripboard Rev 1.1 / 1.1a — Modular Architecture & Specifications](#custom-stripboard-rev-11--11a--modular-architecture--specifications)
    - [Physical & Mechanical Specifications](#1-physical--mechanical-specifications)
    - [Top Power Subsystem: DC Barrel Jacks & Breakout SIP3 Headers](#2-top-power-subsystem-dc-barrel-jacks--breakout-sip3-headers)
    - [Dual LM317 Linear Regulators (TI Datasheet, Page 1)](#3-dual-lm317-linear-regulators-ti-datasheet-page-1)
    - [Left Margin: Dual Upright LM2596 Step-Down Modules (VR101, VR102)](#4-left-margin-dual-upright-lm2596-step-down-modules-vr101-vr102)
-   - [Right Margin: 10-Way 5.08mm Screw Terminal Block & Pass-Thru Matrix (TB101)](#5-right-margin-10-way-508mm-screw-terminal-block--pass-thru-matrix-tb101)
+   - [Right Margin: 4x 3-Pin PC Fan Connectors Matrix (FAN1..FAN4)](#5-right-margin-4x-3-pin-pc-fan-connectors-matrix-fan1fan4)
    - [Right Margin: Scratch-Pad Prototyping Area (56 Pads, 3 mil)](#6-right-margin-scratch-pad-prototyping-area-56-pads-3-mil)
    - [Manufacturing Directive: Through-Hole (THT) Mandatory Default & Pad Size >= 80 mil](#7-manufacturing-directive-through-hole-tht-mandatory-default--pad-size--80-mil)
    - [Standardized Copper Trace Width Hierarchy](#8-standardized-copper-trace-width-hierarchy)
@@ -110,27 +112,42 @@ Feedback, bug reports, field tests, and pull requests are warmly welcomed!
 
 ## Hardware Bill of Materials (BOM)
 
-All components are **100% Through-Hole (Thru-Pin / THT / DIP)** for easy soldering on stripboard:
+All components are **100% Through-Hole (Thru-Pin / THT / DIP)** for easy soldering on stripboard.
+
+### Primary BOM: Custom Stripboard Rev 1.1a with High-Side Sziklai Drivers (BC549 + BC328) & ATX MOLEX
 
 | Item | Component | Package / Value | Qty | Role / Circuit Connection |
 | :--- | :--- | :---: | :---: | :--- |
-| **BRD1** | Placa Padrão Trilha | 33.0 $\times$ 72.0 mm | 1 | Breadboard-style matrix (12 cols $\times$ 28 rows, 336 holes, 2.54 mm pitch) |
-| **U1** | ATmega328P-PU | 28-Pin Narrow DIP | 1 | Main microcontroller (16 MHz) |
-| **SKT1** | IC Socket | 28-Pin Narrow DIP | 1 | Socket for ATmega328P |
-| **U2** | ULN2003A or ULN7003A | 16-Pin DIP | 1 | 7-channel Darlington low-side ground switch |
-| **SKT2** | IC Socket | 16-Pin DIP | 1 | Socket for ULN2003A |
-| **MOD1** | CH340 6-Pin USB-TTL Module | 6-Pin Module | 1 | USB-UART bridge to motherboard internal USB header |
-| **HDR_USB**| Female/Male Pin Socket | 1x6, 2.54 mm pitch | 1 | Receptacle for CH340 module (Rows R21–R26, Col C02) |
-| **Y1** | Quartz Crystal | 16.000 MHz (HC-49) | 1 | Master clock across ATmega Pins 9 & 10 |
+| **BRD1** | **Custom Stripboard Rev 1.1a** | $88.90 \times 128.27\text{ mm}$ Eurocard | 1 | 64 prototyping rows, 8 vertical power rails, 44-pin edge connector |
+| **U1** | ATmega328P-PU | 28-Pin Narrow DIP ($300\text{ mil}$) | 1 | Main microcontroller (16.000 MHz master clock) |
+| **SKT1** | IC Socket | 28-Pin Narrow DIP ($300\text{ mil}$) | 1 | Precision socket for ATmega328P |
+| **Q1A–Q1D** | NPN Transistors | **BC549** (or BC548 / BC337), TO-92 | 4 | High-Side Sziklai input drivers / level-shifters ($5\text{V} \to 12\text{V}$) |
+| **Q2A–Q2D** | PNP Power Transistors | **BC328** (or BC327), TO-92 | 4 | High-Side Sziklai power pass switches ($800\text{ mA}$ continuous, $V_{sat} \le 0.15\text{V}$) |
+| **R1A–R1D** | Metal/Carbon Resistors | $1.5\text{ k}\Omega$, 1/4W axial | 4 | Base current limiting for NPN drivers ($Q_1$) |
+| **R2A–R2D** | Metal/Carbon Resistors | $4.7\text{ k}\Omega$, 1/4W axial | 4 | Pull-ups to +12V rail for crisp cutoff of PNP power switches ($Q_2$) |
+| **R3A–R3D** | Metal/Carbon Resistors | $680\,\Omega$, 1/4W axial | 4 | Base drive current setting into PNP power switches ($Q_2$) |
+| **D1–D4** | Rectifier Diodes | **1N4007** (or 1N5819 Schottky), DO-41 | 4 | Inductive kickback clamp freewheeling diodes across fan outputs |
+| **R_RST** | Metal/Carbon Resistor | $10\text{ k}\Omega$, 1/4W axial | 1 | Pull-up on ATmega Pin 1 (/RESET) to +5V |
+| **R4–R7** | Metal/Carbon Resistors | $10\text{ k}\Omega$, 1/4W axial | 4 | Pull-ups for Fan Tachometer lines (to +5V rail) |
+| **FAN1–FAN4** | PC Fan Headers | Molex KK 254 3-Pin Male Header with Lock ($2.54\text{ mm}$) | 4 | Direct onboard headers for 4 PC fan harnesses (GND, +12V Switched, Tachometer) |
+| **CONN_MOLEX**| ATX MOLEX Connector | 4-Pin ($5.08\text{ mm}$ pitch, Molex 8981) | 1 | Direct autonomous power from PC PSU: +12V (Yellow), +5V (Red), GND (Black) |
+| **MOD1** | CH340 6-Pin USB-TTL Module | 6-Pin Module (5V Jumper) | 1 | USB-UART bridge to motherboard internal USB 2.0 header |
+| **HDR_USB**| Female Pin Header Socket | 1x6, $2.54\text{ mm}$ pitch | 1 | Receptacle for CH340 module |
+| **Y1** | Quartz Crystal | 16.000 MHz (HC-49/S) | 1 | Master clock across ATmega Pins 9 & 10 |
 | **C3, C4** | Ceramic Capacitors | 22 pF (Disc) | 2 | Crystal load capacitors to GND |
-| **C_DTR** | Ceramic Capacitor | 100 nF (0.1 µF) | 1 | In-line AC coupling for DTR auto-reset (Row R21, across Cut 2) |
-| **C2, C5** | Ceramic Capacitors | 100 nF (0.1 µF) | 2 | VCC/GND and AVCC/GND high-frequency bypass decoupling |
-| **C1** | Electrolytic Capacitor | 100 µF, 25V (Radial) | 1 | Bulk decoupling across +12V rail and GND bus |
-| **R_RST** | Metal/Carbon Resistor | $10\text{ k}\Omega$, 1/4W | 1 | Pull-up on ATmega Pin 1 (/RESET) to +5V |
-| **R1–R4** | Metal/Carbon Resistors | $10\text{ k}\Omega$, 1/4W | 4 | Pull-ups for Fan Tachometer lines (mount directly from C11 to Upper C12) |
-| **J_PWR** | Screw Terminal Block | 2-Pin, 5.08 mm pitch | 1 | PSU +12V (Yellow) and GND (Black) power input |
-| **J_FAN** | Male Pin Headers | 3-Pin, 2.54 mm pitch | 4 | Fan 1 to Fan 4 headers (Option A: Rows R26–R28) |
-| **WIRE** | Solid Core Hookup Wire | 24 AWG | ~1 m | Top-side jumper links |
+| **C_DTR** | Ceramic Capacitor | 100 nF ($0.1\,\mu\text{F}$) | 1 | In-line AC coupling for DTR auto-reset |
+| **C2, C5** | Ceramic Capacitors | 100 nF ($0.1\,\mu\text{F}$) | 2 | VCC/GND and AVCC/GND high-frequency bypass decoupling |
+| **C1** | Electrolytic Capacitor | $100\,\mu\text{F}$, 25V (Radial) | 1 | Bulk decoupling across +12V rail and GND bus |
+
+### Legacy BOM (Historical Reference): Standard 33.0 x 72.0 mm Perfboard (ULN2003A Low-Side)
+
+| Item | Component | Package / Value | Qty | Role / Circuit Connection |
+| :--- | :--- | :---: | :---: | :--- |
+| **BRD_OLD**| Placa Padrão Trilha | $33.0 \times 72.0\text{ mm}$ | 1 | Breadboard-style matrix (12 cols $\times$ 28 rows, 336 holes, $2.54\text{ mm}$ pitch) |
+| **U1** | ATmega328P-PU | 28-Pin Narrow DIP | 1 | Main microcontroller (16 MHz) |
+| **U2** | ULN2003A or ULN7003A | 16-Pin DIP | 1 | 7-channel Darlington low-side ground switch |
+| **J_PWR** | Screw Terminal Block | 2-Pin, $5.08\text{ mm}$ pitch | 1 | PSU +12V (Yellow) and GND (Black) power input |
+| **J_FAN** | Male Pin Headers | 3-Pin, $2.54\text{ mm}$ pitch | 4 | Fan 1 to Fan 4 headers (Option A: Rows R26–R28) |
 
 ---
 
@@ -201,6 +218,54 @@ Based on the physical connectivity map from [`custoStripBoard.ods`](docs/custoSt
   - `HOT_STANDBY`: Fan B remains idle until Fan A tachometer reports 0 RPM while commanded ON (`PWM > 50`). Upon detecting stall/failure, Fan B immediately ramps to 100% and transmits an alarm.
 - **Failsafe Watchdog:** A 5-second hardware/software heartbeat timer. If the Linux host freezes, crashes, or the USB cable is unplugged, the microcontroller automatically ramps all fans to a safe **70% duty cycle (180/255)**.
 
+### High-Side Switching via Sziklai Pair (BC549 + BC328)
+
+In conventional low-side switching (such as pulling down ground via a ULN2003A Darlington array), interrupting the fan's GND line cuts off the 0V reference of the internal Hall-effect sensor during PWM OFF periods. This causes the open-collector tachometer line (Pin 3) to float or bounce up to +12V through the motor windings, severely corrupting RPM readings and inducing PWM noise.
+
+To eliminate this fundamental flaw, the architecture was reiterated to adopt **High-Side Switching (Lado Hi)**:
+- **Clean Ground Reference (0V):** Pin 1 (GND) of all fans is tied permanently to common system ground (0V). The internal Hall sensor never loses its ground reference.
+- **Pristine Tachometer Square Wave:** Pin 3 (Tachometer) produces a clean, jitter-free square wave (2 pulses per revolution) across all PWM duty cycles ($0\text{--}100\%$) via standard $10\text{ k}\Omega$ pull-ups to +5V.
+- **Sziklai Pair (Complementary Feedback Pair — CFP) Topology:**
+  - $Q_1$ (NPN Driver): **BC549** (or BC548 / BC337) in TO-92 ($C\text{--}B\text{--}E$).
+  - $Q_2$ (PNP Power Pass): **BC328** (or BC327) in TO-92 ($C\text{--}B\text{--}E$, $800\text{ mA}$ max continuous).
+  - Resistors: $R_1 = 1.5\text{ k}\Omega$ (base limit for $Q_1$), $R_2 = 4.7\text{ k}\Omega$ (pull-up to +12V for crisp $Q_2$ cutoff), $R_3 = 680\,\Omega$ (base drive into $Q_2$).
+  - Clamp Diode: 1N4007 or 1N5819 Schottky across the switched fan output to clamp inductive coil flyback.
+- **Ultralow Saturation Drop ($V_{CE(sat)} \le 0.15\text{ V}$):**  
+  Unlike Darlington pairs (which exhibit $V_{sat} \approx 1.2\text{--}1.5\text{ V}$ and reduce fan voltage to $\approx 10.5\text{ V}$), the saturated BC328 PNP pass transistor drops less than $150\text{ mV}$. The fans receive over **$11.85\text{ V}$** at 100% duty cycle, ensuring full rated airflow without thermal throttling!
+- **Zero Firmware Code Inversion Required:**  
+  The two complementary stages provide a double inversion (Logic 1 out of ATmega $\to Q_1$ conducts $\to$ pulls $Q_2$ base low $\to Q_2$ saturates $\to$ +12V applied to fan). The PWM logic is natively **Active-High**, matching existing firmware without requiring code modifications.
+
+### Autonomous Onboard Power via Standard ATX MOLEX (+12V / +5V)
+
+To make the fan controller completely autonomous and eliminate waste heat inside the chassis:
+- **Dual Rail Direct from PC PSU:** The controller connects directly to a standard 4-pin peripheral MOLEX connector (Molex 8981 standard, $5.08\text{ mm}$ pitch):
+  - **Pin 1 (Yellow Wire):** $+12\text{ V DC}$ $\to$ Powers the 4 fan channels and BC328 PNP emitters.
+  - **Pin 2 & 3 (Black Wires):** Common System Ground ($0\text{ V}$) $\to$ Star ground point for all fan grounds and logic.
+  - **Pin 4 (Red Wire):** $+5\text{ V DC}$ $\to$ Powers the ATmega328P logic, CH340 module, and pull-up networks.
+- **Zero Heat Dissipation:** Bypasses linear regulators ($0\text{ W}$ burned as heat) and eliminates buck-converter switching EMI.
+- **Continuous Standalone Operation:** The microcontroller runs continuously from the PSU standby/active rails, independently of whether the USB header cable is disconnected during chassis servicing.
+
+### Complete Lepton-EDA Hierarchical Schematic & Netlist
+
+The entire fan controller circuit has been formalized in native **Lepton-EDA (`lepton-schematic`)** using a clean **hierarchical subcircuit architecture**:
+- **Top-Level Schematic:** [`lepton/fancontrol_sziklai.sch`](file:///home/fred/C/fanControl/lepton/fancontrol_sziklai.sch) — Instantiates the standalone ATmega328P MCU, ATX MOLEX power entry, USB CH340 interface, 4x 3-pin PC fan headers (`FAN1`..`FAN4`), and the 4 modular **`DRV1..DRV4` subcircuit blocks**.
+- **Hierarchical Subcircuit Channel:** [`lepton/sziklaiN.sch`](file:///home/fred/C/fanControl/lepton/sziklaiN.sch) — Reusable High-Side Sziklai channel with standard I/O ports (`PWM` in, `+12V` pwr, `GND` pwr, `FAN_OUT` out), BC549 NPN driver, BC328 PNP power switch, 1.5k base resistor, 4.7k pull-up, 680R series base drive, and 1N4007 flyback diode.
+- **Hierarchical Block Symbol:** [`lepton/symbols/sziklaiN.sym`](file:///home/fred/C/fanControl/lepton/symbols/sziklaiN.sym) — Hierarchical symbol (`source=sziklaiN.sch`) with pinlabels mapping directly to child ports.
+- **High-Resolution Previews:**
+  - **Top-Level Schematic Preview:** [`docs/fancontrol_sziklai_schematic.png`](file:///home/fred/C/fanControl/docs/fancontrol_sziklai_schematic.png) | [`lepton/fancontrol_sziklai.png`](file:///home/fred/C/fanControl/lepton/fancontrol_sziklai.png)
+  - **Sziklai Subcircuit Channel Preview:** [`docs/sziklaiN_subcircuit.png`](file:///home/fred/C/fanControl/docs/sziklaiN_subcircuit.png) | [`lepton/sziklaiN.png`](file:///home/fred/C/fanControl/lepton/sziklaiN.png)
+  - **Circuit Assembly Layout on Stripboard Rev 1.1a (Top View 300 DPI):** [`docs/templates/circuit_assembly_rev1.1a_top_view.png`](file:///home/fred/C/fanControl/docs/templates/circuit_assembly_rev1.1a_top_view.png)
+  - **1:1 Scale Printable Assembly PDF Sheet (A4 with Calibration Rulers):** [`docs/templates/stripboard_rev1.1a_1to1_printout.pdf`](file:///home/fred/C/fanControl/docs/templates/stripboard_rev1.1a_1to1_printout.pdf)
+- **Extracted Hierarchical Netlist (PCB / gEDA format):** [`lepton/fancontrol_sziklai.net`](file:///home/fred/C/fanControl/lepton/fancontrol_sziklai.net) (automatically namespaced components: `DRV1/Q1`, `DRV1/Q2`, `DRV1/R1..R3`, `DRV1/D1`, etc.).
+- **Local Symbols Directory:** [`lepton/symbols/`](file:///home/fred/C/fanControl/lepton/symbols/) (including `sziklaiN.sym`, `atmega328p_dip28.sym`, `bc549_npn.sym`, `bc328_pnp.sym`, `molex_atx_4p.sym`, `kre10_508.sym`, `ch340_header_6p.sym`, `fan_3pin.sym`).
+- **One-Command Build & Export:**
+  ```bash
+  make -C lepton sziklai
+  # Or open interactively in Lepton-EDA:
+  lepton-schematic lepton/fancontrol_sziklai.sch
+  lepton-schematic lepton/sziklaiN.sch
+  ```
+
 ---
 
 ## Custom Stripboard Rev 1.1 / 1.1a — Modular Architecture & Specifications
@@ -222,7 +287,7 @@ The evolution of the cooling control and prototyping project gave rise to **Cust
   │            [SIP3 Breakout 1]     U101+Caps   U102+Caps    [SIP3 Breakout 2]            │
   │            X=500..700, Y=200..400 R101/R102   R103/R104   X=2800..3000                 │
   │ ───────────────────────────────── GND BRIDGE (Y=600 mil) ───────────────────────────── │
-  │ [VR101]                                                    [TB101 KRE 10P 5.08mm]      │
+  │ [VR101]                                                    [FAN1..4 3-Pin Headers]     │
   │ LM2596 Upright #1                                          X=3400, Y=600..2400 mil     │
   │ 4x7 Pins (200 mil)                                         [CONN137..139 Pass-Thru]    │
   │ Y=600..1200 mil                                            3 pass-thru pads per pin    │
@@ -344,18 +409,18 @@ For high-efficiency switching regulation (e.g., +12V to +5V or variable outputs 
 
 ---
 
-### 5. Right Margin: 10-Way 5.08mm Screw Terminal Block & Pass-Thru Matrix (`TB101`)
+### 5. Right Margin: 4x 3-Pin PC Fan Connectors Matrix (`FAN1`..`FAN4`)
 
 On the upper right margin, between mounting holes `MH102` and `MH104`:
-- **Screw Terminal Block 10P 5.08mm (`TB101`):** Pins at $X = 3400.00\text{ mil}$, $Y = [600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400]\text{ mil}$.
-- **Horizontal 3-Point Pass-Thru Matrix:** For each screw terminal pin, 3 plated pass-thru holes extend horizontally inward:
-  - `CONN137` at $X = 3300.00\text{ mil}$
-  - `CONN138` at $X = 3200.00\text{ mil}$
-  - `CONN139` at $X = 3100.00\text{ mil}$
-- **$30\text{ mil}$ Copper Traces:** Each 4-hole row is tied together by $30\text{ mil}$ traces, creating 10 independent electrical nets (`KRE_1` to `KRE_10`).
+- **Direct PC Fan Connectors (`FAN1`..`FAN4`):** Standard 3-pin headers (Molex KK 254 / $2.54\text{ mm}$ pitch) with friction lock ramps, eliminating the costly screw terminal block:
+  - `FAN1`: Pins at $X = 3400.00\text{ mil}$, $Y = [600, 700, 800]\text{ mil}$ (GND, +12V Switched, Tachometer)
+  - `FAN2`: Pins at $X = 3400.00\text{ mil}$, $Y = [1000, 1100, 1200]\text{ mil}$ (GND, +12V Switched, Tachometer)
+  - `FAN3`: Pins at $X = 3400.00\text{ mil}$, $Y = [1400, 1500, 1600]\text{ mil}$ (GND, +12V Switched, Tachometer)
+  - `FAN4`: Pins at $X = 3400.00\text{ mil}$, $Y = [1800, 1900, 2000]\text{ mil}$ (GND, +12V Switched, Tachometer)
+- **Direct Fan Harness Plug-in:** PC chassis fan cables plug directly into these onboard headers without splices or adapter blocks.
 - **Mechanical Clearances:**
   - Above ($Y = 600\text{ mil}$): $>150\text{ mil}$ clearance to the `MH102` screw keepout.
-  - Below ($Y = 2400\text{ mil}$): The terminal block plastic body terminates at $Y = 2500\text{ mil}$, providing $80\text{ mil}$ of isolation to the pad of `MH104` ($Y = 2700\text{ mil}$).
+  - Below ($Y = 2000\text{ mil}$): $>600\text{ mil}$ clearance to `MH104` ($Y = 2700\text{ mil}$).
 
 ---
 
@@ -438,7 +503,7 @@ On the lower right margin, between `MH104` and `MH106`:
 
 - **Dimensions:** $126\text{ mil}$ ($3.20\text{ mm}$) drill, $240\text{ mil}$ copper pad ring, $300\text{ mil}$ ($7.62\text{ mm}$) silkscreen keepout and head relief.
 - **Bottom Hole Alignment (`MH105`, `MH106`):** Located at $Y = 4600\text{ mil}$, the bottom edge of the copper pad ring ($Y = 4720\text{ mil}$) aligns strictly with the baseline of the bottom pad row ($Y = 4728\text{ mil}$), preserving $140\text{ mil}$ clearance to the tongue shoulders.
-- **Validated Keepouts:** `MH103` at $Y = 2000\text{ mil}$ (clear of `VR101` and `VR102`); `MH104` at $Y = 2700\text{ mil}$ (clear of `TB101` and scratch-pad).
+- **Validated Keepouts:** `MH103` at $Y = 2000\text{ mil}$ (clear of `VR101` and `VR102`); `MH104` at $Y = 2700\text{ mil}$ (clear of fan headers and scratch-pad).
 
 ---
 
@@ -678,6 +743,14 @@ This project was conceived, designed, coded, debugged, and documented end-to-end
   [https://www.arctic.de/media/9a/83/08/1697784936/Spec_Sheet_P8_BLACK_EN.pdf](https://www.arctic.de/media/9a/83/08/1697784936/Spec_Sheet_P8_BLACK_EN.pdf)
 - **Akasa 90mm Chassis Cooling Fans (92 $\times$ 92 $\times$ 25mm):**  
   Akasa Thermal Solution. Standard 12V DC (~0.15A–0.20A), 3-pin connector.
+- **Fairchild / ON Semiconductor / NXP — BC548 & BC549 NPN Epitaxial Silicon Transistors:**  
+  General-purpose NPN switching and amplifier transistors in TO-92 (C-B-E pinout, $V_{CEO} = 30\text{V}$, $I_C = 100\text{mA}$, $h_{FE} = 200\text{--}800$).
+- **Fairchild / ON Semiconductor / Diotec — BC327 & BC328 PNP Epitaxial Silicon Transistors:**  
+  Medium-power PNP switching and driver transistors in TO-92 (C-B-E pinout, $V_{CEO} = 45\text{V}/30\text{V}$, $I_C = 800\text{mA}$, $P_{tot} = 625\text{mW}$, ultralow $V_{CE(sat)} \le 0.15\text{V}$).
+- **Molex LLC — Commercial Standard 0.084" / 0.093" Pin and Socket Power Connectors (Molex 8981 Series):**  
+  Standard ATX 4-pin peripheral power connector (Pin 1: +12V Yellow, Pins 2 & 3: GND Black, Pin 4: +5V Red, 5.08mm / 0.200" pitch).
+- **George C. Sziklai (US Patent 2,762,870 — September 11, 1956):**  
+  *Push-pull amplifier with complementary-symmetry transistors*. Foundations of the Complementary Feedback Pair (CFP) for high-gain, low saturation voltage drops ($V_{sat} \approx V_{CE(sat)}$) in high-side solid-state switching.
 - **Sullins Connector Solutions — Card Edge Connectors (0.100" Pitch, ETM / EBM Series):**  
   44-position / 22-contact industrial female card edge receptacle (2.54 mm pitch, $0.300'' - 0.330''$ contact depth).  
   [https://www.sullinscorp.com/](https://www.sullinscorp.com/)
@@ -760,7 +833,7 @@ All components adhere strictly to the **100% Through-Hole (THT / DIP)** engineer
 | **C3, C4** | Ceramic Disc Capacitors 22 pF | $2.54\text{ mm}$ pitch | 2 | $0.05 | R$ 0.30 | R$ 0.60 |
 | **U101, U102** | LM317T Linear Regulators (TI Datasheet) | TO-220 Upright | 2 | $0.40 | R$ 2.30 | R$ 4.60 |
 | **VR101, VR102**| LM2596 DC-DC Step-Down Buck Modules | Upright $4 \times 7$ pin array | 2 | $1.30 | R$ 7.50 | R$ 15.00 |
-| **TB101** | 10-Way 5.08mm Screw Terminal Block | ZB128 14mm height | 1 | $1.10 | R$ 6.40 | R$ 6.40 |
+| **FAN1–FAN4** | 3-Pin PC Fan Headers (Molex KK 254) | 2.54mm pitch with lock | 4 | $0.15 | R$ 0.90 | R$ 3.60 |
 | **CONN117, 118**| 2.1mm $\times$ 5.5mm DC Power Barrel Jacks | THT Radial | 2 | $0.25 | R$ 1.45 | R$ 2.90 |
 | **HDR_SANDWICH**| 2.54mm Breakaway Pin Headers (M/F) | 40-pin breakaway strips | 2 strips | $0.60 | R$ 3.50 | R$ 7.00 |
 | **PASSIVES** | Decoupling caps (100nF, 1uF, 100uF) + 1/4W Resistors | Axial / Radial Kit | 1 kit | $0.70 | R$ 4.00 | R$ 4.00 |

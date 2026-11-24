@@ -1,0 +1,13 @@
+G04 start of page 2 for group 0 layer_idx 10 *
+G04 Title: Custom Stripboard Rev 1.1a, top_paste *
+G04 Creator: pcb-rnd 3.1.6 *
+G04 CreationDate: 2026-11-23 14:58:15 UTC *
+G04 For: fred *
+G04 Format: Gerber/RS-274X *
+G04 PCB-Dimensions: 350000 505000 *
+G04 PCB-Coordinate-Origin: lower left *
+%MOIN*%
+%FSLAX25Y25*%
+%LNTOP_PASTE_NONE_0*%
+%ADD101C,0.0004*%
+M02*

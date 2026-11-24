@@ -1,144 +1,145 @@
 # Stripboard Physical Matrix & Coordinate System
-## Based on `custoStripBoard.ods` (33x71 mm Breadboard-Style Protoboard)
-### Configuration: Locked-in Option A (Bottom Edge Fan Bank) + R16/C12 Trace Cut
+## Plataforma Principal: Custom Stripboard Rev 1.1a (Eurocard 88.90 x 128.27 mm)
+### Arquitetura: Controle High-Side por Par Sziklai (BC549 + BC328) & Alimentação Autônoma MOLEX ATX (+12V / +5V)
 
 ---
 
-## 1. Key Architectural Decisions
+## 1. Decisões Arquiteturais Consolidadas
 
-1. **The R16 / C12 Copper Trace Cut:**
-   - A single clean cut on **Column C12 at Row R16** separates the rail into two independent voltage zones:
-     - **Upper C12 (Rows R02 to R15):** Connected to **+5V Logic** (from CH340 VCC / Motherboard USB).
-     - **Lower C12 (Rows R17 to R28):** Connected to **+12V Power** (from PC PSU Molex/SATA Yellow wire).
-2. **Direct Horizontal Tachometer Pull-Ups:**
-   - Because Upper C12 is energized with +5V, the four $10\text{k}\Omega$ pull-up resistors (**R1 to R4**) mount horizontally across **Columns C11 and C12** directly adjacent to ATmega Port C pins (Rows R04 to R07). **Zero crossover jumper wires are needed for pull-ups!**
-3. **Locked-in Option A (Bottom Edge Fan Bank):**
-   - All 4 fan connectors are grouped at the **bottom edge of the board (Rows R26 to R28)**.
-   - All fan cables exit toward the bottom of the PC chassis for clean, unified cable management.
-4. **Dedicated CH340 & Decoupling Zone (Rows R21 to R26):**
-   - The 6-pin female socket header for the CH340 USB module, the auto-reset DTR coupling capacitor, the 5V logic decoupling capacitor, and the 12V bulk electrolytic capacitor are grouped cleanly along Rows R21 to R26.
+1. **Placa Padrão Eurocard Industrial (Custom Stripboard Rev 1.1a):**
+   - Dimensões: $3500.00\,\text{mil} \times 5050.00\,\text{mil}$ ($88.90\,\text{mm} \times 128.27\,\text{mm}$).
+   - Padrão **100% Through-Hole (THT / PTH)** com pads $\ge 80\,\text{mil}$ ($2.032\,\text{mm}$) e broca de $35\,\text{mil}$ ($0.889\,\text{mm}$).
+   - 64 réguas horizontais de prototipagem de 9 pinos cada (32 linhas no Banco Esquerdo e 32 linhas no Banco Direito).
+   - 8 Barramentos Verticais de Força com trilhas pesadas de $40\,\text{mil}$ (+12V, +5V, GND).
+   - Conectores diretos de 3 pinos para ventoinhas (`FAN1`..`FAN4`, passo $2.54\,\text{mm}$ / padrão PC fan Molex KK 254), eliminando o borne KRE (`TB101`), reduzindo custo e economizando espaço.
 
----
+2. **Controle High-Side por Par Sziklai (Complementary Feedback Pair — CFP):**
+   - **$Q_1$ (NPN Driver / Level-Shifter):** **BC549** (ou BC548 / BC337) em encapsulamento TO-92 (C-B-E).
+   - **$Q_2$ (PNP Pass / Saída de Alta Corrente):** **BC328** (ou BC327) em encapsulamento TO-92 (C-B-E, $800\,\text{mA}$ contínuo).
+   - **Queda de Tensão Mínima ($V_{CE(sat)} \le 0.15\,\text{V}$):** A ventoinha recebe mais de $11.85\,\text{V}$ a 100% de PWM, garantindo rotação plena sem perdas térmicas (contra a queda de $1.2\text{--}1.5\,\text{V}$ do Darlington).
+   - **Terra Sólido e Contínuo (0V):** O pino 1 (GND) dos 4 fans é permanentemente conectado ao terra comum da fonte do PC. A leitura do tacômetro (Pino 3) é 100% imune a ruídos e jitter de PWM.
 
-## 2. Complete Physical Board Matrix (28 Rows $\times$ 12 Columns = 336 Holes)
+3. **Alimentação Autônoma Onboard via Conector MOLEX ATX Padrão:**
+   - Utilização direta das tensões de $+12\,\text{V}$ e $+5\,\text{V}$ do conector de periféricos MOLEX ATX de 4 vias (Molex 8981, passo $5.08\,\text{mm}$):
+     - **Pino 1 (Fio Amarelo):** $+12\,\text{V}$ $\to$ Barramento de Potência (Rail 6 em $X = 2800\,\text{mil}$) e Emissores dos PNP BC328.
+     - **Pino 2 (Fio Preto):** GND $\to$ Ponto Estrela de Terra (Rail 8 em $X = 3000\,\text{mil}$).
+     - **Pino 3 (Fio Preto):** GND $\to$ Ponto Estrela de Terra (Rail 4 em $X = 1700\,\text{mil}$).
+     - **Pino 4 (Fio Vermelho):** $+5\,\text{V}$ $\to$ Barramento Lógico (Rail 5 em $X = 1800\,\text{mil}$) para ATmega328P, CH340 e pull-ups.
+   - **Zero Dissipação Térmica:** Elimina a necessidade de reguladores lineares ou conversores buck adicionais.
 
-```
-        C01       C02  C03  C04  C05      C06    C07      C08  C09  C10  C11       C12
-       (GND)     (--- LEFT BANK ---)     (+5V)  (GND)    (--- RIGHT BANK ---)     (RAIL)
- R01:  ─────────────────── [ NET 1: TOP AUXILIARY RAIL ] ───────────────────────  ─────
- R02:  (GND)     CH340 DTR-Cap  Pin 1 ──► [ ATmega328P ] ◄── Pin 28                (+5V )
- R03:  (GND)     CH340 TXD  ──► Pin 2 ──► [    DIP-28  ] ◄── Pin 27                (+5V )
- R04:  (GND)     CH340 RXD  ◄── Pin 3 ──► [  Rows 2-15 ] ◄── Pin 26 ──[10kΩ R4]──► (+5V )
- R05:  (GND)     Fan 1 Tach ──► Pin 4 ──► [            ] ◄── Pin 25 ──[10kΩ R3]──► (+5V )
- R06:  (GND)     Fan 4 PWM  ──► Pin 5 ──► [   PINS:    ] ◄── Pin 24 ──[10kΩ R2]──► (+5V )
- R07:  (GND)                    Pin 6 ──► [ Left: 1-14 ] ◄── Pin 23 ──[10kΩ R1]──► (+5V )
- R08:  (GND)     Bridge to +5V  Pin 7 ──► [   (in C05) ] ◄── Pin 22 (Bridge to GND)(+5V )
- R09:  (GND)     Bridge to GND  Pin 8 ──► [            ] ◄── Pin 21 (AREF 100nF)   (+5V )
- R10:  (GND)     22pF to GND ── Pin 9 ──► [ Right:28-15] ◄── Pin 20 (AVCC to +5V)  (+5V )
- R11:  (GND)     22pF to GND ── Pin 10──► [   (in C08) ] ◄── Pin 19                (+5V )
- R12:  (GND)                    Pin 11──► [            ] ◄── Pin 18                (+5V )
- R13:  (GND)                    Pin 12──► [            ] ◄── Pin 17 (Fan 3 PWM Out)(+5V )
- R14:  (GND)                    Pin 13──► [            ] ◄── Pin 16 (Fan 2 PWM Out)(+5V )
- R15:  (GND)                    Pin 14──► [            ] ◄── Pin 15 (Fan 1 PWM Out)(+5V )
-       ═══════════════════════════════════════════════════════════════════════════  [CUT 1] R16/C12
- R16:  (GND)     ────────────────── [ 1-ROW SPACER GAP ] ───────────────────────   ─────
- R17:  (GND)     PWM 1 In ──►   Pin 1 ──► [  ULN2003A  ] ◄── Pin 16 (OUT 1) ──────►(+12V)
- R18:  (GND)     PWM 2 In ──►   Pin 2 ──► [   DIP-16   ] ◄── Pin 15 (OUT 2) ──────►(+12V)
- R19:  (GND)     PWM 3 In ──►   Pin 3 ──► [  Rows 17-24] ◄── Pin 14 (OUT 3) ──────►(+12V)
- R20:  (GND)     PWM 4 In ──►   Pin 4 ──► [   PINS:    ] ◄── Pin 13 (OUT 4) ──────►(+12V)
-       ────────────────── [ CH340 & DECOUPLING ZONE: ROWS R21-R26 ] ─────────────
- R21:  (GND)     [CH340 Pin 1: DTR] [CUT 2] [C_DTR 100nF] ──► (ULN Pin 5: Unused) (+12V)
- R22:  (GND)     [CH340 Pin 2: RXD] ───────────────────────► (ULN Pin 6: Unused) (+12V)
- R23:  (GND)     [CH340 Pin 3: TXD] ───────────────────────► (ULN Pin 7: Unused) (+12V)
- R24:  (GND)     [CH340 Pin 4: VCC] [CUT 3] [C2 100nF] ────► (ULN Pin 8: GND)    (+12V)
- R25:  (GND)     [CH340 Pin 5: CTS (NC)] ── [C1 100uF 25V Electrolytic] ────────► (+12V)
- R26:  (GND)     [CH340 Pin 6: GND] ────► [Bridge to C01] ──► (Fans +12V Bus)    (+12V)
-                 ───[CUT 4: R27/R28]───                  ───[CUT 5: R27/R28]───
- R27:  (GND)     [F1 SwGND: C02] [F2 SwGND: C04]         [F3 SwGND: C08] [F4 SwGND: C10] (+12V)
- R28:  (GND)     [F1 Tach : C02] [F2 Tach : C04]         [F3 Tach : C08] [F4 Tach : C10] (+12V)
-```
+4. **Conexão Direta Onboard via Conectores PC Fan de 3 Pinos (`FAN1`..`FAN4`):**
+   - Conectores macho padrão Molex KK 254 com rampa de travamento (passo $2.54\,\text{mm}$):
+     - **FAN1:** Pino 1 (GND), Pino 2 (+12V Chaveado High-Side `FAN1_12V`), Pino 3 (Tacômetro RPM $\to$ PD2 / INT0)
+     - **FAN2:** Pino 1 (GND), Pino 2 (+12V Chaveado High-Side `FAN2_12V`), Pino 3 (Tacômetro RPM $\to$ PD4 / PCINT20)
+     - **FAN3:** Pino 1 (GND), Pino 2 (+12V Chaveado High-Side `FAN3_12V`), Pino 3 (Tacômetro RPM $\to$ PD5 / PCINT21)
+     - **FAN4:** Pino 1 (GND), Pino 2 (+12V Chaveado High-Side `FAN4_12V`), Pino 3 (Tacômetro RPM $\to$ PD6 / PCINT22)
+   - Elimina o borne KRE (`TB101`), permitindo o encaixe direto dos chicotes das ventoinhas do gabinete sem emendas ou custo de blocos terminais.
 
 ---
 
-## 3. Detailed CH340 6-Pin Socket Header & Decoupling Area (Rows R21 to R26)
+## 2. Mapa Geral de Coordenadas da Placa Custom Stripboard Rev 1.1a
 
-The 6-pin female socket header (1x6, 2.54 mm pitch) is soldered into **Column C02 across Rows R21 to R26**.
-
-```
-                           DETAILED COMPONENT & TRACE CUT MAP
-                           Rows R21 to R26 (Columns C01 to C12)
-
-        C01         C02            C03            C04            C05          C06       C07      C12
-       (GND)                                                                 (+5V)     (GND)    (+12V)
-R21:    │     [CH340 Pin 1: DTR] ──[CUT 2]── [C_DTR 100nF leg 2]                  │         │        │
-        │             │                              │                            │         │        │
-        │             └── [C_DTR 100nF leg 1]        └── Jumper wire to ATmega    │         │        │
-        │                                                Pin 1 (/RESET at R02)    │         │        │
-        │                                                                         │         │        │
-R22:    │     [CH340 Pin 2: RXD] ─────────────────────── Jumper wire to ATmega    │         │        │
-        │                                                Pin 3 (TXD at R04)       │         │        │
-        │                                                                         │         │        │
-R23:    │     [CH340 Pin 3: TXD] ─────────────────────── Jumper wire to ATmega    │         │        │
-        │                                                Pin 2 (RXD at R03)       │         │        │
-        │                                                                         │         │        │
-R24:    │     [CH340 Pin 4: VCC] ──[CUT 3]── [C2 100nF] ────► [ULN Pin 8: GND] ───┴──► +5V  │        │
-        │             │                                               │                     │        │
-        │             └── Wire jumper to C06 (+5V Rail)               └── Jumper to C01 GND │        │
-        │                                                                                   │        │
-R25:    │     [CH340 Pin 5: CTS (NC)]                                                       │        │
-        │             (Unconnected / Floating)                                              │        │
-        │                                                                                   │        │
-R26:    │     [CH340 Pin 6: GND] ── (Solder bridge to C01)                                  │        │
-        │             │                                                                     │        │
-        │             └── Negative leg of C1 (100uF) ────────────── Positive leg of C1 ─────┴──────►│
-        ▼                                                                                            ▼
+```text
+       X=500  X=600  X=700   X=800..1600       X=1700 X=1800   X=1900..2700      X=2800 X=2900 X=3000   X=3400
+       Rail1  Rail2  Rail3   (BANCO ESQUERDO)  Rail4  Rail5    (BANCO DIREITO)   Rail6  Rail7  Rail8    [FAN1..4 3P CON]
+                             (9 furos / linha) (GND)  (+5V)    (9 furos / linha) (+12V) (+12V) (GND)
+Y=800:   │      │      │     [Row 01 Left ] ── [ ATmega328P ] ── [Row 01 Right]     │      │      │      [FAN1: Pin 1 GND]
+Y=900:   │      │      │     [Row 02 Left ] ── [   DIP-28   ] ── [Row 02 Right]     │      │      │      [FAN1: Pin 2 12V]
+Y=1000:  │      │      │     [Row 03 Left ] ── [  Rows 1-14 ] ── [Row 03 Right]     │      │      │      [FAN1: Pin 3 TACH]
+Y=1100:  │      │      │     [Row 04 Left ] ── [            ] ── [Row 04 Right]     │      │      │      [FAN2: Pin 1 GND]
+Y=1200:  │      │      │     [Row 05 Left ] ── [ Cristal    ] ── [Row 05 Right]     │      │      │      [FAN2: Pin 2 12V]
+Y=1300:  │      │      │     [Row 06 Left ] ── [ 16MHz +    ] ── [Row 06 Right]     │      │      │      [FAN2: Pin 3 TACH]
+Y=1400:  │      │      │     [Row 07 Left ] ── [ Pull-ups   ] ── [Row 07 Right]     │      │      │      [FAN3: Pin 1 GND]
+Y=1500:  │      │      │     [Row 08 Left ] ── [ Tacômetro  ] ── [Row 08 Right]     │      │      │      [FAN3: Pin 2 12V]
+Y=1600:  │      │      │     [Row 09 Left ] ── [            ] ── [Row 09 Right]     │      │      │      [FAN3: Pin 3 TACH]
+Y=1700:  │      │      │     [Row 10 Left ] ── [            ] ── [Row 10 Right]     │      │      │      [FAN4: Pin 1 GND]
+Y=1800:  │      │      │     [Row 11 Left ] ── [            ] ── [Row 11 Right]     │      │      │      [FAN4: Pin 2 12V]
+Y=1900:  │      │      │     [Row 12 Left ] ── [            ] ── [Row 12 Right]     │      │      │      [FAN4: Pin 3 TACH]
+Y=2000:  │      │      │     [Row 13 Left ] ── [            ] ── [Row 13 Right]     │      │      │
+Y=2100:  │      │      │     [Row 14 Left ] ── [            ] ── [Row 14 Right]     │      │      │
+         ─────────────────── [ ESPAÇADOR E DESACOPLAMENTO: ROWS 15-16 ] ───────────────────────────
+Y=2400:  │      │      │     [Row 17 Left ]                      [CANAL 1 SZIKLAI (Row 17, 18, 19)] ──► FAN1 Pin 2
+Y=2700:  │      │      │     [Row 20 Left ]                      [CANAL 2 SZIKLAI (Row 20, 21, 22)] ──► FAN2 Pin 2
+Y=3000:  │      │      │     [Row 23 Left ]                      [CANAL 3 SZIKLAI (Row 23, 24, 25)] ──► FAN3 Pin 2
+Y=3300:  │      │      │     [Row 26 Left ]                      [CANAL 4 SZIKLAI (Row 26, 27, 28)] ──► FAN4 Pin 2
+Y=3400:  │      │      │     [Row 27: CH340 DTR-Cap]             │      │      │
+Y=3500:  │      │      │     [Row 28: CH340 RXD]                 │      │      │
+Y=3600:  │      │      │     [Row 29: CH340 TXD]                 │      │      │
+Y=3700:  │      │      │     [Row 30: CH340 VCC] ── [CONN_MOLEX: +12V / GND / GND / +5V]
+Y=3800:  │      │      │     [Row 31: CH340 CTS]                 │      │      │
+Y=3900:  │      │      │     [Row 32: CH340 GND]                 │      │      │
 ```
 
-### A. Pin-by-Pin Wiring Schedule for CH340 Header
+---
 
-| Pin # | CH340 Label | Location | Exact Connection & Jumper Routing |
-| :---: | :---: | :---: | :--- |
-| **Pin 1** | **DTR** | **Row R21, Col C02** | **Auto-Reset Circuit:**<br>• Make **[CUT 2]** between C02 and C03 on Row R21.<br>• Solder **C_DTR ($100\text{nF}$ ceramic)** with leg 1 in C02 and leg 2 in C03.<br>• Run a jumper wire from **Row R21, Col C03** up to **Row R02, Col C03** (ATmega Pin 1 / /RESET). |
-| **Pin 2** | **RXD** | **Row R22, Col C02** | **UART Receive (from MCU):**<br>• Row R22 Left Bank (Net 34) is free (ULN Pin 6 is unused).<br>• Run a jumper wire from **Row R22, Col C03** up to **Row R04, Col C04** (ATmega Pin 3 / PD1 / TXD). |
-| **Pin 3** | **TXD** | **Row R23, Col C02** | **UART Transmit (to MCU):**<br>• Row R23 Left Bank (Net 35) is free (ULN Pin 7 is unused).<br>• Run a jumper wire from **Row R23, Col C03** up to **Row R03, Col C04** (ATmega Pin 2 / PD0 / RXD). |
-| **Pin 4** | **VCC (+5V)** | **Row R24, Col C02** | **USB 5V Power Entry & Decoupling:**<br>• On Row R24, Col C05 holds ULN Pin 8 (GND). To prevent shorting VCC to GND, make **[CUT 3]** between C03 and C04 on Row R24.<br>• Run a jumper wire from **Row R24, Col C02** to **Column C06 (+5V Rail)**.<br>• Solder **C2 ($100\text{nF}$ ceramic)** directly across CUT 3 (leg 1 in C03 = +5V, leg 2 in C04 = GND) for zero-lead-length bypass filtering! |
-| **Pin 5** | **CTS** | **Row R25, Col C02** | **Clear to Send:**<br>• Leave unconnected (NC / Floating). |
-| **Pin 6** | **GND** | **Row R26, Col C02** | **Logic & Signal Ground:**<br>• Connect via a short solder bridge or 1-hole jumper from **Row R26, Col C02** directly to **Column C01 (GND Bus)**. |
+## 3. Topologia e Mapa Físico dos 4 Canais Sziklai High-Side
+
+Cada canal ocupa 3 linhas horizontais no Banco Direito ($X = 1900$ a $2700\,\text{mil}$), acoplando-se diretamente ao barramento de $+12\,\text{V}$ (Rail 6 em $X = 2800\,\text{mil}$) e ao barramento de GND (Rail 4 em $X = 1700\,\text{mil}$ e Rail 8 em $X = 3000\,\text{mil}$):
+
+```text
+                  +12V Rail 6 (X=2800 mil)
+                       │
+                       ├──────────────────────────┐
+                       │                          │
+                   [R2: 4.7kΩ]                 Emissor (E) [X=2800 mil]
+                 (Pull-up corte)                  │
+                       │                          │ Q2: BC328 (PNP, TO-92)
+                       ├───[R3: 680Ω]─── Base (B)─┤   [Pad X=2400 mil]
+                       │                          │
+                 Coletor (C)                      │ Coletor (C) [Pad X=2500 mil]
+                       │                          │
+                       │ Q1: BC549 (NPN, TO-92)   ├───────────────► Saída +12V Chaveada (para Borne KRE)
+                       │                          │                 (Pino 2 do Fan)
+ PWM In ──[R1: 1.5kΩ]──┤ Base (B)                [D1] 1N4007
+ (MCU)                 │                         (Flyback)
+                  Emissor (E)                     │
+                       │                          ▼
+                  GND (0V Rail 4) ────────────────┴───────────────► GND Comum (Pino 1 do Fan)
+```
+
+### Detalhamento Físico de cada Bloco de 3 Linhas (Exemplo Canal 1):
+- **Linha 17 (NPN Driver):**
+  - $R_1$ ($1.5\,\text{k}\Omega$): terminal 1 em $X=2000\,\text{mil}$ (ligado a `NET_PWM1`), terminal 2 em $X=2300\,\text{mil}$.
+  - $Q_1$ (BC549 NPN): Base em $X=2400\,\text{mil}$, Emissor ligado ao Rail 4 GND em $X=1700\,\text{mil}$, Coletor inserido na Linha 18 em $X=2400\,\text{mil}$.
+- **Linha 18 (Nó Intermediário de Drive & Pull-up):**
+  - Coletor de $Q_1$ em $X=2400\,\text{mil}$.
+  - $R_2$ ($4.7\,\text{k}\Omega$ pull-up): montado entre $X=2500\,\text{mil}$ e Rail 6 (+12V em $X=2800\,\text{mil}$).
+  - $R_3$ ($680\,\Omega$ drive): terminal 1 em $X=2300\,\text{mil}$, terminal 2 na Linha 19 em $X=2300\,\text{mil}$.
+- **Linha 19 (PNP de Potência & Proteção Flyback):**
+  - Base de $Q_2$ em $X=2400\,\text{mil}$ (recebe $R_3$).
+  - Emissor de $Q_2$ (BC328 PNP): soldado no Rail 6 (+12V em $X=2800\,\text{mil}$).
+  - Coletor de $Q_2$: em $X=2500\,\text{mil}$ (Gera `FAN1_12V`).
+  - Diodo Flyback $D_1$ (1N4007): Cátodo em $X=2600\,\text{mil}$ (Linha 19), Ânodo no Rail 8 (GND em $X=3000\,\text{mil}$).
+  - Jumper de Saída: De $X=2700\,\text{mil}$ diretamente para o Pino 2 do conector `FAN1`!
 
 ---
 
-### B. Decoupling Capacitors in this Area
+## 4. Arquivo de Coordenadas Completas
 
-1. **C_DTR ($100\text{nF}$ Ceramic Disc / Monolithic):**
-   - **Location:** Row R21 across **[CUT 2]** (Hole C02 to Hole C03).
-   - **Role:** Differentiates the DTR level drop from Linux into a sharp 1ms negative spike to reset the ATmega328P automatically before serial code flashing.
-2. **C2 ($100\text{nF}$ Ceramic Bypass Capacitor):**
-   - **Location:** Row R24 across **[CUT 3]** (Hole C03 to Hole C04).
-   - **Role:** High-frequency noise suppression right at the USB +5V power input.
-3. **C1 ($100\mu\text{F}$ 25V Electrolytic Bulk Capacitor):**
-   - **Location:** Row R25 / R26.
-   - **Positive (+) lead:** Inserted into **Row R25, Column C12 (+12V Rail)**.
-   - **Negative (-) lead:** Inserted into **Row R25, Column C07 (GND)** or Column C01 (GND).
-   - **Role:** Stabilizes the +12V power rail and absorbs inductive voltage dips/spikes when all 4 cooling fans start up or switch duty cycles.
+A tabela detalhada contendo as coordenadas $(X, Y)$ em mil e milímetros de todos os 37 componentes, furos e pinos está registrada em:
+- [`SZIKLAI_REV1.1A_COORDINATE_SCHEDULE.md`](SZIKLAI_REV1.1A_COORDINATE_SCHEDULE.md)
+- Script gerador oficial: [`generate_sziklai_rev1.1a_schedule.py`](generate_sziklai_rev1.1a_schedule.py)
 
 ---
 
-## 4. Track Cuts in the CH340 Area
+## 5. Visualizações do Circuito e Gabaritos de Impressão 1:1 (Rev 1.1a)
 
-| Cut ID | Coordinate | Method | Purpose |
-| :---: | :---: | :---: | :--- |
-| **[CUT 2]** | **Row R21 (between C02 and C03)** | Twist 3mm drill bit on copper side | Isolates CH340 DTR pin so $100\text{nF}$ AC capacitor C_DTR can be inserted in-line. |
-| **[CUT 3]** | **Row R24 (between C03 and C04)** | Twist 3mm drill bit on copper side | Isolates CH340 VCC (+5V in C02/C03) from ULN Pin 8 (GND in C04/C05). C2 bypass cap mounts directly across this cut! |
+Os diagramas de montagem e gabaritos em escala real 1:1 para a placa Rev 1.1a estão disponíveis no diretório [`templates/`](templates/):
+- **Diagrama de Montagem do Circuito no PCB (Top View):**
+  - Imagem 300 DPI: [`circuit_assembly_rev1.1a_top_view.png`](templates/circuit_assembly_rev1.1a_top_view.png)
+  - Vetorial SVG: [`circuit_assembly_rev1.1a_top_view.svg`](templates/circuit_assembly_rev1.1a_top_view.svg)
+- **Diagrama de Solda e Furação (Bottom View espelhado):**
+  - Imagem 300 DPI: [`circuit_assembly_rev1.1a_bottom_view.png`](templates/circuit_assembly_rev1.1a_bottom_view.png)
+  - Vetorial SVG: [`circuit_assembly_rev1.1a_bottom_view.svg`](templates/circuit_assembly_rev1.1a_bottom_view.svg)
+- **Folha de Impressão A4 1:1 com Calibradores Milimétricos:**
+  - PDF Vetorial 100% Escala: [`stripboard_rev1.1a_1to1_printout.pdf`](templates/stripboard_rev1.1a_1to1_printout.pdf)
+  - Script Gerador Automatizado: [`generate_rev1.1a_templates.py`](templates/generate_rev1.1a_templates.py)
 
 ---
 
-## 5. Summary of All Track Cuts on the Entire Board
+## Apêndice: Referência Histórica do Protótipo em Placa Padrão (custoStripBoard.ods)
 
-Only **7 tiny track cuts** across the whole 336-hole board:
-1. **Cut 1 (Rail Split):** Row **R16, Column C12** (Separates Upper +5V Logic from Lower +12V Fan Power).
-2. **Cut 2 (DTR Isolation):** Row **R21, between C02 and C03** (For in-line DTR auto-reset capacitor).
-3. **Cut 3 (VCC/GND Split):** Row **R24, between C03 and C04** (Separates CH340 5V from ULN GND; mounts C2 bypass cap).
-4. **Cut 4 (Fan 1 Pin Split):** Column **C02, between R27 and R28** (Separates Fan 1 GND from Tach).
-5. **Cut 5 (Fan 2 Pin Split):** Column **C04, between R27 and R28** (Separates Fan 2 GND from Tach).
-6. **Cut 6 (Fan 3 Pin Split):** Column **C08, between R27 and R28** (Separates Fan 3 GND from Tach).
-7. **Cut 7 (Fan 4 Pin Split):** Column **C10, between R27 and R28** (Separates Fan 4 GND from Tach).
+> Esta seção preserva o projeto histórico desenvolvido para a placa genérica de $33\,\text{mm} \times 72\,\text{mm}$ (336 furos) documentada em `custoStripBoard.ods`, utilizando o corte de trilha R16/C12 e chaveamento Low-Side com ULN2003A:
+> - Matriz: 28 Linhas $\times$ 12 Colunas.
+> - Corte de Trilha: R16/C12 para separar +5V superior de +12V inferior.
+> - Layout detalhado, esquemas de cortes e moldes 1:1 permanecem disponíveis no diretório [`docs/templates/`](templates/).

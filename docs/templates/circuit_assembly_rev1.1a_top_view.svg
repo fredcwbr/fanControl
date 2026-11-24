@@ -1,0 +1,2306 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108.9mm" height="148.27mm" viewBox="0 0 108.9 148.27">
+<defs>
+  <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="0.4" dy="0.6" stdDeviation="0.4" flood-opacity="0.35"/></filter>
+  <filter id="ic-shadow" x="-10%" y="-5%" width="120%" height="110%"><feDropShadow dx="0.5" dy="0.8" stdDeviation="0.6" flood-opacity="0.45"/></filter>
+</defs>
+<style>
+  text { font-family: "DejaVu Sans", "Helvetica", Arial, sans-serif; text-anchor: middle; dominant-baseline: central; }
+  .board-body { fill: #1c3b2b; stroke: #0d1f16; stroke-width: 0.5; }
+  .copper-pad { fill: #e5a95d; stroke: #a36d2e; stroke-width: 0.08; }
+  .copper-track { fill: #2e6648; stroke: #1f4531; stroke-width: 0.15; }
+  .hole { fill: #111111; stroke: #333333; stroke-width: 0.08; }
+  .m3-pad { fill: #e5a95d; stroke: #8a581e; stroke-width: 0.2; }
+  .silkscreen { fill: #ffffff; font-size: 1.4px; font-weight: bold; }
+  .silk-sub { fill: #dddddd; font-size: 1.0px; }
+  .wire-pwr12 { stroke: #e53935; stroke-width: 0.7; stroke-linecap: round; fill: none; }
+  .wire-pwr5  { stroke: #fb8c00; stroke-width: 0.7; stroke-linecap: round; fill: none; }
+  .wire-gnd   { stroke: #212121; stroke-width: 0.7; stroke-linecap: round; fill: none; }
+  .wire-pwm   { stroke: #1e88e5; stroke-width: 0.6; stroke-linecap: round; fill: none; }
+  .wire-tach  { stroke: #43a047; stroke-width: 0.6; stroke-linecap: round; fill: none; }
+  .wire-uart  { stroke: #fdd835; stroke-width: 0.6; stroke-linecap: round; fill: none; }
+  .wire-rst   { stroke: #8e24aa; stroke-width: 0.6; stroke-linecap: round; fill: none; }
+</style>
+<path d="M 10.0 10.0 L 98.89999999999999 10.0 L 98.89999999999999 130.39600000000002 L 88.74 130.39600000000002 L 88.74 138.26999999999998 L 20.16 138.26999999999998 L 20.16 130.39600000000002 L 10.0 130.39600000000002 Z" class="board-body" filter="url(#shadow)"/>
+<text x="54.449999999999996" y="13.81" class="silkscreen" font-size="2.6px">FAN CONTROLLER — CUSTOM STRIPBOARD REV 1.1a</text>
+<text x="54.449999999999996" y="16.604" class="silk-sub" font-size="1.4px">High-Side Sziklai CFP (4x BC549 + BC328) • Autonomous ATX MOLEX Power</text>
+<circle cx="15.08" cy="15.08" r="3.05" class="m3-pad"/>
+<circle cx="15.08" cy="15.08" r="1.60" class="hole"/>
+<text x="15.08" y="19.906" class="silk-sub" font-size="1.2px">MH101</text>
+<circle cx="93.82" cy="15.08" r="3.05" class="m3-pad"/>
+<circle cx="93.82" cy="15.08" r="1.60" class="hole"/>
+<text x="93.82" y="19.906" class="silk-sub" font-size="1.2px">MH102</text>
+<circle cx="15.08" cy="60.8" r="3.05" class="m3-pad"/>
+<circle cx="15.08" cy="60.8" r="1.60" class="hole"/>
+<text x="15.08" y="65.626" class="silk-sub" font-size="1.2px">MH103</text>
+<circle cx="93.82" cy="78.58" r="3.05" class="m3-pad"/>
+<circle cx="93.82" cy="78.58" r="1.60" class="hole"/>
+<text x="93.82" y="83.40599999999999" class="silk-sub" font-size="1.2px">MH104</text>
+<circle cx="15.08" cy="126.83999999999999" r="3.05" class="m3-pad"/>
+<circle cx="15.08" cy="126.83999999999999" r="1.60" class="hole"/>
+<text x="15.08" y="131.666" class="silk-sub" font-size="1.2px">MH105</text>
+<circle cx="93.82" cy="126.83999999999999" r="3.05" class="m3-pad"/>
+<circle cx="93.82" cy="126.83999999999999" r="1.60" class="hole"/>
+<text x="93.82" y="131.666" class="silk-sub" font-size="1.2px">MH106</text>
+<rect x="21.683999999999997" y="29.304000000000002" width="2.032" height="101.092" rx="0.8" fill="#999999" opacity="0.35"/>
+<circle cx="22.7" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="30.32" r="0.445" class="hole"/>
+<circle cx="22.7" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="32.86" r="0.445" class="hole"/>
+<circle cx="22.7" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="35.4" r="0.445" class="hole"/>
+<circle cx="22.7" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="37.94" r="0.445" class="hole"/>
+<circle cx="22.7" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="22.7" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="22.7" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="22.7" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="48.1" r="0.445" class="hole"/>
+<circle cx="22.7" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="50.64" r="0.445" class="hole"/>
+<circle cx="22.7" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="53.18" r="0.445" class="hole"/>
+<circle cx="22.7" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="55.72" r="0.445" class="hole"/>
+<circle cx="22.7" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="58.26" r="0.445" class="hole"/>
+<circle cx="22.7" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="60.8" r="0.445" class="hole"/>
+<circle cx="22.7" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="22.7" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="65.88" r="0.445" class="hole"/>
+<circle cx="22.7" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="22.7" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="22.7" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="73.5" r="0.445" class="hole"/>
+<circle cx="22.7" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="22.7" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="78.58" r="0.445" class="hole"/>
+<circle cx="22.7" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="22.7" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="83.66" r="0.445" class="hole"/>
+<circle cx="22.7" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="86.2" r="0.445" class="hole"/>
+<circle cx="22.7" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="88.74" r="0.445" class="hole"/>
+<circle cx="22.7" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="91.28" r="0.445" class="hole"/>
+<circle cx="22.7" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="93.82" r="0.445" class="hole"/>
+<circle cx="22.7" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="96.36" r="0.445" class="hole"/>
+<circle cx="22.7" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="22.7" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="101.44" r="0.445" class="hole"/>
+<circle cx="22.7" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="22.7" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="106.52" r="0.445" class="hole"/>
+<circle cx="22.7" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="109.06" r="0.445" class="hole"/>
+<circle cx="22.7" cy="111.6" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="111.6" r="0.445" class="hole"/>
+<circle cx="22.7" cy="114.14" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="114.14" r="0.445" class="hole"/>
+<circle cx="22.7" cy="116.67999999999999" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="22.7" cy="119.22" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="119.22" r="0.445" class="hole"/>
+<circle cx="22.7" cy="121.75999999999999" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="121.75999999999999" r="0.445" class="hole"/>
+<circle cx="22.7" cy="124.3" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="124.3" r="0.445" class="hole"/>
+<circle cx="22.7" cy="126.83999999999999" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="126.83999999999999" r="0.445" class="hole"/>
+<circle cx="22.7" cy="129.38" r="1.016" class="copper-pad"/>
+<circle cx="22.7" cy="129.38" r="0.445" class="hole"/>
+<text x="22.7" y="27.779999999999998" class="silk-sub" font-weight="bold" font-size="1.1px">Aux 1</text>
+<rect x="24.224000000000004" y="29.304000000000002" width="2.032" height="101.092" rx="0.8" fill="#999999" opacity="0.35"/>
+<circle cx="25.240000000000002" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="30.32" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="32.86" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="35.4" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="37.94" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="48.1" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="50.64" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="53.18" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="55.72" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="58.26" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="60.8" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="65.88" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="73.5" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="78.58" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="83.66" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="86.2" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="88.74" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="91.28" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="93.82" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="96.36" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="101.44" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="106.52" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="109.06" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="111.6" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="111.6" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="114.14" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="114.14" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="116.67999999999999" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="119.22" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="119.22" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="121.75999999999999" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="121.75999999999999" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="124.3" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="124.3" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="126.83999999999999" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="126.83999999999999" r="0.445" class="hole"/>
+<circle cx="25.240000000000002" cy="129.38" r="1.016" class="copper-pad"/>
+<circle cx="25.240000000000002" cy="129.38" r="0.445" class="hole"/>
+<text x="25.240000000000002" y="27.779999999999998" class="silk-sub" font-weight="bold" font-size="1.1px">Aux 2</text>
+<rect x="26.763999999999996" y="29.304000000000002" width="2.032" height="101.092" rx="0.8" fill="#999999" opacity="0.35"/>
+<circle cx="27.779999999999998" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="30.32" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="32.86" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="35.4" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="37.94" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="48.1" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="50.64" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="53.18" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="55.72" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="58.26" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="60.8" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="65.88" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="73.5" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="78.58" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="83.66" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="86.2" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="88.74" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="91.28" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="93.82" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="96.36" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="101.44" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="106.52" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="109.06" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="111.6" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="111.6" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="114.14" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="114.14" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="116.67999999999999" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="119.22" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="119.22" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="121.75999999999999" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="121.75999999999999" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="124.3" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="124.3" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="126.83999999999999" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="126.83999999999999" r="0.445" class="hole"/>
+<circle cx="27.779999999999998" cy="129.38" r="1.016" class="copper-pad"/>
+<circle cx="27.779999999999998" cy="129.38" r="0.445" class="hole"/>
+<text x="27.779999999999998" y="27.779999999999998" class="silk-sub" font-weight="bold" font-size="1.1px">Aux 3</text>
+<rect x="52.164" y="29.304000000000002" width="2.032" height="101.092" rx="0.8" fill="#333333" opacity="0.35"/>
+<circle cx="53.18" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="30.32" r="0.445" class="hole"/>
+<circle cx="53.18" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="32.86" r="0.445" class="hole"/>
+<circle cx="53.18" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="35.4" r="0.445" class="hole"/>
+<circle cx="53.18" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="37.94" r="0.445" class="hole"/>
+<circle cx="53.18" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="53.18" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="53.18" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="53.18" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="48.1" r="0.445" class="hole"/>
+<circle cx="53.18" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="50.64" r="0.445" class="hole"/>
+<circle cx="53.18" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="53.18" r="0.445" class="hole"/>
+<circle cx="53.18" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="55.72" r="0.445" class="hole"/>
+<circle cx="53.18" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="58.26" r="0.445" class="hole"/>
+<circle cx="53.18" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="60.8" r="0.445" class="hole"/>
+<circle cx="53.18" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="53.18" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="65.88" r="0.445" class="hole"/>
+<circle cx="53.18" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="53.18" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="53.18" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="73.5" r="0.445" class="hole"/>
+<circle cx="53.18" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="53.18" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="78.58" r="0.445" class="hole"/>
+<circle cx="53.18" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="53.18" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="83.66" r="0.445" class="hole"/>
+<circle cx="53.18" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="86.2" r="0.445" class="hole"/>
+<circle cx="53.18" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="88.74" r="0.445" class="hole"/>
+<circle cx="53.18" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="91.28" r="0.445" class="hole"/>
+<circle cx="53.18" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="93.82" r="0.445" class="hole"/>
+<circle cx="53.18" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="96.36" r="0.445" class="hole"/>
+<circle cx="53.18" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="53.18" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="101.44" r="0.445" class="hole"/>
+<circle cx="53.18" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="53.18" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="106.52" r="0.445" class="hole"/>
+<circle cx="53.18" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="109.06" r="0.445" class="hole"/>
+<circle cx="53.18" cy="111.6" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="111.6" r="0.445" class="hole"/>
+<circle cx="53.18" cy="114.14" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="114.14" r="0.445" class="hole"/>
+<circle cx="53.18" cy="116.67999999999999" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="53.18" cy="119.22" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="119.22" r="0.445" class="hole"/>
+<circle cx="53.18" cy="121.75999999999999" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="121.75999999999999" r="0.445" class="hole"/>
+<circle cx="53.18" cy="124.3" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="124.3" r="0.445" class="hole"/>
+<circle cx="53.18" cy="126.83999999999999" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="126.83999999999999" r="0.445" class="hole"/>
+<circle cx="53.18" cy="129.38" r="1.016" class="copper-pad"/>
+<circle cx="53.18" cy="129.38" r="0.445" class="hole"/>
+<text x="53.18" y="27.779999999999998" class="silk-sub" font-weight="bold" font-size="1.1px">GND</text>
+<rect x="54.704" y="29.304000000000002" width="2.032" height="101.092" rx="0.8" fill="#e65100" opacity="0.35"/>
+<circle cx="55.72" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="30.32" r="0.445" class="hole"/>
+<circle cx="55.72" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="32.86" r="0.445" class="hole"/>
+<circle cx="55.72" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="35.4" r="0.445" class="hole"/>
+<circle cx="55.72" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="37.94" r="0.445" class="hole"/>
+<circle cx="55.72" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="55.72" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="55.72" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="55.72" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="48.1" r="0.445" class="hole"/>
+<circle cx="55.72" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="50.64" r="0.445" class="hole"/>
+<circle cx="55.72" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="53.18" r="0.445" class="hole"/>
+<circle cx="55.72" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="55.72" r="0.445" class="hole"/>
+<circle cx="55.72" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="58.26" r="0.445" class="hole"/>
+<circle cx="55.72" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="60.8" r="0.445" class="hole"/>
+<circle cx="55.72" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="55.72" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="65.88" r="0.445" class="hole"/>
+<circle cx="55.72" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="55.72" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="55.72" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="73.5" r="0.445" class="hole"/>
+<circle cx="55.72" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="55.72" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="78.58" r="0.445" class="hole"/>
+<circle cx="55.72" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="55.72" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="83.66" r="0.445" class="hole"/>
+<circle cx="55.72" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="86.2" r="0.445" class="hole"/>
+<circle cx="55.72" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="88.74" r="0.445" class="hole"/>
+<circle cx="55.72" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="91.28" r="0.445" class="hole"/>
+<circle cx="55.72" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="93.82" r="0.445" class="hole"/>
+<circle cx="55.72" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="96.36" r="0.445" class="hole"/>
+<circle cx="55.72" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="55.72" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="101.44" r="0.445" class="hole"/>
+<circle cx="55.72" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="55.72" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="106.52" r="0.445" class="hole"/>
+<circle cx="55.72" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="109.06" r="0.445" class="hole"/>
+<circle cx="55.72" cy="111.6" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="111.6" r="0.445" class="hole"/>
+<circle cx="55.72" cy="114.14" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="114.14" r="0.445" class="hole"/>
+<circle cx="55.72" cy="116.67999999999999" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="55.72" cy="119.22" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="119.22" r="0.445" class="hole"/>
+<circle cx="55.72" cy="121.75999999999999" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="121.75999999999999" r="0.445" class="hole"/>
+<circle cx="55.72" cy="124.3" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="124.3" r="0.445" class="hole"/>
+<circle cx="55.72" cy="126.83999999999999" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="126.83999999999999" r="0.445" class="hole"/>
+<circle cx="55.72" cy="129.38" r="1.016" class="copper-pad"/>
+<circle cx="55.72" cy="129.38" r="0.445" class="hole"/>
+<text x="55.72" y="27.779999999999998" class="silk-sub" font-weight="bold" font-size="1.1px">+5V</text>
+<rect x="80.10399999999998" y="29.304000000000002" width="2.032" height="101.092" rx="0.8" fill="#c62828" opacity="0.35"/>
+<circle cx="81.11999999999999" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="30.32" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="32.86" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="35.4" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="37.94" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="48.1" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="50.64" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="53.18" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="55.72" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="58.26" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="60.8" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="65.88" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="73.5" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="78.58" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="83.66" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="86.2" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="88.74" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="91.28" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="93.82" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="96.36" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="101.44" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="106.52" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="109.06" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="111.6" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="111.6" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="114.14" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="114.14" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="116.67999999999999" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="119.22" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="119.22" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="121.75999999999999" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="121.75999999999999" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="124.3" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="124.3" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="126.83999999999999" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="126.83999999999999" r="0.445" class="hole"/>
+<circle cx="81.11999999999999" cy="129.38" r="1.016" class="copper-pad"/>
+<circle cx="81.11999999999999" cy="129.38" r="0.445" class="hole"/>
+<text x="81.11999999999999" y="27.779999999999998" class="silk-sub" font-weight="bold" font-size="1.1px">+12V</text>
+<rect x="82.64399999999999" y="29.304000000000002" width="2.032" height="101.092" rx="0.8" fill="#c62828" opacity="0.35"/>
+<circle cx="83.66" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="30.32" r="0.445" class="hole"/>
+<circle cx="83.66" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="32.86" r="0.445" class="hole"/>
+<circle cx="83.66" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="35.4" r="0.445" class="hole"/>
+<circle cx="83.66" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="37.94" r="0.445" class="hole"/>
+<circle cx="83.66" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="83.66" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="83.66" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="83.66" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="48.1" r="0.445" class="hole"/>
+<circle cx="83.66" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="50.64" r="0.445" class="hole"/>
+<circle cx="83.66" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="53.18" r="0.445" class="hole"/>
+<circle cx="83.66" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="55.72" r="0.445" class="hole"/>
+<circle cx="83.66" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="58.26" r="0.445" class="hole"/>
+<circle cx="83.66" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="60.8" r="0.445" class="hole"/>
+<circle cx="83.66" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="83.66" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="65.88" r="0.445" class="hole"/>
+<circle cx="83.66" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="83.66" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="83.66" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="73.5" r="0.445" class="hole"/>
+<circle cx="83.66" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="83.66" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="78.58" r="0.445" class="hole"/>
+<circle cx="83.66" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="83.66" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="83.66" r="0.445" class="hole"/>
+<circle cx="83.66" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="86.2" r="0.445" class="hole"/>
+<circle cx="83.66" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="88.74" r="0.445" class="hole"/>
+<circle cx="83.66" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="91.28" r="0.445" class="hole"/>
+<circle cx="83.66" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="93.82" r="0.445" class="hole"/>
+<circle cx="83.66" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="96.36" r="0.445" class="hole"/>
+<circle cx="83.66" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="83.66" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="101.44" r="0.445" class="hole"/>
+<circle cx="83.66" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="83.66" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="106.52" r="0.445" class="hole"/>
+<circle cx="83.66" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="109.06" r="0.445" class="hole"/>
+<circle cx="83.66" cy="111.6" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="111.6" r="0.445" class="hole"/>
+<circle cx="83.66" cy="114.14" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="114.14" r="0.445" class="hole"/>
+<circle cx="83.66" cy="116.67999999999999" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="83.66" cy="119.22" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="119.22" r="0.445" class="hole"/>
+<circle cx="83.66" cy="121.75999999999999" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="121.75999999999999" r="0.445" class="hole"/>
+<circle cx="83.66" cy="124.3" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="124.3" r="0.445" class="hole"/>
+<circle cx="83.66" cy="126.83999999999999" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="126.83999999999999" r="0.445" class="hole"/>
+<circle cx="83.66" cy="129.38" r="1.016" class="copper-pad"/>
+<circle cx="83.66" cy="129.38" r="0.445" class="hole"/>
+<text x="83.66" y="27.779999999999998" class="silk-sub" font-weight="bold" font-size="1.1px">+12V</text>
+<rect x="85.184" y="29.304000000000002" width="2.032" height="101.092" rx="0.8" fill="#333333" opacity="0.35"/>
+<circle cx="86.2" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="30.32" r="0.445" class="hole"/>
+<circle cx="86.2" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="32.86" r="0.445" class="hole"/>
+<circle cx="86.2" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="35.4" r="0.445" class="hole"/>
+<circle cx="86.2" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="37.94" r="0.445" class="hole"/>
+<circle cx="86.2" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="86.2" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="86.2" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="86.2" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="48.1" r="0.445" class="hole"/>
+<circle cx="86.2" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="50.64" r="0.445" class="hole"/>
+<circle cx="86.2" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="53.18" r="0.445" class="hole"/>
+<circle cx="86.2" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="55.72" r="0.445" class="hole"/>
+<circle cx="86.2" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="58.26" r="0.445" class="hole"/>
+<circle cx="86.2" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="60.8" r="0.445" class="hole"/>
+<circle cx="86.2" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="86.2" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="65.88" r="0.445" class="hole"/>
+<circle cx="86.2" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="86.2" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="86.2" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="73.5" r="0.445" class="hole"/>
+<circle cx="86.2" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="86.2" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="78.58" r="0.445" class="hole"/>
+<circle cx="86.2" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="86.2" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="83.66" r="0.445" class="hole"/>
+<circle cx="86.2" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="86.2" r="0.445" class="hole"/>
+<circle cx="86.2" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="88.74" r="0.445" class="hole"/>
+<circle cx="86.2" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="91.28" r="0.445" class="hole"/>
+<circle cx="86.2" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="93.82" r="0.445" class="hole"/>
+<circle cx="86.2" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="96.36" r="0.445" class="hole"/>
+<circle cx="86.2" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="86.2" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="101.44" r="0.445" class="hole"/>
+<circle cx="86.2" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="86.2" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="106.52" r="0.445" class="hole"/>
+<circle cx="86.2" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="109.06" r="0.445" class="hole"/>
+<circle cx="86.2" cy="111.6" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="111.6" r="0.445" class="hole"/>
+<circle cx="86.2" cy="114.14" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="114.14" r="0.445" class="hole"/>
+<circle cx="86.2" cy="116.67999999999999" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="86.2" cy="119.22" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="119.22" r="0.445" class="hole"/>
+<circle cx="86.2" cy="121.75999999999999" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="121.75999999999999" r="0.445" class="hole"/>
+<circle cx="86.2" cy="124.3" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="124.3" r="0.445" class="hole"/>
+<circle cx="86.2" cy="126.83999999999999" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="126.83999999999999" r="0.445" class="hole"/>
+<circle cx="86.2" cy="129.38" r="1.016" class="copper-pad"/>
+<circle cx="86.2" cy="129.38" r="0.445" class="hole"/>
+<text x="86.2" y="27.779999999999998" class="silk-sub" font-weight="bold" font-size="1.1px">GND</text>
+<rect x="29.304000000000002" y="29.304000000000002" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="30.32" r="0.445" class="hole"/>
+<circle cx="32.86" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="30.32" r="0.445" class="hole"/>
+<circle cx="35.4" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="30.32" r="0.445" class="hole"/>
+<circle cx="37.94" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="30.32" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="30.32" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="30.32" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="30.32" r="0.445" class="hole"/>
+<circle cx="48.1" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="30.32" r="0.445" class="hole"/>
+<circle cx="50.64" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="30.32" r="0.445" class="hole"/>
+<rect x="57.244" y="29.304000000000002" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="30.32" r="0.445" class="hole"/>
+<circle cx="60.8" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="30.32" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="30.32" r="0.445" class="hole"/>
+<circle cx="65.88" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="30.32" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="30.32" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="30.32" r="0.445" class="hole"/>
+<circle cx="73.5" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="30.32" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="30.32" r="0.445" class="hole"/>
+<circle cx="78.58" cy="30.32" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="30.32" r="0.445" class="hole"/>
+<text x="19.652" y="30.32" class="silk-sub" font-size="1.1px">R01</text>
+<text x="89.24799999999999" y="30.32" class="silk-sub" font-size="1.1px">R01</text>
+<rect x="29.304000000000002" y="31.844" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="32.86" r="0.445" class="hole"/>
+<circle cx="32.86" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="32.86" r="0.445" class="hole"/>
+<circle cx="35.4" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="32.86" r="0.445" class="hole"/>
+<circle cx="37.94" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="32.86" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="32.86" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="32.86" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="32.86" r="0.445" class="hole"/>
+<circle cx="48.1" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="32.86" r="0.445" class="hole"/>
+<circle cx="50.64" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="32.86" r="0.445" class="hole"/>
+<rect x="57.244" y="31.844" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="32.86" r="0.445" class="hole"/>
+<circle cx="60.8" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="32.86" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="32.86" r="0.445" class="hole"/>
+<circle cx="65.88" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="32.86" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="32.86" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="32.86" r="0.445" class="hole"/>
+<circle cx="73.5" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="32.86" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="32.86" r="0.445" class="hole"/>
+<circle cx="78.58" cy="32.86" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="32.86" r="0.445" class="hole"/>
+<text x="19.652" y="32.86" class="silk-sub" font-size="1.1px">R02</text>
+<text x="89.24799999999999" y="32.86" class="silk-sub" font-size="1.1px">R02</text>
+<rect x="29.304000000000002" y="34.384" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="35.4" r="0.445" class="hole"/>
+<circle cx="32.86" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="35.4" r="0.445" class="hole"/>
+<circle cx="35.4" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="35.4" r="0.445" class="hole"/>
+<circle cx="37.94" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="35.4" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="35.4" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="35.4" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="35.4" r="0.445" class="hole"/>
+<circle cx="48.1" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="35.4" r="0.445" class="hole"/>
+<circle cx="50.64" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="35.4" r="0.445" class="hole"/>
+<rect x="57.244" y="34.384" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="35.4" r="0.445" class="hole"/>
+<circle cx="60.8" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="35.4" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="35.4" r="0.445" class="hole"/>
+<circle cx="65.88" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="35.4" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="35.4" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="35.4" r="0.445" class="hole"/>
+<circle cx="73.5" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="35.4" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="35.4" r="0.445" class="hole"/>
+<circle cx="78.58" cy="35.4" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="35.4" r="0.445" class="hole"/>
+<text x="19.652" y="35.4" class="silk-sub" font-size="1.1px">R03</text>
+<text x="89.24799999999999" y="35.4" class="silk-sub" font-size="1.1px">R03</text>
+<rect x="29.304000000000002" y="36.924" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="37.94" r="0.445" class="hole"/>
+<circle cx="32.86" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="37.94" r="0.445" class="hole"/>
+<circle cx="35.4" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="37.94" r="0.445" class="hole"/>
+<circle cx="37.94" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="37.94" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="37.94" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="37.94" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="37.94" r="0.445" class="hole"/>
+<circle cx="48.1" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="37.94" r="0.445" class="hole"/>
+<circle cx="50.64" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="37.94" r="0.445" class="hole"/>
+<rect x="57.244" y="36.924" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="37.94" r="0.445" class="hole"/>
+<circle cx="60.8" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="37.94" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="37.94" r="0.445" class="hole"/>
+<circle cx="65.88" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="37.94" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="37.94" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="37.94" r="0.445" class="hole"/>
+<circle cx="73.5" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="37.94" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="37.94" r="0.445" class="hole"/>
+<circle cx="78.58" cy="37.94" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="37.94" r="0.445" class="hole"/>
+<text x="19.652" y="37.94" class="silk-sub" font-size="1.1px">R04</text>
+<text x="89.24799999999999" y="37.94" class="silk-sub" font-size="1.1px">R04</text>
+<rect x="29.304000000000002" y="39.464000000000006" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="32.86" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="35.4" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="37.94" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="48.1" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="50.64" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="40.480000000000004" r="0.445" class="hole"/>
+<rect x="57.244" y="39.464000000000006" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="60.8" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="65.88" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="73.5" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="40.480000000000004" r="0.445" class="hole"/>
+<circle cx="78.58" cy="40.480000000000004" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="40.480000000000004" r="0.445" class="hole"/>
+<text x="19.652" y="40.480000000000004" class="silk-sub" font-size="1.1px">R05</text>
+<text x="89.24799999999999" y="40.480000000000004" class="silk-sub" font-size="1.1px">R05</text>
+<rect x="29.304000000000002" y="42.004" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="32.86" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="35.4" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="37.94" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="48.1" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="50.64" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="43.019999999999996" r="0.445" class="hole"/>
+<rect x="57.244" y="42.004" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="60.8" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="65.88" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="73.5" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="43.019999999999996" r="0.445" class="hole"/>
+<circle cx="78.58" cy="43.019999999999996" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="43.019999999999996" r="0.445" class="hole"/>
+<text x="19.652" y="43.019999999999996" class="silk-sub" font-size="1.1px">R06</text>
+<text x="89.24799999999999" y="43.019999999999996" class="silk-sub" font-size="1.1px">R06</text>
+<rect x="29.304000000000002" y="44.544" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="32.86" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="35.4" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="37.94" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="48.1" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="50.64" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="45.559999999999995" r="0.445" class="hole"/>
+<rect x="57.244" y="44.544" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="60.8" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="65.88" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="73.5" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="45.559999999999995" r="0.445" class="hole"/>
+<circle cx="78.58" cy="45.559999999999995" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="45.559999999999995" r="0.445" class="hole"/>
+<text x="19.652" y="45.559999999999995" class="silk-sub" font-size="1.1px">R07</text>
+<text x="89.24799999999999" y="45.559999999999995" class="silk-sub" font-size="1.1px">R07</text>
+<rect x="29.304000000000002" y="47.084" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="48.1" r="0.445" class="hole"/>
+<circle cx="32.86" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="48.1" r="0.445" class="hole"/>
+<circle cx="35.4" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="48.1" r="0.445" class="hole"/>
+<circle cx="37.94" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="48.1" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="48.1" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="48.1" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="48.1" r="0.445" class="hole"/>
+<circle cx="48.1" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="48.1" r="0.445" class="hole"/>
+<circle cx="50.64" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="48.1" r="0.445" class="hole"/>
+<rect x="57.244" y="47.084" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="48.1" r="0.445" class="hole"/>
+<circle cx="60.8" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="48.1" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="48.1" r="0.445" class="hole"/>
+<circle cx="65.88" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="48.1" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="48.1" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="48.1" r="0.445" class="hole"/>
+<circle cx="73.5" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="48.1" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="48.1" r="0.445" class="hole"/>
+<circle cx="78.58" cy="48.1" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="48.1" r="0.445" class="hole"/>
+<text x="19.652" y="48.1" class="silk-sub" font-size="1.1px">R08</text>
+<text x="89.24799999999999" y="48.1" class="silk-sub" font-size="1.1px">R08</text>
+<rect x="29.304000000000002" y="49.624" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="50.64" r="0.445" class="hole"/>
+<circle cx="32.86" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="50.64" r="0.445" class="hole"/>
+<circle cx="35.4" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="50.64" r="0.445" class="hole"/>
+<circle cx="37.94" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="50.64" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="50.64" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="50.64" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="50.64" r="0.445" class="hole"/>
+<circle cx="48.1" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="50.64" r="0.445" class="hole"/>
+<circle cx="50.64" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="50.64" r="0.445" class="hole"/>
+<rect x="57.244" y="49.624" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="50.64" r="0.445" class="hole"/>
+<circle cx="60.8" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="50.64" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="50.64" r="0.445" class="hole"/>
+<circle cx="65.88" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="50.64" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="50.64" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="50.64" r="0.445" class="hole"/>
+<circle cx="73.5" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="50.64" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="50.64" r="0.445" class="hole"/>
+<circle cx="78.58" cy="50.64" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="50.64" r="0.445" class="hole"/>
+<text x="19.652" y="50.64" class="silk-sub" font-size="1.1px">R09</text>
+<text x="89.24799999999999" y="50.64" class="silk-sub" font-size="1.1px">R09</text>
+<rect x="29.304000000000002" y="52.164" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="53.18" r="0.445" class="hole"/>
+<circle cx="32.86" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="53.18" r="0.445" class="hole"/>
+<circle cx="35.4" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="53.18" r="0.445" class="hole"/>
+<circle cx="37.94" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="53.18" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="53.18" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="53.18" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="53.18" r="0.445" class="hole"/>
+<circle cx="48.1" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="53.18" r="0.445" class="hole"/>
+<circle cx="50.64" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="53.18" r="0.445" class="hole"/>
+<rect x="57.244" y="52.164" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="53.18" r="0.445" class="hole"/>
+<circle cx="60.8" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="53.18" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="53.18" r="0.445" class="hole"/>
+<circle cx="65.88" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="53.18" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="53.18" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="53.18" r="0.445" class="hole"/>
+<circle cx="73.5" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="53.18" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="53.18" r="0.445" class="hole"/>
+<circle cx="78.58" cy="53.18" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="53.18" r="0.445" class="hole"/>
+<text x="19.652" y="53.18" class="silk-sub" font-size="1.1px">R10</text>
+<text x="89.24799999999999" y="53.18" class="silk-sub" font-size="1.1px">R10</text>
+<rect x="29.304000000000002" y="54.704" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="55.72" r="0.445" class="hole"/>
+<circle cx="32.86" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="55.72" r="0.445" class="hole"/>
+<circle cx="35.4" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="55.72" r="0.445" class="hole"/>
+<circle cx="37.94" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="55.72" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="55.72" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="55.72" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="55.72" r="0.445" class="hole"/>
+<circle cx="48.1" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="55.72" r="0.445" class="hole"/>
+<circle cx="50.64" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="55.72" r="0.445" class="hole"/>
+<rect x="57.244" y="54.704" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="55.72" r="0.445" class="hole"/>
+<circle cx="60.8" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="55.72" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="55.72" r="0.445" class="hole"/>
+<circle cx="65.88" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="55.72" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="55.72" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="55.72" r="0.445" class="hole"/>
+<circle cx="73.5" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="55.72" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="55.72" r="0.445" class="hole"/>
+<circle cx="78.58" cy="55.72" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="55.72" r="0.445" class="hole"/>
+<text x="19.652" y="55.72" class="silk-sub" font-size="1.1px">R11</text>
+<text x="89.24799999999999" y="55.72" class="silk-sub" font-size="1.1px">R11</text>
+<rect x="29.304000000000002" y="57.244" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="58.26" r="0.445" class="hole"/>
+<circle cx="32.86" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="58.26" r="0.445" class="hole"/>
+<circle cx="35.4" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="58.26" r="0.445" class="hole"/>
+<circle cx="37.94" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="58.26" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="58.26" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="58.26" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="58.26" r="0.445" class="hole"/>
+<circle cx="48.1" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="58.26" r="0.445" class="hole"/>
+<circle cx="50.64" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="58.26" r="0.445" class="hole"/>
+<rect x="57.244" y="57.244" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="58.26" r="0.445" class="hole"/>
+<circle cx="60.8" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="58.26" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="58.26" r="0.445" class="hole"/>
+<circle cx="65.88" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="58.26" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="58.26" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="58.26" r="0.445" class="hole"/>
+<circle cx="73.5" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="58.26" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="58.26" r="0.445" class="hole"/>
+<circle cx="78.58" cy="58.26" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="58.26" r="0.445" class="hole"/>
+<text x="19.652" y="58.26" class="silk-sub" font-size="1.1px">R12</text>
+<text x="89.24799999999999" y="58.26" class="silk-sub" font-size="1.1px">R12</text>
+<rect x="29.304000000000002" y="59.784" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="60.8" r="0.445" class="hole"/>
+<circle cx="32.86" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="60.8" r="0.445" class="hole"/>
+<circle cx="35.4" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="60.8" r="0.445" class="hole"/>
+<circle cx="37.94" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="60.8" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="60.8" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="60.8" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="60.8" r="0.445" class="hole"/>
+<circle cx="48.1" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="60.8" r="0.445" class="hole"/>
+<circle cx="50.64" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="60.8" r="0.445" class="hole"/>
+<rect x="57.244" y="59.784" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="60.8" r="0.445" class="hole"/>
+<circle cx="60.8" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="60.8" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="60.8" r="0.445" class="hole"/>
+<circle cx="65.88" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="60.8" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="60.8" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="60.8" r="0.445" class="hole"/>
+<circle cx="73.5" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="60.8" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="60.8" r="0.445" class="hole"/>
+<circle cx="78.58" cy="60.8" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="60.8" r="0.445" class="hole"/>
+<text x="19.652" y="60.8" class="silk-sub" font-size="1.1px">R13</text>
+<text x="89.24799999999999" y="60.8" class="silk-sub" font-size="1.1px">R13</text>
+<rect x="29.304000000000002" y="62.324" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="32.86" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="35.4" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="37.94" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="48.1" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="50.64" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="63.339999999999996" r="0.445" class="hole"/>
+<rect x="57.244" y="62.324" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="60.8" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="65.88" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="73.5" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="63.339999999999996" r="0.445" class="hole"/>
+<circle cx="78.58" cy="63.339999999999996" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="63.339999999999996" r="0.445" class="hole"/>
+<text x="19.652" y="63.339999999999996" class="silk-sub" font-size="1.1px">R14</text>
+<text x="89.24799999999999" y="63.339999999999996" class="silk-sub" font-size="1.1px">R14</text>
+<rect x="29.304000000000002" y="64.86399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="65.88" r="0.445" class="hole"/>
+<circle cx="32.86" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="65.88" r="0.445" class="hole"/>
+<circle cx="35.4" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="65.88" r="0.445" class="hole"/>
+<circle cx="37.94" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="65.88" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="65.88" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="65.88" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="65.88" r="0.445" class="hole"/>
+<circle cx="48.1" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="65.88" r="0.445" class="hole"/>
+<circle cx="50.64" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="65.88" r="0.445" class="hole"/>
+<rect x="57.244" y="64.86399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="65.88" r="0.445" class="hole"/>
+<circle cx="60.8" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="65.88" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="65.88" r="0.445" class="hole"/>
+<circle cx="65.88" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="65.88" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="65.88" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="65.88" r="0.445" class="hole"/>
+<circle cx="73.5" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="65.88" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="65.88" r="0.445" class="hole"/>
+<circle cx="78.58" cy="65.88" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="65.88" r="0.445" class="hole"/>
+<text x="19.652" y="65.88" class="silk-sub" font-size="1.1px">R15</text>
+<text x="89.24799999999999" y="65.88" class="silk-sub" font-size="1.1px">R15</text>
+<rect x="29.304000000000002" y="67.40399999999998" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="32.86" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="35.4" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="37.94" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="48.1" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="50.64" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="68.41999999999999" r="0.445" class="hole"/>
+<rect x="57.244" y="67.40399999999998" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="60.8" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="65.88" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="73.5" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="68.41999999999999" r="0.445" class="hole"/>
+<circle cx="78.58" cy="68.41999999999999" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="68.41999999999999" r="0.445" class="hole"/>
+<text x="19.652" y="68.41999999999999" class="silk-sub" font-size="1.1px">R16</text>
+<text x="89.24799999999999" y="68.41999999999999" class="silk-sub" font-size="1.1px">R16</text>
+<rect x="29.304000000000002" y="69.944" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="32.86" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="35.4" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="37.94" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="48.1" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="50.64" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="70.96000000000001" r="0.445" class="hole"/>
+<rect x="57.244" y="69.944" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="60.8" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="65.88" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="73.5" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="70.96000000000001" r="0.445" class="hole"/>
+<circle cx="78.58" cy="70.96000000000001" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="70.96000000000001" r="0.445" class="hole"/>
+<text x="19.652" y="70.96000000000001" class="silk-sub" font-size="1.1px">R17</text>
+<text x="89.24799999999999" y="70.96000000000001" class="silk-sub" font-size="1.1px">R17</text>
+<rect x="29.304000000000002" y="72.484" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="73.5" r="0.445" class="hole"/>
+<circle cx="32.86" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="73.5" r="0.445" class="hole"/>
+<circle cx="35.4" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="73.5" r="0.445" class="hole"/>
+<circle cx="37.94" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="73.5" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="73.5" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="73.5" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="73.5" r="0.445" class="hole"/>
+<circle cx="48.1" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="73.5" r="0.445" class="hole"/>
+<circle cx="50.64" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="73.5" r="0.445" class="hole"/>
+<rect x="57.244" y="72.484" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="73.5" r="0.445" class="hole"/>
+<circle cx="60.8" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="73.5" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="73.5" r="0.445" class="hole"/>
+<circle cx="65.88" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="73.5" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="73.5" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="73.5" r="0.445" class="hole"/>
+<circle cx="73.5" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="73.5" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="73.5" r="0.445" class="hole"/>
+<circle cx="78.58" cy="73.5" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="73.5" r="0.445" class="hole"/>
+<text x="19.652" y="73.5" class="silk-sub" font-size="1.1px">R18</text>
+<text x="89.24799999999999" y="73.5" class="silk-sub" font-size="1.1px">R18</text>
+<rect x="29.304000000000002" y="75.02399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="32.86" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="35.4" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="37.94" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="48.1" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="50.64" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="76.03999999999999" r="0.445" class="hole"/>
+<rect x="57.244" y="75.02399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="60.8" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="65.88" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="73.5" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="76.03999999999999" r="0.445" class="hole"/>
+<circle cx="78.58" cy="76.03999999999999" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="76.03999999999999" r="0.445" class="hole"/>
+<text x="19.652" y="76.03999999999999" class="silk-sub" font-size="1.1px">R19</text>
+<text x="89.24799999999999" y="76.03999999999999" class="silk-sub" font-size="1.1px">R19</text>
+<rect x="29.304000000000002" y="77.564" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="78.58" r="0.445" class="hole"/>
+<circle cx="32.86" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="78.58" r="0.445" class="hole"/>
+<circle cx="35.4" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="78.58" r="0.445" class="hole"/>
+<circle cx="37.94" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="78.58" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="78.58" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="78.58" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="78.58" r="0.445" class="hole"/>
+<circle cx="48.1" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="78.58" r="0.445" class="hole"/>
+<circle cx="50.64" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="78.58" r="0.445" class="hole"/>
+<rect x="57.244" y="77.564" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="78.58" r="0.445" class="hole"/>
+<circle cx="60.8" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="78.58" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="78.58" r="0.445" class="hole"/>
+<circle cx="65.88" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="78.58" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="78.58" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="78.58" r="0.445" class="hole"/>
+<circle cx="73.5" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="78.58" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="78.58" r="0.445" class="hole"/>
+<circle cx="78.58" cy="78.58" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="78.58" r="0.445" class="hole"/>
+<text x="19.652" y="78.58" class="silk-sub" font-size="1.1px">R20</text>
+<text x="89.24799999999999" y="78.58" class="silk-sub" font-size="1.1px">R20</text>
+<rect x="29.304000000000002" y="80.10399999999998" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="32.86" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="35.4" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="37.94" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="48.1" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="50.64" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="81.11999999999999" r="0.445" class="hole"/>
+<rect x="57.244" y="80.10399999999998" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="60.8" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="65.88" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="73.5" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="81.11999999999999" r="0.445" class="hole"/>
+<circle cx="78.58" cy="81.11999999999999" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="81.11999999999999" r="0.445" class="hole"/>
+<text x="19.652" y="81.11999999999999" class="silk-sub" font-size="1.1px">R21</text>
+<text x="89.24799999999999" y="81.11999999999999" class="silk-sub" font-size="1.1px">R21</text>
+<rect x="29.304000000000002" y="82.64399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="83.66" r="0.445" class="hole"/>
+<circle cx="32.86" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="83.66" r="0.445" class="hole"/>
+<circle cx="35.4" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="83.66" r="0.445" class="hole"/>
+<circle cx="37.94" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="83.66" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="83.66" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="83.66" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="83.66" r="0.445" class="hole"/>
+<circle cx="48.1" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="83.66" r="0.445" class="hole"/>
+<circle cx="50.64" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="83.66" r="0.445" class="hole"/>
+<rect x="57.244" y="82.64399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="83.66" r="0.445" class="hole"/>
+<circle cx="60.8" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="83.66" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="83.66" r="0.445" class="hole"/>
+<circle cx="65.88" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="83.66" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="83.66" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="83.66" r="0.445" class="hole"/>
+<circle cx="73.5" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="83.66" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="83.66" r="0.445" class="hole"/>
+<circle cx="78.58" cy="83.66" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="83.66" r="0.445" class="hole"/>
+<text x="19.652" y="83.66" class="silk-sub" font-size="1.1px">R22</text>
+<text x="89.24799999999999" y="83.66" class="silk-sub" font-size="1.1px">R22</text>
+<rect x="29.304000000000002" y="85.184" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="86.2" r="0.445" class="hole"/>
+<circle cx="32.86" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="86.2" r="0.445" class="hole"/>
+<circle cx="35.4" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="86.2" r="0.445" class="hole"/>
+<circle cx="37.94" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="86.2" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="86.2" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="86.2" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="86.2" r="0.445" class="hole"/>
+<circle cx="48.1" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="86.2" r="0.445" class="hole"/>
+<circle cx="50.64" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="86.2" r="0.445" class="hole"/>
+<rect x="57.244" y="85.184" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="86.2" r="0.445" class="hole"/>
+<circle cx="60.8" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="86.2" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="86.2" r="0.445" class="hole"/>
+<circle cx="65.88" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="86.2" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="86.2" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="86.2" r="0.445" class="hole"/>
+<circle cx="73.5" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="86.2" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="86.2" r="0.445" class="hole"/>
+<circle cx="78.58" cy="86.2" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="86.2" r="0.445" class="hole"/>
+<text x="19.652" y="86.2" class="silk-sub" font-size="1.1px">R23</text>
+<text x="89.24799999999999" y="86.2" class="silk-sub" font-size="1.1px">R23</text>
+<rect x="29.304000000000002" y="87.72399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="88.74" r="0.445" class="hole"/>
+<circle cx="32.86" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="88.74" r="0.445" class="hole"/>
+<circle cx="35.4" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="88.74" r="0.445" class="hole"/>
+<circle cx="37.94" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="88.74" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="88.74" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="88.74" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="88.74" r="0.445" class="hole"/>
+<circle cx="48.1" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="88.74" r="0.445" class="hole"/>
+<circle cx="50.64" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="88.74" r="0.445" class="hole"/>
+<rect x="57.244" y="87.72399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="88.74" r="0.445" class="hole"/>
+<circle cx="60.8" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="88.74" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="88.74" r="0.445" class="hole"/>
+<circle cx="65.88" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="88.74" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="88.74" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="88.74" r="0.445" class="hole"/>
+<circle cx="73.5" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="88.74" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="88.74" r="0.445" class="hole"/>
+<circle cx="78.58" cy="88.74" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="88.74" r="0.445" class="hole"/>
+<text x="19.652" y="88.74" class="silk-sub" font-size="1.1px">R24</text>
+<text x="89.24799999999999" y="88.74" class="silk-sub" font-size="1.1px">R24</text>
+<rect x="29.304000000000002" y="90.264" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="91.28" r="0.445" class="hole"/>
+<circle cx="32.86" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="91.28" r="0.445" class="hole"/>
+<circle cx="35.4" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="91.28" r="0.445" class="hole"/>
+<circle cx="37.94" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="91.28" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="91.28" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="91.28" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="91.28" r="0.445" class="hole"/>
+<circle cx="48.1" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="91.28" r="0.445" class="hole"/>
+<circle cx="50.64" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="91.28" r="0.445" class="hole"/>
+<rect x="57.244" y="90.264" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="91.28" r="0.445" class="hole"/>
+<circle cx="60.8" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="91.28" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="91.28" r="0.445" class="hole"/>
+<circle cx="65.88" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="91.28" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="91.28" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="91.28" r="0.445" class="hole"/>
+<circle cx="73.5" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="91.28" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="91.28" r="0.445" class="hole"/>
+<circle cx="78.58" cy="91.28" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="91.28" r="0.445" class="hole"/>
+<text x="19.652" y="91.28" class="silk-sub" font-size="1.1px">R25</text>
+<text x="89.24799999999999" y="91.28" class="silk-sub" font-size="1.1px">R25</text>
+<rect x="29.304000000000002" y="92.80399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="93.82" r="0.445" class="hole"/>
+<circle cx="32.86" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="93.82" r="0.445" class="hole"/>
+<circle cx="35.4" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="93.82" r="0.445" class="hole"/>
+<circle cx="37.94" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="93.82" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="93.82" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="93.82" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="93.82" r="0.445" class="hole"/>
+<circle cx="48.1" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="93.82" r="0.445" class="hole"/>
+<circle cx="50.64" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="93.82" r="0.445" class="hole"/>
+<rect x="57.244" y="92.80399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="93.82" r="0.445" class="hole"/>
+<circle cx="60.8" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="93.82" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="93.82" r="0.445" class="hole"/>
+<circle cx="65.88" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="93.82" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="93.82" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="93.82" r="0.445" class="hole"/>
+<circle cx="73.5" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="93.82" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="93.82" r="0.445" class="hole"/>
+<circle cx="78.58" cy="93.82" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="93.82" r="0.445" class="hole"/>
+<text x="19.652" y="93.82" class="silk-sub" font-size="1.1px">R26</text>
+<text x="89.24799999999999" y="93.82" class="silk-sub" font-size="1.1px">R26</text>
+<rect x="29.304000000000002" y="95.344" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="96.36" r="0.445" class="hole"/>
+<circle cx="32.86" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="96.36" r="0.445" class="hole"/>
+<circle cx="35.4" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="96.36" r="0.445" class="hole"/>
+<circle cx="37.94" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="96.36" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="96.36" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="96.36" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="96.36" r="0.445" class="hole"/>
+<circle cx="48.1" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="96.36" r="0.445" class="hole"/>
+<circle cx="50.64" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="96.36" r="0.445" class="hole"/>
+<rect x="57.244" y="95.344" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="96.36" r="0.445" class="hole"/>
+<circle cx="60.8" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="96.36" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="96.36" r="0.445" class="hole"/>
+<circle cx="65.88" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="96.36" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="96.36" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="96.36" r="0.445" class="hole"/>
+<circle cx="73.5" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="96.36" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="96.36" r="0.445" class="hole"/>
+<circle cx="78.58" cy="96.36" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="96.36" r="0.445" class="hole"/>
+<text x="19.652" y="96.36" class="silk-sub" font-size="1.1px">R27</text>
+<text x="89.24799999999999" y="96.36" class="silk-sub" font-size="1.1px">R27</text>
+<rect x="29.304000000000002" y="97.88399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="32.86" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="35.4" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="37.94" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="48.1" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="50.64" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="98.89999999999999" r="0.445" class="hole"/>
+<rect x="57.244" y="97.88399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="60.8" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="65.88" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="73.5" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="78.58" cy="98.89999999999999" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="98.89999999999999" r="0.445" class="hole"/>
+<text x="19.652" y="98.89999999999999" class="silk-sub" font-size="1.1px">R28</text>
+<text x="89.24799999999999" y="98.89999999999999" class="silk-sub" font-size="1.1px">R28</text>
+<rect x="29.304000000000002" y="100.42399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="101.44" r="0.445" class="hole"/>
+<circle cx="32.86" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="101.44" r="0.445" class="hole"/>
+<circle cx="35.4" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="101.44" r="0.445" class="hole"/>
+<circle cx="37.94" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="101.44" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="101.44" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="101.44" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="101.44" r="0.445" class="hole"/>
+<circle cx="48.1" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="101.44" r="0.445" class="hole"/>
+<circle cx="50.64" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="101.44" r="0.445" class="hole"/>
+<rect x="57.244" y="100.42399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="101.44" r="0.445" class="hole"/>
+<circle cx="60.8" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="101.44" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="101.44" r="0.445" class="hole"/>
+<circle cx="65.88" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="101.44" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="101.44" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="101.44" r="0.445" class="hole"/>
+<circle cx="73.5" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="101.44" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="101.44" r="0.445" class="hole"/>
+<circle cx="78.58" cy="101.44" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="101.44" r="0.445" class="hole"/>
+<text x="19.652" y="101.44" class="silk-sub" font-size="1.1px">R29</text>
+<text x="89.24799999999999" y="101.44" class="silk-sub" font-size="1.1px">R29</text>
+<rect x="29.304000000000002" y="102.96399999999998" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="32.86" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="35.4" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="37.94" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="48.1" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="50.64" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="103.97999999999999" r="0.445" class="hole"/>
+<rect x="57.244" y="102.96399999999998" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="60.8" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="65.88" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="73.5" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="78.58" cy="103.97999999999999" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="103.97999999999999" r="0.445" class="hole"/>
+<text x="19.652" y="103.97999999999999" class="silk-sub" font-size="1.1px">R30</text>
+<text x="89.24799999999999" y="103.97999999999999" class="silk-sub" font-size="1.1px">R30</text>
+<rect x="29.304000000000002" y="105.50399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="106.52" r="0.445" class="hole"/>
+<circle cx="32.86" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="106.52" r="0.445" class="hole"/>
+<circle cx="35.4" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="106.52" r="0.445" class="hole"/>
+<circle cx="37.94" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="106.52" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="106.52" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="106.52" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="106.52" r="0.445" class="hole"/>
+<circle cx="48.1" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="106.52" r="0.445" class="hole"/>
+<circle cx="50.64" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="106.52" r="0.445" class="hole"/>
+<rect x="57.244" y="105.50399999999999" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="106.52" r="0.445" class="hole"/>
+<circle cx="60.8" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="106.52" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="106.52" r="0.445" class="hole"/>
+<circle cx="65.88" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="106.52" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="106.52" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="106.52" r="0.445" class="hole"/>
+<circle cx="73.5" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="106.52" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="106.52" r="0.445" class="hole"/>
+<circle cx="78.58" cy="106.52" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="106.52" r="0.445" class="hole"/>
+<text x="19.652" y="106.52" class="silk-sub" font-size="1.1px">R31</text>
+<text x="89.24799999999999" y="106.52" class="silk-sub" font-size="1.1px">R31</text>
+<rect x="29.304000000000002" y="108.044" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="30.32" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="30.32" cy="109.06" r="0.445" class="hole"/>
+<circle cx="32.86" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="32.86" cy="109.06" r="0.445" class="hole"/>
+<circle cx="35.4" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="35.4" cy="109.06" r="0.445" class="hole"/>
+<circle cx="37.94" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="37.94" cy="109.06" r="0.445" class="hole"/>
+<circle cx="40.480000000000004" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="40.480000000000004" cy="109.06" r="0.445" class="hole"/>
+<circle cx="43.019999999999996" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="43.019999999999996" cy="109.06" r="0.445" class="hole"/>
+<circle cx="45.559999999999995" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="45.559999999999995" cy="109.06" r="0.445" class="hole"/>
+<circle cx="48.1" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="48.1" cy="109.06" r="0.445" class="hole"/>
+<circle cx="50.64" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="50.64" cy="109.06" r="0.445" class="hole"/>
+<rect x="57.244" y="108.044" width="22.352" height="2.032" rx="0.6" class="copper-track" opacity="0.45"/>
+<circle cx="58.26" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="58.26" cy="109.06" r="0.445" class="hole"/>
+<circle cx="60.8" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="60.8" cy="109.06" r="0.445" class="hole"/>
+<circle cx="63.339999999999996" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="63.339999999999996" cy="109.06" r="0.445" class="hole"/>
+<circle cx="65.88" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="65.88" cy="109.06" r="0.445" class="hole"/>
+<circle cx="68.41999999999999" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="68.41999999999999" cy="109.06" r="0.445" class="hole"/>
+<circle cx="70.96000000000001" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="70.96000000000001" cy="109.06" r="0.445" class="hole"/>
+<circle cx="73.5" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="73.5" cy="109.06" r="0.445" class="hole"/>
+<circle cx="76.03999999999999" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="76.03999999999999" cy="109.06" r="0.445" class="hole"/>
+<circle cx="78.58" cy="109.06" r="1.016" class="copper-pad"/>
+<circle cx="78.58" cy="109.06" r="0.445" class="hole"/>
+<text x="19.652" y="109.06" class="silk-sub" font-size="1.1px">R32</text>
+<text x="89.24799999999999" y="109.06" class="silk-sub" font-size="1.1px">R32</text>
+<circle cx="88.74" cy="86.2" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="86.2" r="0.445" class="hole"/>
+<circle cx="91.28" cy="86.2" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="86.2" r="0.445" class="hole"/>
+<circle cx="93.82" cy="86.2" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="86.2" r="0.445" class="hole"/>
+<circle cx="96.36" cy="86.2" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="86.2" r="0.445" class="hole"/>
+<circle cx="88.74" cy="88.74" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="88.74" r="0.445" class="hole"/>
+<circle cx="91.28" cy="88.74" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="88.74" r="0.445" class="hole"/>
+<circle cx="93.82" cy="88.74" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="88.74" r="0.445" class="hole"/>
+<circle cx="96.36" cy="88.74" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="88.74" r="0.445" class="hole"/>
+<circle cx="88.74" cy="91.28" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="91.28" r="0.445" class="hole"/>
+<circle cx="91.28" cy="91.28" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="91.28" r="0.445" class="hole"/>
+<circle cx="93.82" cy="91.28" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="91.28" r="0.445" class="hole"/>
+<circle cx="96.36" cy="91.28" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="91.28" r="0.445" class="hole"/>
+<circle cx="88.74" cy="93.82" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="93.82" r="0.445" class="hole"/>
+<circle cx="91.28" cy="93.82" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="93.82" r="0.445" class="hole"/>
+<circle cx="93.82" cy="93.82" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="93.82" r="0.445" class="hole"/>
+<circle cx="96.36" cy="93.82" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="93.82" r="0.445" class="hole"/>
+<circle cx="88.74" cy="96.36" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="96.36" r="0.445" class="hole"/>
+<circle cx="91.28" cy="96.36" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="96.36" r="0.445" class="hole"/>
+<circle cx="93.82" cy="96.36" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="96.36" r="0.445" class="hole"/>
+<circle cx="96.36" cy="96.36" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="96.36" r="0.445" class="hole"/>
+<circle cx="88.74" cy="98.89999999999999" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="91.28" cy="98.89999999999999" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="93.82" cy="98.89999999999999" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="96.36" cy="98.89999999999999" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="98.89999999999999" r="0.445" class="hole"/>
+<circle cx="88.74" cy="101.44" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="101.44" r="0.445" class="hole"/>
+<circle cx="91.28" cy="101.44" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="101.44" r="0.445" class="hole"/>
+<circle cx="93.82" cy="101.44" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="101.44" r="0.445" class="hole"/>
+<circle cx="96.36" cy="101.44" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="101.44" r="0.445" class="hole"/>
+<circle cx="88.74" cy="103.97999999999999" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="91.28" cy="103.97999999999999" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="93.82" cy="103.97999999999999" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="96.36" cy="103.97999999999999" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="103.97999999999999" r="0.445" class="hole"/>
+<circle cx="88.74" cy="106.52" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="106.52" r="0.445" class="hole"/>
+<circle cx="91.28" cy="106.52" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="106.52" r="0.445" class="hole"/>
+<circle cx="93.82" cy="106.52" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="106.52" r="0.445" class="hole"/>
+<circle cx="96.36" cy="106.52" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="106.52" r="0.445" class="hole"/>
+<circle cx="88.74" cy="109.06" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="109.06" r="0.445" class="hole"/>
+<circle cx="91.28" cy="109.06" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="109.06" r="0.445" class="hole"/>
+<circle cx="93.82" cy="109.06" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="109.06" r="0.445" class="hole"/>
+<circle cx="96.36" cy="109.06" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="109.06" r="0.445" class="hole"/>
+<circle cx="88.74" cy="111.6" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="111.6" r="0.445" class="hole"/>
+<circle cx="91.28" cy="111.6" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="111.6" r="0.445" class="hole"/>
+<circle cx="93.82" cy="111.6" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="111.6" r="0.445" class="hole"/>
+<circle cx="96.36" cy="111.6" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="111.6" r="0.445" class="hole"/>
+<circle cx="88.74" cy="114.14" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="114.14" r="0.445" class="hole"/>
+<circle cx="91.28" cy="114.14" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="114.14" r="0.445" class="hole"/>
+<circle cx="93.82" cy="114.14" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="114.14" r="0.445" class="hole"/>
+<circle cx="96.36" cy="114.14" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="114.14" r="0.445" class="hole"/>
+<circle cx="88.74" cy="116.67999999999999" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="91.28" cy="116.67999999999999" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="93.82" cy="116.67999999999999" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="96.36" cy="116.67999999999999" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="116.67999999999999" r="0.445" class="hole"/>
+<circle cx="88.74" cy="119.22" r="1.143" class="copper-pad"/>
+<circle cx="88.74" cy="119.22" r="0.445" class="hole"/>
+<circle cx="91.28" cy="119.22" r="1.143" class="copper-pad"/>
+<circle cx="91.28" cy="119.22" r="0.445" class="hole"/>
+<circle cx="93.82" cy="119.22" r="1.143" class="copper-pad"/>
+<circle cx="93.82" cy="119.22" r="0.445" class="hole"/>
+<circle cx="96.36" cy="119.22" r="1.143" class="copper-pad"/>
+<circle cx="96.36" cy="119.22" r="0.445" class="hole"/>
+<rect x="20.43" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="23.478" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="26.526" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="29.573999999999998" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="32.622" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="35.67" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="38.718" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="41.766" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="44.814" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="47.862" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="50.91" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="53.958" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="57.006" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="60.053999999999995" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="63.102000000000004" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="66.15" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="69.19800000000001" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="72.246" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="75.294" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="78.342" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="81.39" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="84.438" y="129.69" width="2.0" height="7.0" rx="0.4" fill="#d4af37" opacity="0.8"/>
+<rect x="50.14" y="28.52" width="8.619999999999997" height="36.62" rx="1.2" fill="#151515" stroke="#333333" stroke-width="0.3" filter="url(#ic-shadow)"/>
+<circle cx="54.45" cy="28.52" r="1.2" fill="#2b2b2b"/>
+<text x="54.45" y="43.83" fill="#e0e0e0" font-size="1.8px" font-weight="bold">ATmega328P</text>
+<text x="54.45" y="46.83" fill="#9e9e9e" font-size="1.2px">16MHz AVR MCU</text>
+<text x="54.45" y="49.83" fill="#e53935" font-size="1.1px">● Pin 1</text>
+<rect x="41.519999999999996" y="49.11" width="3.0" height="5.6" rx="1.5" fill="#c0c0c0" stroke="#777777" stroke-width="0.25" filter="url(#shadow)"/>
+<text x="43.019999999999996" y="51.91" fill="#111111" font-size="1.1px" font-weight="bold" transform="rotate(-90 43.019999999999996 51.91)">16 MHz</text>
+<circle cx="46.83" cy="50.64" r="1.6" fill="#00897b" stroke="#004d40" stroke-width="0.2"/>
+<text x="46.83" y="50.64" fill="#ffffff" font-size="0.9px">C3</text>
+<circle cx="46.83" cy="53.18" r="1.6" fill="#00897b" stroke="#004d40" stroke-width="0.2"/>
+<text x="46.83" y="53.18" fill="#ffffff" font-size="0.9px">C4</text>
+<line x1="48.1" y1="37.94" x2="55.72" y2="37.94" stroke="#d7ccc8" stroke-width="0.4"/>
+<rect x="49.91" y="37.04" width="4.0" height="1.8" rx="0.4" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.2"/>
+<line x1="50.709999999999994" y1="37.04" x2="50.709999999999994" y2="38.839999999999996" stroke="#5d4037" stroke-width="0.3"/>
+<line x1="51.51" y1="37.04" x2="51.51" y2="38.839999999999996" stroke="#212121" stroke-width="0.3"/>
+<line x1="52.309999999999995" y1="37.04" x2="52.309999999999995" y2="38.839999999999996" stroke="#ff9800" stroke-width="0.3"/>
+<line x1="53.11" y1="37.04" x2="53.11" y2="38.839999999999996" stroke="#ffd700" stroke-width="0.3"/>
+<text x="51.91" y="36.14" fill="#ffffff" font-size="0.9px">R4 (T1)</text>
+<line x1="48.1" y1="43.019999999999996" x2="55.72" y2="43.019999999999996" stroke="#d7ccc8" stroke-width="0.4"/>
+<rect x="49.91" y="42.12" width="4.0" height="1.8" rx="0.4" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.2"/>
+<line x1="50.709999999999994" y1="42.12" x2="50.709999999999994" y2="43.919999999999995" stroke="#5d4037" stroke-width="0.3"/>
+<line x1="51.51" y1="42.12" x2="51.51" y2="43.919999999999995" stroke="#212121" stroke-width="0.3"/>
+<line x1="52.309999999999995" y1="42.12" x2="52.309999999999995" y2="43.919999999999995" stroke="#ff9800" stroke-width="0.3"/>
+<line x1="53.11" y1="42.12" x2="53.11" y2="43.919999999999995" stroke="#ffd700" stroke-width="0.3"/>
+<text x="51.91" y="41.22" fill="#ffffff" font-size="0.9px">R5 (T2)</text>
+<line x1="48.1" y1="55.72" x2="55.72" y2="55.72" stroke="#d7ccc8" stroke-width="0.4"/>
+<rect x="49.91" y="54.82" width="4.0" height="1.8" rx="0.4" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.2"/>
+<line x1="50.709999999999994" y1="54.82" x2="50.709999999999994" y2="56.62" stroke="#5d4037" stroke-width="0.3"/>
+<line x1="51.51" y1="54.82" x2="51.51" y2="56.62" stroke="#212121" stroke-width="0.3"/>
+<line x1="52.309999999999995" y1="54.82" x2="52.309999999999995" y2="56.62" stroke="#ff9800" stroke-width="0.3"/>
+<line x1="53.11" y1="54.82" x2="53.11" y2="56.62" stroke="#ffd700" stroke-width="0.3"/>
+<text x="51.91" y="53.92" fill="#ffffff" font-size="0.9px">R6 (T3)</text>
+<line x1="48.1" y1="58.26" x2="55.72" y2="58.26" stroke="#d7ccc8" stroke-width="0.4"/>
+<rect x="49.91" y="57.36" width="4.0" height="1.8" rx="0.4" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.2"/>
+<line x1="50.709999999999994" y1="57.36" x2="50.709999999999994" y2="59.16" stroke="#5d4037" stroke-width="0.3"/>
+<line x1="51.51" y1="57.36" x2="51.51" y2="59.16" stroke="#212121" stroke-width="0.3"/>
+<line x1="52.309999999999995" y1="57.36" x2="52.309999999999995" y2="59.16" stroke="#ff9800" stroke-width="0.3"/>
+<line x1="53.11" y1="57.36" x2="53.11" y2="59.16" stroke="#ffd700" stroke-width="0.3"/>
+<text x="51.91" y="56.46" fill="#ffffff" font-size="0.9px">R7 (T4)</text>
+<rect x="49.91" y="29.42" width="4.0" height="1.8" rx="0.4" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.2"/>
+<text x="51.91" y="28.52" fill="#ffffff" font-size="0.9px">R_RST 10k</text>
+<circle cx="40.480000000000004" cy="96.36" r="1.5" fill="#fbc02d" stroke="#f57f17" stroke-width="0.2"/>
+<text x="40.480000000000004" y="96.36" fill="#000000" font-size="0.8px" font-weight="bold">C_DTR</text>
+<rect x="33.9" y="94.56" width="3.0" height="16.300000000000004" rx="0.8" fill="#212121" stroke="#424242" stroke-width="0.3" filter="url(#shadow)"/>
+<text x="35.4" y="102.71000000000001" fill="#ffffff" font-size="1.2px" font-weight="bold" transform="rotate(-90 35.4 102.71000000000001)">CH340 USB (6P)</text>
+<rect x="50.68" y="100.77999999999999" width="38.02" height="6.4" rx="1.5" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="0.4" filter="url(#shadow)"/>
+<text x="69.69" y="99.47999999999999" fill="#ffffff" font-size="1.3px" font-weight="bold">CONN_MOLEX (ATX 4-PIN: +12V / GND / GND / +5V)</text>
+<circle cx="81.11999999999999" cy="103.97999999999999" r="1.4" fill="#e53935" stroke="#333333" stroke-width="0.2"/>
+<circle cx="86.2" cy="103.97999999999999" r="1.4" fill="#212121" stroke="#333333" stroke-width="0.2"/>
+<circle cx="53.18" cy="103.97999999999999" r="1.4" fill="#212121" stroke="#333333" stroke-width="0.2"/>
+<circle cx="55.72" cy="103.97999999999999" r="1.4" fill="#fb8c00" stroke="#333333" stroke-width="0.2"/>
+<circle cx="83.66" cy="98.89999999999999" r="2.8" fill="#1e88e5" stroke="#0d47a1" stroke-width="0.3" filter="url(#shadow)"/>
+<text x="83.66" y="98.89999999999999" fill="#ffffff" font-size="1.0px" font-weight="bold">C1 100uF</text>
+<circle cx="54.449999999999996" cy="98.89999999999999" r="1.6" fill="#fbc02d" stroke="#f57f17" stroke-width="0.2"/>
+<text x="54.449999999999996" y="98.89999999999999" fill="#000000" font-size="0.9px" font-weight="bold">C2</text>
+<circle cx="60.8" cy="48.1" r="1.5" fill="#fbc02d" stroke="#f57f17" stroke-width="0.2"/>
+<text x="60.8" y="48.1" fill="#000000" font-size="0.8px" font-weight="bold">C_REF</text>
+<rect x="59.53" y="69.94399999999999" width="27.939999999999998" height="7.112000000000009" rx="1.0" fill="#2e7d32" fill-opacity="0.10" stroke="#388e3c" stroke-width="0.2" stroke-dasharray="1.0, 0.8"/>
+<text x="73.5" y="68.74399999999999" fill="#81c784" font-size="1.0px" font-weight="bold">DRV1 (FAN 1)</text>
+<line x1="60.8" y1="70.96000000000001" x2="68.41999999999999" y2="70.96000000000001" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="63.009999999999984" y="70.26" width="3.2" height="1.4" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="64.60999999999999" y="69.66000000000001" fill="#ffffff" font-size="0.8px">R1 1.5k</text>
+<path d="M 69.66000000000001 71.22999999999999 A 1.4 1.4 0 0 1 72.26 71.22999999999999 L 72.26 73.22999999999999 L 69.66000000000001 73.22999999999999 Z" fill="#212121" stroke="#424242" stroke-width="0.2"/>
+<text x="70.96000000000001" y="72.22999999999999" fill="#ffffff" font-size="0.7px">BC549</text>
+<line x1="53.18" y1="70.96000000000001" x2="69.66000000000001" y2="70.96000000000001" class="wire-gnd" stroke-width="0.4"/>
+<line x1="73.5" y1="73.5" x2="81.11999999999999" y2="73.5" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="75.71000000000001" y="72.8" width="3.2" height="1.4" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="77.31" y="72.2" fill="#ffffff" font-size="0.8px">R2 4.7k</text>
+<line x1="68.41999999999999" y1="73.5" x2="68.41999999999999" y2="76.03999999999999" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="67.71999999999998" y="73.17" width="1.4" height="3.2" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="67.01999999999998" y="74.77" fill="#ffffff" font-size="0.7px" transform="rotate(-90 67.01999999999998 74.77)">R3 680R</text>
+<path d="M 70.82999999999998 74.83999999999999 A 1.5 1.5 0 0 1 73.63 74.83999999999999 L 73.63 77.24 L 70.82999999999998 77.24 Z" fill="#1565c0" stroke="#0d47a1" stroke-width="0.2"/>
+<text x="72.22999999999999" y="76.03999999999999" fill="#ffffff" font-size="0.75px" font-weight="bold">BC328</text>
+<line x1="73.63" y1="76.03999999999999" x2="81.11999999999999" y2="76.03999999999999" class="wire-pwr12" stroke-width="0.4"/>
+<line x1="76.03999999999999" y1="76.03999999999999" x2="86.2" y2="76.03999999999999" stroke="#424242" stroke-width="0.4"/>
+<rect x="79.12" y="75.13999999999999" width="4.0" height="1.8" rx="0.3" fill="#212121" stroke="#000000" stroke-width="0.2"/>
+<line x1="79.92" y1="75.13999999999999" x2="79.92" y2="76.94" stroke="#eeeeee" stroke-width="0.5"/>
+<text x="81.12" y="77.83999999999999" fill="#ffffff" font-size="0.8px">1N4007</text>
+<rect x="59.53" y="77.564" width="27.939999999999998" height="7.112000000000009" rx="1.0" fill="#2e7d32" fill-opacity="0.10" stroke="#388e3c" stroke-width="0.2" stroke-dasharray="1.0, 0.8"/>
+<text x="73.5" y="76.36399999999999" fill="#81c784" font-size="1.0px" font-weight="bold">DRV2 (FAN 2)</text>
+<line x1="60.8" y1="78.58" x2="68.41999999999999" y2="78.58" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="63.009999999999984" y="77.88" width="3.2" height="1.4" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="64.60999999999999" y="77.28" fill="#ffffff" font-size="0.8px">R1 1.5k</text>
+<path d="M 69.66000000000001 78.85 A 1.4 1.4 0 0 1 72.26 78.85 L 72.26 80.85 L 69.66000000000001 80.85 Z" fill="#212121" stroke="#424242" stroke-width="0.2"/>
+<text x="70.96000000000001" y="79.85" fill="#ffffff" font-size="0.7px">BC549</text>
+<line x1="53.18" y1="78.58" x2="69.66000000000001" y2="78.58" class="wire-gnd" stroke-width="0.4"/>
+<line x1="73.5" y1="81.11999999999999" x2="81.11999999999999" y2="81.11999999999999" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="75.71000000000001" y="80.41999999999999" width="3.2" height="1.4" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="77.31" y="79.82" fill="#ffffff" font-size="0.8px">R2 4.7k</text>
+<line x1="68.41999999999999" y1="81.11999999999999" x2="68.41999999999999" y2="83.66" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="67.71999999999998" y="80.78999999999999" width="1.4" height="3.2" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="67.01999999999998" y="82.38999999999999" fill="#ffffff" font-size="0.7px" transform="rotate(-90 67.01999999999998 82.38999999999999)">R3 680R</text>
+<path d="M 70.82999999999998 82.46 A 1.5 1.5 0 0 1 73.63 82.46 L 73.63 84.86 L 70.82999999999998 84.86 Z" fill="#1565c0" stroke="#0d47a1" stroke-width="0.2"/>
+<text x="72.22999999999999" y="83.66" fill="#ffffff" font-size="0.75px" font-weight="bold">BC328</text>
+<line x1="73.63" y1="83.66" x2="81.11999999999999" y2="83.66" class="wire-pwr12" stroke-width="0.4"/>
+<line x1="76.03999999999999" y1="83.66" x2="86.2" y2="83.66" stroke="#424242" stroke-width="0.4"/>
+<rect x="79.12" y="82.75999999999999" width="4.0" height="1.8" rx="0.3" fill="#212121" stroke="#000000" stroke-width="0.2"/>
+<line x1="79.92" y1="82.75999999999999" x2="79.92" y2="84.56" stroke="#eeeeee" stroke-width="0.5"/>
+<text x="81.12" y="85.46" fill="#ffffff" font-size="0.8px">1N4007</text>
+<rect x="59.53" y="85.184" width="27.939999999999998" height="7.111999999999995" rx="1.0" fill="#2e7d32" fill-opacity="0.10" stroke="#388e3c" stroke-width="0.2" stroke-dasharray="1.0, 0.8"/>
+<text x="73.5" y="83.984" fill="#81c784" font-size="1.0px" font-weight="bold">DRV3 (FAN 3)</text>
+<line x1="60.8" y1="86.2" x2="68.41999999999999" y2="86.2" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="63.009999999999984" y="85.5" width="3.2" height="1.4" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="64.60999999999999" y="84.9" fill="#ffffff" font-size="0.8px">R1 1.5k</text>
+<path d="M 69.66000000000001 86.47 A 1.4 1.4 0 0 1 72.26 86.47 L 72.26 88.47 L 69.66000000000001 88.47 Z" fill="#212121" stroke="#424242" stroke-width="0.2"/>
+<text x="70.96000000000001" y="87.47" fill="#ffffff" font-size="0.7px">BC549</text>
+<line x1="53.18" y1="86.2" x2="69.66000000000001" y2="86.2" class="wire-gnd" stroke-width="0.4"/>
+<line x1="73.5" y1="88.74" x2="81.11999999999999" y2="88.74" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="75.71000000000001" y="88.03999999999999" width="3.2" height="1.4" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="77.31" y="87.44" fill="#ffffff" font-size="0.8px">R2 4.7k</text>
+<line x1="68.41999999999999" y1="88.74" x2="68.41999999999999" y2="91.28" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="67.71999999999998" y="88.41" width="1.4" height="3.2" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="67.01999999999998" y="90.00999999999999" fill="#ffffff" font-size="0.7px" transform="rotate(-90 67.01999999999998 90.00999999999999)">R3 680R</text>
+<path d="M 70.82999999999998 90.08 A 1.5 1.5 0 0 1 73.63 90.08 L 73.63 92.48 L 70.82999999999998 92.48 Z" fill="#1565c0" stroke="#0d47a1" stroke-width="0.2"/>
+<text x="72.22999999999999" y="91.28" fill="#ffffff" font-size="0.75px" font-weight="bold">BC328</text>
+<line x1="73.63" y1="91.28" x2="81.11999999999999" y2="91.28" class="wire-pwr12" stroke-width="0.4"/>
+<line x1="76.03999999999999" y1="91.28" x2="86.2" y2="91.28" stroke="#424242" stroke-width="0.4"/>
+<rect x="79.12" y="90.38" width="4.0" height="1.8" rx="0.3" fill="#212121" stroke="#000000" stroke-width="0.2"/>
+<line x1="79.92" y1="90.38" x2="79.92" y2="92.18" stroke="#eeeeee" stroke-width="0.5"/>
+<text x="81.12" y="93.08" fill="#ffffff" font-size="0.8px">1N4007</text>
+<rect x="59.53" y="92.804" width="27.939999999999998" height="7.111999999999995" rx="1.0" fill="#2e7d32" fill-opacity="0.10" stroke="#388e3c" stroke-width="0.2" stroke-dasharray="1.0, 0.8"/>
+<text x="73.5" y="91.604" fill="#81c784" font-size="1.0px" font-weight="bold">DRV4 (FAN 4)</text>
+<line x1="60.8" y1="93.82" x2="68.41999999999999" y2="93.82" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="63.009999999999984" y="93.11999999999999" width="3.2" height="1.4" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="64.60999999999999" y="92.52" fill="#ffffff" font-size="0.8px">R1 1.5k</text>
+<path d="M 69.66000000000001 94.09 A 1.4 1.4 0 0 1 72.26 94.09 L 72.26 96.09 L 69.66000000000001 96.09 Z" fill="#212121" stroke="#424242" stroke-width="0.2"/>
+<text x="70.96000000000001" y="95.09" fill="#ffffff" font-size="0.7px">BC549</text>
+<line x1="53.18" y1="93.82" x2="69.66000000000001" y2="93.82" class="wire-gnd" stroke-width="0.4"/>
+<line x1="73.5" y1="96.36" x2="81.11999999999999" y2="96.36" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="75.71000000000001" y="95.66" width="3.2" height="1.4" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="77.31" y="95.06" fill="#ffffff" font-size="0.8px">R2 4.7k</text>
+<line x1="68.41999999999999" y1="96.36" x2="68.41999999999999" y2="98.89999999999999" stroke="#d7ccc8" stroke-width="0.3"/>
+<rect x="67.71999999999998" y="96.03" width="1.4" height="3.2" rx="0.3" fill="#d7ccc8" stroke="#5d4037" stroke-width="0.15"/>
+<text x="67.01999999999998" y="97.63" fill="#ffffff" font-size="0.7px" transform="rotate(-90 67.01999999999998 97.63)">R3 680R</text>
+<path d="M 70.82999999999998 97.69999999999999 A 1.5 1.5 0 0 1 73.63 97.69999999999999 L 73.63 100.1 L 70.82999999999998 100.1 Z" fill="#1565c0" stroke="#0d47a1" stroke-width="0.2"/>
+<text x="72.22999999999999" y="98.89999999999999" fill="#ffffff" font-size="0.75px" font-weight="bold">BC328</text>
+<line x1="73.63" y1="98.89999999999999" x2="81.11999999999999" y2="98.89999999999999" class="wire-pwr12" stroke-width="0.4"/>
+<line x1="76.03999999999999" y1="98.89999999999999" x2="86.2" y2="98.89999999999999" stroke="#424242" stroke-width="0.4"/>
+<rect x="79.12" y="97.99999999999999" width="4.0" height="1.8" rx="0.3" fill="#212121" stroke="#000000" stroke-width="0.2"/>
+<line x1="79.92" y1="97.99999999999999" x2="79.92" y2="99.8" stroke="#eeeeee" stroke-width="0.5"/>
+<text x="81.12" y="100.69999999999999" fill="#ffffff" font-size="0.8px">1N4007</text>
+<rect x="93.86" y="23.64" width="5.0" height="8.279999999999998" rx="0.8" fill="#eeeeee" stroke="#757575" stroke-width="0.3" filter="url(#shadow)"/>
+<rect x="97.96" y="24.64" width="1.0" height="6.279999999999998" rx="0.2" fill="#bdbdbd"/>
+<text x="91.86" y="27.78" fill="#ffffff" font-size="1.2px" font-weight="bold">FAN1</text>
+<text x="96.36" y="25.240000000000002" fill="#212121" font-size="0.8px">G</text>
+<text x="96.36" y="27.779999999999998" fill="#c62828" font-size="0.8px">+</text>
+<text x="96.36" y="30.32" fill="#2e7d32" font-size="0.8px">T</text>
+<rect x="93.86" y="33.8" width="5.0" height="8.280000000000005" rx="0.8" fill="#eeeeee" stroke="#757575" stroke-width="0.3" filter="url(#shadow)"/>
+<rect x="97.96" y="34.8" width="1.0" height="6.280000000000005" rx="0.2" fill="#bdbdbd"/>
+<text x="91.86" y="37.94" fill="#ffffff" font-size="1.2px" font-weight="bold">FAN2</text>
+<text x="96.36" y="35.4" fill="#212121" font-size="0.8px">G</text>
+<text x="96.36" y="37.94" fill="#c62828" font-size="0.8px">+</text>
+<text x="96.36" y="40.480000000000004" fill="#2e7d32" font-size="0.8px">T</text>
+<rect x="93.86" y="43.959999999999994" width="5.0" height="8.280000000000005" rx="0.8" fill="#eeeeee" stroke="#757575" stroke-width="0.3" filter="url(#shadow)"/>
+<rect x="97.96" y="44.959999999999994" width="1.0" height="6.280000000000005" rx="0.2" fill="#bdbdbd"/>
+<text x="91.86" y="48.099999999999994" fill="#ffffff" font-size="1.2px" font-weight="bold">FAN3</text>
+<text x="96.36" y="45.559999999999995" fill="#212121" font-size="0.8px">G</text>
+<text x="96.36" y="48.1" fill="#c62828" font-size="0.8px">+</text>
+<text x="96.36" y="50.64" fill="#2e7d32" font-size="0.8px">T</text>
+<rect x="93.86" y="54.12" width="5.0" height="8.279999999999998" rx="0.8" fill="#eeeeee" stroke="#757575" stroke-width="0.3" filter="url(#shadow)"/>
+<rect x="97.96" y="55.12" width="1.0" height="6.279999999999998" rx="0.2" fill="#bdbdbd"/>
+<text x="91.86" y="58.26" fill="#ffffff" font-size="1.2px" font-weight="bold">FAN4</text>
+<text x="96.36" y="55.72" fill="#212121" font-size="0.8px">G</text>
+<text x="96.36" y="58.26" fill="#c62828" font-size="0.8px">+</text>
+<text x="96.36" y="60.8" fill="#2e7d32" font-size="0.8px">T</text>
+<path d="M 78.58 76.03999999999999 C 86.58 76.03999999999999, 88.36 27.779999999999998, 96.36 27.779999999999998" class="wire-pwr12" stroke-width="0.55"/>
+<path d="M 78.58 83.66 C 86.58 83.66, 88.36 37.94, 96.36 37.94" class="wire-pwr12" stroke-width="0.55"/>
+<path d="M 78.58 91.28 C 86.58 91.28, 88.36 48.1, 96.36 48.1" class="wire-pwr12" stroke-width="0.55"/>
+<path d="M 78.58 98.89999999999999 C 86.58 98.89999999999999, 88.36 58.26, 96.36 58.26" class="wire-pwr12" stroke-width="0.55"/>
+<line x1="86.2" y1="25.240000000000002" x2="96.36" y2="25.240000000000002" class="wire-gnd" stroke-width="0.55"/>
+<line x1="86.2" y1="35.4" x2="96.36" y2="35.4" class="wire-gnd" stroke-width="0.55"/>
+<line x1="86.2" y1="45.559999999999995" x2="96.36" y2="45.559999999999995" class="wire-gnd" stroke-width="0.55"/>
+<line x1="86.2" y1="55.72" x2="96.36" y2="55.72" class="wire-gnd" stroke-width="0.55"/>
+<path d="M 96.36 30.32 C 81.36 30.32, 65.64 37.94, 50.64 37.94" class="wire-tach" stroke-width="0.5" stroke-dasharray="1.2, 0.6"/>
+<path d="M 96.36 40.480000000000004 C 81.36 40.480000000000004, 65.64 43.019999999999996, 50.64 43.019999999999996" class="wire-tach" stroke-width="0.5" stroke-dasharray="1.2, 0.6"/>
+<path d="M 96.36 50.64 C 81.36 50.64, 65.64 55.72, 50.64 55.72" class="wire-tach" stroke-width="0.5" stroke-dasharray="1.2, 0.6"/>
+<path d="M 96.36 60.8 C 81.36 60.8, 65.64 58.26, 50.64 58.26" class="wire-tach" stroke-width="0.5" stroke-dasharray="1.2, 0.6"/>
+<path d="M 58.26 63.339999999999996 C 66.25999999999999 63.339999999999996, 52.8 70.96000000000001, 60.8 70.96000000000001" class="wire-pwm" stroke-width="0.55"/>
+<path d="M 58.26 60.8 C 66.25999999999999 60.8, 52.8 78.58, 60.8 78.58" class="wire-pwm" stroke-width="0.55"/>
+<path d="M 58.26 58.26 C 66.25999999999999 58.26, 52.8 86.2, 60.8 86.2" class="wire-pwm" stroke-width="0.55"/>
+<path d="M 50.64 40.480000000000004 C 58.64 40.480000000000004, 52.8 93.82, 60.8 93.82" class="wire-pwm" stroke-width="0.55"/>
+<rect x="16.449999999999996" y="119.25999999999999" width="76.0" height="5.0" rx="0.8" fill="#111111" opacity="0.85" stroke="#444444" stroke-width="0.3"/>
+<line x1="19.449999999999996" y1="121.75999999999999" x2="25.449999999999996" y2="121.75999999999999" class="wire-pwr12" stroke-width="0.8"/>
+<text x="29.449999999999996" y="121.75999999999999" fill="#ffffff" font-size="1.1px">+12V</text>
+<line x1="35.449999999999996" y1="121.75999999999999" x2="41.449999999999996" y2="121.75999999999999" class="wire-pwr5" stroke-width="0.8"/>
+<text x="45.449999999999996" y="121.75999999999999" fill="#ffffff" font-size="1.1px">+5V</text>
+<line x1="50.449999999999996" y1="121.75999999999999" x2="56.449999999999996" y2="121.75999999999999" class="wire-gnd" stroke-width="0.8"/>
+<text x="60.449999999999996" y="121.75999999999999" fill="#ffffff" font-size="1.1px">GND</text>
+<line x1="65.44999999999999" y1="121.75999999999999" x2="71.44999999999999" y2="121.75999999999999" class="wire-pwm" stroke-width="0.8"/>
+<text x="75.44999999999999" y="121.75999999999999" fill="#ffffff" font-size="1.1px">PWM</text>
+<line x1="80.44999999999999" y1="121.75999999999999" x2="86.44999999999999" y2="121.75999999999999" class="wire-tach" stroke-width="0.8"/>
+<text x="90.44999999999999" y="121.75999999999999" fill="#ffffff" font-size="1.1px">TACH</text>
+</svg>

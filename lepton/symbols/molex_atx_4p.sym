@@ -1,0 +1,54 @@
+v 20220529 2
+T 400 2300 8 10 1 1 0 0 1
+refdes=CONN_MOLEX
+T 400 2150 5 10 0 0 0 0 1
+device=MOLEX_ATX_4P
+T 400 2000 5 10 0 0 0 0 1
+footprint=MOLEX_8981_4P
+B 400 200 1800 1700 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 700 1600 9 10 1 0 0 0 1
+ATX MOLEX
+P 2600 1400 2200 1400 1 0 0
+{
+T 2400 1430 5 8 1 1 0 0 1
+pinnumber=1
+T 2400 1370 5 8 0 1 0 2 1
+pinseq=1
+T 2100 1400 9 8 1 1 0 6 1
+pinlabel=+12V (Yellow)
+T 2100 1400 5 8 0 1 0 8 1
+pintype=pwr
+}
+P 2600 1000 2200 1000 1 0 0
+{
+T 2400 1030 5 8 1 1 0 0 1
+pinnumber=2
+T 2400 970 5 8 0 1 0 2 1
+pinseq=2
+T 2100 1000 9 8 1 1 0 6 1
+pinlabel=GND (Black)
+T 2100 1000 5 8 0 1 0 8 1
+pintype=pwr
+}
+P 2600 600 2200 600 1 0 0
+{
+T 2400 630 5 8 1 1 0 0 1
+pinnumber=3
+T 2400 570 5 8 0 1 0 2 1
+pinseq=3
+T 2100 600 9 8 1 1 0 6 1
+pinlabel=GND (Black)
+T 2100 600 5 8 0 1 0 8 1
+pintype=pwr
+}
+P 2600 200 2200 200 1 0 0
+{
+T 2400 230 5 8 1 1 0 0 1
+pinnumber=4
+T 2400 170 5 8 0 1 0 2 1
+pinseq=4
+T 2100 200 9 8 1 1 0 6 1
+pinlabel=+5V (Red)
+T 2100 200 5 8 0 1 0 8 1
+pintype=pwr
+}
