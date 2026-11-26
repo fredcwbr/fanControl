@@ -9,6 +9,7 @@ build/
 *.bin
 fancontrol
 daemon/fancontrold
+dashboard/fancontrol-tui
 
 # Lepton-EDA & pcb-rnd temporary/backup files
 *.bak*
