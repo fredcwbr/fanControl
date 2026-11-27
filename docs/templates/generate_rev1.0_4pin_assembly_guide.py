@@ -444,10 +444,10 @@ def build_page_2(c):
 
     # 2. PWM Jumpers (Blue)
     pwm_color = colors.HexColor("#00e5ff")
-    draw_jumper(c, 8, 17, 3, 20, pwm_color) # PWM 1 (PB1 R17C08 -> R20C03)
-    draw_jumper(c, 8, 16, 4, 20, pwm_color) # PWM 2 (PB2 R16C08 -> R20C04)
-    draw_jumper(c, 8, 15, 9, 20, pwm_color) # PWM 3 (PB3 R15C08 -> R20C09)
-    draw_jumper(c, 5, 8, 10, 20, pwm_color)  # PWM 4 (PD3 R08C05 -> R20C10)
+    draw_jumper(c, 5, 8, 3, 20, pwm_color)   # PWM 1 (PD3 Pin 5 R08C05 -> R20C03) - Left Bank!
+    draw_jumper(c, 8, 16, 4, 20, pwm_color)  # PWM 2 (PB2 Pin 16 R16C08 -> R20C04)
+    draw_jumper(c, 8, 15, 9, 20, pwm_color)  # PWM 3 (PB3 Pin 17 R15C08 -> R20C09)
+    draw_jumper(c, 8, 17, 10, 20, pwm_color) # PWM 4 (PB1 Pin 15 R17C08 -> R20C10) - Right Bank!
 
     # 3. TACH Jumpers (Green)
     tach_color = colors.HexColor("#76ff03")
@@ -623,13 +623,13 @@ def build_page_3(c):
     c.drawString(142 * mm, y, "Descrição Operacional")
 
     jumpers_data = [
-        ("WJ01", "R17C08 (U1 Pin 15)", "R20C03 (FAN1 Pad)", "PWM1 (25 kHz)", "Azul", "Comando PWM Canal 1 (Timer 1 OC1A)"),
+        ("WJ01", "R08C05 (U1 Pin 5)",  "R20C03 (FAN1 Pad)", "PWM1 (25 kHz)", "Azul", "Comando PWM Canal 1 (Timer 2 OC2B / PD3)"),
         ("WJ02", "R07C05 (U1 Pin 4)",  "R21C03 (FAN1 Pad)", "TACH1 (RPM)",   "Verde", "Leitura de Tacômetro Canal 1 (INT0)"),
-        ("WJ03", "R16C08 (U1 Pin 16)", "R20C04 (FAN2 Pad)", "PWM2 (25 kHz)", "Azul", "Comando PWM Canal 2 (Timer 1 OC1B)"),
+        ("WJ03", "R16C08 (U1 Pin 16)", "R20C04 (FAN2 Pad)", "PWM2 (25 kHz)", "Azul", "Comando PWM Canal 2 (Timer 1 OC1B / PB2)"),
         ("WJ04", "R09C05 (U1 Pin 6)",  "R21C04 (FAN2 Pad)", "TACH2 (RPM)",   "Verde", "Leitura de Tacômetro Canal 2 (PCINT20)"),
-        ("WJ05", "R15C08 (U1 Pin 17)", "R20C09 (FAN3 Pad)", "PWM3 (25 kHz)", "Azul", "Comando PWM Canal 3 (Timer 2 OC2A)"),
+        ("WJ05", "R15C08 (U1 Pin 17)", "R20C09 (FAN3 Pad)", "PWM3 (25 kHz)", "Azul", "Comando PWM Canal 3 (Timer 2 OC2A / PB3)"),
         ("WJ06", "R14C05 (U1 Pin 11)", "R21C09 (FAN3 Pad)", "TACH3 (RPM)",   "Verde", "Leitura de Tacômetro Canal 3 (PCINT21)"),
-        ("WJ07", "R08C05 (U1 Pin 5)",  "R20C10 (FAN4 Pad)", "PWM4 (25 kHz)", "Azul", "Comando PWM Canal 4 (Timer 2 OC2B)"),
+        ("WJ07", "R17C08 (U1 Pin 15)", "R20C10 (FAN4 Pad)", "PWM4 (25 kHz)", "Azul", "Comando PWM Canal 4 (Timer 1 OC1A / PB1)"),
         ("WJ08", "R15C05 (U1 Pin 12)", "R21C10 (FAN4 Pad)", "TACH4 (RPM)",   "Verde", "Leitura de Tacômetro Canal 4 (PCINT22)"),
         ("WJ09", "R27C04 (HW TxD)",    "R05C05 (U1 Pin 2)",  "UART_RX",       "Laranja", "Comunicação Serial USB -> MCU RXD"),
         ("WJ10", "R27C05 (HW RxD)",    "R06C05 (U1 Pin 3)",  "UART_TX",       "Roxo", "Comunicação Serial MCU TXD -> USB"),
@@ -712,7 +712,7 @@ def build_page_3(c):
         ("R05", "Pin 2", "PD0 (RXD)", "Jumper WJ09 (HW-597 TxD)", "Pin 27", "PC4 (ADC4)", "Livre / Expansão I2C (SDA)"),
         ("R06", "Pin 3", "PD1 (TXD)", "Jumper WJ10 (HW-597 RxD)", "Pin 26", "PC3 (ADC3)", "Livre"),
         ("R07", "Pin 4", "PD2 (INT0)", "Jumper WJ02 (FAN1 TACH)", "Pin 25", "PC2 (ADC2)", "Livre"),
-        ("R08", "Pin 5", "PD3 (OC2B)", "Jumper WJ07 (FAN4 PWM)", "Pin 24", "PC1 (ADC1)", "Livre"),
+        ("R08", "Pin 5", "PD3 (OC2B)", "Jumper WJ01 (FAN1 PWM)", "Pin 24", "PC1 (ADC1)", "Livre"),
         ("R09", "Pin 6", "PD4 (PCINT20)", "Jumper WJ04 (FAN2 TACH)", "Pin 23", "PC0 (ADC0)", "Livre"),
         ("R10", "Pin 7", "VCC (+5V)", "Alimentação +5V Lógica", "Pin 22", "GND (0V)", "Jumper WJ14 ao GND"),
         ("R11", "Pin 8", "GND (0V)", "Jumper WJ13 ao GND", "Pin 21", "AREF", "Capacitor 100nF ao GND"),
@@ -721,7 +721,7 @@ def build_page_3(c):
         ("R14", "Pin 11", "PD5 (PCINT21)", "Jumper WJ06 (FAN3 TACH)", "Pin 18", "PB4 (MISO)", "Livre / ISP MISO"),
         ("R15", "Pin 12", "PD6 (PCINT22)", "Jumper WJ08 (FAN4 TACH)", "Pin 17", "PB3 (OC2A)", "Jumper WJ05 (FAN3 PWM)"),
         ("R16", "Pin 13", "PD7", "Livre", "Pin 16", "PB2 (OC1B)", "Jumper WJ03 (FAN2 PWM)"),
-        ("R17", "Pin 14", "PB0", "Livre", "Pin 15", "PB1 (OC1A)", "Jumper WJ01 (FAN1 PWM)")
+        ("R17", "Pin 14", "PB0", "Livre", "Pin 15", "PB1 (OC1A)", "Jumper WJ07 (FAN4 PWM)")
     ]
 
     c.setFont("Helvetica", 6.5)
@@ -764,7 +764,7 @@ def build_page_4(c):
         ("FASE 2: INSTALAÇÃO DOS WIRE JUMPERS (WJ) ISOLADOS", colors.HexColor("#e65100"), [
             ("[ ]", "WJ de Alimentação: Soldar WJ R23C06 (GND dos coolers ao GND comum) e WJ R22C07 (+12V dos coolers ao +12V inferior)."),
             ("[ ]", "Pontes Verticais R26-R27: Conectar verticalmente as colunas 2, 3, 4, 5 e 8, 9, 10, 11 entre as linhas 26 e 27."),
-            ("[ ]", "Jumpers PWM (Fio Azul): Soldar WJ01 (R17C08->R20C03), WJ03 (R16C08->R20C04), WJ05 (R15C08->R20C09) e WJ07 (R08C05->R20C10)."),
+            ("[ ]", "Jumpers PWM (Fio Azul): Soldar WJ01 (R08C05->R20C03), WJ03 (R16C08->R20C04), WJ05 (R15C08->R20C09) e WJ07 (R17C08->R20C10)."),
             ("[ ]", "Jumpers TACH (Fio Verde): Soldar WJ02 (R07C05->R21C03), WJ04 (R09C05->R21C04), WJ06 (R14C05->R21C09) e WJ08 (R15C05->R21C10)."),
             ("[ ]", "Jumpers UART (Fio Laranja/Roxo): Soldar WJ09 (R27C04->R05C05 TxD->RXD) e WJ10 (R27C05->R06C05 RxD->TXD)."),
             ("[ ]", "Jumpers GND/VCC do MCU: Soldar pinos 8 e 22 ao GND (Coluna 6) e pinos 7 e 20 à linha de +5V.")

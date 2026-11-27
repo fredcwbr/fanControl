@@ -38,7 +38,7 @@ netname=TACH1
 N 7500 9700 8500 9700 4
 {
 T 7700 9750 5 10 1 1 0 0 1
-netname=PWM4
+netname=PWM1
 }
 N 7500 9200 8500 9200 4
 {
@@ -68,7 +68,7 @@ netname=TACH4
 N 12900 5200 13700 5200 4
 {
 T 13100 5250 5 10 1 1 0 0 1
-netname=PWM1
+netname=PWM4
 }
 N 12900 5700 13700 5700 4
 {

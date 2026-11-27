@@ -42,17 +42,17 @@ static void apply_hardware_pwm(uint8_t channel, uint8_t duty) {
     if (g_mode == PWM_MODE_4PIN_25KHZ) {
         uint16_t timer1_val = (uint16_t)(((uint32_t)duty * 320) / 255);
         switch (channel) {
-            case 1: OCR1A = timer1_val; break;
-            case 2: OCR1B = timer1_val; break;
-            case 3: OCR2A = duty; break;
-            case 4: OCR2B = duty; break;
+            case 1: OCR2B = duty; break;       // PD3 (Pin 5 / OC2B)  -> FAN 1 PWM
+            case 2: OCR1B = timer1_val; break; // PB2 (Pin 16 / OC1B) -> FAN 2 PWM
+            case 3: OCR2A = duty; break;       // PB3 (Pin 17 / OC2A) -> FAN 3 PWM
+            case 4: OCR1A = timer1_val; break; // PB1 (Pin 15 / OC1A) -> FAN 4 PWM
         }
     } else {
         switch (channel) {
-            case 1: OCR1A = duty; break;
-            case 2: OCR1B = duty; break;
-            case 3: OCR2A = duty; break;
-            case 4: OCR2B = duty; break;
+            case 1: OCR2B = duty; break;       // PD3 (Pin 5 / OC2B)  -> FAN 1 PWM
+            case 2: OCR1B = duty; break;       // PB2 (Pin 16 / OC1B) -> FAN 2 PWM
+            case 3: OCR2A = duty; break;       // PB3 (Pin 17 / OC2A) -> FAN 3 PWM
+            case 4: OCR1A = duty; break;       // PB1 (Pin 15 / OC1A) -> FAN 4 PWM
         }
     }
 }
