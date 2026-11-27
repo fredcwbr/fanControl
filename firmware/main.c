@@ -119,7 +119,7 @@ int main(void) {
     // Initialize hardware peripherals
     timer0_tick_init();
     uart_init(115200);
-    pwm_init(PWM_MODE_3PIN_LOWFREQ);
+    pwm_init(PWM_MODE_4PIN_25KHZ);
     tach_init();
 
     // Enable global interrupts

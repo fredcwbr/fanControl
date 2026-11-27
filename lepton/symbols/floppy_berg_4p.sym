@@ -1,0 +1,54 @@
+v 20220529 2
+T 400 2400 8 10 1 1 0 0 1
+refdes=CONN_FLOPPY
+T 400 2250 5 10 0 0 0 0 1
+device=FLOPPY_PWR_4P
+T 400 2100 5 10 0 0 0 0 1
+footprint=BERG4_2.54MM
+B 400 200 2000 1900 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 600 1800 9 10 1 0 0 0 1
+FLOPPY 4P PWR
+P 2800 1600 2400 1600 1 0 0
+{
+T 2600 1630 5 8 1 1 0 0 1
+pinnumber=1
+T 2600 1570 5 8 0 1 0 2 1
+pinseq=1
+T 2300 1600 9 8 1 1 0 6 1
+pinlabel=1: +5V (Red)
+T 2300 1600 5 8 0 1 0 8 1
+pintype=pwr
+}
+P 2800 1200 2400 1200 1 0 0
+{
+T 2600 1230 5 8 1 1 0 0 1
+pinnumber=2
+T 2600 1170 5 8 0 1 0 2 1
+pinseq=2
+T 2300 1200 9 8 1 1 0 6 1
+pinlabel=2: GND (Black)
+T 2300 1200 5 8 0 1 0 8 1
+pintype=pwr
+}
+P 2800 800 2400 800 1 0 0
+{
+T 2600 830 5 8 1 1 0 0 1
+pinnumber=3
+T 2600 770 5 8 0 1 0 2 1
+pinseq=3
+T 2300 800 9 8 1 1 0 6 1
+pinlabel=3: GND (Black)
+T 2300 800 5 8 0 1 0 8 1
+pintype=pwr
+}
+P 2800 400 2400 400 1 0 0
+{
+T 2600 430 5 8 1 1 0 0 1
+pinnumber=4
+T 2600 370 5 8 0 1 0 2 1
+pinseq=4
+T 2300 400 9 8 1 1 0 6 1
+pinlabel=4: +12V (Yel)
+T 2300 400 5 8 0 1 0 8 1
+pintype=pwr
+}
